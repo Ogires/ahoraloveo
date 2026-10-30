@@ -38,7 +38,7 @@ const AVISOS = [
   ],
   [palabra('neurodivers[oa]s?'), 'Revisa: una persona es «neurodivergente»; «neurodiverso» es un grupo.'],
   [palabra('asperger'), 'Ya no es un diagnóstico: úsalo solo para explicarlo.'],
-  [palabra('autismo femenino'), 'Mejor «autismo en niñas» o «presentación femenina» (una mención es aceptable).'],
+  [palabra('autismo femenino'), 'Mejor «autismo en mujeres y niñas» o «presentación femenina» (una mención por página es aceptable).'],
   [/[¡!]/gu, 'Sin exclamaciones en el contenido.'],
 ];
 

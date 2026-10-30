@@ -1,6 +1,6 @@
 ---
 name: lenguaje-claro
-description: Redacta y revisa los textos de la web de autismo en niñas para que una familia cansada o asustada los entienda a la primera. Aplica lenguaje claro en español de España (ISO 24495-1), la guía de estilo del proyecto y el peso justo de cada fuente. Úsala siempre que escribas, reescribas o revises una ficha (término del glosario, señal, herramienta de diagnóstico, escenario, momento de «Un día con Lucía»), la portada, «Sobre esta web», los avisos o cualquier texto que vaya a leer una familia, aunque nadie diga «lenguaje claro». Úsala también para revisar un borrador generado con IA o un texto ajeno antes de publicarlo.
+description: Redacta y revisa los textos de la web «Ahora lo veo» (autismo en mujeres y niñas) para que una familia cansada o asustada los entienda a la primera. Aplica lenguaje claro en español de España (ISO 24495-1), la guía de estilo del proyecto y el peso justo de cada fuente. Úsala siempre que escribas, reescribas o revises una ficha (término del glosario, señal, herramienta de diagnóstico, escenario, momento de «Un día con Lucía»), la portada, «Sobre esta web», los avisos o cualquier texto que vaya a leer una familia, aunque nadie diga «lenguaje claro». Úsala también para revisar un borrador generado con IA o un texto ajeno antes de publicarlo.
 ---
 
 # Lenguaje claro para familias
@@ -61,7 +61,7 @@ Es la seña de identidad de la web, y también donde más fácil es pasarse.
 - Di lo que dicen las fuentes, con su peso. Escribe «es frecuente que…» solo si una fuente lo respalda.
 - Si no hay datos, escribe **«Sin datos sobre niñas»** y, si ayuda, explica por qué (por ejemplo, que las muestras eran casi todas masculinas). Un hueco honesto vale más que una generalización.
 - No conviertas la presentación femenina en un estereotipo: no todas las niñas autistas camuflan, y algunos niños sí. Ayudan fórmulas como «en muchas niñas (y en algunos niños)…».
-- En el texto, mejor «autismo en niñas» o «presentación femenina» que «autismo femenino». Esta última puede aparecer una vez, para quien lo busque así.
+- En el texto, mejor «autismo en mujeres y niñas» (o «en niñas», si se habla solo de ellas) o «presentación femenina» que «autismo femenino». Esta última puede aparecer una vez por página, para quien lo busque así.
 
 ## El peso de cada fuente, dicho con palabras
 
@@ -89,7 +89,7 @@ Toda afirmación que no sea de sentido común lleva su fuente (el id del catálo
 ### Para redactar una ficha
 
 1. **Lee las fuentes primero**, no al revés. Anota qué dice cada una y su nivel. Si una afirmación no tiene fuente, no la escribas, o márcala como pendiente.
-2. **Escribe siguiendo el esquema de la colección:** `src/content.config.ts` o, si aún no existe, la sección 4 de `docs/plans/2026-10-30-autismo-ninas-design.md`. Hay un ejemplo completo en [references/ejemplos.md](references/ejemplos.md).
+2. **Escribe siguiendo el esquema de la colección:** `src/content.config.ts` o, si aún no existe, la sección 4 de `docs/plans/2026-10-30-ahoraloveo-design.md`. Hay un ejemplo completo en [references/ejemplos.md](references/ejemplos.md).
 3. **Pasa el script de legibilidad** (ver abajo) y corrige las frases largas y las palabras marcadas. Un aviso puede estar justificado, pero entonces explica por qué.
 4. **Entrega la ficha con la lista de comprobación** y una lista aparte de lo que no hayas podido comprobar, para la revisión humana.
 

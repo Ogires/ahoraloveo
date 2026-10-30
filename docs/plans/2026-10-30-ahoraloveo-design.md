@@ -1,12 +1,12 @@
-# Autismo en niñas: diseño
+# Ahora lo veo: diseño
 
-> Nombre provisional (`autismo-ninas`). Lema: **«La guía que nos hubiera gustado tener»**.
+> Nombre en clave: `ahoraloveo`. «Ahora lo veo» es el candidato a nombre definitivo. Lema: **«La guía que nos hubiera gustado tener»**.
 
-Web de información sobre autismo para familias que empiezan, con el foco puesto en cómo se presenta en las niñas.
+Web de información sobre autismo para quien empieza, con el foco puesto en cómo se presenta en mujeres y niñas. La primera versión se centra en las niñas y sus familias.
 
 ## 1. Propósito y público
 
-**Para quién:** familias con hijos e hijas de 0 a 12 años, con una sospecha de autismo o un diagnóstico reciente. Es el momento en que más falta hace una guía y menos se sabe qué buscar.
+**Para quién:** familias con hijos e hijas de 0 a 12 años, con una sospecha de autismo o un diagnóstico reciente. Es el momento en que más falta hace una guía y menos se sabe qué buscar. Más adelante, también adolescentes y mujeres adultas que se reconocen en el espectro, a menudo con un diagnóstico tardío.
 
 **Las cuatro necesidades que cubre a largo plazo:**
 
@@ -17,7 +17,7 @@ Web de información sobre autismo para familias que empiezan, con el foco puesto
 
 **Ámbito:** España. Lo local (trámites, asociaciones) empieza por la Comunitat Valenciana.
 
-**Sello: el autismo en niñas.** La web sirve a cualquier familia, pero cada página cuenta qué cambia en las niñas. En ellas el diagnóstico suele llegar más tarde, el camuflaje lo esconde, y buena parte de la investigación y de las herramientas de diagnóstico se construyó con muestras mayoritariamente masculinas. Además, en español apenas hay contenido sobre el tema.
+**Sello: el autismo en mujeres y niñas.** La web sirve a cualquier familia, pero cada página cuenta qué cambia en ellas. En las niñas y en las mujeres el diagnóstico suele llegar más tarde, el camuflaje lo esconde, y buena parte de la investigación y de las herramientas de diagnóstico se construyó con muestras mayoritariamente masculinas. Además, en español apenas hay contenido sobre el tema.
 
 **Quién la hace:** una familia, no profesionales, y la web lo dice claramente. Está firmada con el nombre de su autor y no incluye ningún dato que identifique a menores.
 
@@ -110,7 +110,8 @@ Esta es la red de seguridad del contenido.
 
 ## 7. Guía de estilo
 
-- **«Autista» o «autismo»** como forma principal: «niñas autistas», «el autismo en niñas».
+- **«Autista» o «autismo»** como forma principal: «niñas autistas», «mujeres autistas», «el autismo en mujeres y niñas».
+- **«Autismo femenino»** puede aparecer una vez por página, porque es como lo busca mucha gente, pero no como forma habitual: sugiere un tipo distinto de autismo.
 - **«En el espectro»** en tono cercano, sobre todo en los textos de experiencia.
 - **«TEA»** para lo clínico y los trámites, explicado la primera vez que aparece.
 - **«Con autismo»** se acepta si sale de forma natural.
@@ -205,6 +206,7 @@ Esta es la red de seguridad del contenido.
 ## 12. Visión a largo plazo (sin fecha)
 
 - **Ruta por etapas:** tengo una sospecha → proceso de diagnóstico → acabamos de recibir el diagnóstico → los primeros meses → el colegio. Con una segunda entrada igual de visible: «¿Y si es una niña?».
+- **Adolescentes y mujeres adultas:** la pubertad, el diagnóstico en la edad adulta, el camuflaje y el agotamiento, con su propio recorrido.
 - **Fichas de trámites** de la Comunitat Valenciana y estatales, con un formato fijo y una fecha de comprobación que caduca a los 6 meses.
 - **Guías del día a día:** comunicación (pictogramas, sistemas alternativos), sensorialidad, sueño, comida, rutinas, amistad, pubertad y cuidar a quien cuida.
 - **Semáforo de terapias** según su evidencia, con una columna de «evidencia en niñas».
@@ -226,9 +228,11 @@ Esta es la red de seguridad del contenido.
 
 ## 13. Decisiones abiertas
 
-- **Nombre definitivo y subdominio.** Criterios:
+- **Nombre definitivo y subdominio.** El candidato es «Ahora lo veo», con el subtítulo «Autismo en mujeres y niñas». Falta comprobar las marcas registradas y probarlo con familias. Criterios:
   - que no coincida con marcas, libros, cuentas o dominios que ya existan;
-  - evitar «Asperger», que ya no es un diagnóstico y parte de la comunidad rechaza.
+  - evitar «Asperger», que ya no es un diagnóstico y parte de la comunidad rechaza;
+  - evitar la familia de «mirar», que ya usan varias asociaciones de autismo (Mírame, Mira'm, Miradas);
+  - nada de siglas ni de juegos de palabras con «TEA», que abundan en el sector.
 
-  Hasta decidirlo, se usa el nombre en clave `autismo-ninas`.
+  Hasta decidirlo, el nombre en clave es `ahoraloveo`.
 - **Listas definitivas** de términos, señales y herramientas. Se cierran al redactar cada iteración, contrastándolas con las fuentes.

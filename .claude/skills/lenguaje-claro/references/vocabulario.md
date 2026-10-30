@@ -6,7 +6,7 @@ Qué palabras usar, cuáles evitar y por qué. El script `legibilidad.mjs` avisa
 
 | Usar | Cuándo | Motivo |
 |---|---|---|
-| «autista», «autismo» | Forma principal: «niñas autistas», «el autismo en niñas» | Es la preferida por buena parte de la comunidad autista adulta, le quita peso a la palabra y es lo que escribe quien busca |
+| «autista», «autismo» | Forma principal: «niñas autistas», «mujeres autistas», «el autismo en mujeres y niñas» | Es la preferida por buena parte de la comunidad autista adulta, le quita peso a la palabra y es lo que escribe quien busca |
 | «en el espectro» | Tono cercano y textos de experiencia | Suaviza sin ocultar; usado como forma principal sería un eufemismo |
 | «TEA» | Lo clínico y los trámites, explicado la primera vez | Es el nombre oficial del diagnóstico |
 | «con autismo» | Si sale de forma natural | La usan muchas familias y entidades; no se corrige |
@@ -33,7 +33,7 @@ Qué palabras usar, cuáles evitar y por qué. El script `legibilidad.mjs` avisa
 | ⚑ «los estudios demuestran», «está demostrado» | «Un estudio con N niñas encontró…», «Las guías coinciden en…» | Exagera el peso de la fuente |
 | ⚑ «neurodiverso/a» (aplicado a una persona) | «neurodivergente» | Una persona es neurodivergente; un grupo es neurodiverso |
 | ⚑ «Asperger» | Mencionarlo solo para explicar que ya no es un diagnóstico | Desapareció del DSM-5 y de la CIE-11, y parte de la comunidad lo rechaza |
-| ⚑ «autismo femenino» | «autismo en niñas», «presentación femenina» | El perfil no es exclusivo de ellas. Una mención es aceptable, para quien lo busque así |
+| ⚑ «autismo femenino» | «autismo en mujeres y niñas» (o «en niñas», si se habla solo de ellas), «presentación femenina» | Sugiere un tipo distinto de autismo, y el perfil no es exclusivo de ellas. Una mención por página es aceptable, porque es como lo busca mucha gente |
 | ⚑ exclamaciones | Punto | Restan serenidad y credibilidad |
 
 ## Términos en inglés
