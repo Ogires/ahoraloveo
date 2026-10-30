@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.astro/
+.wrangler/
+.dev.vars
+.env*
+
+# Planes de implementación e instrucciones para agentes: no se publican
+docs/plans/*-plan.md
+docs/plans/*-mv1.md
+
+# Notas personales y borradores de trabajo
+notas/
