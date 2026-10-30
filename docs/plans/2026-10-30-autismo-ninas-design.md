@@ -48,7 +48,7 @@ Queda fuera de la primera versión todo lo de la sección 11 (Visión).
 Cada pieza de contenido es un fichero Markdown o YAML dentro de una colección de Astro, con su esquema validado en la compilación.
 
 - **`fuentes`**: `id`, título, autoría, año, tipo (guía clínica, revisión, estudio, entidad, oficial, experiencia), nivel (sección 6), idioma, URL o DOI, licencia, fecha de la última comprobación y temas. En los estudios, además: diseño, tamaño de la muestra, edades, **porcentaje de niñas** y si da **resultados separados por sexo**.
-- **`glosario`**: término, alias (también en inglés), familia (sensorial, emociones, social, pensamiento, identidad o clínico), qué es, cómo se ve, con qué no confundirlo, **en niñas** (texto o «sin datos»), términos relacionados, fuentes y fecha de revisión.
+- **`glosario`**: término, alias (también en inglés), familia (sensorial, emociones, social, pensamiento, identidad o clínico), qué es, cómo se ve, con qué no confundirlo, **en niñas** (texto o «sin datos»), qué hacer (opcional: qué puede hacer la familia con esto), términos relacionados, fuentes y fecha de revisión.
 - **`senales`**: título, área del DSM-5, descripción, ejemplos cotidianos, cómo se suele describir, **cómo puede verse en niñas**, términos relacionados, fuentes y fecha de revisión.
 - **`herramientas`**: nombre, tipo (cribado, diagnóstico o complementaria), edades, quién la pasa, formato (cuestionario, entrevista, observación o prueba), duración, áreas que mide, cómo funciona, limitaciones, **en niñas**, qué preguntar al profesional, fuentes y fecha de revisión.
 - **`escenarios`**: situación, opciones, respuesta, explicación, términos y fuentes.
