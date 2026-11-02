@@ -1,1 +1,8 @@
-<html lang="es"><body><p>En construcción</p></body></html>
+---
+import Base from '../layouts/Base.astro';
+import { SITIO } from '../config';
+---
+
+<Base titulo={SITIO.nombre} descripcion="Información sobre autismo para familias, con lo que cambia en las niñas.">
+  <h1>{SITIO.lema}</h1>
+</Base>

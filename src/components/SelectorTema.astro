@@ -1,0 +1,31 @@
+<button type="button" class="selector-tema" data-selector-tema aria-pressed="false" hidden>
+  <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3a8.5 8.5 0 1 0 11.5 11.5Z"></path>
+  </svg>
+  <span>Modo oscuro</span>
+</button>
+
+<script>
+  import { guardar, leer } from '../lib/almacen';
+  import { CLAVE_TEMA, alternar, temaEfectivo, temaGuardado } from '../lib/tema';
+
+  const boton = document.querySelector<HTMLButtonElement>('[data-selector-tema]');
+  const raiz = document.documentElement;
+  const sistema = matchMedia('(prefers-color-scheme: dark)');
+  const actual = () =>
+    temaEfectivo(temaGuardado(raiz.dataset.tema ?? leer(CLAVE_TEMA)), sistema.matches);
+  const pintar = () => boton?.setAttribute('aria-pressed', String(actual() === 'oscuro'));
+
+  if (boton) {
+    boton.hidden = false;
+    pintar();
+    boton.addEventListener('click', () => {
+      const siguiente = alternar(actual());
+      raiz.dataset.tema = siguiente;
+      guardar(CLAVE_TEMA, siguiente);
+      pintar();
+    });
+    sistema.addEventListener('change', pintar);
+  }
+</script>

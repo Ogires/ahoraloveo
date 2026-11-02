@@ -1,0 +1,103 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--tinta);
+  font-family: 'Lexend Variable', 'Trebuchet MS', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+h1, h2, h3 { margin: 0; line-height: 1.15; font-weight: 600; letter-spacing: -0.01em; text-wrap: balance; }
+h1 { font-size: clamp(2.25rem, 5vw, 3.875rem); letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.75rem, 3.2vw, 2.25rem); }
+h3 { font-size: 1.5rem; }
+p, ul, ol, dl, figure { margin: 0; }
+p, li, dd { text-wrap: pretty; max-width: 38em; }
+a { color: var(--acento); text-underline-offset: 0.18em; text-decoration-thickness: 0.08em; }
+a:hover { color: var(--tinta); }
+:focus-visible { outline: 3px solid var(--acento); outline-offset: 3px; }
+main:focus { outline: none; }
+
+.contenedor { max-width: 70rem; margin-inline: auto; padding-inline: clamp(1rem, 4vw, 2.5rem); }
+.saltar {
+  position: absolute; left: 1rem; top: -100px; z-index: 10;
+  padding: 0.75rem 1rem; border-radius: 12px;
+  background: var(--superficie); color: var(--tinta);
+}
+.saltar:focus { top: 1rem; }
+
+.cabecera {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 1rem 2rem; padding-block: 1.75rem;
+}
+.marca {
+  display: flex; align-items: center; gap: 0.75rem;
+  color: var(--tinta); text-decoration: none; font-weight: 600; font-size: 1.25rem;
+}
+.cabecera ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; font-size: 1.0625rem; }
+.cabecera nav a { color: var(--tinta); }
+.cabecera nav a[aria-current='page'] { font-weight: 600; text-decoration-thickness: 0.15em; }
+
+.boton {
+  display: inline-flex; align-items: center; min-height: 48px; padding: 0.75rem 1.625rem;
+  border-radius: 999px; background: var(--acento); color: var(--sobre-acento);
+  font-weight: 500; text-decoration: none;
+}
+.boton:hover { color: var(--sobre-acento); text-decoration: underline; }
+.selector-tema {
+  display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px; padding: 0.5rem 1rem;
+  border-radius: 999px; border: 2px solid var(--linea); background: var(--superficie);
+  color: var(--tinta); font: inherit; font-size: 1rem; cursor: pointer;
+}
+.selector-tema[aria-pressed='true'] { border-color: var(--tinta); }
+.selector-tema[hidden] { display: none; }
+
+.chip {
+  display: inline-flex; align-items: center; padding: 0.2rem 0.8rem; border-radius: 999px;
+  background: var(--familia); color: var(--sobre-familia); font-size: 0.9375rem; font-weight: 500;
+}
+.rueda path { fill: var(--familia); }
+.rueda text { fill: var(--sobre-familia); font: 500 14px 'Lexend Variable', 'Trebuchet MS', sans-serif; }
+.panel { background: var(--superficie); border-radius: 28px; padding: clamp(1.25rem, 3vw, 2.5rem); }
+
+/* Páginas de texto corrido: sobre, aviso legal, 404 */
+.texto { display: flex; flex-direction: column; gap: 1.25rem; max-width: 44rem; padding-block: 1.5rem 0; }
+.texto h2 { margin-top: 1.5rem; }
+.texto ul { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.5rem; }
+.texto dl { display: flex; flex-direction: column; gap: 1rem; }
+.texto dt { font-weight: 600; }
+.texto dd { margin: 0; }
+
+.pie {
+  margin-top: 5.5rem; padding-block: 1.5rem 4rem; border-top: 1.5px solid var(--linea);
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem;
+  font-size: 0.9375rem; color: var(--tinta-suave);
+}
+.pie a { color: var(--tinta-suave); }
+
+/* Pagefind (Component UI): solo se puede tematizar con sus variables */
+:root {
+  --pf-text: var(--tinta);
+  --pf-text-secondary: var(--tinta-suave);
+  --pf-background: var(--superficie);
+  --pf-border: var(--linea);
+  --pf-hover: var(--fondo);
+  --pf-mark: color-mix(in srgb, var(--social) 45%, transparent);
+  --pf-font: 'Lexend Variable', 'Trebuchet MS', sans-serif;
+  --pf-outline-focus: var(--acento);
+  --pf-outline-width: 3px;
+  --pf-border-radius: 16px;
+  --pf-input-font-size: 1.125rem;
+  --pf-shadow-sm: none;
+  --pf-shadow-md: none;
+  --pf-shadow-lg: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

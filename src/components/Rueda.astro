@@ -1,0 +1,28 @@
+---
+import { segmentos } from '../lib/rueda';
+import { FAMILIAS } from '../lib/tokens';
+
+interface Props {
+  tamano?: number;
+  etiquetas?: boolean;
+}
+
+const { tamano = 360, etiquetas = false } = Astro.props;
+const partes = segmentos({ interior: etiquetas ? 92 : 70 });
+const nombres = new Intl.ListFormat('es', { type: 'conjunction' }).format(
+  FAMILIAS.map((f) => f.nombre.toLowerCase()),
+);
+const accesible = etiquetas
+  ? ({ role: 'img', 'aria-label': `Rueda con las seis familias del glosario: ${nombres}` } as const)
+  : ({ 'aria-hidden': 'true' } as const);
+---
+
+<svg class="rueda" viewBox="0 0 360 360" width={tamano} height={tamano} {...accesible}>
+  {partes.map((p, i) => <path class={`f-${FAMILIAS[i].id}`} d={p.d} />)}
+  {etiquetas &&
+    partes.map((p, i) => (
+      <text x={p.etiqueta.x} y={p.etiqueta.y} text-anchor="middle" dominant-baseline="middle">
+        {FAMILIAS[i].nombre}
+      </text>
+    ))}
+</svg>
