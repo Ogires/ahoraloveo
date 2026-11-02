@@ -34,9 +34,16 @@ describe('familias', () => {
 describe('cssDeTokens', () => {
   const css = cssDeTokens();
 
-  it('define todos los colores en los dos modos', () => {
-    for (const [clave, valor] of [...Object.entries(CLARO), ...Object.entries(OSCURO)]) {
-      expect(css).toContain(`--${clave}:${valor};`);
+  // Cada regla ocupa una línea: así se comprueba que cada color está en el bloque de su modo.
+  const regla = (selector: string) => css.split('\n').find((linea) => linea.includes(selector)) ?? '';
+
+  it('cada modo define todos sus colores en su propio bloque', () => {
+    const bloquesOscuros = [regla(':root:not([data-tema="claro"])'), regla(':root[data-tema="oscuro"]')];
+    for (const [clave, valor] of Object.entries(CLARO)) {
+      expect(regla(':root{color-scheme:light;')).toContain(`--${clave}:${valor};`);
+    }
+    for (const bloque of bloquesOscuros) {
+      for (const [clave, valor] of Object.entries(OSCURO)) expect(bloque).toContain(`--${clave}:${valor};`);
     }
   });
 

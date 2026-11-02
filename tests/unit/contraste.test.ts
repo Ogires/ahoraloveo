@@ -8,6 +8,7 @@ describe('contraste', () => {
 
   it('#767676 sobre blanco es el gris más claro que pasa AA', () => {
     expect(contraste('#767676', '#FFFFFF')).toBeCloseTo(4.54, 2);
+    expect(contraste('#777777', '#FFFFFF')).toBeLessThan(4.5);
   });
 
   it('no depende del orden', () => {
