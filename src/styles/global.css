@@ -7,8 +7,9 @@ body {
   font-family: 'Lexend Variable', 'Trebuchet MS', sans-serif;
   font-size: 1.125rem;
   line-height: 1.6;
+  overflow-wrap: break-word; /* una palabra larga no puede ensanchar la página a 320 px */
 }
-h1, h2, h3 { margin: 0; line-height: 1.15; font-weight: 600; letter-spacing: -0.01em; text-wrap: balance; }
+h1, h2, h3 { margin: 0; line-height: 1.15; font-weight: 600; letter-spacing: -0.01em; text-wrap: balance; hyphens: auto; }
 h1 { font-size: clamp(2.25rem, 5vw, 3.875rem); letter-spacing: -0.02em; }
 h2 { font-size: clamp(1.75rem, 3.2vw, 2.25rem); }
 h3 { font-size: 1.5rem; }
@@ -21,11 +22,13 @@ main:focus { outline: none; }
 
 .contenedor { max-width: 70rem; margin-inline: auto; padding-inline: clamp(1rem, 4vw, 2.5rem); }
 .saltar {
-  position: absolute; left: 1rem; top: -100px; z-index: 10;
+  position: absolute; left: 1rem; top: 1rem; z-index: 10;
   padding: 0.75rem 1rem; border-radius: 12px;
   background: var(--superficie); color: var(--tinta);
+  /* Fuera de la vista mida lo que mida: con el texto ampliado ocupa dos líneas. */
+  transform: translateY(calc(-100% - 1.5rem));
 }
-.saltar:focus { top: 1rem; }
+.saltar:focus { transform: none; }
 
 .cabecera {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
@@ -33,9 +36,9 @@ main:focus { outline: none; }
 }
 .marca {
   display: flex; align-items: center; gap: 0.75rem;
-  color: var(--tinta); text-decoration: none; font-weight: 600; font-size: 1.25rem;
+  color: var(--tinta); text-decoration: none; font-weight: 600; font-size: 1.3125rem;
 }
-.cabecera ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; font-size: 1.0625rem; }
+.cabecera ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; }
 .cabecera nav a { color: var(--tinta); }
 .cabecera nav a[aria-current='page'] { font-weight: 600; text-decoration-thickness: 0.15em; }
 
@@ -48,10 +51,14 @@ main:focus { outline: none; }
 .selector-tema {
   display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px; padding: 0.5rem 1rem;
   border-radius: 999px; border: 2px solid var(--linea); background: var(--superficie);
-  color: var(--tinta); font: inherit; font-size: 1rem; cursor: pointer;
+  color: var(--tinta); font: inherit; font-weight: 500; cursor: pointer;
 }
 .selector-tema[aria-pressed='true'] { border-color: var(--tinta); }
 .selector-tema[hidden] { display: none; }
+@media (forced-colors: active) {
+  /* Con colores forzados no se ven ni el borde ni el cambio de la página: el estado va en el fondo. */
+  .selector-tema[aria-pressed='true'] { background: Highlight; color: HighlightText; }
+}
 
 .chip {
   display: inline-flex; align-items: center; padding: 0.2rem 0.8rem; border-radius: 999px;
