@@ -6,7 +6,7 @@ export const SITIO = {
   url: 'https://ahoraloveo.webninja.workers.dev',
   autoria: '[Firma pendiente]',
   correo: 'contacto@ejemplo.org', // provisional: cambiar antes de desplegar
-  // Con false, cada página lleva noindex y robots.txt bloquea a los buscadores.
+  // Con false, cada página lleva noindex para que los buscadores no la indexen.
   publicada: false,
   // Token público de Cloudflare Web Analytics. Vacío: sin estadísticas.
   analytics: '',
