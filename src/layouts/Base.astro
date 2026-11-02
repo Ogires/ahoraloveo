@@ -4,6 +4,7 @@ import '../styles/global.css';
 import Rueda from '../components/Rueda.astro';
 import SelectorTema from '../components/SelectorTema.astro';
 import { SITIO } from '../config';
+import { mediaBarra } from '../lib/tema';
 import { CLARO, OSCURO } from '../lib/tokens';
 
 interface Props {
@@ -31,8 +32,8 @@ const enlaces = [
     <meta name="description" content={descripcion} />
     <link rel="canonical" href={canonica} />
     {!SITIO.publicada && <meta name="robots" content="noindex, nofollow" />}
-    <meta name="theme-color" content={CLARO.fondo} media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content={OSCURO.fondo} media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content={CLARO.fondo} media={mediaBarra('claro', null)} data-tema="claro" />
+    <meta name="theme-color" content={OSCURO.fondo} media={mediaBarra('oscuro', null)} data-tema="oscuro" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <script is:inline src="/tema.js"></script>
     <link rel="stylesheet" href="/tokens.css" />

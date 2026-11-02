@@ -13,3 +13,11 @@ export function temaEfectivo(guardado: Tema | null, sistemaOscuro: boolean): Tem
 export function alternar(tema: Tema): Tema {
   return tema === 'oscuro' ? 'claro' : 'oscuro';
 }
+
+// Cada modo tiene su <meta name="theme-color"> (el color de la barra del móvil).
+// Sin modo elegido, cada una vale con su preferencia del sistema; con uno elegido, solo la suya.
+// public/tema.js aplica la misma regla antes de pintar.
+export function mediaBarra(meta: Tema, elegido: Tema | null): string {
+  if (!elegido) return `(prefers-color-scheme: ${meta === 'oscuro' ? 'dark' : 'light'})`;
+  return meta === elegido ? 'all' : 'not all';
+}

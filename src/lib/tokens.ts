@@ -54,10 +54,12 @@ const variables = (paleta: Paleta) =>
 export function cssDeTokens(): string {
   const familias =
     FAMILIAS.map((f) => `--${f.id}:${f.color};`).join('') + `--sobre-familia:${SOBRE_FAMILIA};`;
+  // El modo oscuro solo en pantalla: al imprimir, el navegador quita los fondos y el texto claro
+  // quedaría casi invisible sobre el papel.
   return [
     `:root{color-scheme:light;${variables(CLARO)}${familias}}`,
-    `@media (prefers-color-scheme:dark){:root:not([data-tema="claro"]){color-scheme:dark;${variables(OSCURO)}}}`,
-    `:root[data-tema="oscuro"]{color-scheme:dark;${variables(OSCURO)}}`,
+    `@media screen and (prefers-color-scheme:dark){:root:not([data-tema="claro"]){color-scheme:dark;${variables(OSCURO)}}}`,
+    `@media screen{:root[data-tema="oscuro"]{color-scheme:dark;${variables(OSCURO)}}}`,
     ...FAMILIAS.map((f) => `.f-${f.id}{--familia:var(--${f.id})}`),
   ].join('\n');
 }

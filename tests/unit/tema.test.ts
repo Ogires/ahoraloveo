@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { alternar, temaEfectivo, temaGuardado } from '../../src/lib/tema';
+import { alternar, mediaBarra, temaEfectivo, temaGuardado } from '../../src/lib/tema';
 
 describe('tema', () => {
   it('solo acepta «claro» y «oscuro» como valor guardado', () => {
@@ -22,5 +22,15 @@ describe('tema', () => {
   it('alterna entre los dos', () => {
     expect(alternar('claro')).toBe('oscuro');
     expect(alternar('oscuro')).toBe('claro');
+  });
+
+  it('sin modo elegido, el color de la barra del móvil sigue al sistema', () => {
+    expect(mediaBarra('claro', null)).toBe('(prefers-color-scheme: light)');
+    expect(mediaBarra('oscuro', null)).toBe('(prefers-color-scheme: dark)');
+  });
+
+  it('con un modo elegido, solo vale el color de la barra de ese modo', () => {
+    expect(mediaBarra('oscuro', 'oscuro')).toBe('all');
+    expect(mediaBarra('claro', 'oscuro')).toBe('not all');
   });
 });

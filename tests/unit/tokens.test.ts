@@ -47,6 +47,11 @@ describe('cssDeTokens', () => {
     }
   });
 
+  it('el modo oscuro solo se aplica en pantalla: al imprimir, tinta oscura sobre papel blanco', () => {
+    expect(regla(':root:not([data-tema="claro"])').startsWith('@media screen and (prefers-color-scheme:dark){')).toBe(true);
+    expect(regla(':root[data-tema="oscuro"]').startsWith('@media screen{')).toBe(true);
+  });
+
   it('el modo elegido a mano manda sobre el del sistema', () => {
     expect(css).toContain(':root:not([data-tema="claro"])');
     expect(css).toContain(':root[data-tema="oscuro"]');

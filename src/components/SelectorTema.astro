@@ -8,9 +8,10 @@
 
 <script>
   import { guardar, leer } from '../lib/almacen';
-  import { CLAVE_TEMA, alternar, temaEfectivo, temaGuardado } from '../lib/tema';
+  import { CLAVE_TEMA, alternar, mediaBarra, temaEfectivo, temaGuardado } from '../lib/tema';
 
   const boton = document.querySelector<HTMLButtonElement>('[data-selector-tema]');
+  const barras = document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]');
   const raiz = document.documentElement;
   const sistema = matchMedia('(prefers-color-scheme: dark)');
   const actual = () =>
@@ -24,6 +25,10 @@
       const siguiente = alternar(actual());
       raiz.dataset.tema = siguiente;
       guardar(CLAVE_TEMA, siguiente);
+      barras.forEach((m) => {
+        const meta = temaGuardado(m.dataset.tema);
+        if (meta) m.media = mediaBarra(meta, siguiente);
+      });
       pintar();
     });
     sistema.addEventListener('change', pintar);
