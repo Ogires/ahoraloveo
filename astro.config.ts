@@ -3,6 +3,8 @@ import { SITIO } from './src/config';
 
 export default defineConfig({
   site: SITIO.url,
+  // Shiki colorea el código con estilos en línea, que la CSP bloquea. No hay bloques de código.
+  markdown: { syntaxHighlight: false },
   security: {
     csp: {
       directives: [
