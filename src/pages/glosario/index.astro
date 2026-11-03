@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { FAMILIAS } from '../../lib/tokens';
+
+const terminos = (await getCollection('glosario')).sort((a, b) =>
+  a.data.termino.localeCompare(b.data.termino, 'es'),
+);
+const grupos = FAMILIAS.map((f) => ({
+  ...f,
+  terminos: terminos.filter((t) => t.data.familia === f.id),
+})).filter((g) => g.terminos.length > 0);
+---
+
+<Base titulo="Glosario" descripcion="Las palabras que vais a oír al hablar de autismo, explicadas con calma y con lo que cambia en las niñas.">
+  <div class="glosario">
+    <header>
+      <h1>Glosario</h1>
+      <p>Las palabras que vais a oír al hablar de autismo. Cada término dice de dónde sale la información y cuándo se revisó.</p>
+    </header>
+    {grupos.map((g) => (
+      <section class={`f-${g.id}`} aria-labelledby={`familia-${g.id}`}>
+        <h2 id={`familia-${g.id}`}><span class="chip">{g.nombre}</span></h2>
+        <dl>
+          {g.terminos.map((t) => (
+            <div class="entrada">
+              <dt><a href={`/glosario/${t.id}/`}>{t.data.termino}</a></dt>
+              <dd>{t.data.que_es}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    ))}
+  </div>
+</Base>
+
+<style>
+  .glosario { display: flex; flex-direction: column; gap: 3rem; padding-block: 1.5rem 0; }
+  header, section, dl { display: flex; flex-direction: column; }
+  header { gap: 0.75rem; }
+  section { gap: 1.25rem; }
+  dl { gap: 1rem; }
+  .entrada { background: var(--superficie); border-radius: 28px; padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 0.375rem; }
+  dt { font-size: 1.3125rem; font-weight: 600; }
+  dd { margin: 0; }
+</style>
