@@ -1,8 +1,37 @@
 ---
+import Rueda from '../components/Rueda.astro';
 import Base from '../layouts/Base.astro';
 import { SITIO } from '../config';
 ---
 
-<Base titulo={SITIO.nombre} descripcion="Información sobre autismo para familias, con lo que cambia en las niñas.">
-  <h1>{SITIO.lema}</h1>
+<Base titulo={SITIO.tema} descripcion="Qué es el autismo, cómo se ve en el día a día y qué cambia en las niñas. Escrita por una familia, con cada fuente a la vista.">
+  <section class="portada">
+    <div class="portada-texto">
+      <h1>{SITIO.lema}</h1>
+      <p class="entradilla">Qué es el autismo, cómo se ve en el día a día y qué cambia en las niñas. Escrita por una familia, con cada fuente a la vista.</p>
+      <div class="acciones">
+        <a class="boton" href="/glosario/">Abrir el glosario</a>
+        <a href="/sobre/">Quién hace esta web</a>
+      </div>
+    </div>
+    <figure class="portada-rueda">
+      <Rueda etiquetas />
+      <figcaption>Las seis familias del glosario. Cada una tiene su color, y ese color os acompaña por toda la web.</figcaption>
+    </figure>
+  </section>
+  <section class="panel empezando" aria-labelledby="empezando">
+    <h2 id="empezando">Esta web está empezando</h2>
+    <p>De momento hay unas pocas palabras del glosario. Iremos sumando términos, señales y herramientas de diagnóstico poco a poco, siempre con sus fuentes.</p>
+  </section>
 </Base>
+
+<style>
+  .portada { display: flex; flex-wrap: wrap; align-items: center; gap: 3rem 4rem; padding-block: 2rem 4rem; }
+  .portada-texto { flex: 1 1 30rem; min-width: 0; display: flex; flex-direction: column; gap: 1.5rem; }
+  .entradilla { font-size: 1.3125rem; font-weight: 300; color: var(--tinta-suave); max-width: 30em; }
+  .acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.5rem; }
+  .portada-rueda { flex: 0 1 25rem; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+  .portada-rueda :global(.rueda) { width: 100%; max-width: 380px; height: auto; }
+  figcaption { font-size: 1rem; color: var(--tinta-suave); text-align: center; max-width: 24em; }
+  .empezando { display: flex; flex-direction: column; gap: 0.75rem; }
+</style>
