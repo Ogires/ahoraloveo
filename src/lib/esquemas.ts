@@ -100,6 +100,14 @@ export const esquemaFuente = z
     }
   });
 
+// Entidades que las fichas nombran en el texto («AETAPI explica…»): su primera mención enlaza a su web.
+export const esquemaEntidad = z.object({
+  nombre: texto(), // tal como se escribe en las fichas
+  otros_nombres: z.array(texto()).default([]),
+  web: z.httpUrl(),
+  idioma: z.string().regex(/^[a-z]{2}$/).default('es'),
+});
+
 // Recibe las referencias ya creadas, para que Vitest pueda probar el esquema sin astro:content.
 // Es genérica para no perder sus tipos: con z.ZodType, getEntries() no aceptaría las fuentes.
 export const crearEsquemaTermino = <F extends z.ZodType, G extends z.ZodType>(referencias: {

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { z } from 'astro/zod';
-import { crearEsquemaTermino, esquemaFuente } from '../../src/lib/esquemas';
+import { crearEsquemaTermino, esquemaEntidad, esquemaFuente } from '../../src/lib/esquemas';
 
 const esquemaTermino = crearEsquemaTermino({ fuentes: z.string(), glosario: z.string() });
 
@@ -137,6 +137,18 @@ describe('el nivel de una fuente encaja con su tipo', () => {
 
   it('solo los estudios llevan datos de muestra', () => {
     expect(valido(esquemaFuente, { ...fuente, estudio })).toBe(false);
+  });
+});
+
+describe('esquema de entidades', () => {
+  const entidad = { nombre: 'AETAPI', web: 'https://aetapi.org/' };
+
+  it('acepta una entidad con nombre y web; idioma y otros nombres tienen valor por defecto', () => {
+    expect(esquemaEntidad.parse(entidad)).toEqual({ ...entidad, otros_nombres: [], idioma: 'es' });
+  });
+
+  it.each(['aetapi.org', 'javascript:alert(1)'])('rechaza %s como web', (web) => {
+    expect(valido(esquemaEntidad, { ...entidad, web })).toBe(false);
   });
 });
 

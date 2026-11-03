@@ -1,8 +1,10 @@
 ---
 import { getCollection, getEntries } from 'astro:content';
+import TextoEnlazado from '../../components/TextoEnlazado.astro';
 import Base from '../../layouts/Base.astro';
 import { SITIO } from '../../config';
 import { enlaceCorreccion } from '../../lib/correcciones';
+import { enlazarEntidades, type Entidad } from '../../lib/enlazar';
 import { NIVELES } from '../../lib/esquemas';
 import { formatearFecha } from '../../lib/fecha';
 import { exigirTodas } from '../../lib/referencias';
@@ -26,6 +28,21 @@ const relacionados = exigirTodas(
   d.relacionados.map((r) => `glosario/${r.id}`),
   origen,
 );
+const entidades: Entidad[] = (await getCollection('entidades')).map((e) => ({
+  nombres: [e.data.nombre, ...e.data.otros_nombres],
+  web: e.data.web,
+  idioma: e.data.idioma,
+}));
+// En el orden en que se leen los apartados: la primera mención de la ficha es la que enlaza.
+const yaEnlazadas = new Set<Entidad>();
+const enlazar = (t: string) => enlazarEntidades(t, entidades, yaEnlazadas);
+const texto = {
+  que_es: enlazar(d.que_es),
+  como_se_ve: enlazar(d.como_se_ve),
+  no_confundir_con: d.no_confundir_con ? enlazar(d.no_confundir_con) : null,
+  en_ninas: enlazar(d.en_ninas),
+  que_hacer: d.que_hacer ? enlazar(d.que_hacer) : null,
+};
 const familia = FAMILIAS.find((f) => f.id === d.familia)!;
 const url = new URL(Astro.url.pathname, Astro.site).href;
 ---
@@ -41,26 +58,26 @@ const url = new URL(Astro.url.pathname, Astro.site).href;
 
     <section aria-labelledby="que-es">
       <h2 id="que-es">Qué es</h2>
-      <p>{d.que_es}</p>
+      <p><TextoEnlazado trozos={texto.que_es} /></p>
     </section>
     <section aria-labelledby="como-se-ve">
       <h2 id="como-se-ve">Cómo se ve</h2>
-      <p>{d.como_se_ve}</p>
+      <p><TextoEnlazado trozos={texto.como_se_ve} /></p>
     </section>
-    {d.no_confundir_con && (
+    {texto.no_confundir_con && (
       <section aria-labelledby="no-confundir">
         <h2 id="no-confundir">No confundir con</h2>
-        <p>{d.no_confundir_con}</p>
+        <p><TextoEnlazado trozos={texto.no_confundir_con} /></p>
       </section>
     )}
     <section class="en-ninas" aria-labelledby="en-ninas">
       <h2 id="en-ninas">En niñas</h2>
-      <p>{d.en_ninas}</p>
+      <p><TextoEnlazado trozos={texto.en_ninas} /></p>
     </section>
-    {d.que_hacer && (
+    {texto.que_hacer && (
       <section aria-labelledby="que-hacer">
         <h2 id="que-hacer">Qué podéis hacer</h2>
-        <p>{d.que_hacer}</p>
+        <p><TextoEnlazado trozos={texto.que_hacer} /></p>
       </section>
     )}
     {relacionados.length > 0 && (

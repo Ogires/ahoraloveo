@@ -1,0 +1,10 @@
+---
+import type { Trozo } from '../lib/enlazar';
+
+interface Props {
+  trozos: Trozo[];
+}
+const { trozos } = Astro.props;
+---
+
+{trozos.map((t) => (t.enlace ? <a href={t.enlace.href} hreflang={t.enlace.idioma}>{t.texto}</a> : t.texto))}
