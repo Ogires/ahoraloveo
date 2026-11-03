@@ -37,7 +37,7 @@ Tres secciones de contenido fijo, cada una con su pieza interactiva:
 
 | Sección | Contenido | Interactividad |
 |---|---|---|
-| **Glosario** | 25-30 términos (alexitimia, crisis o *meltdown*, desconexión o *shutdown*, estereotipias, camuflaje, ecolalia, intereses especiales, teoría de la mente, coherencia central, funciones ejecutivas, interocepción, hiper e hiposensibilidad, burnout autista, doble empatía, niveles de apoyo, neurodiversidad, neurodivergente, neurotípico…) | Mazo de tarjetas y escenarios «¿Crisis o rabieta?» |
+| **Glosario** | 25-30 términos (alexitimia, crisis o *meltdown*, desconexión o *shutdown*, estereotipias, camuflaje, ecolalia, intereses especiales, teoría de la mente, coherencia central, funciones ejecutivas, interocepción, hiper e hiposensibilidad, burnout autista, doble empatía, niveles de apoyo, neurodiversidad, neurodivergente, neurotípico…) | Escenas «¿Lo habéis visto?» y escenas de elegir para las parejas que se confunden («¿Crisis o rabieta?») |
 | **Señales** | Organizadas según los criterios del DSM-5: comunicación e interacción social por un lado, y patrones repetitivos, rutinas, intereses y aspectos sensoriales por otro. Cada señal compara «cómo se suele describir» con «cómo puede verse en niñas» | El cuaderno de observaciones |
 | **Herramientas de diagnóstico** | Cribado frente a diagnóstico. Candidatas: M-CHAT-R/F, SCQ, ADOS-2, ADI-R, SRS-2, pruebas de teoría de la mente y GQ-ASC. La lista se cierra al redactar, contrastando cada una con su fuente | Cronograma del proceso y tabla de herramientas por áreas |
 
@@ -48,10 +48,11 @@ Queda fuera de la primera versión todo lo de la sección 12 (Visión).
 Cada pieza de contenido es un fichero Markdown o YAML dentro de una colección de Astro, con su esquema validado en la compilación.
 
 - **`fuentes`**: `id`, título, autoría, año, tipo (guía clínica, revisión, estudio, entidad, oficial, experiencia, libro), nivel (sección 6), idioma, URL, DOI o ISBN, licencia, fecha de la última comprobación y temas. En los estudios, además: diseño, tamaño de la muestra, edades, **porcentaje de niñas** y si da **resultados separados por sexo**. En los libros, la editorial.
-- **`glosario`**: término, alias (también en inglés), familia (sensorial, emociones, social, pensamiento, identidad o clínico), qué es, cómo se ve, con qué no confundirlo, **en niñas** (texto o «sin datos»), qué hacer (opcional: qué puede hacer la familia con esto), términos relacionados, fuentes y fecha de revisión.
+- **`glosario`**: término, alias (también en inglés), familia (sensorial, emociones, social, pensamiento, identidad o clínico), qué es, cómo se ve, con qué no confundirlo, **en niñas** (texto o «sin datos»), qué hacer (opcional: qué puede hacer la familia con esto), términos relacionados, fuentes, fecha de revisión y **escenas** (de una a tres; cada una con su texto, la edad y dónde pasa). Una escena solo muestra lo que la ficha ya dice con su fuente.
+- **`entidades`**: nombre tal como se escribe en el texto («AETAPI»), otros nombres («NAS»), web e idioma de la web. La primera vez que una ficha nombra una entidad, el nombre enlaza a su web; quien redacta no tiene que marcarlo.
 - **`senales`**: título, área del DSM-5, descripción, ejemplos cotidianos, cómo se suele describir, **cómo puede verse en niñas**, términos relacionados, fuentes y fecha de revisión.
 - **`herramientas`**: nombre, tipo (cribado, diagnóstico o complementaria), edades, quién la pasa, formato (cuestionario, entrevista, observación o prueba), duración, áreas que mide, cómo funciona, limitaciones, **en niñas**, qué preguntar al profesional, fuentes y fecha de revisión.
-- **`escenarios`**: situación, opciones, respuesta, explicación, términos y fuentes.
+- **`escenarios`** (las escenas de elegir): situación, opciones (siempre con «No lo sé»), explicación de cada opción, términos y fuentes.
 - **`dia-lucia`** *(aparcada)*: momentos del día (hora, escena, pictogramas y puntos que enlazan a una señal o a un término). Se retoma solo si la sección vuelve a encajar.
 - **`proceso`**: los pasos del cronograma de diagnóstico.
 
@@ -65,8 +66,15 @@ Esta es la red de seguridad del contenido.
 
 ## 5. Piezas interactivas
 
-1. **Mazo del glosario.** Tarjetas que se giran: delante el término, detrás la explicación y el ejemplo. Se pueden filtrar por familia. *Sin JavaScript:* una lista de definiciones.
-2. **Escenarios «¿Crisis o rabieta?» y similares.** Una situación corta, eliges una opción y se te explica el porqué. No hay fallos, solo explicaciones. *Sin JavaScript:* cada escenario es un `<details>` desplegable.
+1. **Escenas «¿Lo habéis visto?»** (`/escenas/`). La entrada ligera al glosario: primero la escena, después el nombre, para que la familia reconozca a su hija en situaciones del día a día. Se llega desde la portada y desde el glosario, cuya lista completa se mantiene.
+   - Una tarjeta cada vez. Delante, una escena de dos o tres frases (unas 50 palabras como mucho) con un pie de edad y lugar («7 años · en el parque»), sin nombres propios. Detrás, tras pulsar «¿Qué hay detrás?»: la familia con su color, «Detrás puede haber:», el término, la primera frase de «Qué es» y «Leer la ficha».
+   - Botones «Esto lo hemos visto», «Anterior» y «Siguiente». Progreso sin puntos: «Escena 3 de 30 · Habéis marcado 5». En cualquier momento, «Lo que habéis reconocido»: la lista de términos marcados con enlace a su ficha.
+   - Orden fijo elegido a mano, alternando familias y empezando por situaciones frecuentes y poco duras.
+   - **Sin diagnosticar:** nunca «es camuflaje», sino «detrás puede haber». Al empezar se recuerda que una escena sola no dice nada: cuenta el conjunto, que se mantenga en el tiempo y que le afecte en su día a día.
+   - **Variedad:** edades, lugares y formas de ser distintas (tímidas, habladoras, desinhibidas), algunas escenas con niños y pocas del tipo «estalla al llegar a casa». Una prueba avisa si más de un tercio de las escenas comparte edad o lugar.
+   - Solo se guardan, en el navegador, los ids de las escenas marcadas, con `try/catch`, un botón de «borrar lo marcado» bien visible y un aviso para dispositivos compartidos.
+   - Solo botones, sin gestos de deslizar. El giro es un fundido corto que desaparece con `prefers-reduced-motion`; al girar, el foco pasa al término; el progreso se anuncia con una región `aria-live` educada. *Sin JavaScript:* una lista de escenas, cada una con su «¿Qué hay detrás?» en un `<details>`; solo se pierde poder marcar.
+2. **Escenas de elegir «¿Crisis o rabieta?» y similares**, solo para parejas que se confunden (crisis o rabieta, crisis o desconexión, camuflaje o timidez…). Una situación corta con dos o tres opciones, siempre con «No lo sé». Cada opción lleva a su explicación, y nunca se dice «correcto» ni «fallo»: «Encaja mejor con una crisis, porque…». Aparecen en la ficha de los términos de la pareja, debajo de «No confundir con», y de vez en cuando como una tarjeta más entre las escenas. *Sin JavaScript:* cada una es un `<details>` desplegable.
 3. **«Un día con Lucía, 8 años»** *(aparcada)*. Una línea temporal del día de una niña inventada: la ropa con etiquetas por la mañana, el recreo en la periferia del grupo, el camuflaje en clase, el derrumbe al llegar a casa, su interés intenso por la tarde y la hora de dormir. Cada momento tiene puntos que, al tocarlos, muestran la señal que hay detrás, con su enlace al glosario. Lucía es un personaje compuesto que no se basa en ninguna niña real identificable. Las escenas usan pictogramas de ARASAAC. *Sin JavaScript:* una lista ordenada con las señales visibles.
 4. **Cuaderno de observaciones para el pediatra.** Al leer las señales, puedes marcar «esto lo he visto» y apuntar un ejemplo propio. Al final se genera un resumen para imprimir o guardar en PDF y llevarlo a la consulta.
    - **No suma ni puntúa.**
@@ -179,7 +187,7 @@ Esta es la red de seguridad del contenido.
 **Pruebas y CI** (GitHub Actions):
 
 - **Job de pruebas:**
-  - Vitest para la lógica del cuaderno y de los escenarios;
+  - Vitest para la lógica del cuaderno, de las escenas y de los enlaces a entidades;
   - compilación de Astro, que valida esquemas y referencias;
   - comprobación de enlaces rotos;
   - axe con Playwright sobre las páginas compiladas.
@@ -199,7 +207,7 @@ Esta es la red de seguridad del contenido.
 |---|---|---|
 | 0 | Cimientos | Repo, Astro con esquemas, guía de estilo, portada mínima, «Sobre esta web», aviso legal y privacidad, CI completo, despliegue en el subdominio, Pagefind, Web Analytics y correo de contacto. Con 3 o 4 términos de prueba para validar el circuito |
 | 1 | Herramientas de diagnóstico | Las fichas de herramientas, el cronograma y la tabla de herramientas por áreas |
-| 2 | Glosario (**primer lanzamiento**) | 25-30 términos, el mazo y 6-8 escenarios. El lanzamiento público espera a tener las herramientas y el glosario completos |
+| 2 | Glosario (**primer lanzamiento**) | 25-30 términos, las escenas «¿Lo habéis visto?» (una por término para empezar) y 6-8 escenas de elegir. El lanzamiento público espera a tener las herramientas y el glosario completos |
 | 3 | Señales y cuaderno | Las señales por áreas, con su apartado de niñas, y el cuaderno para el pediatra |
 
 «Un día con Lucía» queda aparcada: no convence como sección. Si algún día vuelve, necesita su propio hueco y reabrir la licencia de los pictogramas de ARASAAC.

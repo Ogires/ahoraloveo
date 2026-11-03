@@ -1,6 +1,6 @@
 ---
 name: lenguaje-claro
-description: Redacta y revisa los textos de la web «Ahora lo veo» (autismo en mujeres y niñas) para que una familia cansada o asustada los entienda a la primera. Aplica lenguaje claro en español de España (ISO 24495-1), la guía de estilo del proyecto y el peso justo de cada fuente. Úsala siempre que escribas, reescribas o revises una ficha (término del glosario, señal, herramienta de diagnóstico, escenario, momento de «Un día con Lucía»), la portada, «Sobre esta web», los avisos o cualquier texto que vaya a leer una familia, aunque nadie diga «lenguaje claro». Úsala también para revisar un borrador generado con IA o un texto ajeno antes de publicarlo.
+description: Redacta y revisa los textos de la web «Ahora lo veo» (autismo en mujeres y niñas) para que una familia cansada o asustada los entienda a la primera. Aplica lenguaje claro en español de España (ISO 24495-1), la guía de estilo del proyecto y el peso justo de cada fuente. Úsala siempre que escribas, reescribas o revises una ficha (término del glosario, señal, herramienta de diagnóstico, escena, escena de elegir, momento de «Un día con Lucía»), la portada, «Sobre esta web», los avisos o cualquier texto que vaya a leer una familia, aunque nadie diga «lenguaje claro». Úsala también para revisar un borrador generado con IA o un texto ajeno antes de publicarlo.
 ---
 
 # Lenguaje claro para familias
