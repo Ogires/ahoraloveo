@@ -139,3 +139,58 @@ describe('el nivel de una fuente encaja con su tipo', () => {
     expect(valido(esquemaFuente, { ...fuente, estudio })).toBe(false);
   });
 });
+
+describe('libros', () => {
+  const { url: _, ...sinUrl } = fuente;
+  const libro = {
+    ...sinUrl,
+    titulo: 'La ansiedad en el autismo',
+    autoria: 'Isabel Paula',
+    tipo: 'libro',
+    nivel: 'divulgacion',
+    idioma: 'es',
+    editorial: 'Alianza Editorial',
+    isbn: '978-84-206-9756-7',
+  };
+
+  it('acepta un libro con su ISBN, sin URL ni DOI', () => {
+    expect(valido(esquemaFuente, libro)).toBe(true);
+  });
+
+  it('un libro escrito en primera persona puede ser experiencia', () => {
+    expect(valido(esquemaFuente, { ...libro, nivel: 'experiencia' })).toBe(true);
+  });
+
+  it.each(['consenso', 'estudios', 'entidades'])('un libro no puede ser «%s»', (nivel) => {
+    expect(valido(esquemaFuente, { ...libro, nivel })).toBe(false);
+  });
+
+  it('la divulgación es solo para libros', () => {
+    expect(valido(esquemaFuente, { ...fuente, nivel: 'divulgacion' })).toBe(false);
+  });
+
+  it('un libro necesita su editorial', () => {
+    const { editorial: _e, ...sinEditorial } = libro;
+    expect(valido(esquemaFuente, sinEditorial)).toBe(false);
+  });
+
+  it('sin ISBN, URL ni DOI no hay forma de encontrar la fuente', () => {
+    const { isbn: _i, ...sinIsbn } = libro;
+    expect(valido(esquemaFuente, sinIsbn)).toBe(false);
+  });
+
+  it.each(['978-84-9104-953-1', '9788418139178', '84-206-9756-7', '0-306-40615-2'])(
+    'acepta el ISBN %s',
+    (isbn) => {
+      expect(valido(esquemaFuente, { ...libro, isbn })).toBe(true);
+    },
+  );
+
+  // Una cifra mal copiada o cambiada de sitio hace que el dígito de control no cuadre.
+  it.each(['978-84-206-9756-8', '978-84-206-9765-7', '84-206-9756-2', '978-84-206', 'ISBN 978-84-206-9756-7'])(
+    'rechaza %s como ISBN',
+    (isbn) => {
+      expect(valido(esquemaFuente, { ...libro, isbn })).toBe(false);
+    },
+  );
+});

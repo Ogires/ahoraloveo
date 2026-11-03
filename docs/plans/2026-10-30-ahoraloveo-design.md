@@ -47,7 +47,7 @@ Queda fuera de la primera versión todo lo de la sección 12 (Visión).
 
 Cada pieza de contenido es un fichero Markdown o YAML dentro de una colección de Astro, con su esquema validado en la compilación.
 
-- **`fuentes`**: `id`, título, autoría, año, tipo (guía clínica, revisión, estudio, entidad, oficial, experiencia), nivel (sección 6), idioma, URL o DOI, licencia, fecha de la última comprobación y temas. En los estudios, además: diseño, tamaño de la muestra, edades, **porcentaje de niñas** y si da **resultados separados por sexo**.
+- **`fuentes`**: `id`, título, autoría, año, tipo (guía clínica, revisión, estudio, entidad, oficial, experiencia, libro), nivel (sección 6), idioma, URL, DOI o ISBN, licencia, fecha de la última comprobación y temas. En los estudios, además: diseño, tamaño de la muestra, edades, **porcentaje de niñas** y si da **resultados separados por sexo**. En los libros, la editorial.
 - **`glosario`**: término, alias (también en inglés), familia (sensorial, emociones, social, pensamiento, identidad o clínico), qué es, cómo se ve, con qué no confundirlo, **en niñas** (texto o «sin datos»), qué hacer (opcional: qué puede hacer la familia con esto), términos relacionados, fuentes y fecha de revisión.
 - **`senales`**: título, área del DSM-5, descripción, ejemplos cotidianos, cómo se suele describir, **cómo puede verse en niñas**, términos relacionados, fuentes y fecha de revisión.
 - **`herramientas`**: nombre, tipo (cribado, diagnóstico o complementaria), edades, quién la pasa, formato (cuestionario, entrevista, observación o prueba), duración, áreas que mide, cómo funciona, limitaciones, **en niñas**, qué preguntar al profesional, fuentes y fecha de revisión.
@@ -85,8 +85,9 @@ Esta es la red de seguridad del contenido.
 | 1. Consenso | Guías de práctica clínica (NICE, SIGN, Ministerio de Sanidad), revisiones sistemáticas y metaanálisis, OMS | Afirmaciones clínicas |
 | 2. Estudios | Estudios revisados por pares, con su diseño y su muestra a la vista | «Un estudio con N niñas sugiere…», nunca como verdad cerrada |
 | 3. Entidades | Autismo España, Confederación Asperger España, AETAPI, Autistica, National Autistic Society | Orientación práctica |
+| 4. Divulgación | Libros de especialistas publicados por una editorial (Barry Prizant, Isabel Paula, José Ramón Alonso…) | Explicar conceptos y enfoques, siempre con el nombre de quien lo dice. Las cifras y las afirmaciones clínicas, de la fuente original que cite el libro |
 | Oficial | BOE, DOGV, Generalitat, Seguridad Social, Agencia Tributaria | Trámites, y solo para trámites |
-| Experiencia | Textos del autor y relatos en primera persona de mujeres autistas | Siempre marcada como vivencia |
+| Experiencia | Textos del autor y relatos en primera persona de mujeres autistas, también en libro (Temple Grandin) | Siempre marcada como vivencia |
 
 **Quedan fuera:** las webs que venden terapias, los textos sin autoría ni fecha y los foros.
 

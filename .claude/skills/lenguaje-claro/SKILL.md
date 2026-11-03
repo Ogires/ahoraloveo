@@ -72,6 +72,7 @@ La familia no ve el nivel de la fuente: lo nota en cómo está escrito el texto.
 | 1. Consenso | «Las guías clínicas coinciden en que…», «Según la guía NICE…» | — |
 | 2. Estudio | «Un estudio de 2023 con 120 niñas encontró que…», «Hay pocos estudios, y pequeños, pero apuntan a…» | «Los estudios demuestran…» o «está demostrado» con un solo estudio |
 | 3. Entidad | «Autismo España recomienda…» | Presentarlo como evidencia clínica |
+| 4. Divulgación | «La psicóloga Isabel Paula explica que…», «Barry Prizant propone…» | Presentarlo como consenso, o sacar una cifra del libro sin ir al estudio que cita |
 | Oficial | «Según la web de la Generalitat (comprobado en octubre de 2026)…» | Plazos o importes sin fuente ni fecha |
 | Experiencia | «Muchas mujeres autistas cuentan que…», «En nuestra casa…» | Presentarla como un dato |
 

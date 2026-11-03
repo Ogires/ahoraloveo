@@ -63,29 +63,88 @@ export function silabas(token) {
   return Math.max(total, 1);
 }
 
-// Deja solo la prosa: sin claves YAML, ids, URLs ni sintaxis Markdown.
-export function prosa(texto) {
-  return texto
-    .split(/\r?\n/)
-    .map((linea) => {
-      if (/^\s*(---|```)/.test(linea)) return '';
-      let l = linea.replace(/^\s*[\w-]+:\s*[>|]?-?\s*/, '');
-      if (/^\[.*\]$/.test(l.trim()) || /^[\w./-]+$/.test(l.trim())) return '';
-      return l
-        .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
-        .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
-        .replace(/https?:\/\/\S+/g, '')
-        .replace(/<[^>]+>/g, '')
-        .replace(/`[^`]*`/g, '')
-        .replace(/^\s*(#+|>|[-*+]|\d+\.)\s*/, '')
-        .replace(/[*_]/g, '');
-    })
-    .join('\n');
+// Quita a una línea de prosa los enlaces, las URL y la sintaxis Markdown.
+const limpiar = (linea) =>
+  linea
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .replace(/https?:\/\/\S+/g, '')
+    .replace(/<[^>]+>/g, '')
+    .replace(/`[^`]*`/g, '')
+    .replace(/^\s*(#+|>|[-*+]|\d+\.)\s*/, '')
+    .replace(/[*_]/g, '')
+    .trim();
+
+const CLAVE_YAML = /^\s*[\w-]+:(?:\s|$)/;
+const INICIO_BLOQUE = /^(\s*)[\w-]+:\s*([>|])[-+]?\s*$/;
+const ESTRUCTURA_MD = /^\s*(#+|>|[-*+]|\d+\.)\s/;
+const SOLO_ID = /^(\[.*\]|[\w./-]+)$/;
+
+// Deja solo la prosa, en párrafos: sin claves YAML, ids, URL ni sintaxis Markdown.
+// Las líneas de un mismo párrafo (un bloque «>» de YAML o un párrafo de Markdown
+// partido en varias líneas) se unen. Antes cada salto de línea contaba como final de
+// frase: el índice salía inflado y las frases largas partidas en dos líneas no se veían.
+// Cada párrafo guarda en qué línea del fichero empieza cada trozo, para los avisos.
+export function parrafos(texto) {
+  const lista = [];
+  let actual = null;
+  let bloque = null; // sangría y tipo («>» o «|») del bloque YAML abierto
+  const cerrar = () => {
+    if (actual?.texto) lista.push(actual);
+    actual = null;
+  };
+  const anadir = (trozo, linea) => {
+    if (!trozo) return;
+    actual ??= { texto: '', lineas: [] };
+    if (actual.texto) actual.texto += ' ';
+    actual.lineas.push({ desde: actual.texto.length, linea });
+    actual.texto += trozo;
+  };
+
+  texto.split(/\r?\n/).forEach((original, i) => {
+    const linea = i + 1;
+    const vacia = original.trim() === '';
+    const sangria = original.length - original.trimStart().length;
+    if (bloque && !vacia && sangria <= bloque.sangria) bloque = null;
+
+    if (bloque) {
+      // Dentro de un bloque todo es prosa, aunque empiece por «palabra:».
+      if (vacia) return cerrar();
+      anadir(limpiar(original), linea);
+      if (bloque.tipo === '|') cerrar();
+      return;
+    }
+    if (vacia || /^\s*(---|```)/.test(original)) return cerrar();
+
+    const inicio = original.match(INICIO_BLOQUE);
+    if (inicio) {
+      cerrar();
+      bloque = { sangria: inicio[1].length, tipo: inicio[2] };
+      return;
+    }
+    if (CLAVE_YAML.test(original)) {
+      // Un valor en la misma línea que su clave es un párrafo propio, salvo ids, listas y fechas.
+      cerrar();
+      const valor = original.replace(CLAVE_YAML, '').trim();
+      if (!SOLO_ID.test(valor)) anadir(limpiar(valor), linea);
+      return cerrar();
+    }
+    if (ESTRUCTURA_MD.test(original)) cerrar();
+    const limpia = limpiar(original);
+    if (!actual && SOLO_ID.test(limpia)) return;
+    anadir(limpia, linea);
+  });
+  cerrar();
+  return lista;
 }
 
+export const prosa = (texto) => parrafos(texto).map((p) => p.texto).join('\n');
+
 export function analizar(texto) {
-  const limpio = prosa(texto);
-  const frases = limpio
+  const lista = parrafos(texto);
+  const frases = lista
+    .map((p) => p.texto)
+    .join('\n')
     .split(/\n|[.!?…]+(?=\s|$)/u)
     .map((f) => ({ texto: f.trim(), palabras: f.match(/\p{L}+/gu) ?? [] }))
     .filter((f) => f.palabras.length > 0);
@@ -95,12 +154,18 @@ export function analizar(texto) {
     ? 206.835 - 62.3 * (nSilabas / palabras.length) - palabras.length / frases.length
     : null;
 
+  // Se buscan en el párrafo entero, para encontrar también «señales de alarma» partido
+  // entre dos líneas, y se informa de la línea del fichero donde empieza lo encontrado.
   const avisos = [];
-  limpio.split('\n').forEach((linea, i) => {
+  for (const p of lista) {
     for (const [re, motivo] of AVISOS) {
-      for (const m of linea.matchAll(re)) avisos.push({ linea: i + 1, encontrado: m[0], motivo });
+      for (const m of p.texto.matchAll(re)) {
+        const linea = p.lineas.findLast((l) => l.desde <= m.index).linea;
+        avisos.push({ linea, encontrado: m[0], motivo });
+      }
     }
-  });
+  }
+  avisos.sort((a, b) => a.linea - b.linea);
 
   return {
     palabras: palabras.length,

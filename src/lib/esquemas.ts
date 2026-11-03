@@ -6,13 +6,14 @@ export const NIVELES = {
   consenso: 'Consenso: guías clínicas y revisiones',
   estudios: 'Estudio',
   entidades: 'Entidad',
+  divulgacion: 'Divulgación: libros de especialistas',
   oficial: 'Fuente oficial',
   experiencia: 'Experiencia',
 } as const;
 type Nivel = keyof typeof NIVELES;
 const IDS_NIVELES = Object.keys(NIVELES) as [Nivel, ...Nivel[]];
 
-const TIPOS = ['guia-clinica', 'revision', 'estudio', 'entidad', 'oficial', 'experiencia'] as const;
+const TIPOS = ['guia-clinica', 'revision', 'estudio', 'entidad', 'oficial', 'experiencia', 'libro'] as const;
 type Tipo = (typeof TIPOS)[number];
 
 // Qué niveles admite cada tipo, para que el peso de una fuente no se infle.
@@ -24,7 +25,23 @@ const NIVELES_POR_TIPO: Record<Tipo, Nivel[]> = {
   entidad: ['entidades', 'consenso'],
   oficial: ['oficial', 'consenso'],
   experiencia: ['experiencia'],
+  // Un libro de especialista es divulgación; uno escrito desde la propia vivencia, experiencia.
+  libro: ['divulgacion', 'experiencia'],
 };
+
+// ISBN-10 o ISBN-13, con o sin guiones. El dígito de control caza las cifras mal copiadas.
+function isbnValido(isbn: string): boolean {
+  const cifras = isbn.replace(/-/g, '');
+  if (/^97[89]\d{10}$/.test(cifras)) {
+    const suma = [...cifras].reduce((total, c, i) => total + Number(c) * (i % 2 ? 3 : 1), 0);
+    return suma % 10 === 0;
+  }
+  if (/^\d{9}[\dX]$/.test(cifras)) {
+    const suma = [...cifras].reduce((total, c, i) => total + (c === 'X' ? 10 : Number(c)) * (10 - i), 0);
+    return suma % 11 === 0;
+  }
+  return false;
+}
 
 const texto = () => z.string().trim().min(1);
 
@@ -45,6 +62,8 @@ export const esquemaFuente = z
     idioma: z.string().regex(/^[a-z]{2}$/),
     url: z.httpUrl().optional(),
     doi: z.string().regex(/^10\.\d{4,9}\/\S+$/).optional(),
+    isbn: z.string().refine(isbnValido, 'El ISBN no es válido: revisa que esté bien copiado').optional(),
+    editorial: texto().optional(),
     licencia: z.string().optional(),
     comprobado: fecha(),
     temas: z.array(z.string()).default([]),
@@ -58,7 +77,11 @@ export const esquemaFuente = z
       })
       .optional(),
   })
-  .refine((f) => f.url || f.doi, { message: 'Cada fuente necesita una URL o un DOI' })
+  .refine((f) => f.url || f.doi || f.isbn, { message: 'Cada fuente necesita una URL, un DOI o un ISBN' })
+  .refine((f) => f.tipo !== 'libro' || f.editorial, {
+    message: 'Un libro necesita su editorial',
+    path: ['editorial'],
+  })
   .refine((f) => f.tipo !== 'estudio' || f.estudio, {
     message: 'Un estudio necesita su diseño, muestra, edades, porcentaje de niñas y si separa resultados por sexo',
     path: ['estudio'],
