@@ -38,7 +38,7 @@ Tres secciones de contenido fijo, cada una con su pieza interactiva:
 | Sección | Contenido | Interactividad |
 |---|---|---|
 | **Glosario** | 25-30 términos (alexitimia, crisis o *meltdown*, desconexión o *shutdown*, estereotipias, camuflaje, ecolalia, intereses especiales, teoría de la mente, coherencia central, funciones ejecutivas, interocepción, hiper e hiposensibilidad, burnout autista, doble empatía, niveles de apoyo, neurodiversidad, neurodivergente, neurotípico…) | Mazo de tarjetas y escenarios «¿Crisis o rabieta?» |
-| **Señales** | Organizadas según los criterios del DSM-5: comunicación e interacción social por un lado, y patrones repetitivos, rutinas, intereses y aspectos sensoriales por otro. Cada señal compara «cómo se suele describir» con «cómo puede verse en niñas» | «Un día con Lucía» y el cuaderno de observaciones |
+| **Señales** | Organizadas según los criterios del DSM-5: comunicación e interacción social por un lado, y patrones repetitivos, rutinas, intereses y aspectos sensoriales por otro. Cada señal compara «cómo se suele describir» con «cómo puede verse en niñas» | El cuaderno de observaciones |
 | **Herramientas de diagnóstico** | Cribado frente a diagnóstico. Candidatas: M-CHAT-R/F, SCQ, ADOS-2, ADI-R, SRS-2, pruebas de teoría de la mente y GQ-ASC. La lista se cierra al redactar, contrastando cada una con su fuente | Cronograma del proceso y tabla de herramientas por áreas |
 
 Queda fuera de la primera versión todo lo de la sección 12 (Visión).
@@ -52,7 +52,7 @@ Cada pieza de contenido es un fichero Markdown o YAML dentro de una colección d
 - **`senales`**: título, área del DSM-5, descripción, ejemplos cotidianos, cómo se suele describir, **cómo puede verse en niñas**, términos relacionados, fuentes y fecha de revisión.
 - **`herramientas`**: nombre, tipo (cribado, diagnóstico o complementaria), edades, quién la pasa, formato (cuestionario, entrevista, observación o prueba), duración, áreas que mide, cómo funciona, limitaciones, **en niñas**, qué preguntar al profesional, fuentes y fecha de revisión.
 - **`escenarios`**: situación, opciones, respuesta, explicación, términos y fuentes.
-- **`dia-lucia`**: momentos del día (hora, escena, pictogramas y puntos que enlazan a una señal o a un término).
+- **`dia-lucia`** *(aparcada)*: momentos del día (hora, escena, pictogramas y puntos que enlazan a una señal o a un término). Se retoma solo si la sección vuelve a encajar.
 - **`proceso`**: los pasos del cronograma de diagnóstico.
 
 **La compilación falla si:**
@@ -67,7 +67,7 @@ Esta es la red de seguridad del contenido.
 
 1. **Mazo del glosario.** Tarjetas que se giran: delante el término, detrás la explicación y el ejemplo. Se pueden filtrar por familia. *Sin JavaScript:* una lista de definiciones.
 2. **Escenarios «¿Crisis o rabieta?» y similares.** Una situación corta, eliges una opción y se te explica el porqué. No hay fallos, solo explicaciones. *Sin JavaScript:* cada escenario es un `<details>` desplegable.
-3. **«Un día con Lucía, 8 años».** Una línea temporal del día de una niña inventada: la ropa con etiquetas por la mañana, el recreo en la periferia del grupo, el camuflaje en clase, el derrumbe al llegar a casa, su interés intenso por la tarde y la hora de dormir. Cada momento tiene puntos que, al tocarlos, muestran la señal que hay detrás, con su enlace al glosario. Lucía es un personaje compuesto que no se basa en ninguna niña real identificable. Las escenas usan pictogramas de ARASAAC. *Sin JavaScript:* una lista ordenada con las señales visibles.
+3. **«Un día con Lucía, 8 años»** *(aparcada)*. Una línea temporal del día de una niña inventada: la ropa con etiquetas por la mañana, el recreo en la periferia del grupo, el camuflaje en clase, el derrumbe al llegar a casa, su interés intenso por la tarde y la hora de dormir. Cada momento tiene puntos que, al tocarlos, muestran la señal que hay detrás, con su enlace al glosario. Lucía es un personaje compuesto que no se basa en ninguna niña real identificable. Las escenas usan pictogramas de ARASAAC. *Sin JavaScript:* una lista ordenada con las señales visibles.
 4. **Cuaderno de observaciones para el pediatra.** Al leer las señales, puedes marcar «esto lo he visto» y apuntar un ejemplo propio. Al final se genera un resumen para imprimir o guardar en PDF y llevarlo a la consulta.
    - **No suma ni puntúa.**
    - Se guarda en `localStorage`, con las lecturas y escrituras protegidas por `try/catch`.
@@ -122,7 +122,7 @@ Esta es la red de seguridad del contenido.
 
 ## 8. Identidad visual
 
-**La idea: el espectro es una rueda, no una línea.** No va de «menos» a «más» autista: cada persona tiene su propia combinación. La rueda reúne las seis familias del glosario, y cada familia tiene un color que se repite por toda la web: en las tarjetas, en las señales y en el día de Lucía.
+**La idea: el espectro es una rueda, no una línea.** No va de «menos» a «más» autista: cada persona tiene su propia combinación. La rueda reúne las seis familias del glosario, y cada familia tiene un color que se repite por toda la web: en las tarjetas y en las señales.
 
 **Tipografía:** Lexend, una sola familia para todo, diseñada para que leer cueste menos esfuerzo.
 
@@ -159,7 +159,6 @@ Esta es la red de seguridad del contenido.
 - Dentro de una caja tintada con el color de una familia, los enlaces van en color tinta y subrayados. El violeta del modo oscuro no llega a 4,5:1 sobre esas cajas.
 - Formas: esquinas redondeadas (28 px en tarjetas y paneles, botones en forma de píldora), sin sombras ni degradados.
 - El modo oscuro sigue la preferencia del sistema y tiene además un selector manual.
-- Las escenas de Lucía usan pictogramas de ARASAAC dentro de un círculo del color de su familia.
 - Movimiento: el giro de una tarjeta es, como mucho, un fundido corto, y desaparece con `prefers-reduced-motion`.
 
 **Pendiente:** el sello visual del apartado «En niñas» y el logotipo, que depende del nombre.
@@ -198,10 +197,11 @@ Esta es la red de seguridad del contenido.
 | # | Iteración | Qué incluye |
 |---|---|---|
 | 0 | Cimientos | Repo, Astro con esquemas, guía de estilo, portada mínima, «Sobre esta web», aviso legal y privacidad, CI completo, despliegue en el subdominio, Pagefind, Web Analytics y correo de contacto. Con 3 o 4 términos de prueba para validar el circuito |
-| 1 | Glosario (**primer lanzamiento**) | 25-30 términos, el mazo y 6-8 escenarios |
-| 2 | Señales y cuaderno | Las señales por áreas, con su apartado de niñas, y el cuaderno para el pediatra |
-| 3 | Un día con Lucía | La línea temporal interactiva con pictogramas |
-| 4 | Herramientas de diagnóstico | Las fichas, el cronograma y la tabla de herramientas por áreas |
+| 1 | Herramientas de diagnóstico | Las fichas de herramientas, el cronograma y la tabla de herramientas por áreas |
+| 2 | Glosario (**primer lanzamiento**) | 25-30 términos, el mazo y 6-8 escenarios. El lanzamiento público espera a tener las herramientas y el glosario completos |
+| 3 | Señales y cuaderno | Las señales por áreas, con su apartado de niñas, y el cuaderno para el pediatra |
+
+«Un día con Lucía» queda aparcada: no convence como sección. Si algún día vuelve, necesita su propio hueco y reabrir la licencia de los pictogramas de ARASAAC.
 
 ## 12. Visión a largo plazo (sin fecha)
 
