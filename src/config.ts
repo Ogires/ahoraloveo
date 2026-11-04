@@ -5,7 +5,7 @@ export const SITIO = {
   lema: 'Para cuando aparece la palabra «autismo»', // dice para quién es, no por qué se hace
   url: 'https://ahoraloveo.webninja.workers.dev',
   autoria: 'Ogires', // seudónimo (decisión 3)
-  correo: 'contacto@ejemplo.org', // provisional: cambiar antes de desplegar
+  correo: 'ahoraloveo@webninja.fyi', // Cloudflare Email Routing (decisión 5)
   // Con false, cada página lleva noindex para que los buscadores no la indexen.
   publicada: false,
   // Token público de Cloudflare Web Analytics. Vacío: sin estadísticas.
