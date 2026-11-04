@@ -5,6 +5,7 @@ import Base from '../../layouts/Base.astro';
 import { SITIO } from '../../config';
 import { enlaceCorreccion } from '../../lib/correcciones';
 import { enlazarEntidades, type Entidad } from '../../lib/enlazar';
+import { cargarEntidades } from '../../lib/entidades';
 import { NIVELES } from '../../lib/esquemas';
 import { formatearFecha } from '../../lib/fecha';
 import { exigirTodas } from '../../lib/referencias';
@@ -28,11 +29,7 @@ const relacionados = exigirTodas(
   d.relacionados.map((r) => `glosario/${r.id}`),
   origen,
 );
-const entidades: Entidad[] = (await getCollection('entidades')).map((e) => ({
-  nombres: [e.data.nombre, ...e.data.otros_nombres],
-  web: e.data.web,
-  idioma: e.data.idioma,
-}));
+const entidades = await cargarEntidades();
 // En el orden en que se leen los apartados: la primera mención de la ficha es la que enlaza.
 const yaEnlazadas = new Set<Entidad>();
 const enlazar = (t: string) => enlazarEntidades(t, entidades, yaEnlazadas);

@@ -4,7 +4,7 @@ export const SITIO = {
   tema: 'Autismo en mujeres y niñas', // subtítulo: dice de qué va y es lo que se busca
   lema: 'La guía que nos hubiera gustado tener',
   url: 'https://ahoraloveo.webninja.workers.dev',
-  autoria: '[Firma pendiente]',
+  autoria: 'Ogires', // seudónimo (decisión 3)
   correo: 'contacto@ejemplo.org', // provisional: cambiar antes de desplegar
   // Con false, cada página lleva noindex para que los buscadores no la indexen.
   publicada: false,

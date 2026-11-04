@@ -1,0 +1,66 @@
+---
+import TextoEnlazado from '../components/TextoEnlazado.astro';
+import Base from '../layouts/Base.astro';
+import { SITIO } from '../config';
+import { enlazarEntidades, type Entidad } from '../lib/enlazar';
+import { cargarEntidades } from '../lib/entidades';
+import { NIVELES } from '../lib/esquemas';
+
+type Nivel = keyof typeof NIVELES;
+
+// Record con todas las claves: si mañana se añade un nivel, la compilación pide su explicación.
+const usos: Record<Nivel, string> = {
+  consenso:
+    'Guías clínicas, que son las que siguen los profesionales, y revisiones que reúnen muchos estudios sobre una misma pregunta. En ellas se apoyan las afirmaciones sobre salud.',
+  estudios:
+    'Estudios que otros equipos de investigación han revisado antes de publicarse. Siempre decimos con cuántas personas se hicieron, y nunca los damos por verdad cerrada.',
+  entidades: 'Asociaciones como AETAPI o la National Autistic Society. Las usamos para los consejos prácticos.',
+  divulgacion:
+    'Libros de especialistas publicados por una editorial. Sirven para explicar ideas, siempre diciendo quién las propone. Las cifras las sacamos del estudio original que cita el libro.',
+  oficial: 'Boletines y webs de las administraciones. Solo para trámites.',
+  experiencia: 'Relatos en primera persona, también en libro. Siempre los marcamos como vivencia, no como un dato.',
+};
+
+const entidades = await cargarEntidades();
+const yaEnlazadas = new Set<Entidad>();
+const niveles = (Object.keys(NIVELES) as Nivel[]).map((id) => ({
+  nombre: NIVELES[id],
+  uso: enlazarEntidades(usos[id], entidades, yaEnlazadas),
+}));
+---
+
+<Base titulo="Sobre esta web" descripcion="Quién hace esta web, por qué y cómo se elige y se revisa la información.">
+  <div class="texto" data-pagefind-body>
+    <h1>Sobre esta web</h1>
+
+    <h2>Quién la hace</h2>
+    <p>Esta web la escribe {SITIO.autoria}. No somos profesionales de la salud: intentamos leer por vosotros las guías y los estudios, y contaros lo que dicen con calma y con palabras sencillas. Cada cosa que decimos lleva su fuente, para que podáis comprobarla.</p>
+
+    <h2>Para quién es</h2>
+    <p>Para familias con hijos o hijas de 0 a 12 años, cuando hay una sospecha de autismo o un diagnóstico reciente. Cada página cuenta, además, qué cambia en las niñas.</p>
+    <p>También para quien comparte su día a día con ellas y ellos: abuelas y abuelos, el profesorado o el personal del comedor y de las extraescolares. Y para las familias de sus compañeras y compañeros, que tanto pueden ayudar en un cumpleaños o en una tarde de parque.</p>
+
+    <h2>Cómo elegimos la información</h2>
+    <ul>
+      <li>Cada afirmación lleva su fuente, y cada página, la fecha en que se revisó.</li>
+      <li>Decimos cuánto pesa cada fuente: no es lo mismo una guía clínica que un estudio pequeño.</li>
+      <li>Cuando no hay datos sobre niñas, lo decimos.</li>
+      <li>No vendemos nada ni recomendamos terapias concretas.</li>
+    </ul>
+    <p>Cada fuente lleva una de estas etiquetas:</p>
+    <dl>
+      {niveles.map((n) => (
+        <div>
+          <dt>{n.nombre}</dt>
+          <dd><TextoEnlazado trozos={n.uso} /></dd>
+        </div>
+      ))}
+    </dl>
+
+    <h2>Lo que esta web no es</h2>
+    <p>No sustituye un diagnóstico ni el consejo de profesionales. Si algo de lo que leéis os preocupa, habladlo con su pediatra.</p>
+
+    <h2>Si algo está mal</h2>
+    <p>Cada término del glosario tiene un enlace para avisarnos. También podéis escribirnos a <a href={`mailto:${SITIO.correo}`}>{SITIO.correo}</a>.</p>
+  </div>
+</Base>

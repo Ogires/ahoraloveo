@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITIO } from '../config';
+---
+
+<Base titulo="Aviso legal y privacidad" descripcion="Quién está detrás de esta web, qué datos se tratan y con qué licencias se comparte.">
+  <div class="texto">
+    <h1>Aviso legal y privacidad</h1>
+
+    <h2>Quién está detrás</h2>
+    <p>Esta web la hace {SITIO.autoria}. Es un proyecto personal, sin fines comerciales y sin publicidad. Para cualquier consulta, escribid a <a href={`mailto:${SITIO.correo}`}>{SITIO.correo}</a>.</p>
+
+    <h2>Privacidad</h2>
+    <p>No hay cuentas, ni cookies, ni formularios.</p>
+    <ul>
+      <li>Si cambiáis entre el modo claro y el oscuro, esa preferencia se guarda solo en vuestro navegador.</li>
+      <li>La tipografía está en esta misma web: no se descarga de Google ni de ningún otro servicio.</li>
+      <li>Cloudflare aloja la web. Como cualquier alojamiento, recibe la dirección de internet de vuestro dispositivo (la IP) para poder enviaros las páginas.</li>
+      {/* Según Cloudflare, Web Analytics no usa cookies ni localStorage y no identifica a nadie por su IP (comprobado el 2026-11-04). */}
+      {SITIO.analytics && <li>Para contar las visitas usamos Cloudflare Web Analytics, que no usa cookies ni os sigue de una web a otra.</li>}
+      <li>Si nos escribís, usamos vuestro correo solo para responderos.</li>
+    </ul>
+
+    <h2>Licencias</h2>
+    <ul>
+      <li>Los textos tienen licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" hreflang="es">Creative Commons BY-SA 4.0</a>. Podéis copiarlos y adaptarlos si decís de dónde salen y los compartís con la misma licencia.</li>
+      <li>El código tiene licencia MIT.</li>
+      <li>La tipografía Lexend tiene licencia SIL Open Font License.</li>
+    </ul>
+
+    <h2>Aviso</h2>
+    <p>La información de esta web es divulgativa. No sustituye un diagnóstico ni el consejo profesional.</p>
+  </div>
+</Base>
