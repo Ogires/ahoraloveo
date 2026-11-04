@@ -2,7 +2,7 @@
 export const SITIO = {
   nombre: 'Ahora lo veo', // candidato: faltan las marcas y la prueba con familias
   tema: 'Autismo en mujeres y niñas', // subtítulo: dice de qué va y es lo que se busca
-  lema: 'La guía que nos hubiera gustado tener',
+  lema: 'Para cuando aparece la palabra «autismo»', // dice para quién es, no por qué se hace
   url: 'https://ahoraloveo.webninja.workers.dev',
   autoria: 'Ogires', // seudónimo (decisión 3)
   correo: 'contacto@ejemplo.org', // provisional: cambiar antes de desplegar

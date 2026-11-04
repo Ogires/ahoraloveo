@@ -1,6 +1,6 @@
 # Ahora lo veo: diseño
 
-> Nombre en clave: `ahoraloveo`. «Ahora lo veo» es el candidato a nombre definitivo. Lema: **«La guía que nos hubiera gustado tener»**.
+> Nombre en clave: `ahoraloveo`. «Ahora lo veo» es el candidato a nombre definitivo. Lema: **«Para cuando aparece la palabra "autismo"»**.
 
 Web de información sobre autismo para quien empieza, con el foco puesto en cómo se presenta en mujeres y niñas. La primera versión se centra en las niñas y sus familias.
 
