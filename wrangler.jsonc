@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "ahoraloveo",
+  "compatibility_date": "2026-10-01",
+  // Worker solo con assets: no hay script. Cuando llegue el RAG, se añade "main".
+  "assets": {
+    "directory": "./dist",
+    // Una ruta que no existe recibe 404.html con estado 404, en lugar de una respuesta vacía.
+    "not_found_handling": "404-page"
+  },
+  "workers_dev": true
+  // Cuando haya nombre: "routes": [{ "pattern": "<subdominio>.webninja.fyi", "custom_domain": true }]
+}
