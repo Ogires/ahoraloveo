@@ -26,6 +26,8 @@ interface Paleta {
   acento: string;
   'sobre-acento': string;
   linea: string;
+  // Fondo de las palabras resaltadas en la búsqueda: el amarillo de «Social» mezclado con la superficie.
+  resaltado: string;
 }
 
 export const CLARO: Paleta = {
@@ -36,6 +38,7 @@ export const CLARO: Paleta = {
   acento: '#4F46A5',
   'sobre-acento': '#FFFFFF',
   linea: '#DEDBEA',
+  resaltado: '#F5E2B1',
 };
 
 export const OSCURO: Paleta = {
@@ -46,6 +49,7 @@ export const OSCURO: Paleta = {
   acento: '#B2ACF5',
   'sobre-acento': '#1A1827',
   linea: '#36324A',
+  resaltado: '#605447',
 };
 
 const variables = (paleta: Paleta) =>

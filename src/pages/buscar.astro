@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base titulo="Buscar" descripcion="Buscad un término o una palabra en toda la web.">
+  <Fragment slot="cabeza">
+    <link rel="stylesheet" href="/pagefind/pagefind-component-ui.css" />
+    <script is:inline type="module" src="/pagefind/pagefind-component-ui.js"></script>
+    <script is:inline type="module" src="/buscar.js"></script>
+  </Fragment>
+  <div class="buscar">
+    <h1>Buscar</h1>
+    <noscript>
+      <p>La búsqueda necesita JavaScript. Mientras, tenéis <a href="/glosario/">todos los términos en el glosario</a>.</p>
+    </noscript>
+    <pagefind-input></pagefind-input>
+    <pagefind-summary></pagefind-summary>
+    <pagefind-results></pagefind-results>
+  </div>
+</Base>
+
+<style>
+  .buscar { display: flex; flex-direction: column; gap: 1.5rem; max-width: 44rem; padding-block: 1.5rem 0; }
+</style>

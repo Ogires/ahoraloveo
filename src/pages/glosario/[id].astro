@@ -46,7 +46,8 @@ const url = new URL(Astro.url.pathname, Astro.site).href;
 
 <Base titulo={d.termino} descripcion={d.que_es}>
   <article class={`ficha f-${d.familia}`} data-pagefind-body>
-    <p><a href="/glosario/">Glosario</a></p>
+    {/* La navegación no se indexa: buscar «crisis» no debe traer cada ficha que solo la enlaza. */}
+    <p data-pagefind-ignore><a href="/glosario/">Glosario</a></p>
     <header>
       <span class="chip">{familia.nombre}</span>
       <h1>{d.termino}</h1>
@@ -78,7 +79,7 @@ const url = new URL(Astro.url.pathname, Astro.site).href;
       </section>
     )}
     {relacionados.length > 0 && (
-      <section aria-labelledby="relacionados">
+      <section aria-labelledby="relacionados" data-pagefind-ignore>
         <h2 id="relacionados">Términos relacionados</h2>
         <ul class="relacionados">
           {relacionados.map((r) => <li><a href={`/glosario/${r.id}/`}>{r.data.termino}</a></li>)}
@@ -106,7 +107,7 @@ const url = new URL(Astro.url.pathname, Astro.site).href;
         ))}
       </ol>
     </section>
-    <footer class="meta">
+    <footer class="meta" data-pagefind-ignore>
       <p>Revisado el {formatearFecha(d.revisado)}.</p>
       <p><a href={enlaceCorreccion({ correo: SITIO.correo, pagina: d.termino, url })}>¿Algo está mal o desactualizado? Avisadnos</a></p>
     </footer>

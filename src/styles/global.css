@@ -83,22 +83,41 @@ main:focus { outline: none; }
 }
 .pie a { color: var(--tinta-suave); }
 
-/* Pagefind (Component UI): solo se puede tematizar con sus variables */
+/* Pagefind (Component UI): se tematiza con sus variables, que siguen al modo claro u oscuro. */
 :root {
   --pf-text: var(--tinta);
   --pf-text-secondary: var(--tinta-suave);
+  --pf-text-muted: var(--tinta-suave);
   --pf-background: var(--superficie);
   --pf-border: var(--linea);
   --pf-hover: var(--fondo);
-  --pf-mark: color-mix(in srgb, var(--social) 45%, transparent);
+  --pf-mark: var(--tinta); /* es el color del texto resaltado, no su fondo */
   --pf-font: 'Lexend Variable', 'Trebuchet MS', sans-serif;
   --pf-outline-focus: var(--acento);
   --pf-outline-width: 3px;
   --pf-border-radius: 16px;
   --pf-input-font-size: 1.125rem;
+  --pf-summary-font-size: 1rem;
+  --pf-result-title-font-size: 1.125rem;
+  --pf-result-excerpt-font-size: 1rem;
   --pf-shadow-sm: none;
   --pf-shadow-md: none;
   --pf-shadow-lg: none;
+}
+/* Lo que sus variables no cubren: Pagefind corta cada extracto a una línea (a 320 px, cuatro palabras)
+   y deja el resaltado sin fondo. Lo fija con selectores de tres ids, :is(*, #\#); con cuatro le ganamos
+   sin !important. */
+:is(*, #\#):is(*, #\#):is(*, #\#):is(*, #\#) :is(.pf-result-excerpt, .pf-heading-excerpt) {
+  white-space: normal;
+  font-size: 1rem;
+}
+/* Y algunos textos los fija entre 12 y 14 px, muy pequeños para leer en el móvil. */
+:is(*, #\#):is(*, #\#):is(*, #\#):is(*, #\#) :is(.pf-input-clear, .pf-heading-chip, .pf-empty-text, .pf-error) {
+  font-size: 0.9375rem;
+}
+:is(*, #\#):is(*, #\#):is(*, #\#):is(*, #\#) :is(.pf-result-excerpt, .pf-heading-excerpt) mark {
+  background: var(--resaltado);
+  border-radius: 4px;
 }
 
 @media (prefers-reduced-motion: reduce) {

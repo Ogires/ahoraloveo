@@ -17,6 +17,10 @@ describe.each([
   it('el texto de los botones se lee sobre el acento', () => {
     expect(contraste(paleta['sobre-acento'], paleta.acento)).toBeGreaterThanOrEqual(AA);
   });
+
+  it('las palabras resaltadas en la búsqueda se leen sobre su fondo', () => {
+    expect(contraste(paleta.tinta, paleta.resaltado)).toBeGreaterThanOrEqual(AA);
+  });
 });
 
 describe('familias', () => {
