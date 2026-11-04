@@ -1,0 +1,14 @@
+# Cabeceras que pone Cloudflare al servir la web. El servidor de `astro preview` no las aplica.
+# La CSP principal va en la <meta> que genera Astro. Aquí solo se añade frame-ancestors, que en una
+# <meta> no funciona: nadie puede meter la web dentro de otra página. El navegador aplica las dos políticas.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Content-Security-Policy: frame-ancestors 'none'
+  X-Frame-Options: DENY
+  Strict-Transport-Security: max-age=31536000
+
+# Los ficheros de /_astro/ llevan un hash en el nombre: si cambian, cambia la URL.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
