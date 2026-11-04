@@ -38,4 +38,11 @@ Qué palabras usar, cuáles evitar y por qué. El script `legibilidad.mjs` avisa
 
 ## Términos en inglés
 
-Si el término en inglés es el que la familia va a encontrar en otros sitios, ponlo una vez en cursiva y entre paréntesis, detrás del español: «crisis (*meltdown*)», «desconexión (*shutdown*)», «estereotipias (*stimming*)». En el resto del texto, solo el español.
+El título de cada ficha del glosario es el término original en inglés, porque es el que da acceso a la literatura: *meltdown*, *shutdown*, *masking*, *stimming*, *burnout*. Debajo va su nombre en español (campo `en_espanol`), que es el que la familia puede haber oído en la consulta.
+
+En el texto:
+- **Si en español no hay una palabra asentada,** usa la inglesa, sin cursiva y en masculino: «un meltdown», «el masking». Los verbos, en español: «camuflar», «desconectarse».
+- **Si la hay y es casi igual,** usa la española: «la alexitimia», «la ecolalia», «la teoría de la mente».
+- **Si los estudios usan otro nombre en inglés,** dilo una vez para que se pueda buscar: «Muchos estudios lo llaman camouflaging». Va también en `alias`.
+
+Fuera del glosario (portada, señales, herramientas), la primera vez que salga un término, como en el título de su ficha y con el español entre paréntesis: «un meltdown (una crisis)».

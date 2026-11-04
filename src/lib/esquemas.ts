@@ -115,8 +115,9 @@ export const crearEsquemaTermino = <F extends z.ZodType, G extends z.ZodType>(re
   glosario: G;
 }) =>
   z.object({
-    termino: texto(),
-    alias: z.array(z.string()).default([]),
+    termino: texto(), // el original en inglés, que es como aparece en los libros y los estudios
+    en_espanol: z.array(texto()).min(1, 'Cada término necesita al menos un nombre en español'),
+    alias: z.array(z.string()).default([]), // otros nombres en inglés
     familia: z.enum(IDS_FAMILIAS),
     que_es: texto(),
     como_se_ve: texto(),

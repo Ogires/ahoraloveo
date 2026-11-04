@@ -3,16 +3,16 @@ import { expect, test } from '@playwright/test';
 // La primera búsqueda descarga el índice y puede tardar más de 2 segundos: se espera al resultado.
 const ESPERA = { timeout: 15_000 };
 
-test('buscar «crisis» encuentra su ficha', async ({ page }) => {
+test('el nombre en español («crisis») encuentra la ficha en inglés', async ({ page }) => {
   await page.goto('/buscar/');
   await page.locator('pagefind-input input').fill('crisis');
-  await expect(page.locator('pagefind-results a[href*="/glosario/crisis/"]').first()).toBeVisible(ESPERA);
+  await expect(page.locator('pagefind-results a[href*="/glosario/meltdown/"]').first()).toBeVisible(ESPERA);
 });
 
-test('un alias también encuentra la ficha', async ({ page }) => {
+test('otro nombre en inglés también encuentra la ficha', async ({ page }) => {
   await page.goto('/buscar/');
-  await page.locator('pagefind-input input').fill('meltdown');
-  await expect(page.locator('pagefind-results a[href*="/glosario/crisis/"]').first()).toBeVisible(ESPERA);
+  await page.locator('pagefind-input input').fill('camouflaging');
+  await expect(page.locator('pagefind-results a[href*="/glosario/masking/"]').first()).toBeVisible(ESPERA);
 });
 
 test('sin resultados, lo dice en el tono de la web', async ({ page }) => {

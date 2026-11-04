@@ -5,8 +5,8 @@ import { crearEsquemaTermino, esquemaEntidad, esquemaFuente } from '../../src/li
 const esquemaTermino = crearEsquemaTermino({ fuentes: z.string(), glosario: z.string() });
 
 const termino = {
-  termino: 'Crisis',
-  alias: ['meltdown'],
+  termino: 'Meltdown',
+  en_espanol: ['crisis'],
   familia: 'emociones',
   que_es: 'Una reacción involuntaria.',
   como_se_ve: 'Llanto intenso.',
@@ -63,6 +63,12 @@ describe('esquema del glosario', () => {
 
   it.each(['', '   '])('exige el apartado «En niñas», aunque sea para decir que no hay datos (%j)', (en_ninas) => {
     expect(valido(esquemaTermino, { ...termino, en_ninas })).toBe(false);
+  });
+
+  it('exige al menos un nombre en español, para poder encontrar la ficha con él', () => {
+    const { en_espanol: _, ...sinEspanol } = termino;
+    expect(valido(esquemaTermino, sinEspanol)).toBe(false);
+    expect(valido(esquemaTermino, { ...termino, en_espanol: [] })).toBe(false);
   });
 
   it('rechaza una familia que no existe', () => {

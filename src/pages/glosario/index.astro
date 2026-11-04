@@ -24,7 +24,9 @@ const grupos = FAMILIAS.map((f) => ({
         <dl>
           {g.terminos.map((t) => (
             <div class="entrada">
-              <dt><a href={`/glosario/${t.id}/`}>{t.data.termino}</a></dt>
+              <dt>
+                <a href={`/glosario/${t.id}/`}><span lang="en">{t.data.termino}</span> <span class="es">({t.data.en_espanol[0]})</span></a>
+              </dt>
               <dd>{t.data.que_es}</dd>
             </div>
           ))}
@@ -42,5 +44,6 @@ const grupos = FAMILIAS.map((f) => ({
   dl { gap: 1rem; }
   .entrada { background: var(--superficie); border-radius: 28px; padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 0.375rem; }
   dt { font-size: 1.3125rem; font-weight: 600; }
+  .es { font-weight: 400; }
   dd { margin: 0; }
 </style>

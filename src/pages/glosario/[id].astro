@@ -43,14 +43,16 @@ const familia = FAMILIAS.find((f) => f.id === d.familia)!;
 const url = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
-<Base titulo={d.termino} descripcion={d.que_es}>
+<Base titulo={`${d.termino} (${d.en_espanol[0]})`} descripcion={d.que_es}>
   <article class={`ficha f-${d.familia}`} data-pagefind-body>
     {/* La navegación no se indexa: buscar «crisis» no debe traer cada ficha que solo la enlaza. */}
     <p data-pagefind-ignore><a href="/glosario/">Glosario</a></p>
     <header>
       <span class="chip">{familia.nombre}</span>
-      <h1>{d.termino}</h1>
-      {d.alias.length > 0 && <p class="alias">También se dice: {d.alias.join(', ')}</p>}
+      {/* El título es el original en inglés: lang="en" para que el lector de pantalla lo pronuncie bien. */}
+      <h1 lang="en">{d.termino}</h1>
+      <p class="en-espanol">En español: {d.en_espanol.join(', ')}</p>
+      {d.alias.length > 0 && <p class="alias">También se dice: <span lang="en">{d.alias.join(', ')}</span></p>}
     </header>
 
     <section aria-labelledby="que-es">
@@ -81,7 +83,7 @@ const url = new URL(Astro.url.pathname, Astro.site).href;
       <section aria-labelledby="relacionados" data-pagefind-ignore>
         <h2 id="relacionados">Términos relacionados</h2>
         <ul class="relacionados">
-          {relacionados.map((r) => <li><a href={`/glosario/${r.id}/`}>{r.data.termino}</a></li>)}
+          {relacionados.map((r) => <li><a href={`/glosario/${r.id}/`}><span lang="en">{r.data.termino}</span> ({r.data.en_espanol[0]})</a></li>)}
         </ul>
       </section>
     )}
@@ -118,6 +120,7 @@ const url = new URL(Astro.url.pathname, Astro.site).href;
   header { display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem; }
   section { display: flex; flex-direction: column; gap: 0.75rem; }
   h2 { font-size: 1.5rem; }
+  .en-espanol { font-size: 1.3125rem; }
   .alias { color: var(--tinta-suave); }
   .en-ninas { background: var(--superficie); border: 3px solid var(--familia); border-radius: 28px; padding: clamp(1.25rem, 3vw, 2rem); }
   .relacionados { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
