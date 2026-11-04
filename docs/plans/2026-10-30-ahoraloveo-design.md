@@ -19,7 +19,7 @@ Web de información sobre autismo para quien empieza, con el foco puesto en cóm
 
 **Sello: el autismo en mujeres y niñas.** La web sirve a cualquier familia, pero cada página cuenta qué cambia en ellas. En las niñas y en las mujeres el diagnóstico suele llegar más tarde, el camuflaje lo esconde, y buena parte de la investigación y de las herramientas de diagnóstico se construyó con muestras mayoritariamente masculinas. Además, en español apenas hay contenido sobre el tema.
 
-**Quién la hace:** una familia, no profesionales, y la web lo dice claramente. Está firmada con el nombre de su autor y no incluye ningún dato que identifique a menores.
+**Quién la hace:** una familia, no profesionales, y la web lo dice claramente. Está firmada con el seudónimo «Ogires». «Sobre esta web» dice para quién es la web, no por qué la hacemos: no cuenta nada de la familia ni incluye ningún dato que identifique a menores.
 
 ## 2. Principios
 
