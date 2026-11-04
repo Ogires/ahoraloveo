@@ -18,5 +18,7 @@ test('un alias también encuentra la ficha', async ({ page }) => {
 test('sin resultados, lo dice en el tono de la web', async ({ page }) => {
   await page.goto('/buscar/');
   await page.locator('pagefind-input input').fill('zxqv');
-  await expect(page.getByText('No hemos encontrado nada para «zxqv»')).toBeVisible(ESPERA);
+  // El resumen visible. Pagefind repite el texto un momento en una región para lectores de pantalla,
+  // así que getByText a veces encuentra dos elementos.
+  await expect(page.locator('.pf-summary')).toContainText('No hemos encontrado nada para «zxqv»', ESPERA);
 });
