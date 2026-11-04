@@ -1,5 +1,7 @@
-// Enlaza la primera mención de cada entidad en el texto de una ficha. Devuelve trozos,
-// no HTML: la página los pinta como texto o como <a>, y Astro escapa el texto.
+// Enlaza la primera mención de cada entidad en un texto. La ficha lo llama una vez por apartado,
+// así que cada apartado enlaza su primera mención y se puede leer suelto: quien salta a
+// «Qué podéis hacer» encuentra el enlace sin volver arriba. Devuelve trozos, no HTML:
+// la página los pinta como texto o como <a>, y Astro escapa el texto.
 export interface Entidad {
   nombres: string[];
   web: string;
@@ -20,9 +22,8 @@ const patron = (e: Entidad) =>
     'u',
   );
 
-// `yaEnlazadas` se comparte entre los apartados de una ficha: así cada entidad se enlaza
-// una sola vez en toda la ficha, en su primera mención.
-export function enlazarEntidades(texto: string, entidades: Entidad[], yaEnlazadas: Set<Entidad>): Trozo[] {
+export function enlazarEntidades(texto: string, entidades: Entidad[]): Trozo[] {
+  const yaEnlazadas = new Set<Entidad>();
   const trozos: Trozo[] = [];
   let resto = texto;
   for (;;) {

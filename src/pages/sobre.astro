@@ -2,7 +2,7 @@
 import TextoEnlazado from '../components/TextoEnlazado.astro';
 import Base from '../layouts/Base.astro';
 import { SITIO } from '../config';
-import { enlazarEntidades, type Entidad } from '../lib/enlazar';
+import { enlazarEntidades } from '../lib/enlazar';
 import { cargarEntidades } from '../lib/entidades';
 import { NIVELES } from '../lib/esquemas';
 
@@ -22,10 +22,9 @@ const usos: Record<Nivel, string> = {
 };
 
 const entidades = await cargarEntidades();
-const yaEnlazadas = new Set<Entidad>();
 const niveles = (Object.keys(NIVELES) as Nivel[]).map((id) => ({
   nombre: NIVELES[id],
-  uso: enlazarEntidades(usos[id], entidades, yaEnlazadas),
+  uso: enlazarEntidades(usos[id], entidades),
 }));
 ---
 
