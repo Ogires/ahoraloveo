@@ -12,7 +12,7 @@
     "preview": "astro preview",
     "test": "vitest run",
     "test:e2e": "playwright test",
-    "enlaces": "linkinator ./dist --recurse --skip \"^https?://(?!127\\.0\\.0\\.1[:/])\""
+    "enlaces": "linkinator ./ 404.html --server-root ./dist --recurse --check-css --skip \"^https?://(?!127\\.0\\.0\\.1[:/])\""
   },
   "dependencies": {
     "@fontsource-variable/lexend": "^5.3.0",
