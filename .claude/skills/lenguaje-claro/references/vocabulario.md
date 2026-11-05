@@ -40,7 +40,7 @@ Qué palabras usar, cuáles evitar y por qué. El script `legibilidad.mjs` avisa
 
 Manda el uso: el título de cada ficha del glosario es el nombre que más se usa en español al hablar de autismo.
 - **Si se usa tal cual en inglés,** el título va en inglés y debajo sus nombres en español (campo `en_espanol`), los que la familia puede haber oído en la consulta: *Meltdown* (crisis), *Masking* (camuflaje), *Shutdown* (desconexión).
-- **Si se usa en español,** el título va en español y debajo el original en inglés (campo `en_ingles`), que es con el que se encuentra la literatura: Alexitimia (*alexithymia*), Interocepción (*interoception*), Teoría de la mente (*theory of mind*).
+- **Si se usa en español,** el título va en español y debajo el original en inglés (campo `en_ingles`), que es con el que se encuentra la literatura: Alexitimia (*alexithymia*), Interocepción (*interoception*), Teoría de la mente (*theory of mind*). También Estereotipias (*stimming*): es lo que pone el informe y lo que dicen los profesionales, aunque la comunidad autista use más *stimming*.
 
 En el texto, la misma palabra que el título. Si es inglesa, sin cursiva y en masculino: «un meltdown», «el masking». Los verbos, en español: «camuflar», «desconectarse». Si los estudios usan otro nombre, dilo una vez para que se pueda buscar («Muchos estudios lo llaman camouflaging») y ponlo en `alias`.
 
