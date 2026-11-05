@@ -1,0 +1,17 @@
+titulo: '«Having All of Your Internal Resources Exhausted Beyond Measure and Being Left with No Clean-Up Crew»: Defining Autistic Burnout'
+autoria: Dora M. Raymaker, Alan R. Teo, Nicole A. Steckler, Brandy Lentz, Mirah Scharer, Austin Delos Santos, Steven K. Kapp, Morrigan Hunter, Andee Joyce y Christina Nicolaidis
+anio: 2020
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7313636/
+doi: 10.1089/aut.2019.0079
+licencia: CC BY-NC 4.0
+comprobado: 2026-11-05
+temas: [burnout-autista]
+estudio:
+  diseno: Entrevistas a adultos autistas y análisis de textos publicados en internet
+  muestra: 19 # entrevistas; además, 19 fuentes de internet
+  edades: Adultos de 21 a 65 años
+  porcentaje_ninas: null # el artículo da cifras de género que no cuadran entre sí (10 mujeres, 7 hombres y 4 de otro género para 19 entrevistas)
+  resultados_por_sexo: false

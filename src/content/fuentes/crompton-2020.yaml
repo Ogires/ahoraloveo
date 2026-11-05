@@ -1,0 +1,17 @@
+titulo: Autistic peer-to-peer information transfer is highly effective
+autoria: Catherine J. Crompton, Danielle Ropar, Claire V. M. Evans-Williams, Emma G. Flynn y Sue Fletcher-Watson
+anio: 2020
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7545656/
+doi: 10.1177/1362361320919286
+licencia: CC BY-NC 4.0
+comprobado: 2026-11-05
+temas: [doble-empatia]
+estudio:
+  diseno: Experimento con cadenas de 8 personas que se transmiten una historia
+  muestra: 72
+  edades: Adultos
+  porcentaje_ninas: 79.2 # 57 mujeres de 72 (29 no autistas y 28 autistas)
+  resultados_por_sexo: false
