@@ -14,7 +14,7 @@ Los ejemplos enseñan la **redacción**. Sus afirmaciones son ilustrativas: en u
 
 > Antes: «La alexitimia es un constructo multidimensional caracterizado por dificultades en la identificación y descripción de los estados emocionales propios.»
 >
-> Después: «La alexitimia es la dificultad para reconocer las propias emociones y ponerles nombre. Una niña puede decir que le duele la tripa cuando en realidad está nerviosa por un examen.»
+> Después: «La alexitimia es la dificultad para reconocer las propias emociones y ponerles nombre. Una niña puede contestar «bien» cuando le preguntáis cómo está, aunque lleve toda la tarde irritable.»
 
 **Peso exagerado → peso justo**
 
