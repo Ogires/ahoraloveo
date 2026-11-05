@@ -1,0 +1,99 @@
+---
+import { getCollection, getEntries } from 'astro:content';
+import ListaFuentes from '../../components/ListaFuentes.astro';
+import NombreTermino from '../../components/NombreTermino.astro';
+import PieRevision from '../../components/PieRevision.astro';
+import TextoEnlazado from '../../components/TextoEnlazado.astro';
+import Base from '../../layouts/Base.astro';
+import { enlazarEntidades } from '../../lib/enlazar';
+import { cargarEntidades } from '../../lib/entidades';
+import { AREAS, FORMATOS, TIPOS_HERRAMIENTA } from '../../lib/esquemas';
+import { exigirTodas } from '../../lib/referencias';
+
+export async function getStaticPaths() {
+  const herramientas = await getCollection('herramientas');
+  return herramientas.map((herramienta) => ({ params: { id: herramienta.id }, props: { herramienta } }));
+}
+
+const { herramienta } = Astro.props;
+const d = herramienta.data;
+const origen = `La herramienta «${herramienta.id}»`;
+const fuentes = exigirTodas(await getEntries(d.fuentes), d.fuentes.map((r) => `fuentes/${r.id}`), origen);
+const relacionados = exigirTodas(
+  await getEntries(d.relacionados),
+  d.relacionados.map((r) => `glosario/${r.id}`),
+  origen,
+);
+const entidades = await cargarEntidades();
+// Cada apartado enlaza la primera vez que nombra cada entidad, para que se pueda leer suelto.
+const enlazar = (t: string) => enlazarEntidades(t, entidades);
+// «Cuestionario y entrevista»: la lista en minúsculas, con «y», y la primera letra en mayúscula.
+const lista = new Intl.ListFormat('es', { type: 'conjunction' }).format(d.formato.map((f) => FORMATOS[f].toLowerCase()));
+const formato = lista.charAt(0).toUpperCase() + lista.slice(1);
+const apartados = [
+  { id: 'que-es', titulo: 'Qué es y cómo funciona', texto: d.que_es },
+  { id: 'que-mide', titulo: 'Qué mide', texto: d.que_mide },
+  { id: 'como-se-interpreta', titulo: 'Cómo se interpreta', texto: d.como_se_interpreta },
+  { id: 'limitaciones', titulo: 'Limitaciones', texto: d.limitaciones },
+];
+---
+
+<Base titulo={d.nombre} descripcion={d.que_es}>
+  <article class="ficha" data-pagefind-body>
+    {/* La navegación no se indexa, como en el glosario. */}
+    <p data-pagefind-ignore><a href="/diagnostico/">Diagnóstico</a></p>
+    <header>
+      <h1>{d.nombre}</h1>
+      <p class="nombre-completo">{d.nombre_completo}</p>
+    </header>
+
+    <dl class="carta panel">
+      <div><dt>Tipo</dt><dd>{TIPOS_HERRAMIENTA[d.tipo]}</dd></div>
+      <div><dt>Edades</dt><dd>{d.edades}</dd></div>
+      <div><dt>Quién la pasa</dt><dd>{d.quien}</dd></div>
+      <div><dt>Formato</dt><dd>{formato}</dd></div>
+      <div><dt>Duración</dt><dd>{d.duracion}</dd></div>
+    </dl>
+
+    {apartados.map((a) => (
+      <section aria-labelledby={a.id}>
+        <h2 id={a.id}>{a.titulo}</h2>
+        <p><TextoEnlazado trozos={enlazar(a.texto)} /></p>
+        {a.id === 'que-mide' && <ul class="areas">{d.areas.map((area) => <li>{AREAS[area]}</li>)}</ul>}
+      </section>
+    ))}
+
+    <section class="en-ninas" aria-labelledby="en-ninas">
+      <h2 id="en-ninas">En niñas</h2>
+      <p><TextoEnlazado trozos={enlazar(d.en_ninas)} /></p>
+    </section>
+
+    <section aria-labelledby="que-preguntar">
+      <h2 id="que-preguntar">Qué preguntar al profesional</h2>
+      <ul class="preguntas">{d.que_preguntar.map((p) => <li>{p}</li>)}</ul>
+    </section>
+
+    {relacionados.length > 0 && (
+      <section aria-labelledby="relacionados" data-pagefind-ignore>
+        <h2 id="relacionados">Términos relacionados</h2>
+        <ul class="relacionados">
+          {relacionados.map((r) => <li><a href={`/glosario/${r.id}/`}><NombreTermino datos={r.data} /></a></li>)}
+        </ul>
+      </section>
+    )}
+
+    <section aria-labelledby="fuentes" data-pagefind-ignore>
+      <h2 id="fuentes">Fuentes</h2>
+      <ListaFuentes fuentes={fuentes} />
+    </section>
+    <PieRevision revisado={d.revisado} pagina={d.nombre} />
+  </article>
+</Base>
+
+<style>
+  .nombre-completo { font-size: 1.3125rem; }
+  .carta { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 1rem 2rem; margin: 0; }
+  .carta dt { font-weight: 600; }
+  .carta dd { margin: 0; }
+  .areas, .preguntas { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.5rem; }
+</style>
