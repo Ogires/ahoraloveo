@@ -17,3 +17,9 @@ test('la búsqueda explica que necesita JavaScript y ofrece el glosario', async 
   await expect(aviso).toContainText('La búsqueda necesita JavaScript');
   await expect(aviso.locator('a[href="/glosario/"]')).toBeVisible();
 });
+
+test('el proceso del diagnóstico se lee sin JavaScript', async ({ page }) => {
+  await page.goto('/diagnostico/');
+  await expect(page.locator('ol.pasos > li')).toHaveCount(6);
+  await expect(page.getByRole('region', { name: 'Qué mide cada herramienta' })).toBeVisible();
+});

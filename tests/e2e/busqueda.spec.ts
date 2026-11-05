@@ -22,3 +22,9 @@ test('sin resultados, lo dice en el tono de la web', async ({ page }) => {
   // así que getByText a veces encuentra dos elementos.
   await expect(page.locator('.pf-summary')).toContainText('No hemos encontrado nada para «zxqv»', ESPERA);
 });
+
+test('«cribado» encuentra la sección del diagnóstico', async ({ page }) => {
+  await page.goto('/buscar/');
+  await page.locator('pagefind-input input').fill('cribado');
+  await expect(page.locator('pagefind-results a[href*="/diagnostico/"]').first()).toBeVisible(ESPERA);
+});
