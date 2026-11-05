@@ -8,3 +8,26 @@ test('la ficha de una herramienta muestra su carta de datos', async ({ page }) =
   }
   await expect(page.getByRole('heading', { name: 'En niñas' })).toBeVisible();
 });
+
+test('el proceso tiene seis pasos, en orden', async ({ page }) => {
+  await page.goto('/diagnostico/');
+  const pasos = page.locator('ol.pasos > li');
+  await expect(pasos).toHaveCount(6);
+  for (let i = 0; i < 6; i++) await expect(pasos.nth(i).locator('h2')).toHaveAttribute('id', `paso-${i + 1}`);
+});
+
+test('cada herramienta del proceso enlaza a una ficha que existe', async ({ page, request }) => {
+  await page.goto('/diagnostico/');
+  const enlaces = await page.locator('.herramientas-paso a').evaluateAll((as) => as.map((a) => a.getAttribute('href')!));
+  expect(enlaces.length).toBeGreaterThan(0);
+  for (const href of enlaces) expect((await request.get(href)).status()).toBe(200);
+});
+
+test('la tabla tiene encabezados de fila y de columna, y su recuadro se alcanza con el teclado', async ({ page }) => {
+  await page.goto('/diagnostico/');
+  const region = page.getByRole('region', { name: 'Qué mide cada herramienta' });
+  await expect(region).toHaveAttribute('tabindex', '0');
+  await expect(region.locator('thead th[scope="col"]')).toHaveCount(5);
+  await expect(region.locator('tbody th[scope="row"]').first()).toBeVisible();
+  await expect(region.locator('tbody th[scope="rowgroup"]').first()).toHaveText('Cribado');
+});

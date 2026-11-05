@@ -1,0 +1,136 @@
+---
+import { getCollection, getEntries } from 'astro:content';
+import ListaFuentes from '../../components/ListaFuentes.astro';
+import PieRevision from '../../components/PieRevision.astro';
+import TextoEnlazado from '../../components/TextoEnlazado.astro';
+import Base from '../../layouts/Base.astro';
+import { enlazarEntidades } from '../../lib/enlazar';
+import { cargarEntidades } from '../../lib/entidades';
+import { AREAS } from '../../lib/esquemas';
+import { formatearFecha } from '../../lib/fecha';
+import { ordenarPasos } from '../../lib/proceso';
+import { exigirTodas } from '../../lib/referencias';
+import { COLUMNAS, tablaAreas } from '../../lib/tabla-areas';
+
+const pasos = ordenarPasos(await getCollection('proceso'));
+const entidades = await cargarEntidades();
+// Cada apartado enlaza la primera vez que nombra cada entidad, para que se pueda leer suelto.
+const enlazar = (t: string) => enlazarEntidades(t, entidades);
+
+const conHerramientas = await Promise.all(
+  pasos.map(async (p) => ({
+    ...p,
+    usa: exigirTodas(
+      await getEntries(p.data.herramientas),
+      p.data.herramientas.map((r) => `herramientas/${r.id}`),
+      `El paso «${p.id}»`,
+    ),
+  })),
+);
+
+// Las fuentes de los pasos y de sus recuadros, sin repetir, en el orden en que aparecen.
+const ids = [
+  ...new Set(pasos.flatMap((p) => [...p.data.fuentes, ...(p.data.comunitat_valenciana?.fuentes ?? [])]).map((r) => r.id)),
+];
+const fuentes = exigirTodas(
+  await getEntries(ids.map((id) => ({ collection: 'fuentes' as const, id }))),
+  ids.map((id) => `fuentes/${id}`),
+  'La página del diagnóstico',
+);
+const revisado = new Date(Math.max(...pasos.map((p) => p.data.revisado.getTime())));
+const grupos = tablaAreas(await getCollection('herramientas'));
+---
+
+<Base titulo="Diagnóstico" descripcion="Cómo se llega a un diagnóstico de autismo, paso a paso, y qué pruebas os podéis encontrar: para qué sirve cada una y qué mide.">
+  <div class="diagnostico" data-pagefind-body>
+    <header>
+      <h1>Cómo es el diagnóstico</h1>
+      <p class="entradilla">Cómo se llega a un diagnóstico de autismo, paso a paso, y qué pruebas os podéis encontrar. Aquí se explican; no se hacen.</p>
+      <p class="aviso panel">Información divulgativa. No sustituye un diagnóstico ni el consejo profesional.</p>
+    </header>
+
+    <ol class="pasos">
+      {conHerramientas.map((p) => (
+        <li class="paso panel">
+          <h2 id={`paso-${p.data.orden}`}><span class="numero">{p.data.orden}.</span> {p.data.titulo}</h2>
+          <p><TextoEnlazado trozos={enlazar(p.data.que_pasa)} /></p>
+          {p.data.quien && <p><strong>Quién interviene:</strong> {p.data.quien}</p>}
+          <p><strong>Qué podéis hacer:</strong> <TextoEnlazado trozos={enlazar(p.data.que_hacer)} /></p>
+          {p.usa.length > 0 && (
+            <div class="herramientas-paso">
+              <h3>Herramientas de este paso</h3>
+              <ul>
+                {p.usa.map((h) => <li><a href={`/diagnostico/${h.id}/`}>{h.data.nombre}</a>: {h.data.edades.charAt(0).toLowerCase() + h.data.edades.slice(1)}</li>)}
+              </ul>
+            </div>
+          )}
+          {p.data.comunitat_valenciana && (
+            <aside class="cv" aria-labelledby={`cv-${p.data.orden}`}>
+              <h3 id={`cv-${p.data.orden}`}>En la Comunitat Valenciana</h3>
+              <p><TextoEnlazado trozos={enlazar(p.data.comunitat_valenciana.texto)} /></p>
+              <p class="comprobado">Comprobado el {formatearFecha(p.data.comunitat_valenciana.comprobado)}.</p>
+            </aside>
+          )}
+        </li>
+      ))}
+    </ol>
+
+    {/* La sección no lleva nombre accesible: así la única región «Qué mide cada herramienta» es el recuadro de la tabla. */}
+    <section>
+      <h2 id="que-mide">Qué mide cada herramienta</h2>
+      <p>Una vista de conjunto. Los matices están en la ficha de cada una.</p>
+      <div class="desplazable" role="region" aria-labelledby="que-mide" tabindex="0">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Herramienta</th>
+              {COLUMNAS.map((c) => <th scope="col">{AREAS[c]}</th>)}
+            </tr>
+          </thead>
+          {grupos.map((g) => (
+            <tbody>
+              <tr><th scope="rowgroup" colspan={COLUMNAS.length + 1}>{g.nombre}</th></tr>
+              {g.filas.map((f) => (
+                <tr>
+                  <th scope="row"><a href={`/diagnostico/${f.id}/`}>{f.nombre}</a> <span class="edades">{f.edades}</span></th>
+                  {f.mide.map((m) => (
+                    <td>{m ? 'Sí' : <><span aria-hidden="true">—</span><span class="visualmente-oculto">No</span></>}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          ))}
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="fuentes" data-pagefind-ignore>
+      <h2 id="fuentes">Fuentes</h2>
+      <ListaFuentes fuentes={fuentes} />
+    </section>
+    <PieRevision revisado={revisado} pagina="Diagnóstico" />
+  </div>
+</Base>
+
+<style>
+  .diagnostico { display: flex; flex-direction: column; gap: 2.5rem; max-width: 52rem; min-width: 0; padding-block: 1.5rem 0; }
+  /* min-width: 0 para que la tabla ancha se desplace dentro de su recuadro y no ensanche la página. */
+  header, section, .paso { display: flex; flex-direction: column; gap: 0.75rem; min-width: 0; }
+  .entradilla { font-size: 1.3125rem; font-weight: 300; color: var(--tinta-suave); }
+  .pasos { display: flex; flex-direction: column; gap: 1.25rem; padding-left: 0; list-style: none; margin: 0; }
+  .paso h2 { font-size: 1.5rem; }
+  .numero { color: var(--acento); }
+  .paso h3 { font-size: 1.125rem; }
+  .herramientas-paso ul { display: flex; flex-direction: column; gap: 0.375rem; padding-left: 1.5rem; }
+  .cv { display: flex; flex-direction: column; gap: 0.5rem; border-left: 4px solid var(--acento); padding-left: 1rem; }
+  .comprobado, .edades { font-size: 0.9375rem; color: var(--tinta-suave); }
+  .edades { display: block; font-weight: 400; }
+  /* position: relative contiene los «No» ocultos (absolutos): sin ella ensanchaban la página. */
+  .desplazable { overflow-x: auto; position: relative; }
+  .desplazable:focus-visible { outline: 3px solid var(--acento); outline-offset: 4px; }
+  table { border-collapse: collapse; min-width: 36rem; }
+  th, td { border-bottom: 1px solid var(--linea); padding: 0.5rem 0.75rem; text-align: left; vertical-align: top; }
+  thead th { font-size: 0.9375rem; }
+  tbody th[scope='rowgroup'] { background: var(--superficie); font-weight: 600; }
+  tbody th[scope='row'] { font-weight: 500; }
+</style>
