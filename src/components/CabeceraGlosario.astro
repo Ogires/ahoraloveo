@@ -1,0 +1,38 @@
+---
+// Cabecera de las dos vistas del índice del glosario, con el selector para cambiar de una a otra.
+// Son dos páginas, no un botón: así funcionan sin JavaScript y cada vista tiene su enlace.
+interface Props {
+  vista: 'familias' | 'a-z';
+}
+
+const { vista } = Astro.props;
+const vistas = [
+  { id: 'familias', href: '/glosario/', texto: 'Por familias' },
+  { id: 'a-z', href: '/glosario/a-z/', texto: 'De la A a la Z' },
+];
+---
+
+<header class="cabecera-glosario">
+  <h1>Glosario</h1>
+  <p>Las palabras que vais a oír al hablar de autismo. Cada término dice de dónde sale la información y cuándo se revisó.</p>
+  <nav class="vistas" aria-label="Orden del glosario">
+    <ul>
+      {vistas.map((v) => (
+        <li><a href={v.href} aria-current={v.id === vista ? 'page' : undefined}>{v.texto}</a></li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .cabecera-glosario { display: flex; flex-direction: column; gap: 0.75rem; }
+  .vistas ul { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin: 0.5rem 0 0; }
+  .vistas a {
+    display: inline-block; padding: 0.4rem 1rem; border: 2px solid var(--acento); border-radius: 999px;
+    text-decoration: none; font-weight: 500;
+  }
+  .vistas a[aria-current='page'] { background: var(--acento); color: var(--sobre-acento); }
+  @media (forced-colors: active) {
+    .vistas a[aria-current='page'] { background: Highlight; color: HighlightText; }
+  }
+</style>

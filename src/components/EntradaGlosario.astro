@@ -1,0 +1,30 @@
+---
+// Un término en el índice del glosario: su nombre enlazado y la primera explicación.
+// En la vista de la A a la Z lleva además la etiqueta de su familia, que allí no se ve por los grupos.
+import type { CollectionEntry } from 'astro:content';
+import NombreTermino from './NombreTermino.astro';
+import { FAMILIAS } from '../lib/tokens';
+
+interface Props {
+  termino: CollectionEntry<'glosario'>;
+  conFamilia?: boolean;
+}
+
+const { termino: t, conFamilia = false } = Astro.props;
+const familia = FAMILIAS.find((f) => f.id === t.data.familia)!;
+---
+
+<div class={`entrada f-${t.data.familia}`}>
+  <dt>
+    <a href={`/glosario/${t.id}/`}><NombreTermino datos={t.data} /></a>
+  </dt>
+  {conFamilia && <dd class="familia"><span class="chip">{familia.nombre}</span></dd>}
+  <dd>{t.data.que_es}</dd>
+</div>
+
+<style>
+  .entrada { background: var(--superficie); border-radius: 28px; padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 0.375rem; }
+  dt { font-size: 1.3125rem; font-weight: 600; }
+  dd { margin: 0; }
+  .familia { margin-block: 0.125rem 0.25rem; }
+</style>

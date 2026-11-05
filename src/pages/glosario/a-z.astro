@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+import CabeceraGlosario from '../../components/CabeceraGlosario.astro';
+import EntradaGlosario from '../../components/EntradaGlosario.astro';
+import Base from '../../layouts/Base.astro';
+import { agruparPorLetra } from '../../lib/letras';
+
+const grupos = agruparPorLetra(await getCollection('glosario'), (t) => t.data.termino);
+---
+
+<Base titulo="Glosario de la A a la Z" descripcion="Las palabras que vais a oír al hablar de autismo, en orden alfabético, con lo que cambia en las niñas.">
+  <div class="glosario">
+    <CabeceraGlosario vista="a-z" />
+    {grupos.map((g) => (
+      <section aria-labelledby={`letra-${g.letra}`}>
+        <h2 id={`letra-${g.letra}`} class="letra">{g.letra}</h2>
+        <dl>{g.elementos.map((t) => <EntradaGlosario termino={t} conFamilia />)}</dl>
+      </section>
+    ))}
+  </div>
+</Base>
+
+<style>
+  .letra { font-size: 1.75rem; color: var(--acento); }
+</style>

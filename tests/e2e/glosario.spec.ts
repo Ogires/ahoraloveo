@@ -24,3 +24,22 @@ test('el índice del glosario muestra cada término con su otro nombre', async (
   await expect(page.getByRole('link', { name: 'Meltdown (crisis)' })).toHaveAttribute('href', '/glosario/meltdown/');
   await expect(page.getByRole('link', { name: 'Alexitimia (alexithymia)' })).toHaveAttribute('href', '/glosario/alexitimia/');
 });
+
+test('el selector marca la vista en la que estás', async ({ page }) => {
+  await page.goto('/glosario/');
+  const vistas = page.getByRole('navigation', { name: 'Orden del glosario' });
+  await expect(vistas.getByRole('link', { name: 'Por familias' })).toHaveAttribute('aria-current', 'page');
+  await vistas.getByRole('link', { name: 'De la A a la Z' }).click();
+  await expect(page).toHaveURL(/\/glosario\/a-z\/$/);
+  await expect(vistas.getByRole('link', { name: 'De la A a la Z' })).toHaveAttribute('aria-current', 'page');
+});
+
+test('la vista de la A a la Z agrupa por letra, en orden, con la familia de cada término', async ({ page }) => {
+  await page.goto('/glosario/a-z/');
+  const letras = await page.locator('h2.letra').allTextContents();
+  expect(letras.length).toBeGreaterThan(1);
+  expect([...letras].sort((a, b) => a.localeCompare(b, 'es'))).toEqual(letras);
+  const primera = page.locator('.entrada').first();
+  await expect(primera.getByRole('link')).toHaveText('Alexitimia (alexithymia)');
+  await expect(primera.locator('.chip')).toHaveText('Emociones');
+});

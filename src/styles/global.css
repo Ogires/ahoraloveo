@@ -138,3 +138,9 @@ main:focus { outline: none; }
     scroll-behavior: auto !important;
   }
 }
+
+/* Índice del glosario (las dos vistas) */
+.glosario { display: flex; flex-direction: column; gap: 3rem; padding-block: 1.5rem 0; }
+.glosario section, .glosario dl { display: flex; flex-direction: column; }
+.glosario section { gap: 1.25rem; }
+.glosario dl { gap: 1rem; margin: 0; }
