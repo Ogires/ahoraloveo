@@ -1,0 +1,16 @@
+titulo: 'What I Wish You Knew: Insights on Burnout, Inertia, Meltdown, and Shutdown From Autistic Youth'
+autoria: Janice Phung, Melanie Penner, Clémence Pirlot y Christie Welch
+anio: 2021
+tipo: estudio
+nivel: estudios
+idioma: en
+doi: 10.3389/fpsyg.2021.741421
+licencia: CC BY 4.0
+comprobado: 2026-11-05
+temas: [shutdown, meltdown, burnout-autista]
+estudio:
+  diseno: Entrevistas individuales con análisis temático
+  muestra: 8
+  edades: De 8 a 18 años (mediana, 14)
+  porcentaje_ninas: 37.5 # 3 de 8
+  resultados_por_sexo: false

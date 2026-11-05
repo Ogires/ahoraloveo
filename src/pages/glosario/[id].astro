@@ -9,6 +9,7 @@ import { enlazarEntidades } from '../../lib/enlazar';
 import { cargarEntidades } from '../../lib/entidades';
 import { NIVELES } from '../../lib/esquemas';
 import { formatearFecha } from '../../lib/fecha';
+import { formatearPorcentaje } from '../../lib/numeros';
 import { exigirTodas } from '../../lib/referencias';
 import { otroNombre, tituloEnIngles } from '../../lib/terminos';
 import { FAMILIAS } from '../../lib/tokens';
@@ -114,7 +115,7 @@ const url = new URL(Astro.url.pathname, Astro.site).href;
               {NIVELES[f.data.nivel]}
               {f.data.estudio && ` con ${f.data.estudio.muestra} participantes`}
               {f.data.estudio && f.data.estudio.porcentaje_ninas !== null &&
-                `, ${f.data.estudio.porcentaje_ninas} % niñas o mujeres`}
+                `, ${formatearPorcentaje(f.data.estudio.porcentaje_ninas)} niñas o mujeres`}
             </span>
           </li>
         ))}
