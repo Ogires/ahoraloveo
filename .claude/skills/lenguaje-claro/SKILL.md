@@ -105,6 +105,10 @@ Aplica la misma lista de comprobación y devuelve una tabla, ordenada de más a 
 - **Media:** frases de más de 30 palabras, tecnicismos sin explicar, un tono alarmista o condescendiente, o fichas sin ningún ejemplo concreto.
 - **Baja:** pulido.
 
+## Escenas del día a día
+
+Las escenas son situaciones cotidianas cortas que muestran un término sin nombrarlo. Antes de escribir o revisar una, lee [references/escenas.md](references/escenas.md): son inventadas, de 60 palabras como mucho, con edad y lugar, sin nombres propios y sin diagnosticar, y solo muestran lo que la ficha ya dice con su fuente.
+
 ## Legibilidad automática
 
 ```bash

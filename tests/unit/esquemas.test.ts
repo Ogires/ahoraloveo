@@ -107,6 +107,29 @@ describe('esquema del glosario', () => {
     expect(valido(esquemaTermino, { ...termino, en_ingles: 'meltdown' })).toBe(false);
   });
 
+  const escena = { edad: '4 años', lugar: 'en una fiesta de cumpleaños', protagonista: 'nina', texto: 'Se aparta a un rincón.' };
+
+  it('acepta de una a tres escenas, y ninguna', () => {
+    expect(valido(esquemaTermino, { ...termino, escenas: [escena] })).toBe(true);
+    expect(valido(esquemaTermino, { ...termino, escenas: [escena, escena, escena] })).toBe(true);
+    expect(valido(esquemaTermino, termino)).toBe(true);
+  });
+
+  it('rechaza más de tres escenas', () => {
+    expect(valido(esquemaTermino, { ...termino, escenas: [escena, escena, escena, escena] })).toBe(false);
+  });
+
+  it('rechaza una escena de más de 60 palabras', () => {
+    expect(valido(esquemaTermino, { ...termino, escenas: [{ ...escena, texto: 'palabra '.repeat(61) }] })).toBe(false);
+  });
+
+  it('rechaza una escena sin lugar, con una edad fuera de 0 a 12 años o con otro protagonista', () => {
+    const { lugar: _, ...sinLugar } = escena;
+    expect(valido(esquemaTermino, { ...termino, escenas: [sinLugar] })).toBe(false);
+    expect(valido(esquemaTermino, { ...termino, escenas: [{ ...escena, edad: '14 años' }] })).toBe(false);
+    expect(valido(esquemaTermino, { ...termino, escenas: [{ ...escena, protagonista: 'nena' }] })).toBe(false);
+  });
+
   it('rechaza una familia que no existe', () => {
     expect(valido(esquemaTermino, { ...termino, familia: 'cognitivo' })).toBe(false);
   });
