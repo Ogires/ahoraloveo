@@ -10,6 +10,9 @@ que_pasa: >
 quien: Pediatría de vuestro centro de salud.
 que_hacer: >
   Llevad a la consulta lo que habéis apuntado. Si algo os preocupa, decidlo con
-  claridad: lo que contáis es una de las piezas del seguimiento.
-fuentes: [previnfad-tea]
+  claridad: lo que contáis es una de las piezas del seguimiento. Y si la
+  preocupación sigue, podéis pedir directamente que la deriven para una
+  evaluación. La guía NICE cuenta la preocupación de la familia entre los motivos
+  para derivar.
+fuentes: [previnfad-tea, nice-cg128]
 revisado: 2026-11-05
