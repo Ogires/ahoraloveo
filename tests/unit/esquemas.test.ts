@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { z } from 'astro/zod';
 import {
   crearEsquemaHerramienta,
+  crearEsquemaPaso,
   crearEsquemaTermino,
   esquemaEntidad,
   esquemaFuente,
@@ -9,6 +10,7 @@ import {
 
 const esquemaTermino = crearEsquemaTermino({ fuentes: z.string(), glosario: z.string() });
 const esquemaHerramienta = crearEsquemaHerramienta({ fuentes: z.string(), glosario: z.string() });
+const esquemaPaso = crearEsquemaPaso({ fuentes: z.string(), herramientas: z.string() });
 
 const herramienta = {
   nombre: 'M-CHAT-R/F',
@@ -290,5 +292,36 @@ describe('esquema de las herramientas', () => {
   it('exige al menos un formato y una pregunta para el profesional', () => {
     expect(valido(esquemaHerramienta, { ...herramienta, formato: [] })).toBe(false);
     expect(valido(esquemaHerramienta, { ...herramienta, que_preguntar: [] })).toBe(false);
+  });
+});
+
+const paso = {
+  orden: 3,
+  titulo: 'Cribado',
+  que_pasa: 'Un cuestionario corto.',
+  que_hacer: 'Preguntad qué significa el resultado.',
+  herramientas: ['m-chat-r-f'],
+  fuentes: ['previnfad-tea'],
+  revisado: '2026-11-05',
+};
+
+describe('esquema de los pasos del proceso', () => {
+  it('acepta un paso sin recuadro valenciano ni «quién interviene»', () => {
+    expect(valido(esquemaPaso, paso)).toBe(true);
+  });
+
+  it('acepta el recuadro valenciano con su texto, fuentes y fecha de comprobación', () => {
+    const comunitat_valenciana = { texto: 'Atención temprana.', fuentes: ['decreto-27-2023'], comprobado: '2026-11-05' };
+    expect(valido(esquemaPaso, { ...paso, comunitat_valenciana })).toBe(true);
+  });
+
+  it('el recuadro valenciano exige fuentes y fecha de comprobación', () => {
+    expect(valido(esquemaPaso, { ...paso, comunitat_valenciana: { texto: 'Atención temprana.', fuentes: [] } })).toBe(false);
+  });
+
+  it('exige al menos una fuente y un orden entero positivo', () => {
+    expect(valido(esquemaPaso, { ...paso, fuentes: [] })).toBe(false);
+    expect(valido(esquemaPaso, { ...paso, orden: 0 })).toBe(false);
+    expect(valido(esquemaPaso, { ...paso, orden: 2.5 })).toBe(false);
   });
 });

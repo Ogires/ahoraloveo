@@ -191,3 +191,26 @@ export const crearEsquemaHerramienta = <F extends z.ZodType, G extends z.ZodType
     fuentes: z.array(referencias.fuentes).min(1, 'Cada herramienta necesita al menos una fuente'),
     revisado: fecha(),
   });
+
+// Los pasos del proceso de diagnóstico. El recuadro valenciano solo va donde algo cambia y está documentado.
+export const crearEsquemaPaso = <F extends z.ZodType, H extends z.ZodType>(referencias: {
+  fuentes: F;
+  herramientas: H;
+}) =>
+  z.object({
+    orden: z.number().int().min(1),
+    titulo: texto(),
+    que_pasa: texto(),
+    quien: texto().optional(),
+    que_hacer: texto(),
+    herramientas: z.array(referencias.herramientas).default([]),
+    comunitat_valenciana: z
+      .object({
+        texto: texto(),
+        fuentes: z.array(referencias.fuentes).min(1),
+        comprobado: fecha(),
+      })
+      .optional(),
+    fuentes: z.array(referencias.fuentes).min(1, 'Cada paso necesita al menos una fuente'),
+    revisado: fecha(),
+  });
