@@ -1,0 +1,18 @@
+---
+// El nombre de un término para listas y enlaces: «Meltdown (crisis)», «Alexitimia (alexithymia)».
+// Lo que está en inglés lleva lang="en", para que el lector de pantalla lo pronuncie bien.
+import { otroNombre, tituloEnIngles } from '../lib/terminos';
+
+interface Props {
+  datos: { termino: string; en_ingles?: string; en_espanol: string[] };
+}
+
+const { datos } = Astro.props;
+const otro = otroNombre(datos);
+---
+
+<span lang={tituloEnIngles(datos) ? 'en' : undefined}>{datos.termino}</span> <span class="otro" lang={otro.lang === 'en' ? 'en' : undefined}>({otro.texto})</span>
+
+<style>
+  .otro { font-weight: 400; }
+</style>

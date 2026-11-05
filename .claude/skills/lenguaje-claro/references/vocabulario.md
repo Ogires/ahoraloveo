@@ -38,11 +38,10 @@ Qué palabras usar, cuáles evitar y por qué. El script `legibilidad.mjs` avisa
 
 ## Términos en inglés
 
-El título de cada ficha del glosario es el término original en inglés, porque es el que da acceso a la literatura: *meltdown*, *shutdown*, *masking*, *stimming*, *burnout*. Debajo va su nombre en español (campo `en_espanol`), que es el que la familia puede haber oído en la consulta.
+Manda el uso: el título de cada ficha del glosario es el nombre que más se usa en español al hablar de autismo.
+- **Si se usa tal cual en inglés,** el título va en inglés y debajo sus nombres en español (campo `en_espanol`), los que la familia puede haber oído en la consulta: *Meltdown* (crisis), *Masking* (camuflaje), *Shutdown* (desconexión).
+- **Si se usa en español,** el título va en español y debajo el original en inglés (campo `en_ingles`), que es con el que se encuentra la literatura: Alexitimia (*alexithymia*), Interocepción (*interoception*), Teoría de la mente (*theory of mind*).
 
-En el texto:
-- **Si en español no hay una palabra asentada,** usa la inglesa, sin cursiva y en masculino: «un meltdown», «el masking». Los verbos, en español: «camuflar», «desconectarse».
-- **Si la hay y es casi igual,** usa la española: «la alexitimia», «la ecolalia», «la teoría de la mente».
-- **Si los estudios usan otro nombre en inglés,** dilo una vez para que se pueda buscar: «Muchos estudios lo llaman camouflaging». Va también en `alias`.
+En el texto, la misma palabra que el título. Si es inglesa, sin cursiva y en masculino: «un meltdown», «el masking». Los verbos, en español: «camuflar», «desconectarse». Si los estudios usan otro nombre, dilo una vez para que se pueda buscar («Muchos estudios lo llaman camouflaging») y ponlo en `alias`.
 
-Fuera del glosario (portada, señales, herramientas), la primera vez que salga un término, como en el título de su ficha y con el español entre paréntesis: «un meltdown (una crisis)».
+Fuera del glosario (portada, señales, herramientas), la primera vez que salga un término, como en el título de su ficha y con el otro nombre entre paréntesis: «un meltdown (una crisis)», «la alexitimia (alexithymia)».

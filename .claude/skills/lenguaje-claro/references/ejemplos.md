@@ -72,7 +72,7 @@ revisado: 2026-10-30
 ```
 
 Fíjate en que:
-- el título es el original en inglés y `en_espanol` lleva cómo se dice aquí;
+- el título es el nombre que más se usa al hablar de autismo, aquí el inglés, y `en_espanol` lleva cómo se dice en español (si el título fuera español, iría `en_ingles` con el original);
 - la primera frase de `que_es` ya sirve sola;
 - `como_se_ve` tiene una escena;
 - `en_ninas` matiza («muchas niñas», no «las niñas»);

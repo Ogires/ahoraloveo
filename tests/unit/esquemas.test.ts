@@ -65,10 +65,19 @@ describe('esquema del glosario', () => {
     expect(valido(esquemaTermino, { ...termino, en_ninas })).toBe(false);
   });
 
-  it('exige al menos un nombre en español, para poder encontrar la ficha con él', () => {
+  it('acepta un título en español con su original en inglés', () => {
     const { en_espanol: _, ...sinEspanol } = termino;
-    expect(valido(esquemaTermino, sinEspanol)).toBe(false);
+    expect(valido(esquemaTermino, { ...sinEspanol, termino: 'Alexitimia', en_ingles: 'alexithymia' })).toBe(true);
+  });
+
+  it('exige el otro nombre: en español si el título va en inglés, o en inglés si va en español', () => {
+    const { en_espanol: _, ...sinNinguno } = termino;
+    expect(valido(esquemaTermino, sinNinguno)).toBe(false);
     expect(valido(esquemaTermino, { ...termino, en_espanol: [] })).toBe(false);
+  });
+
+  it('rechaza los dos a la vez, porque entonces no se sabe en qué idioma está el título', () => {
+    expect(valido(esquemaTermino, { ...termino, en_ingles: 'meltdown' })).toBe(false);
   });
 
   it('rechaza una familia que no existe', () => {

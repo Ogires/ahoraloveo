@@ -115,9 +115,14 @@ export const crearEsquemaTermino = <F extends z.ZodType, G extends z.ZodType>(re
   glosario: G;
 }) =>
   z.object({
-    termino: texto(), // el original en inglés, que es como aparece en los libros y los estudios
-    en_espanol: z.array(texto()).min(1, 'Cada término necesita al menos un nombre en español'),
-    alias: z.array(z.string()).default([]), // otros nombres en inglés
+    // El título es el nombre que más se usa en español al hablar de autismo: «Meltdown», «Alexitimia».
+    termino: texto(),
+    // El otro nombre va debajo del título. Si el título está en inglés, sus nombres en español
+    // (los que la familia puede haber oído en la consulta); si está en español, el original en
+    // inglés (con el que se busca la literatura). Uno de los dos, nunca ambos.
+    en_espanol: z.array(texto()).default([]),
+    en_ingles: texto().optional(),
+    alias: z.array(z.string()).default([]), // otros nombres, como los que usan los estudios
     familia: z.enum(IDS_FAMILIAS),
     que_es: texto(),
     como_se_ve: texto(),
@@ -127,4 +132,12 @@ export const crearEsquemaTermino = <F extends z.ZodType, G extends z.ZodType>(re
     relacionados: z.array(referencias.glosario).default([]),
     fuentes: z.array(referencias.fuentes).min(1, 'Cada término necesita al menos una fuente'),
     revisado: fecha(),
+  }).superRefine((t, ctx) => {
+    if ((t.en_ingles === undefined) === (t.en_espanol.length === 0)) {
+      ctx.addIssue({
+        code: 'custom',
+        message: 'Pon en_espanol si el título está en inglés, o en_ingles si está en español (uno de los dos)',
+        path: ['en_ingles'],
+      });
+    }
   });
