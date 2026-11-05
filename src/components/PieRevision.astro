@@ -1,0 +1,23 @@
+---
+// Pie de una ficha: cuándo se revisó y cómo avisar de un error.
+import { SITIO } from '../config';
+import { enlaceCorreccion } from '../lib/correcciones';
+import { formatearFecha } from '../lib/fecha';
+
+interface Props {
+  revisado: Date;
+  pagina: string;
+}
+
+const { revisado, pagina } = Astro.props;
+const url = new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<footer class="meta" data-pagefind-ignore>
+  <p>Revisado el {formatearFecha(revisado)}.</p>
+  <p><a href={enlaceCorreccion({ correo: SITIO.correo, pagina, url })}>¿Algo está mal o desactualizado? Avisadnos</a></p>
+</footer>
+
+<style>
+  .meta { display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9375rem; color: var(--tinta-suave); }
+</style>

@@ -1,0 +1,37 @@
+---
+// Lista de fuentes de una ficha: título enlazado, autoría, fecha y cuánto pesa cada una.
+import type { CollectionEntry } from 'astro:content';
+import { NIVELES } from '../lib/esquemas';
+import { fechaDeFuente } from '../lib/fecha';
+import { formatearPorcentaje } from '../lib/numeros';
+
+interface Props {
+  fuentes: CollectionEntry<'fuentes'>[];
+}
+
+const { fuentes } = Astro.props;
+---
+
+<ol class="fuentes">
+  {fuentes.map((f) => (
+    <li>
+      {/* Un libro puede no tener ni URL ni DOI: entonces el título va sin enlace y se cita por su ISBN. */}
+      {f.data.url || f.data.doi
+        ? <a href={f.data.url ?? `https://doi.org/${f.data.doi}`} hreflang={f.data.idioma}>{f.data.titulo}</a>
+        : <cite>{f.data.titulo}</cite>}
+      {`. ${f.data.autoria}, ${f.data.editorial ? `${f.data.editorial}, ` : ''}${fechaDeFuente(f.data.anio, f.data.comprobado)}`}
+      {f.data.isbn && `. ISBN ${f.data.isbn}`}{'. '}
+      <span class="nivel">
+        {NIVELES[f.data.nivel]}
+        {f.data.estudio && ` con ${f.data.estudio.muestra} participantes`}
+        {f.data.estudio && f.data.estudio.porcentaje_ninas !== null &&
+          `, ${formatearPorcentaje(f.data.estudio.porcentaje_ninas)} niñas o mujeres`}
+      </span>
+    </li>
+  ))}
+</ol>
+
+<style>
+  .fuentes { display: flex; flex-direction: column; gap: 0.75rem; padding-left: 1.5rem; }
+  .nivel { font-weight: 500; }
+</style>
