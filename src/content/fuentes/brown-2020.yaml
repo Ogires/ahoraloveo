@@ -1,0 +1,16 @@
+titulo: 'Am I Autistic? Utility of the Girls Questionnaire for Autism Spectrum Condition as an Autism Assessment in Adult Women'
+autoria: Claire M. Brown, Tony Attwood, Michelle Garnett y Mark A. Stokes
+anio: 2020
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8992859/
+doi: 10.1089/aut.2019.0054
+comprobado: 2026-11-05
+temas: [gq-asc, diagnostico]
+estudio:
+  diseno: Cuestionario en línea y análisis de componentes principales
+  muestra: 672
+  edades: De 18 a 72 años
+  porcentaje_ninas: 100 # mujeres cis y trans: 350 autistas y 322 no autistas
+  resultados_por_sexo: false
