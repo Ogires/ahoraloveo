@@ -32,6 +32,21 @@ que_hacer: >
   frases sencillas, partir las que repite en trozos más cortos y añadir gestos,
   imágenes o palabras escritas. Con el tiempo, los ecos suelen disminuir, aunque
   pueden volver en momentos de estrés.
+escenas:
+  - edad: 4 años
+    lugar: en la consulta de pediatría
+    protagonista: nina
+    texto: >
+      La pediatra le pregunta si quiere una pegatina y ella contesta: «¿Quieres
+      una pegatina?». Su madre explica que es su forma de decir que sí, y la
+      pediatra se la da.
+  - edad: 6 años
+    lugar: en el baño de casa
+    protagonista: nino
+    texto: >
+      Antes de meterse en la bañera repite en voz baja «agua calentita, agua
+      calentita», con la voz de la presentadora de su programa favorito. Lo hace
+      siempre que algo le da un poco de miedo.
 relacionados: [estereotipias, masking]
 fuentes: [escap-2021, prizant-seres-humanos-unicos, aetapi-mujeres-tea]
 revisado: 2026-11-05

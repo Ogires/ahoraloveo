@@ -34,6 +34,15 @@ que_hacer: >
   actividades, tiempo a solas para recuperarse y no pedirle que se esfuerce en
   parecer como las demás. Si veis que pierde habilidades durante semanas,
   contadlo en la consulta.
+escenas:
+  - edad: 12 años
+    lugar: en casa
+    protagonista: nina
+    texto: >
+      Desde que empezó el curso, al volver del instituto se mete en la cama. Le
+      cuesta organizarse para los deberes y ducharse sin que se lo recuerden,
+      cosas que antes hacía sola. El ruido del extractor de la cocina, que nunca
+      le había molestado, ahora no lo aguanta.
 relacionados: [masking, shutdown, meltdown]
 fuentes: [raymaker-2020, phung-2021, ambitious-meltdowns-shutdowns, cook-2021]
 revisado: 2026-11-05

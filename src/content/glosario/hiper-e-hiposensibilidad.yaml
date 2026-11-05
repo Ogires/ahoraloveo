@@ -35,6 +35,21 @@ que_hacer: >
   preguntarle qué necesita. Barry Prizant cuenta el caso de una familia que le
   decía a su hija «¿Necesitas tus auriculares? ¿Quieres irte?» y respetaba lo
   que ella contestaba. En el colegio, contad qué le molesta y qué la ayuda.
+escenas:
+  - edad: 5 años
+    lugar: en el patio del cole
+    protagonista: nina
+    texto: >
+      Sale al patio en manga corta en pleno enero y no parece tener frío. Se cae
+      del tobogán, se levanta sin quejarse y sigue jugando, aunque le sangra la
+      rodilla.
+  - edad: 10 años
+    lugar: en la cena
+    protagonista: nina
+    texto: >
+      En la cena se tapa un oído con la mano y se sienta lo más lejos posible de
+      su hermano, que mastica con la boca abierta. Las croquetas ni las toca: dice
+      que «pinchan por dentro».
 relacionados: [meltdown, estereotipias]
 fuentes: [nas-crisis, escap-2021, aetapi-mujeres-tea, hull-2017, paula-ansiedad-2015, prizant-seres-humanos-unicos]
 revisado: 2026-11-05

@@ -43,3 +43,11 @@ test('la vista de la A a la Z agrupa por letra, en orden, con la familia de cada
   await expect(primera.getByRole('link')).toHaveText('Alexitimia (alexithymia)');
   await expect(primera.locator('.chip')).toHaveText('Emociones');
 });
+
+test('las escenas aparecen en «En el día a día», con su edad y su lugar', async ({ page }) => {
+  await page.goto('/glosario/ecolalia/');
+  const apartado = page.locator('section[aria-labelledby="dia-a-dia"]');
+  await expect(apartado.getByRole('heading', { name: 'En el día a día' })).toBeVisible();
+  await expect(apartado.locator('.escena')).toHaveCount(2);
+  await expect(apartado.locator('.edad-lugar').first()).toHaveText('4 años · en la consulta de pediatría');
+});

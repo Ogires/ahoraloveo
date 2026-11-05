@@ -36,9 +36,30 @@ que_hacer: >
   se entendió para qué sirven. A veces sí conviene actuar: si las necesita todo
   el rato, si alguna le hace daño o si le trae problemas con los demás. Para
   esos casos, Barry Prizant aconseja cambiar lo que la rodea: menos ruido y
-  menos desorden. También propone buscar con ella
-  otra forma de calmarse, como apretar una pelota en vez de dar golpes con los
-  dedos, o enseñarle dónde y cuándo hacerlas.
+  menos desorden. También propone buscar con ella otra forma de calmarse, como
+  apretar una pelota en vez de dar golpes con los dedos, o enseñarle dónde y
+  cuándo hacerlas.
+escenas:
+  - edad: 7 años
+    lugar: en clase
+    protagonista: nina
+    texto: >
+      Durante el dictado se enrolla un mechón de pelo en el dedo una y otra vez, y
+      con la otra mano aprieta el borde de la falda. Si la profesora la mira,
+      para. En cuanto se da la vuelta, vuelve a empezar.
+  - edad: 2 años
+    lugar: en el parque
+    protagonista: nino
+    texto: >
+      Cuando su padre saca el pompero, salta en el sitio y agita las manos sin
+      parar, muerto de risa. Cada vez que explota una pompa, vuelve a empezar.
+  - edad: 8 años
+    lugar: en el baño del cole
+    protagonista: nina
+    texto: >
+      En clase está quieta y atenta toda la mañana. En el baño, a la hora del
+      recreo, hay menos gente, y se queda un momento aleteando las manos, sin darse
+      cuenta. Después vuelve a la fila tan tranquila.
 relacionados: [masking]
 fuentes: [ambitious-estereotipias, aetapi-mujeres-tea, prizant-seres-humanos-unicos, paula-ansiedad-2015, hull-2017]
 revisado: 2026-11-05

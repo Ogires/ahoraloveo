@@ -32,6 +32,14 @@ que_hacer: >
   apoyan que las personas autistas tengan ocasión de relacionarse con otras
   personas autistas. Buscar esos ratos, por ejemplo en una asociación, puede
   darle un espacio donde le resulte más fácil entenderse.
+escenas:
+  - edad: 9 años
+    lugar: en una tutoría del cole
+    protagonista: nina
+    texto: >
+      En la tutoría, la profesora cuenta que ella no la mira cuando le explica
+      algo y que por eso cree que no atiende. En casa saben que, sin mirar, se
+      entera de todo: luego repite las explicaciones casi palabra por palabra.
 relacionados: [masking]
 fuentes: [crompton-2020, pellicano-2022]
 revisado: 2026-11-05

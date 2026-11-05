@@ -31,5 +31,13 @@ que_hacer: >
   valore su pediatra: no deis por hecho que son nervios. Sobre qué apoyos
   funcionan mejor, la revisión que usamos dice que todavía hace falta
   investigar.
+escenas:
+  - edad: 11 años
+    lugar: en el coche
+    protagonista: nino
+    texto: >
+      Vuelven de un partido que su equipo ha perdido. Su padre le pregunta si está
+      triste o enfadado, y él se encoge de hombros: «Normal». Un rato después
+      pregunta, muy serio, cómo se sabe que uno está enfadado.
 fuentes: [kinnaird-2019]
 revisado: 2026-11-05

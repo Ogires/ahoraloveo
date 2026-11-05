@@ -33,6 +33,22 @@ que_hacer: >
   pasó antes, durante y después de cada meltdown. Con el tiempo suelen aparecer
   patrones: horas, sitios o situaciones que la desbordan. Así es más fácil
   adelantarse.
+escenas:
+  - edad: 3 años
+    lugar: en casa de sus abuelos
+    protagonista: nina
+    texto: >
+      Iban a ir al parque, pero empieza a llover y se quedan en casa. Ella
+      pregunta una y otra vez cuándo van a salir, cada vez más alto. Al final se
+      tira al suelo, grita y da patadas. Cuando por fin se calma, se queda dormida
+      en el sofá.
+  - edad: 9 años
+    lugar: en el comedor del cole
+    protagonista: nino
+    texto: >
+      El comedor está lleno y hay mucho ruido. Antes de acabar el primer plato se
+      levanta, va de un lado a otro de la fila y empieza a balancearse. Cuando un
+      monitor le pide que se siente, da un golpe en la mesa y se pone a gritar.
 relacionados: [masking, shutdown, burnout-autista]
 fuentes: [nas-crisis, paula-ansiedad-2015, aetapi-mujeres-tea]
 revisado: 2026-11-03

@@ -34,6 +34,14 @@ que_hacer: >
   muchas preguntas. Estad cerca y tranquilizadla, sin presionar. Con el tiempo,
   aprenderéis a ver las primeras señales de que se está saturando, y podréis
   bajar la carga antes de que llegue.
+escenas:
+  - edad: 8 años
+    lugar: en la sala de espera del dentista
+    protagonista: nina
+    texto: >
+      Viene de una mañana larga en el cole, y en la sala de espera se oye el torno
+      sin parar. Deja de contestar a su padre, se queda muy quieta en la silla y
+      mira al suelo. Cuando la llaman, tarda mucho en levantarse.
 relacionados: [meltdown, masking, burnout-autista]
 fuentes: [ambitious-meltdowns-shutdowns, phung-2021, cook-2021]
 revisado: 2026-11-05
