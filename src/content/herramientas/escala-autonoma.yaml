@@ -1,0 +1,40 @@
+nombre: Escala Autónoma
+nombre_completo: Escala Autónoma de la Universidad Autónoma de Madrid (2008)
+tipo: cribado
+edades: Mayores de 5 años
+quien: La responde la familia o el profesorado.
+formato: [cuestionario]
+duracion: Breve; tiene 18 preguntas
+areas: [comunicacion-social, repetitivas-sensorial]
+que_es: >
+  Es un cuestionario español, publicado en 2008 por la Universidad Autónoma de
+  Madrid con Autismo España, FESPAU y la Fundación ONCE. Sirve para detectar el
+  autismo en niñas, niños y jóvenes sin discapacidad intelectual. Su título usa
+  los nombres de entonces: «síndrome de Asperger» y «autismo de alto nivel de
+  funcionamiento».
+que_mide: >
+  Tiene 18 frases sobre formas de comportarse, y quien responde dice si las ve
+  nunca, algunas veces, con frecuencia o siempre. Pregunta, por ejemplo, si le
+  cuesta entender el sentido de algunas expresiones o si prefiere hacer las cosas
+  sola. También si le cuesta hacer amigos o si se aferra a las reglas de un juego
+  sin admitir cambios.
+como_se_interpreta: >
+  Cada respuesta suma de 1 a 4 puntos, así que el total va de 18 a 72. Quienes la
+  crearon recomiendan consultar a un especialista si se llega a 36 puntos o se
+  acerca, y añaden que nada impide hacerlo desde 30. No es una prueba
+  diagnóstica: ayuda a decidir cuándo conviene la consulta.
+limitaciones: >
+  Está pensada solo para quien no tiene discapacidad intelectual. Es un cribado:
+  orienta, no diagnostica, y un resultado bajo no descarta el autismo.
+en_ninas: >
+  Sin datos sobre niñas para este cuestionario: las fuentes que hemos consultado
+  no comparan sus resultados entre niñas y niños. Las guías clínicas avisan de que
+  el autismo se reconoce menos en las niñas, porque sus señales suelen ser más
+  sutiles. Si sale bajo y seguís viendo cosas que os preocupan, decidlo en la
+  consulta.
+que_preguntar:
+  - ¿La rellenamos nosotros, el colegio o los dos?
+  - ¿Qué puntuación ha salido y qué hacemos ahora?
+  - Si sale bajo pero seguimos preocupados, ¿qué podemos hacer?
+fuentes: [escala-autonoma-uam, previnfad-tea, escap-2021, nice-cg128]
+revisado: 2026-11-05

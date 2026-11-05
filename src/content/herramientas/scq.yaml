@@ -1,0 +1,34 @@
+nombre: SCQ
+nombre_completo: Cuestionario de Comunicación Social (Social Communication Questionnaire)
+tipo: cribado
+edades: Mayores de 4 años, con una edad mental de al menos 2 años
+quien: Lo responde la familia.
+formato: [cuestionario]
+duracion: De 15 a 20 minutos
+areas: [comunicacion-social]
+que_es: >
+  Es un cuestionario breve para la familia, que en España publica TEA Ediciones.
+  Recoge lo que habéis observado sobre cómo se comunica y se relaciona vuestra hija
+  o hijo, para decidir si conviene una evaluación más completa.
+que_mide: >
+  Pregunta por la comunicación y por la relación con los demás. Tiene 40
+  preguntas, según la guía ESCAP.
+como_se_interpreta: >
+  El profesional suma las respuestas y compara el total con un punto de corte. Si
+  lo supera, recomienda una evaluación más completa. Las fuentes abiertas que hemos
+  consultado no dan ese punto de corte.
+limitaciones: >
+  Es un cribado: orienta, no diagnostica, y un resultado negativo no descarta el
+  autismo. Además, necesita una edad mental de al menos 2 años.
+en_ninas: >
+  Sin datos sobre niñas para este cuestionario: las fuentes que hemos consultado
+  no comparan sus resultados entre niñas y niños. Las guías clínicas avisan de que
+  el autismo se reconoce menos en las niñas, porque sus señales suelen ser más
+  sutiles. Si sale negativo y seguís viendo cosas que os preocupan, decidlo en la
+  consulta.
+que_preguntar:
+  - ¿Por qué nos pasáis este cuestionario y qué haréis con el resultado?
+  - Si sale positivo, ¿a qué servicio nos derivaréis?
+  - Si sale negativo pero seguimos preocupados, ¿qué podemos hacer?
+fuentes: [teaediciones-folleto, escap-2021, nice-cg128]
+revisado: 2026-11-05

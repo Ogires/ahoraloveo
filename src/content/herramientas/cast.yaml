@@ -1,0 +1,34 @@
+nombre: CAST
+nombre_completo: Test infantil del espectro autista (Childhood Autism Spectrum Test)
+tipo: cribado
+edades: De 4 a 12 años, en la versión española
+quien: Lo responde la familia.
+formato: [cuestionario]
+duracion: Unos 10 minutos
+areas: [comunicacion-social]
+que_es: >
+  Es un cuestionario para la familia, con preguntas de sí o no. Está pensado para
+  la edad escolar y adaptado a la población española.
+que_mide: >
+  Pregunta por cómo se relaciona y cómo se comunica en el día a día.
+como_se_interpreta: >
+  Los estudios de validación aconsejan un punto de corte de 15 puntos: a partir de
+  ahí, el resultado es positivo y conviene una evaluación. En esos estudios, unos
+  6 de cada 10 positivos tenían autismo. Un positivo quiere decir que hay que
+  mirarlo con más calma, no que sea autismo.
+limitaciones: >
+  Es un cribado: orienta, no diagnostica, y un resultado negativo no descarta el
+  autismo. Las fuentes no coinciden en el número de preguntas: PrevInfad habla de
+  31 y la guía ESCAP, de 39.
+en_ninas: >
+  Sin datos sobre niñas para este cuestionario: las fuentes que hemos consultado
+  no comparan sus resultados entre niñas y niños. Las guías clínicas avisan de que
+  el autismo se reconoce menos en las niñas, porque sus señales suelen ser más
+  sutiles. Si sale negativo y seguís viendo cosas que os preocupan, decidlo en la
+  consulta.
+que_preguntar:
+  - ¿Por qué nos pasáis este cuestionario y qué haréis con el resultado?
+  - Si sale positivo, ¿a qué servicio nos derivaréis?
+  - Si sale negativo pero seguimos preocupados, ¿qué podemos hacer?
+fuentes: [previnfad-tea, escap-2021, nice-cg128]
+revisado: 2026-11-05

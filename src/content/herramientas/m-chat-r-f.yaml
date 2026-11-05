@@ -1,0 +1,46 @@
+nombre: M-CHAT-R/F
+nombre_completo: Lista de control modificada para el autismo en niños pequeños, revisada y con seguimiento (Modified Checklist for Autism in Toddlers, Revised with Follow-Up)
+tipo: cribado
+edades: De 16 a 30 meses
+quien: Responde la familia. Si hace falta, un profesional hace después una entrevista de seguimiento.
+formato: [cuestionario, entrevista]
+duracion: Menos de 10 minutos, más la entrevista si hace falta
+areas: [comunicacion-social, repetitivas-sensorial]
+que_es: >
+  Es el cuestionario de cribado que recomienda PrevInfad para niñas y niños
+  pequeños, y está validado en España. Tiene dos fases. Primero, la familia
+  responde sí o no a 20 preguntas sobre el día a día. Si el resultado lo pide, un
+  profesional hace después una entrevista de seguimiento, por teléfono o en
+  persona, para aclarar las respuestas que preocupan.
+que_mide: >
+  Pregunta por cosas que suelen aparecer en los primeros años. Por ejemplo, si
+  mira hacia donde señaláis, si señala para enseñaros algo que le interesa o si
+  juega a hacer como que. También si se interesa por otros niños, si responde
+  cuando la llamáis por su nombre o si hace movimientos poco habituales, como
+  mover los dedos cerca de los ojos. No diagnostica: estima la probabilidad de autismo.
+como_se_interpreta: >
+  Cada respuesta que apunta al autismo suma un punto. Con 0 a 2 puntos, el riesgo
+  es bajo; si tiene menos de 2 años, se repite más adelante. Con 3 a 7, el riesgo
+  es medio y se hace la entrevista de seguimiento: si después quedan 2 puntos o
+  más, el cribado es positivo. Con 8 o más, el riesgo es alto y se deriva
+  directamente para una evaluación y para atención temprana. Un positivo quiere
+  decir que hay que mirarlo con más calma, no que sea autismo.
+limitaciones: >
+  Da bastantes falsos positivos: muchas niñas y niños con un resultado positivo no
+  son autistas, aunque a menudo tienen otra dificultad del desarrollo que también
+  conviene atender. PrevInfad calcula que, si se pasa a toda la población, menos
+  de la mitad de los positivos acaban en un diagnóstico de autismo. Por eso
+  recomienda usarlo cuando ya hay alguna duda o algún factor de riesgo. Y un
+  resultado negativo no descarta el autismo.
+en_ninas: >
+  Sin datos sobre niñas para este cuestionario: las fuentes que hemos consultado
+  no comparan sus resultados entre niñas y niños. Las guías clínicas avisan de que
+  el autismo se reconoce menos en las niñas, porque sus señales suelen ser más
+  sutiles. Si sale negativo y seguís viendo cosas que os preocupan, decidlo en la
+  consulta.
+que_preguntar:
+  - ¿Qué resultado ha salido y qué quiere decir?
+  - Si hace falta la entrevista de seguimiento, ¿quién la hace y cuándo?
+  - Si sale bajo pero seguimos preocupados, ¿cuándo volvemos a mirarlo?
+fuentes: [previnfad-tea, mchat-oficial, escap-2021, nice-cg128]
+revisado: 2026-11-05

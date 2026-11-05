@@ -12,6 +12,6 @@ que_hacer: >
   Si sale negativo pero seguís viendo cosas que os preocupan, decidlo: PrevInfad
   recomienda seguir vigilando y repetir el cuestionario al menos hasta los 36
   meses.
-herramientas: []
+herramientas: [m-chat-r-f, cast, escala-autonoma, scq]
 fuentes: [escap-2021, previnfad-tea, nice-cg128]
 revisado: 2026-11-05
