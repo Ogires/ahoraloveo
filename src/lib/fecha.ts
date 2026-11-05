@@ -4,3 +4,7 @@ const formato = new Intl.DateTimeFormat('es-ES', {
 });
 
 export const formatearFecha = (fecha: Date) => formato.format(fecha);
+
+// En la lista de fuentes: el año, o «sin fecha» con el día en que se consultó, como piden las normas de cita.
+export const fechaDeFuente = (anio: number | 'sin fecha', comprobado: Date) =>
+  anio === 'sin fecha' ? `sin fecha (consultada el ${formatearFecha(comprobado)})` : String(anio);

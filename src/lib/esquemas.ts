@@ -56,7 +56,8 @@ export const esquemaFuente = z
   .object({
     titulo: texto(),
     autoria: texto(),
-    anio: z.number().int().min(1900),
+    // «sin fecha» se escribe a propósito, para las páginas que no la dicen: un año olvidado da error.
+    anio: z.union([z.number().int().min(1900), z.literal('sin fecha')]),
     tipo: z.enum(TIPOS),
     nivel: z.enum(IDS_NIVELES),
     idioma: z.string().regex(/^[a-z]{2}$/),

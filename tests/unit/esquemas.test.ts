@@ -90,6 +90,16 @@ describe('esquema de fuentes', () => {
     expect(valido(esquemaFuente, fuente)).toBe(true);
   });
 
+  it('acepta «sin fecha» en una página que no la dice', () => {
+    expect(valido(esquemaFuente, { ...fuente, anio: 'sin fecha' })).toBe(true);
+  });
+
+  it('exige el año, o «sin fecha» puesto a propósito', () => {
+    const { anio: _, ...sinAnio } = fuente;
+    expect(valido(esquemaFuente, sinAnio)).toBe(false);
+    expect(valido(esquemaFuente, { ...fuente, anio: 'sin año' })).toBe(false);
+  });
+
   it('acepta una fuente con DOI y sin URL', () => {
     const { url: _, ...sinUrl } = fuente;
     expect(valido(esquemaFuente, { ...sinUrl, doi: '10.1000/ejemplo' })).toBe(true);
