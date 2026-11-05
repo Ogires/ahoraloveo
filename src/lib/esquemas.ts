@@ -13,7 +13,7 @@ export const NIVELES = {
 type Nivel = keyof typeof NIVELES;
 const IDS_NIVELES = Object.keys(NIVELES) as [Nivel, ...Nivel[]];
 
-const TIPOS = ['guia-clinica', 'revision', 'estudio', 'entidad', 'oficial', 'experiencia', 'libro'] as const;
+const TIPOS = ['guia-clinica', 'revision', 'estudio', 'entidad', 'editorial', 'oficial', 'experiencia', 'libro'] as const;
 type Tipo = (typeof TIPOS)[number];
 
 // Qué niveles admite cada tipo, para que el peso de una fuente no se infle.
@@ -23,6 +23,8 @@ const NIVELES_POR_TIPO: Record<Tipo, Nivel[]> = {
   revision: ['consenso'],
   estudio: ['estudios'],
   entidad: ['entidades', 'consenso'],
+  // La editorial que publica una prueba en España: solo para sus datos técnicos (edades, formato, duración).
+  editorial: ['entidades'],
   oficial: ['oficial', 'consenso'],
   experiencia: ['experiencia'],
   // Un libro de especialista es divulgación; uno escrito desde la propia vivencia, experiencia.

@@ -90,6 +90,14 @@ describe('esquema de fuentes', () => {
     expect(valido(esquemaFuente, fuente)).toBe(true);
   });
 
+  it('acepta una editorial con nivel «entidades», para los datos técnicos de una prueba', () => {
+    expect(valido(esquemaFuente, { ...fuente, tipo: 'editorial', nivel: 'entidades' })).toBe(true);
+  });
+
+  it('no deja que una editorial pese como consenso', () => {
+    expect(valido(esquemaFuente, { ...fuente, tipo: 'editorial', nivel: 'consenso' })).toBe(false);
+  });
+
   it('acepta «sin fecha» en una página que no la dice', () => {
     expect(valido(esquemaFuente, { ...fuente, anio: 'sin fecha' })).toBe(true);
   });
