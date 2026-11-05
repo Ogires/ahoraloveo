@@ -1,0 +1,25 @@
+orden: 4
+titulo: La derivación
+que_pasa: >
+  Si la sospecha se mantiene, pediatría os deriva a un servicio especializado,
+  como neuropediatría, para hacer la evaluación. A la vez, la atención temprana
+  puede empezar con la sospecha, sin esperar al diagnóstico. PrevInfad recomienda
+  derivar cuanto antes a atención temprana a los menores de 30 meses con sospecha
+  de autismo.
+quien: Pediatría. Los servicios a los que deriva cambian según la comunidad autónoma.
+que_hacer: >
+  Pedid que os expliquen adónde os derivan y para qué, y preguntad por la atención
+  temprana. Las esperas en neuropediatría y en atención temprana pueden ser
+  largas, así que conviene empezar los trámites pronto.
+comunitat_valenciana:
+  texto: >
+    El protocolo de 2023 entre sanidad y servicios sociales dice que, ante una
+    sospecha de autismo, pediatría deriva a la unidad de salud mental infantil
+    (USMIA) para completar el diagnóstico. La atención temprana es gratuita, para
+    menores de 6 años, y no exige un diagnóstico. Para pedirla, pediatría os da un
+    «Informe de salud para atención temprana» y vosotros presentáis la solicitud
+    a la unidad de valoración (UVSAT) de vuestra provincia.
+  fuentes: [cv-protocolo-sanidad-2023]
+  comprobado: 2026-11-05
+fuentes: [previnfad-tea, nice-cg128]
+revisado: 2026-11-05
