@@ -1,0 +1,39 @@
+nombre: Pruebas de desarrollo e inteligencia
+nombre_completo: Escala Bayley, escalas Wechsler (WPPSI-IV y WISC-V) y Vineland-3, entre otras
+tipo: complementaria
+edades: Desde el nacimiento hasta la edad adulta, según la prueba
+quien: Profesionales cualificados, sobre todo de psicología. La Vineland-3 la responde la familia.
+formato: [prueba, entrevista, cuestionario]
+duracion: De 30 a 90 minutos, según la prueba
+areas: [desarrollo, vida-diaria]
+que_es: >
+  No sirven para diagnosticar el autismo, pero forman parte de la evaluación. La
+  guía ESCAP pide valorar también el desarrollo, la capacidad intelectual, el
+  lenguaje y la autonomía, porque el objetivo es conocer sus puntos fuertes y lo
+  que necesita. Esta ficha reúne algunos ejemplos que cita la guía.
+que_mide: >
+  La escala Bayley mira el desarrollo de 1 a 42 meses: lo cognitivo, el
+  lenguaje, lo motor, lo socioemocional y la conducta adaptativa. La WPPSI-IV, de
+  2 años y medio a 7 años y medio, y la WISC-V, de 6 a 16 años, miden la
+  inteligencia. Dan un cociente intelectual global y varios índices, como el de
+  comprensión verbal. La Vineland-3 pregunta a la familia por la comunicación, las
+  habilidades para la vida diaria y la socialización.
+como_se_interpreta: >
+  Cada prueba compara los resultados con los de su edad. Pero en el autismo el
+  perfil suele ser muy desigual, con puntos muy fuertes y otros que cuestan más.
+  Por eso la guía ESCAP avisa de que una cifra global de inteligencia puede no
+  reflejar bien lo que de verdad puede hacer. Pide fijarse en los puntos fuertes y
+  débiles concretos.
+limitaciones: >
+  Miden capacidades, no el autismo. Además, la WPPSI-IV y la WISC-V están
+  pensadas para niñas y niños que hablan, así que el profesional elige la prueba
+  según cada caso.
+en_ninas: >
+  Sin datos sobre niñas: las fuentes que hemos consultado no comparan estas
+  pruebas entre niñas y niños autistas.
+que_preguntar:
+  - ¿Qué pruebas le vais a pasar y qué queréis saber con cada una?
+  - ¿Nos explicaréis su perfil, con lo que se le da bien y lo que le cuesta, y no solo una cifra?
+  - ¿Cómo se tendrán en cuenta los resultados en el colegio?
+fuentes: [escap-2021, nice-cg128]
+revisado: 2026-11-05

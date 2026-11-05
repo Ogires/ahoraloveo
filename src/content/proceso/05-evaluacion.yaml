@@ -14,6 +14,6 @@ que_hacer: >
   pequeño. En las niñas las señales pueden ser más sutiles, y la guía ESCAP pide
   no descartar el diagnóstico demasiado pronto: a veces hacen falta varias
   sesiones.
-herramientas: []
+herramientas: [ados-2, adi-r, pruebas-de-desarrollo]
 fuentes: [escap-2021, nice-cg128]
 revisado: 2026-11-05

@@ -1,0 +1,48 @@
+nombre: ADOS-2
+nombre_completo: Escala de Observación para el Diagnóstico del Autismo, 2.ª edición (Autism Diagnostic Observation Schedule, Second Edition)
+tipo: diagnostico
+edades: Desde los 12 meses hasta la edad adulta
+quien: Un profesional con experiencia y formación específica en la prueba.
+formato: [observacion]
+duracion: De 40 a 60 minutos
+areas: [comunicacion-social, repetitivas-sensorial]
+que_es: >
+  Es una sesión de juego y conversación en la que el profesional observa a
+  vuestra hija o hijo. Las actividades están pensadas para que aparezcan las
+  conductas que ayudan a valorar el autismo. Se considera la prueba de referencia
+  para observar el autismo, y en España la publica TEA Ediciones.
+que_mide: >
+  Observa la comunicación, la interacción social, el juego imaginativo y las
+  conductas repetitivas. Tiene cinco módulos, y se elige uno según la edad y el
+  lenguaje. El módulo T es para niñas y niños de 12 a 30 meses que aún no hablan
+  con frases, y el 1, para mayores de 31 meses con ese mismo lenguaje. El 2 es
+  para quien habla con frases; el 3, para quien habla con fluidez y aún juega con
+  juguetes; y el 4, para adolescentes desde unos 16 años y adultos. Con los más
+  pequeños son actividades de juego, como hacer burbujas o una fiesta de
+  cumpleaños de mentira. Con los mayores pesa más la conversación.
+como_se_interpreta: >
+  Lo que observa se puntúa y se suma en un algoritmo. En los módulos 1 a 4, el
+  total se compara con unos puntos de corte y da una clasificación. En el módulo
+  T, el de los más pequeños, no hay puntos de corte, sino un «rango de
+  preocupación». Los módulos 1 a 3 dan además una puntuación comparativa. Compara
+  las señales de autismo observadas con las de niñas y niños autistas de su edad y
+  su nivel de lenguaje, y sirve para ver cambios con el tiempo. El resultado nunca
+  decide solo: se usa junto con el resto de la información.
+limitaciones: >
+  Muestra lo que pasa durante un rato en la consulta, y ahí puede no verse todo lo
+  que pasa en casa o en el colegio. Si lo que cuenta la familia no coincide con
+  lo que se ve, la guía NICE recomienda buscar más información u observar en el
+  colegio o en casa. Y pide no diagnosticar nunca con una sola prueba.
+en_ninas: >
+  La guía ESCAP avisa de que las evaluaciones de diagnóstico actuales no tienen en
+  cuenta las diferencias entre niñas y niños. En las niñas las señales suelen ser
+  más sutiles, así que puede hacer falta una evaluación más detallada y más de una
+  sesión. La guía NICE añade que no hay que descartar el autismo por un buen
+  contacto visual, por sonreír a la familia o por jugar a hacer como que.
+que_preguntar:
+  - ¿Qué módulo le vais a pasar y por qué?
+  - ¿Quién nos explicará los resultados, y cuándo?
+  - ¿Tendréis en cuenta cómo puede presentarse el autismo en las niñas?
+relacionados: [estereotipias]
+fuentes: [teaediciones-ados2, escap-2021, nice-cg128]
+revisado: 2026-11-05

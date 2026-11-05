@@ -1,0 +1,38 @@
+nombre: ADI-R
+nombre_completo: Entrevista para el Diagnóstico del Autismo, revisada (Autism Diagnostic Interview, Revised)
+tipo: diagnostico
+edades: Niñas, niños y adultos con una edad mental de más de 2 años
+quien: Responde la familia. La entrevista la hace un profesional con experiencia y formación específica.
+formato: [entrevista]
+duracion: De hora y media a dos horas y media, contando la puntuación
+areas: [comunicacion-social, repetitivas-sensorial]
+que_es: >
+  Es una entrevista larga con la familia sobre el desarrollo y el comportamiento
+  de vuestra hija o hijo. Las guías piden combinar lo que el profesional observa
+  con lo que cuentan quienes mejor la conocen. El ADI-R recoge esto último, y
+  suele ir junto al ADOS-2.
+que_mide: >
+  Son 93 preguntas sobre tres áreas: el lenguaje y la comunicación, la
+  interacción social, y las conductas restringidas, repetitivas y estereotipadas.
+como_se_interpreta: >
+  El profesional valora vuestras respuestas junto con la observación y el resto de
+  la información para llegar al diagnóstico. Ninguna prueba sirve sola. Según TEA
+  Ediciones, que la publica en España, también ayuda a preparar los planes
+  educativos y de intervención.
+limitaciones: >
+  Es larga: entre hora y media y dos horas y media. Depende de lo que recordéis y
+  sepáis contar, así que ayuda llevar apuntados ejemplos concretos. Además,
+  necesita una edad mental de más de 2 años.
+en_ninas: >
+  Sin datos sobre niñas para esta entrevista: las fuentes que hemos consultado no
+  comparan sus resultados entre niñas y niños. La guía ESCAP avisa de que las
+  evaluaciones de diagnóstico actuales no tienen en cuenta esas diferencias, y de
+  que en las niñas las señales suelen ser más sutiles. Por eso, al responder,
+  contad también lo que os parezca pequeño.
+que_preguntar:
+  - ¿Cuánto durará, y podemos hacerla en más de una sesión?
+  - ¿Os sirve que traigamos notas o vídeos de cuando era más pequeña?
+  - ¿Quién nos explicará qué peso ha tenido en el diagnóstico?
+relacionados: [estereotipias]
+fuentes: [teaediciones-folleto, escap-2021, nice-cg128]
+revisado: 2026-11-05
