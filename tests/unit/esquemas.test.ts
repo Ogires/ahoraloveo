@@ -1,8 +1,33 @@
 import { describe, expect, it } from 'vitest';
 import { z } from 'astro/zod';
-import { crearEsquemaTermino, esquemaEntidad, esquemaFuente } from '../../src/lib/esquemas';
+import {
+  crearEsquemaHerramienta,
+  crearEsquemaTermino,
+  esquemaEntidad,
+  esquemaFuente,
+} from '../../src/lib/esquemas';
 
 const esquemaTermino = crearEsquemaTermino({ fuentes: z.string(), glosario: z.string() });
+const esquemaHerramienta = crearEsquemaHerramienta({ fuentes: z.string(), glosario: z.string() });
+
+const herramienta = {
+  nombre: 'M-CHAT-R/F',
+  nombre_completo: 'Modified Checklist for Autism in Toddlers, Revised with Follow-Up',
+  tipo: 'cribado',
+  edades: 'De 16 a 30 meses',
+  quien: 'Responde la familia; la entrevista de seguimiento la hace un profesional',
+  formato: ['cuestionario', 'entrevista'],
+  duracion: 'Unos 5 minutos',
+  areas: ['comunicacion-social', 'repetitivas-sensorial'],
+  que_es: 'Un cuestionario para la familia.',
+  que_mide: 'La comunicación y el juego.',
+  como_se_interpreta: 'Riesgo bajo, medio o alto.',
+  limitaciones: 'Orienta; no diagnostica.',
+  en_ninas: 'Sin datos sobre niñas.',
+  que_preguntar: ['¿Qué pasa ahora?'],
+  fuentes: ['previnfad-tea'],
+  revisado: '2026-11-05',
+};
 
 const termino = {
   termino: 'Meltdown',
@@ -238,4 +263,32 @@ describe('libros', () => {
       expect(valido(esquemaFuente, { ...libro, isbn })).toBe(false);
     },
   );
+});
+
+describe('esquema de las herramientas', () => {
+  it('acepta una ficha completa', () => {
+    expect(valido(esquemaHerramienta, herramienta)).toBe(true);
+  });
+
+  it('exige al menos una fuente', () => {
+    expect(valido(esquemaHerramienta, { ...herramienta, fuentes: [] })).toBe(false);
+  });
+
+  it('exige el apartado «En niñas», aunque sea para decir que no hay datos', () => {
+    expect(valido(esquemaHerramienta, { ...herramienta, en_ninas: ' ' })).toBe(false);
+  });
+
+  it('rechaza un tipo que no existe', () => {
+    expect(valido(esquemaHerramienta, { ...herramienta, tipo: 'evaluacion' })).toBe(false);
+  });
+
+  it('rechaza un área que no existe y exige al menos una', () => {
+    expect(valido(esquemaHerramienta, { ...herramienta, areas: ['sensorial'] })).toBe(false);
+    expect(valido(esquemaHerramienta, { ...herramienta, areas: [] })).toBe(false);
+  });
+
+  it('exige al menos un formato y una pregunta para el profesional', () => {
+    expect(valido(esquemaHerramienta, { ...herramienta, formato: [] })).toBe(false);
+    expect(valido(esquemaHerramienta, { ...herramienta, que_preguntar: [] })).toBe(false);
+  });
 });

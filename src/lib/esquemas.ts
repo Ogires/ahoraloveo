@@ -144,3 +144,50 @@ export const crearEsquemaTermino = <F extends z.ZodType, G extends z.ZodType>(re
       });
     }
   });
+
+// Herramientas de diagnóstico (iteración 1) y cómo se nombran en la web.
+export const TIPOS_HERRAMIENTA = {
+  cribado: 'Cribado',
+  diagnostico: 'Diagnóstico',
+  complementaria: 'Complementaria',
+} as const;
+export const FORMATOS = {
+  cuestionario: 'Cuestionario',
+  entrevista: 'Entrevista',
+  observacion: 'Observación',
+  prueba: 'Prueba',
+} as const;
+// Las dos primeras siguen los dos bloques del DSM-5; las otras, lo que miden las complementarias.
+export const AREAS = {
+  'comunicacion-social': 'Comunicación e interacción social',
+  'repetitivas-sensorial': 'Conductas repetitivas, intereses y sensorial',
+  desarrollo: 'Desarrollo e inteligencia',
+  'vida-diaria': 'Vida diaria',
+} as const;
+export type TipoHerramienta = keyof typeof TIPOS_HERRAMIENTA;
+export type Area = keyof typeof AREAS;
+const ids = <T extends Record<string, string>>(o: T) => Object.keys(o) as [keyof T & string, ...(keyof T & string)[]];
+
+export const crearEsquemaHerramienta = <F extends z.ZodType, G extends z.ZodType>(referencias: {
+  fuentes: F;
+  glosario: G;
+}) =>
+  z.object({
+    nombre: texto(), // el nombre corto, como lo dice el profesional: «ADOS-2»
+    nombre_completo: texto(),
+    tipo: z.enum(ids(TIPOS_HERRAMIENTA)),
+    edades: texto(),
+    quien: texto(), // quién la pasa o la responde
+    formato: z.array(z.enum(ids(FORMATOS))).min(1),
+    duracion: texto(),
+    areas: z.array(z.enum(ids(AREAS))).min(1, 'Cada herramienta mide al menos un área'),
+    que_es: texto(),
+    que_mide: texto(),
+    como_se_interpreta: texto(),
+    limitaciones: texto(),
+    en_ninas: texto(), // texto, o «Sin datos sobre niñas» con su explicación
+    que_preguntar: z.array(texto()).min(1),
+    relacionados: z.array(referencias.glosario).default([]),
+    fuentes: z.array(referencias.fuentes).min(1, 'Cada herramienta necesita al menos una fuente'),
+    revisado: fecha(),
+  });
