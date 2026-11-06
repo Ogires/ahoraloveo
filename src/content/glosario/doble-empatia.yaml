@@ -34,12 +34,13 @@ que_hacer: >
   darle un espacio donde le resulte más fácil entenderse.
 escenas:
   - edad: 9 años
-    lugar: en una tutoría del cole
+    lugar: de camino a casa
     protagonista: nina
     texto: >
-      En la tutoría, la profesora cuenta que ella no la mira cuando le explica
-      algo y que por eso cree que no atiende. En casa saben que, sin mirar, se
-      entera de todo: luego repite las explicaciones casi palabra por palabra.
+      De camino a casa, su madre le cuenta lo que dijo la profesora en la
+      tutoría: que en los trabajos en grupo no se entiende con sus compañeras.
+      Ella contesta: «Yo digo mi idea y no me entienden. Y cuando hablan ellas, yo
+      tampoco las entiendo».
 relacionados: [masking, neurodiversidad]
 fuentes: [crompton-2020, pellicano-2022]
 revisado: 2026-11-05

@@ -39,10 +39,10 @@ escenas:
     lugar: en casa
     protagonista: nina
     texto: >
-      Desde que empezó el curso, al volver del instituto se mete en la cama. Le
-      cuesta organizarse para los deberes y ducharse sin que se lo recuerden,
-      cosas que antes hacía sola. El ruido del extractor de la cocina, que nunca
-      le había molestado, ahora no lo aguanta.
+      Desde hace meses, al volver del instituto se mete en la cama, y ni el fin
+      de semana le basta para recuperarse. Le cuesta organizarse para los deberes
+      y ducharse sin que se lo recuerden, cosas que antes hacía sola. El ruido del
+      extractor de la cocina, que nunca le había molestado, ahora no lo aguanta.
 relacionados: [masking, shutdown, meltdown]
 fuentes: [raymaker-2020, phung-2021, ambitious-meltdowns-shutdowns, cook-2021]
 revisado: 2026-11-05

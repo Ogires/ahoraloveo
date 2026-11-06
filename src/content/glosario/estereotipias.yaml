@@ -51,15 +51,15 @@ escenas:
     lugar: en el parque
     protagonista: nino
     texto: >
-      Cuando su padre saca el pompero, salta en el sitio y agita las manos sin
-      parar, muerto de risa. Cada vez que explota una pompa, vuelve a empezar.
-  - edad: 8 años
-    lugar: en el baño del cole
+      Cuando su padre saca el pompero, agita las manos sin parar, muerto de risa.
+      Cada vez que explota una pompa, vuelve a empezar.
+  - edad: 6 años
+    lugar: en la terraza de un bar
     protagonista: nina
     texto: >
-      En clase está quieta y atenta toda la mañana. En el baño, a la hora del
-      recreo, hay menos gente, y se queda un momento aleteando las manos, sin darse
-      cuenta. Después vuelve a la fila tan tranquila.
+      Mientras esperan la comida, se balancea en el banco y tararea bajito,
+      siempre la misma canción. Su padre ya se la sabe de memoria. Cuando llega el
+      plato, sigue comiendo y tarareando.
 relacionados: [masking, neurodiversidad]
 fuentes: [ambitious-estereotipias, aetapi-mujeres-tea, prizant-seres-humanos-unicos, paula-ansiedad-2015, hull-2017]
 revisado: 2026-11-05

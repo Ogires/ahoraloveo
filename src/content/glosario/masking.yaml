@@ -35,13 +35,12 @@ que_hacer: >
   ayuda a descansar.
 escenas:
   - edad: 10 años
-    lugar: en una fiesta de cumpleaños
+    lugar: en un cumpleaños
     protagonista: nina
     texto: >
-      La noche antes, le pide a su madre que hagan como si fuera la fiesta, para
-      practicar qué decir al llegar. En el cumpleaños mira a los ojos a todo el
-      mundo y sonríe sin parar. A la vuelta, se queda dormida en el coche antes de
-      llegar a casa.
+      En el coche, de camino al cumpleaños, repasa en voz baja lo que va a decir
+      al dar el regalo. En la fiesta no se separa de su mejor amiga: espera a ver
+      qué contesta ella y luego dice lo mismo.
 relacionados: [meltdown, estereotipias, burnout-autista]
 fuentes: [cook-2021, hull-2017, aetapi-mujeres-tea]
 revisado: 2026-11-03
