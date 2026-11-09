@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { z } from 'astro/zod';
 import {
   crearEsquemaHerramienta,
+  crearEsquemaMito,
   crearEsquemaPaso,
   crearEsquemaTermino,
   esquemaEntidad,
@@ -346,5 +347,53 @@ describe('esquema de los pasos del proceso', () => {
     expect(valido(esquemaPaso, { ...paso, fuentes: [] })).toBe(false);
     expect(valido(esquemaPaso, { ...paso, orden: 0 })).toBe(false);
     expect(valido(esquemaPaso, { ...paso, orden: 2.5 })).toBe(false);
+  });
+});
+
+const esquemaMito = crearEsquemaMito({ fuentes: z.string(), glosario: z.string() });
+
+const mito = {
+  mito: 'Las vacunas causan autismo',
+  dato: 'Los estudios más grandes, con cientos de miles de niñas y niños, no encuentran ninguna relación.',
+  por_que: 'Explicación.',
+  que_hacer: 'Qué podéis hacer.',
+  fuentes: ['escap-2021'],
+  orden: 1,
+  revisado: '2026-11-09',
+};
+
+describe('esquema de los mitos', () => {
+  it('acepta un mito completo, sin los campos opcionales', () => {
+    const r = esquemaMito.parse(mito);
+    expect(r.variantes).toEqual([]);
+    expect(r.relacionados).toEqual([]);
+  });
+
+  it('exige al menos una fuente', () => {
+    expect(esquemaMito.safeParse({ ...mito, fuentes: [] }).success).toBe(false);
+  });
+
+  it('el dato es una frase de 25 palabras como mucho', () => {
+    const largo = Array.from({ length: 26 }, () => 'palabra').join(' ');
+    const r = esquemaMito.safeParse({ ...mito, dato: largo });
+    expect(r.success).toBe(false);
+    expect(JSON.stringify(r.error)).toContain('25 palabras');
+  });
+
+  it('acepta hasta tres variantes y rechaza la cuarta', () => {
+    expect(esquemaMito.safeParse({ ...mito, variantes: ['a', 'b', 'c'] }).success).toBe(true);
+    expect(esquemaMito.safeParse({ ...mito, variantes: ['a', 'b', 'c', 'd'] }).success).toBe(false);
+  });
+
+  it('el mito y sus variantes van sin comillas, porque las pone la página', () => {
+    expect(esquemaMito.safeParse({ ...mito, mito: '«Las vacunas causan autismo»' }).success).toBe(false);
+    expect(esquemaMito.safeParse({ ...mito, variantes: ['"Es cosa de chicos"'] }).success).toBe(false);
+  });
+
+  it('exige un orden entero positivo y la fecha de revisión', () => {
+    expect(esquemaMito.safeParse({ ...mito, orden: 0 }).success).toBe(false);
+    expect(esquemaMito.safeParse({ ...mito, orden: 1.5 }).success).toBe(false);
+    const { revisado: _, ...sinFecha } = mito;
+    expect(esquemaMito.safeParse(sinFecha).success).toBe(false);
   });
 });

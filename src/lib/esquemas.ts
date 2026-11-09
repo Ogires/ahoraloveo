@@ -224,3 +224,26 @@ export const crearEsquemaPaso = <F extends z.ZodType, H extends z.ZodType>(refer
     fuentes: z.array(referencias.fuentes).min(1, 'Cada paso necesita al menos una fuente'),
     revisado: fecha(),
   });
+
+// Las comillas del mito las pone la página: en el YAML van sin ellas.
+const sinComillas = () =>
+  texto().refine((t) => !/^[«"“']|[»"”']$/.test(t), 'Escribe el mito sin comillas: las pone la página');
+
+// Un mito sobre el autismo (guía en .claude/skills/lenguaje-claro/references/mitos.md).
+// Primero el mito y justo debajo el dato, que también es la descripción de la página.
+export const crearEsquemaMito = <F extends z.ZodType, G extends z.ZodType>(referencias: {
+  fuentes: F;
+  glosario: G;
+}) =>
+  z.object({
+    mito: sinComillas(),
+    variantes: z.array(sinComillas()).max(3, 'Un mito tiene tres variantes como mucho').default([]),
+    dato: texto().refine((t) => contarPalabras(t) <= 25, 'El dato es una frase de 25 palabras como mucho'),
+    por_que: texto(),
+    de_donde_viene: texto().optional(),
+    que_hacer: texto(),
+    relacionados: z.array(referencias.glosario).default([]),
+    fuentes: z.array(referencias.fuentes).min(1, 'Cada mito necesita al menos una fuente'),
+    orden: z.number().int().min(1),
+    revisado: fecha(),
+  });
