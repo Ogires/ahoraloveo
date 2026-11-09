@@ -1,6 +1,6 @@
 ---
 name: lenguaje-claro
-description: Redacta y revisa los textos de la web «Ahora lo veo» (autismo en mujeres y niñas) para que una familia cansada o asustada los entienda a la primera. Aplica lenguaje claro en español de España (ISO 24495-1), la guía de estilo del proyecto y el peso justo de cada fuente. Úsala siempre que escribas, reescribas o revises una ficha (término del glosario, señal, herramienta de diagnóstico, escena, escena de elegir, momento de «Un día con Lucía»), la portada, «Sobre esta web», los avisos o cualquier texto que vaya a leer una familia, aunque nadie diga «lenguaje claro». Úsala también para revisar un borrador generado con IA o un texto ajeno antes de publicarlo.
+description: Redacta y revisa los textos de la web «Ahora lo veo» (autismo en mujeres y niñas) para que una familia cansada o asustada los entienda a la primera. Aplica lenguaje claro en español de España (ISO 24495-1), la guía de estilo del proyecto y el peso justo de cada fuente. Úsala siempre que escribas, reescribas o revises una ficha (término del glosario, señal, herramienta de diagnóstico, escena, escena de elegir, mito, momento de «Un día con Lucía»), la portada, «Sobre esta web», los avisos o cualquier texto que vaya a leer una familia, aunque nadie diga «lenguaje claro». Úsala también para revisar un borrador generado con IA o un texto ajeno antes de publicarlo.
 ---
 
 # Lenguaje claro para familias
@@ -108,6 +108,10 @@ Aplica la misma lista de comprobación y devuelve una tabla, ordenada de más a 
 ## Escenas del día a día
 
 Las escenas son situaciones cotidianas cortas que muestran un término sin nombrarlo. Antes de escribir o revisar una, lee [references/escenas.md](references/escenas.md): son inventadas, de 60 palabras como mucho, con edad y lugar, sin nombres propios y sin diagnosticar, y solo muestran lo que la ficha ya dice con su fuente.
+
+## Mitos
+
+Un mito tiene su página en `/mitos/`: primero lo que se suele oír, entre comillas, y justo debajo lo que sabemos. Antes de escribir o revisar uno, lee [references/mitos.md](references/mitos.md). El dato va en una frase, nunca con burlas ni tratamientos, y sin cambiar un mito por otro.
 
 ## Legibilidad automática
 
