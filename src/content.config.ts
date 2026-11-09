@@ -2,6 +2,7 @@ import { defineCollection, reference } from 'astro:content';
 import { glob } from 'astro/loaders';
 import {
   crearEsquemaHerramienta,
+  crearEsquemaMito,
   crearEsquemaPaso,
   crearEsquemaTermino,
   esquemaEntidad,
@@ -34,4 +35,9 @@ const proceso = defineCollection({
   schema: crearEsquemaPaso({ fuentes: reference('fuentes'), herramientas: reference('herramientas') }),
 });
 
-export const collections = { fuentes, glosario, entidades, herramientas, proceso };
+const mitos = defineCollection({
+  loader: glob({ pattern: '**/*.{yaml,yml}', base: './src/content/mitos' }),
+  schema: crearEsquemaMito({ fuentes: reference('fuentes'), glosario: reference('glosario') }),
+});
+
+export const collections = { fuentes, glosario, entidades, herramientas, proceso, mitos };

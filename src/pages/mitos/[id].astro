@@ -1,0 +1,84 @@
+---
+import { getCollection, getEntries } from 'astro:content';
+import ListaFuentes from '../../components/ListaFuentes.astro';
+import NombreTermino from '../../components/NombreTermino.astro';
+import PieRevision from '../../components/PieRevision.astro';
+import TextoEnlazado from '../../components/TextoEnlazado.astro';
+import Base from '../../layouts/Base.astro';
+import { enlazarEntidades } from '../../lib/enlazar';
+import { cargarEntidades } from '../../lib/entidades';
+import { ordenarMitos } from '../../lib/mitos';
+import { exigirTodas } from '../../lib/referencias';
+
+export async function getStaticPaths() {
+  // ordenarMitos para la compilación si dos mitos comparten orden.
+  const mitos = ordenarMitos(await getCollection('mitos'));
+  return mitos.map((mito) => ({ params: { id: mito.id }, props: { mito } }));
+}
+
+const { mito } = Astro.props;
+const d = mito.data;
+const origen = `El mito «${mito.id}»`;
+const fuentes = exigirTodas(await getEntries(d.fuentes), d.fuentes.map((r) => `fuentes/${r.id}`), origen);
+const relacionados = exigirTodas(
+  await getEntries(d.relacionados),
+  d.relacionados.map((r) => `glosario/${r.id}`),
+  origen,
+);
+const entidades = await cargarEntidades();
+// Cada apartado enlaza la primera vez que nombra cada entidad, para que se pueda leer suelto.
+const enlazar = (t: string) => enlazarEntidades(t, entidades);
+const texto = {
+  por_que: enlazar(d.por_que),
+  de_donde_viene: d.de_donde_viene ? enlazar(d.de_donde_viene) : null,
+  que_hacer: enlazar(d.que_hacer),
+};
+---
+
+<Base titulo={`«${d.mito}»`} descripcion={d.dato}>
+  <article class="ficha" data-pagefind-body>
+    <p data-pagefind-ignore><a href="/mitos/">Mitos sobre el autismo</a></p>
+    <header>
+      <p class="se-suele-oir">Se suele oír</p>
+      <h1>«{d.mito}»</h1>
+      {d.variantes.length > 0 && (
+        <ul class="variantes">{d.variantes.map((v) => <li>«{v}»</li>)}</ul>
+      )}
+      <p class="dato">{d.dato}</p>
+    </header>
+
+    <section aria-labelledby="por-que">
+      <h2 id="por-que">Por qué no es así</h2>
+      <p><TextoEnlazado trozos={texto.por_que} /></p>
+    </section>
+    {texto.de_donde_viene && (
+      <section aria-labelledby="de-donde-viene">
+        <h2 id="de-donde-viene">De dónde viene</h2>
+        <p><TextoEnlazado trozos={texto.de_donde_viene} /></p>
+      </section>
+    )}
+    <section aria-labelledby="que-hacer">
+      <h2 id="que-hacer">Qué podéis hacer</h2>
+      <p><TextoEnlazado trozos={texto.que_hacer} /></p>
+    </section>
+    {relacionados.length > 0 && (
+      <section aria-labelledby="relacionados" data-pagefind-ignore>
+        <h2 id="relacionados">Términos relacionados</h2>
+        <ul class="relacionados">
+          {relacionados.map((r) => <li><a href={`/glosario/${r.id}/`}><NombreTermino datos={r.data} /></a></li>)}
+        </ul>
+      </section>
+    )}
+    <section aria-labelledby="fuentes" data-pagefind-ignore>
+      <h2 id="fuentes">Fuentes</h2>
+      <ListaFuentes fuentes={fuentes} />
+    </section>
+    <PieRevision revisado={d.revisado} pagina={`el mito «${d.mito}»`} />
+  </article>
+</Base>
+
+<style>
+  .se-suele-oir { font-size: 0.9375rem; font-weight: 500; color: var(--tinta-suave); }
+  .variantes { list-style: none; padding: 0; margin: 0; color: var(--tinta-suave); display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
+  .dato { font-size: 1.3125rem; font-weight: 500; background: var(--resaltado); border-radius: 14px; padding: 0.75rem 1rem; }
+</style>

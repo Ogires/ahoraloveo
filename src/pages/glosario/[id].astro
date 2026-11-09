@@ -7,6 +7,7 @@ import TextoEnlazado from '../../components/TextoEnlazado.astro';
 import Base from '../../layouts/Base.astro';
 import { enlazarEntidades } from '../../lib/enlazar';
 import { cargarEntidades } from '../../lib/entidades';
+import { mitosDe } from '../../lib/mitos';
 import { exigirTodas } from '../../lib/referencias';
 import { otroNombre, tituloEnIngles } from '../../lib/terminos';
 import { FAMILIAS } from '../../lib/tokens';
@@ -29,6 +30,7 @@ const relacionados = exigirTodas(
   d.relacionados.map((r) => `glosario/${r.id}`),
   origen,
 );
+const mitos = mitosDe(termino.id, await getCollection('mitos'));
 const entidades = await cargarEntidades();
 // Cada apartado enlaza la primera vez que nombra cada entidad, para que se pueda leer suelto.
 const enlazar = (t: string) => enlazarEntidades(t, entidades);
@@ -99,6 +101,14 @@ const familia = FAMILIAS.find((f) => f.id === d.familia)!;
       <section aria-labelledby="que-hacer">
         <h2 id="que-hacer">Qué podéis hacer</h2>
         <p><TextoEnlazado trozos={texto.que_hacer} /></p>
+      </section>
+    )}
+    {mitos.length > 0 && (
+      <section aria-labelledby="mitos" data-pagefind-ignore>
+        <h2 id="mitos">Mitos sobre esto</h2>
+        <ul class="relacionados">
+          {mitos.map((m) => <li><a href={`/mitos/${m.id}/`}>«{m.data.mito}»</a></li>)}
+        </ul>
       </section>
     )}
     {relacionados.length > 0 && (
