@@ -67,7 +67,27 @@ escenas:
 - [ ] Lo ve un adulto que está ahí, y ningún adulto explica la escena.
 - [ ] Sin culpas, burlas ni dramatismo, y sin «son nervios».
 - [ ] El final no repite el de otra escena, y el conjunto no dibuja siempre a la misma niña.
+- [ ] Si lleva ilustración, cumple las normas de «Ilustraciones».
 - [ ] Revisada por una persona antes de publicarse.
+
+## Ilustraciones
+
+Una escena puede llevar una ilustración: la niña o el niño, en dibujo sencillo, haciendo lo que cuenta el texto en un momento tranquilo. Se generan con Gemini a partir de un prompt por escena, con una imagen de referencia para que todas tengan el mismo estilo.
+
+**Estilo.** Ilustración plana, de formas redondeadas, como un álbum ilustrado sencillo. Caras simples, con ojos de punto y expresiones suaves; nada realista. Domina el color de la familia del término, los trazos van en la tinta de la web (`#26223A`) y el fondo es claro y liso, con el sitio solo sugerido. Formato horizontal 4:3.
+
+**Normas:**
+
+1. Solo lo que dice el texto de la escena: ningún gesto ni objeto que no mencione.
+2. Nunca el momento más fuerte de una crisis. En el meltdown y el shutdown se dibuja el antes, o un gesto contenido.
+3. Sin caras realistas ni dramatismo: nada de llanto exagerado ni de gestos de angustia.
+4. Variedad en el conjunto: tonos de piel, pelo, cuerpos, gafas y ropa distintos. No todo en rosa para las niñas. La edad se tiene que notar.
+5. Los adultos, solo si están en la escena, y en segundo plano.
+6. Sin texto, logos, marcas ni sitios reconocibles.
+7. Nunca una foto real como referencia, ni de una niña ni de nadie.
+8. La revisan dos personas antes de publicarse: quien la integra, con esta lista, y quien lleva la web, mirándola.
+
+**En la web** el texto alternativo va vacío a propósito: por la norma 1, la imagen no cuenta nada que no diga el texto de al lado.
 
 ## Lo que se comprueba solo
 
