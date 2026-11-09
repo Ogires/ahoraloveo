@@ -1,0 +1,16 @@
+titulo: 'Savant skills in autism: psychometric approaches and parental reports'
+autoria: Patricia Howlin, Susan Goode, Jane Hutton y Michael Rutter
+anio: 2009
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2677586/
+doi: 10.1098/rstb.2008.0328
+comprobado: 2026-11-09
+temas: [mitos]
+estudio:
+  diseno: Informes de las familias y puntuaciones de las escalas de Wechsler
+  muestra: 137
+  edades: Adultos, de media 24 años
+  porcentaje_ninas: null # el resumen no dice cuántas mujeres había
+  resultados_por_sexo: true # 1 de cada 3 hombres frente a un 19 % de las mujeres
