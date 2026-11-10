@@ -113,18 +113,22 @@ export const esquemaEntidad = z.object({
 });
 
 // Una escena del día a día (guía en .claude/skills/lenguaje-claro/references/escenas.md).
-export const esquemaEscena = z.object({
-  edad: texto().refine(edadValida, 'La edad va de «1 mes» a «12 años», escrita así: «18 meses», «4 años»'),
-  lugar: texto(),
-  protagonista: z.enum(['nina', 'nino']),
-  texto: texto().refine((t) => contarPalabras(t) <= 60, 'Una escena tiene 60 palabras como mucho'),
-});
+// La ilustración es opcional. En la web la valida el image() de Astro; Vitest le pasa un z.string().
+export const crearEsquemaEscena = <I extends z.ZodType>(imagen: I) =>
+  z.object({
+    edad: texto().refine(edadValida, 'La edad va de «1 mes» a «12 años», escrita así: «18 meses», «4 años»'),
+    lugar: texto(),
+    protagonista: z.enum(['nina', 'nino']),
+    texto: texto().refine((t) => contarPalabras(t) <= 60, 'Una escena tiene 60 palabras como mucho'),
+    imagen: imagen.optional(),
+  });
 
 // Recibe las referencias ya creadas, para que Vitest pueda probar el esquema sin astro:content.
 // Es genérica para no perder sus tipos: con z.ZodType, getEntries() no aceptaría las fuentes.
-export const crearEsquemaTermino = <F extends z.ZodType, G extends z.ZodType>(referencias: {
+export const crearEsquemaTermino = <F extends z.ZodType, G extends z.ZodType, I extends z.ZodType>(referencias: {
   fuentes: F;
   glosario: G;
+  imagen: I;
 }) =>
   z.object({
     // El título es el nombre que más se usa en español al hablar de autismo: «Meltdown», «Alexitimia».
@@ -141,7 +145,7 @@ export const crearEsquemaTermino = <F extends z.ZodType, G extends z.ZodType>(re
     no_confundir_con: z.string().optional(),
     en_ninas: texto(), // texto, o «Sin datos sobre niñas» con su explicación
     que_hacer: z.string().optional(),
-    escenas: z.array(esquemaEscena).max(3, 'Una ficha tiene tres escenas como mucho').default([]),
+    escenas: z.array(crearEsquemaEscena(referencias.imagen)).max(3, 'Una ficha tiene tres escenas como mucho').default([]),
     relacionados: z.array(referencias.glosario).default([]),
     fuentes: z.array(referencias.fuentes).min(1, 'Cada término necesita al menos una fuente'),
     revisado: fecha(),

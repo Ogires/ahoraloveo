@@ -17,7 +17,8 @@ const fuentes = defineCollection({
 
 const glosario = defineCollection({
   loader: glob({ pattern: '**/*.{yaml,yml}', base: './src/content/glosario' }),
-  schema: crearEsquemaTermino({ fuentes: reference('fuentes'), glosario: reference('glosario') }),
+  schema: ({ image }) =>
+    crearEsquemaTermino({ fuentes: reference('fuentes'), glosario: reference('glosario'), imagen: image() }),
 });
 
 const entidades = defineCollection({

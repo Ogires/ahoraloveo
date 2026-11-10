@@ -9,7 +9,7 @@ import {
   esquemaFuente,
 } from '../../src/lib/esquemas';
 
-const esquemaTermino = crearEsquemaTermino({ fuentes: z.string(), glosario: z.string() });
+const esquemaTermino = crearEsquemaTermino({ fuentes: z.string(), glosario: z.string(), imagen: z.string() });
 const esquemaHerramienta = crearEsquemaHerramienta({ fuentes: z.string(), glosario: z.string() });
 const esquemaPaso = crearEsquemaPaso({ fuentes: z.string(), herramientas: z.string() });
 
@@ -133,6 +133,14 @@ describe('esquema del glosario', () => {
 
   it('rechaza una familia que no existe', () => {
     expect(valido(esquemaTermino, { ...termino, familia: 'cognitivo' })).toBe(false);
+  });
+
+  it('una escena puede llevar ilustración, o no llevarla', () => {
+    const escena = { edad: '6 años', lugar: 'en la terraza de un bar', protagonista: 'nina', texto: 'Se balancea.' };
+    const conImagen = { ...escena, imagen: '../../assets/escenas/estereotipias-3.webp' };
+    const r = esquemaTermino.parse({ ...termino, escenas: [escena, conImagen] });
+    expect(r.escenas[0].imagen).toBeUndefined();
+    expect(r.escenas[1].imagen).toBe('../../assets/escenas/estereotipias-3.webp');
   });
 });
 
