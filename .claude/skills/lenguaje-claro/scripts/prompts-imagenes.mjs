@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Escribe un prompt por escena del glosario, para generar sus ilustraciones con Gemini.
-//   node .claude/skills/lenguaje-claro/scripts/prompts-imagenes.mjs propuestas/imagenes/prompts.md
+//   node .claude/skills/lenguaje-claro/scripts/prompts-imagenes.mjs propuestas/imagenes/prompts/prompts.md
 // El aspecto y el momento a dibujar de cada prompt quedan «(por decidir)»: se rellenan a mano
 // mirando el conjunto, para que haya variedad (guía de escenas, apartado «Ilustraciones»).
 import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
