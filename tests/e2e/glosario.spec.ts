@@ -51,3 +51,15 @@ test('las escenas aparecen en «En el día a día», con su edad y su lugar', as
   await expect(apartado.locator('.escena')).toHaveCount(2);
   await expect(apartado.locator('.edad-lugar').first()).toHaveText('4 años · en la consulta de pediatría');
 });
+
+test('las escenas con ilustración la muestran, con el texto alternativo vacío a propósito', async ({ page }) => {
+  await page.goto('/glosario/estereotipias/');
+  const imagenes = page.locator('.escena img');
+  expect(await imagenes.count()).toBeGreaterThan(0);
+  for (const imagen of await imagenes.all()) {
+    // Vacío porque la imagen no cuenta nada que no diga el texto de al lado (guía de escenas).
+    await expect(imagen).toHaveAttribute('alt', '');
+    await imagen.scrollIntoViewIfNeeded();
+    await expect.poll(() => imagen.evaluate((i: HTMLImageElement) => i.complete && i.naturalWidth > 0)).toBe(true);
+  }
+});

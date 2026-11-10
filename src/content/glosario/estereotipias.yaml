@@ -53,6 +53,7 @@ escenas:
     texto: >
       Cuando su padre saca el pompero, agita las manos sin parar, muerto de risa.
       Cada vez que explota una pompa, vuelve a empezar.
+    imagen: ../../assets/escenas/estereotipias-2.webp
   - edad: 6 años
     lugar: en la terraza de un bar
     protagonista: nina
@@ -60,6 +61,7 @@ escenas:
       Mientras esperan la comida, se balancea en el banco y tararea bajito,
       siempre la misma canción. Su padre ya se la sabe de memoria. Cuando llega el
       plato, sigue comiendo y tarareando.
+    imagen: ../../assets/escenas/estereotipias-3.webp
 relacionados: [masking, neurodiversidad]
 fuentes: [ambitious-estereotipias, aetapi-mujeres-tea, prizant-seres-humanos-unicos, paula-ansiedad-2015, hull-2017]
 revisado: 2026-11-05
