@@ -1,0 +1,35 @@
+titulo: 'Los criterios: DSM-5 y CIE-11'
+parrafos:
+  - >
+    Las pruebas no diagnostican por sí solas. Con todo lo que reúne, el equipo
+    decide si se cumplen los criterios de uno de los dos manuales de diagnóstico.
+    El DSM-5 es el de la Asociación Americana de Psiquiatría, y la CIE-11, el de
+    la Organización Mundial de la Salud (OMS). La guía ESCAP explica que los dos
+    describen el autismo de forma muy parecida. La guía NICE pide diagnosticar
+    con uno de ellos, con toda la información y con el criterio clínico.
+  - >
+    Los dos manuales agrupan las señales en dos bloques: la comunicación y la
+    relación con los demás, y los comportamientos e intereses repetitivos o muy
+    rígidos. Son las dos primeras columnas de la tabla de abajo. El DSM-5 cuenta
+    también lo sensorial, como molestarse mucho con un ruido o parecer no notar
+    el dolor; la CIE-11, no. Las señales tienen que venir de la primera infancia
+    y afectar a su día a día. Según el DSM-5, a veces no se notan del todo hasta
+    que la vida social le pide más de lo que puede dar.
+  - >
+    Si se confirma, el diagnóstico se llama trastorno del espectro autista (TEA).
+    Con el DSM-5, el informe indica además un nivel de apoyo, del 1, que necesita
+    algo de apoyo, al 3, que necesita un apoyo muy sustancial. La guía ESCAP avisa
+    de que el manual no explica bien qué significa cada nivel. La CIE-11 no usa
+    niveles. Con los dos, el informe puede decir también si hay discapacidad
+    intelectual y cómo es su lenguaje.
+  - >
+    Desde el DSM-5, el Asperger ya no es un diagnóstico aparte: quien lo tenía
+    pasa a tener un diagnóstico de TEA. Y, como recuerda la guía ESCAP, estos
+    manuales clasifican los trastornos, no a las personas.
+que_hacer: >
+  Preguntad con qué manual se ha hecho el diagnóstico y qué quiere decir cada
+  detalle del informe, también el nivel de apoyo. Si no llega a cumplir todos los
+  criterios pero tiene dificultades, la guía NICE pide valorar igualmente, según
+  su perfil, a qué servicios derivarla.
+fuentes: [escap-2021, nice-cg128]
+revisado: 2026-11-10

@@ -1,5 +1,5 @@
 ---
-import { getCollection, getEntries } from 'astro:content';
+import { getCollection, getEntries, getEntry } from 'astro:content';
 import ListaFuentes from '../../components/ListaFuentes.astro';
 import PieRevision from '../../components/PieRevision.astro';
 import TextoEnlazado from '../../components/TextoEnlazado.astro';
@@ -28,16 +28,24 @@ const conHerramientas = await Promise.all(
   })),
 );
 
-// Las fuentes de los pasos y de sus recuadros, sin repetir, en el orden en que aparecen.
+// Los criterios del DSM-5 y la CIE-11: van entre los pasos y la tabla.
+const criterios = await getEntry('apartados', 'criterios');
+if (!criterios) throw new Error('La página del diagnóstico necesita src/content/apartados/criterios.yaml');
+
+// Las fuentes de los pasos, de sus recuadros y de los criterios, sin repetir, en el orden en que aparecen.
 const ids = [
-  ...new Set(pasos.flatMap((p) => [...p.data.fuentes, ...(p.data.comunitat_valenciana?.fuentes ?? [])]).map((r) => r.id)),
+  ...new Set(
+    [...pasos.flatMap((p) => [...p.data.fuentes, ...(p.data.comunitat_valenciana?.fuentes ?? [])]), ...criterios.data.fuentes].map(
+      (r) => r.id,
+    ),
+  ),
 ];
 const fuentes = exigirTodas(
   await getEntries(ids.map((id) => ({ collection: 'fuentes' as const, id }))),
   ids.map((id) => `fuentes/${id}`),
   'La página del diagnóstico',
 );
-const revisado = new Date(Math.max(...pasos.map((p) => p.data.revisado.getTime())));
+const revisado = new Date(Math.max(...[...pasos, criterios].map((p) => p.data.revisado.getTime())));
 const grupos = tablaAreas(await getCollection('herramientas'));
 ---
 
@@ -74,6 +82,12 @@ const grupos = tablaAreas(await getCollection('herramientas'));
         </li>
       ))}
     </ol>
+
+    <section id="criterios" aria-labelledby="criterios-titulo">
+      <h2 id="criterios-titulo">{criterios.data.titulo}</h2>
+      {criterios.data.parrafos.map((p) => <p><TextoEnlazado trozos={enlazar(p)} /></p>)}
+      <p><strong>Qué podéis hacer:</strong> <TextoEnlazado trozos={enlazar(criterios.data.que_hacer)} /></p>
+    </section>
 
     {/* La sección no lleva nombre accesible: así la única región «Qué mide cada herramienta» es el recuadro de la tabla. */}
     <section>

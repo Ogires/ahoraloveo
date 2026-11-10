@@ -31,3 +31,16 @@ test('la tabla tiene encabezados de fila y de columna, y su recuadro se alcanza 
   await expect(region.locator('tbody th[scope="row"]').first()).toBeVisible();
   await expect(region.locator('tbody th[scope="rowgroup"]').first()).toHaveText('Cribado');
 });
+
+test('explica con qué criterios se decide el diagnóstico, entre los pasos y la tabla', async ({ page }) => {
+  await page.goto('/diagnostico/');
+  const apartado = page.getByRole('region', { name: 'Los criterios: DSM-5 y CIE-11' });
+  await expect(apartado.getByRole('heading', { level: 2 })).toBeVisible();
+  await expect(apartado.locator('p').first()).not.toBeEmpty();
+  await expect(apartado).toContainText('Qué podéis hacer');
+  // Va después de los pasos y antes de la tabla, cuyas dos primeras columnas son sus dos bloques.
+  const orden = await page.evaluate(() =>
+    [...document.querySelectorAll('ol.pasos, #criterios, #que-mide')].map((e) => e.id || e.className),
+  );
+  expect(orden).toEqual(['pasos', 'criterios', 'que-mide']);
+});

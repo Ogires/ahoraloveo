@@ -1,6 +1,7 @@
 import { defineCollection, reference } from 'astro:content';
 import { glob } from 'astro/loaders';
 import {
+  crearEsquemaApartado,
   crearEsquemaHerramienta,
   crearEsquemaMito,
   crearEsquemaPaso,
@@ -41,4 +42,10 @@ const mitos = defineCollection({
   schema: crearEsquemaMito({ fuentes: reference('fuentes'), glosario: reference('glosario') }),
 });
 
-export const collections = { fuentes, glosario, entidades, herramientas, proceso, mitos };
+// Apartados sueltos de una página, con sus fuentes y su fecha: «Los criterios» de /diagnostico/.
+const apartados = defineCollection({
+  loader: glob({ pattern: '**/*.{yaml,yml}', base: './src/content/apartados' }),
+  schema: crearEsquemaApartado({ fuentes: reference('fuentes') }),
+});
+
+export const collections = { fuentes, glosario, entidades, herramientas, proceso, mitos, apartados };

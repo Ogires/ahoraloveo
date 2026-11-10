@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { z } from 'astro/zod';
 import {
+  crearEsquemaApartado,
   crearEsquemaHerramienta,
   crearEsquemaMito,
   crearEsquemaPaso,
@@ -403,5 +404,37 @@ describe('esquema de los mitos', () => {
     expect(esquemaMito.safeParse({ ...mito, orden: 1.5 }).success).toBe(false);
     const { revisado: _, ...sinFecha } = mito;
     expect(esquemaMito.safeParse(sinFecha).success).toBe(false);
+  });
+});
+
+const esquemaApartado = crearEsquemaApartado({ fuentes: z.string() });
+
+const apartado = {
+  titulo: 'Los criterios: DSM-5 y CIE-11',
+  parrafos: ['Las pruebas no diagnostican por sí solas.'],
+  que_hacer: 'Preguntad con qué manual se ha hecho el diagnóstico.',
+  fuentes: ['escap-2021'],
+  revisado: '2026-11-10',
+};
+
+describe('esquema de los apartados sueltos de una página', () => {
+  it('acepta un apartado con sus párrafos, qué hacer, fuentes y fecha', () => {
+    expect(esquemaApartado.safeParse(apartado).success).toBe(true);
+  });
+
+  it('exige al menos un párrafo y una fuente', () => {
+    expect(esquemaApartado.safeParse({ ...apartado, parrafos: [] }).success).toBe(false);
+    expect(esquemaApartado.safeParse({ ...apartado, fuentes: [] }).success).toBe(false);
+  });
+
+  it('un apartado es corto: cuatro párrafos como mucho', () => {
+    const r = esquemaApartado.safeParse({ ...apartado, parrafos: ['a', 'b', 'c', 'd', 'e'] });
+    expect(r.success).toBe(false);
+    expect(JSON.stringify(r.error)).toContain('cuatro párrafos');
+  });
+
+  it('exige la fecha de revisión', () => {
+    const { revisado: _, ...sinFecha } = apartado;
+    expect(esquemaApartado.safeParse(sinFecha).success).toBe(false);
   });
 });
