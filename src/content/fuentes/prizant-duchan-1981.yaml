@@ -1,0 +1,16 @@
+titulo: The functions of immediate echolalia in autistic children
+autoria: Barry M. Prizant y J. F. Duchan
+anio: 1981
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/7278167/
+doi: 10.1044/jshd.4603.241
+comprobado: 2026-11-12
+temas: [mitos, ecolalia]
+estudio:
+  diseno: Grabaciones en el colegio y en casa, analizadas una a una
+  muestra: 4 # el resumen dice «For echolalic children», errata de «Four»
+  edades: No consta en el resumen
+  porcentaje_ninas: null
+  resultados_por_sexo: false

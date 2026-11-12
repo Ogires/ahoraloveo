@@ -1,0 +1,17 @@
+titulo: '‘People should be allowed to do what they like’: Autistic adults’ views and experiences of stimming'
+autoria: Steven K. Kapp, Robyn Steward, Laura Crane y otros
+anio: 2019
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6728747/
+doi: 10.1177/1362361319829628
+licencia: CC BY 4.0
+comprobado: 2026-11-12
+temas: [mitos, estereotipias]
+estudio:
+  diseno: Entrevistas y grupos de discusión
+  muestra: 31 # el resumen dice 32; el apartado de método cuenta 31
+  edades: Adultos de 21 a 56 años
+  porcentaje_ninas: 32 # 10 mujeres de 31
+  resultados_por_sexo: false
