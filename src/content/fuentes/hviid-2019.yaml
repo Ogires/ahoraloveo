@@ -1,0 +1,16 @@
+titulo: 'Measles, Mumps, Rubella Vaccination and Autism: A Nationwide Cohort Study'
+autoria: Anders Hviid, Jørgen Vinsløv Hansen, Morten Frisch y Mads Melbye
+anio: 2019
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/30831578/
+doi: 10.7326/M18-2101
+comprobado: 2026-11-12
+temas: [mitos, vacunas]
+estudio:
+  diseno: Registros de toda la población danesa nacida entre 1999 y 2010
+  muestra: 657461
+  edades: Desde el año de edad hasta agosto de 2013
+  porcentaje_ninas: null # el resumen no lo dice
+  resultados_por_sexo: false # el resumen ajusta por sexo, pero no da resultados por separado
