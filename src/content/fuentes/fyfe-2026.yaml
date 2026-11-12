@@ -1,0 +1,17 @@
+titulo: 'Time trends in the male to female ratio for autism incidence: population based, prospectively collected, birth cohort study'
+autoria: Caroline Fyfe, Henric Winell, Sven Sandin y otros
+anio: 2026
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12961995/
+doi: 10.1136/bmj-2025-084164
+licencia: CC BY-NC
+comprobado: 2026-11-12
+temas: [mitos, genero, diagnostico]
+estudio:
+  diseno: Registros de todas las personas nacidas en Suecia entre 1985 y 2020, seguidas hasta 2022
+  muestra: 2756779
+  edades: De 0 a 37 años
+  porcentaje_ninas: null # el texto no da el reparto; es toda la población nacida en esos años
+  resultados_por_sexo: true

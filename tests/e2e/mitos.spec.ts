@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { expect, test } from '@playwright/test';
 import { parse } from 'yaml';
@@ -20,7 +20,8 @@ test('la portada de los mitos pone cada mito entre comillas, con su dato debajo'
 });
 
 test('los mitos salen en el orden de su campo «orden»', async ({ page }) => {
-  const mitos = ['memoria-prodigiosa', 'ninas-calladas'].map(leer).sort((a, b) => a.orden - b.orden);
+  const ids = readdirSync(join(process.cwd(), 'src/content/mitos')).map((f) => f.replace(/\.yaml$/, ''));
+  const mitos = ids.map(leer).sort((a, b) => a.orden - b.orden);
   await page.goto('/mitos/');
   await expect(page.locator('.mito a')).toHaveText(mitos.map((m) => `«${m.mito}»`));
 });

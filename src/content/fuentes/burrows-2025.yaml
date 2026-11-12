@@ -1,0 +1,16 @@
+titulo: 'Sex-Related Measurement Bias in Autism Spectrum Disorder Symptoms in the Baby Siblings Research Consortium'
+autoria: Catherine A. Burrows, Jed T. Elison y otros (Baby Siblings Research Consortium)
+anio: 2025
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12334962/
+doi: 10.1001/jamanetworkopen.2025.25887
+comprobado: 2026-11-12
+temas: [mitos, genero, diagnostico, herramientas]
+estudio:
+  diseno: Seguimiento de hermanas y hermanos pequeños de niñas y niños autistas, valorados con el ADOS
+  muestra: 4550
+  edades: De 20 a 40 meses
+  porcentaje_ninas: 44 # 2548 de 4550 eran niños
+  resultados_por_sexo: true
