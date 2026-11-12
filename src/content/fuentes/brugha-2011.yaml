@@ -1,0 +1,16 @@
+titulo: Epidemiology of autism spectrum disorders in adults in the community in England
+autoria: Traolach S. Brugha, Sally McManus y otros
+anio: 2011
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/21536975/
+doi: 10.1001/archgenpsychiatry.2011.38
+comprobado: 2026-11-12
+temas: [mitos, prevalencia]
+estudio:
+  diseno: Encuesta a hogares de Inglaterra en 2007, con valoración diagnóstica de una parte
+  muestra: 7461 # 618 de ellos pasaron la valoración diagnóstica
+  edades: Desde los 16 años
+  porcentaje_ninas: null # el resumen no lo dice
+  resultados_por_sexo: true # más frecuente en hombres
