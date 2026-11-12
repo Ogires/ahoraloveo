@@ -42,6 +42,7 @@ escenas:
       pregunta una y otra vez cuándo van a salir, cada vez más alto, hasta que se
       tira al suelo, grita y da patadas. Al rato escampa y le dicen que ya pueden
       ir, pero no consigue parar.
+    imagen: ../../assets/escenas/meltdown-1.webp
   - edad: 9 años
     lugar: en el comedor del cole
     protagonista: nino
@@ -49,6 +50,7 @@ escenas:
       El comedor está lleno y hay mucho ruido. Antes de acabar el primer plato se
       levanta, va de un lado a otro de la fila y empieza a balancearse. Cuando un
       monitor le pide que se siente, da un golpe en la mesa y se pone a gritar.
+    imagen: ../../assets/escenas/meltdown-2.webp
 relacionados: [masking, shutdown, burnout-autista]
 fuentes: [nas-crisis, paula-ansiedad-2015, aetapi-mujeres-tea]
 revisado: 2026-11-03

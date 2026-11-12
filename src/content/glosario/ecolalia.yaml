@@ -40,6 +40,7 @@ escenas:
       Al terminar la revisión, la pediatra le enseña las pegatinas y le pregunta
       si quiere una. Ella señala la roja y contesta: «¿Quieres una pegatina?». En
       cuanto se la dan, se la pega en la camiseta.
+    imagen: ../../assets/escenas/ecolalia-1.webp
   - edad: 6 años
     lugar: en el baño de casa
     protagonista: nino
@@ -47,6 +48,7 @@ escenas:
       Antes de meterse en la bañera repite en voz baja «agua calentita, agua
       calentita», con la voz de la presentadora de su programa favorito. Lo hace
       siempre que algo le da un poco de miedo.
+    imagen: ../../assets/escenas/ecolalia-2.webp
 relacionados: [estereotipias, masking]
 fuentes: [escap-2021, prizant-seres-humanos-unicos, aetapi-mujeres-tea]
 revisado: 2026-11-05
