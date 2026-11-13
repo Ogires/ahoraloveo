@@ -1,0 +1,16 @@
+titulo: 'More similar than different: Characterizing special interests in autistic boys and girls based on caregiver report'
+autoria: Cynthia E. Brown, Courtney J. Bernardin, Marshall T. Beauchamp, Stephen M. Kanne y Kerri P. Nowell
+anio: 2024
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/39169860/
+doi: 10.1002/aur.3216
+comprobado: 2026-11-13
+temas: [intereses, genero]
+estudio:
+  diseno: Cuestionario que respondieron las familias (Special Interests Survey)
+  muestra: 1921
+  edades: De 2 a 17 años # según el resumen de SPARK
+  porcentaje_ninas: 20 # 387 niñas de 1.921, según el resumen de SPARK
+  resultados_por_sexo: true
