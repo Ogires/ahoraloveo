@@ -18,18 +18,25 @@ parrafos:
   - >
     Si se confirma, el diagnóstico se llama trastorno del espectro autista (TEA).
     Con el DSM-5, el informe indica además un nivel de apoyo, del 1, que necesita
-    algo de apoyo, al 3, que necesita un apoyo muy sustancial. La guía ESCAP avisa
-    de que el manual no explica bien qué significa cada nivel. La CIE-11 no usa
-    niveles. Con los dos, el informe puede decir también si hay discapacidad
+    algo de apoyo, al 3, que necesita un apoyo muy sustancial. En España también
+    se les llama grados: el grado 2 es el nivel 2. La guía ESCAP avisa de
+    que el manual no explica bien qué significa cada nivel, y la CIE-11 no los
+    usa. Con los dos, el informe puede decir también si hay discapacidad
     intelectual y cómo es su lenguaje.
   - >
     Desde el DSM-5, el Asperger ya no es un diagnóstico aparte: quien lo tenía
-    pasa a tener un diagnóstico de TEA. Y, como recuerda la guía ESCAP, estos
-    manuales clasifican los trastornos, no a las personas.
+    pasa a tener un diagnóstico de TEA. En 2022 salió una revisión del manual, el
+    DSM-5-TR. Para el autismo solo aclaró una cosa: en el bloque de la
+    comunicación y la relación con los demás hacen falta las tres dificultades
+    que describe, no una. Y, como recuerda la guía ESCAP, estos manuales
+    clasifican los trastornos, no a las personas.
 que_hacer: >
   Preguntad con qué manual se ha hecho el diagnóstico y qué quiere decir cada
-  detalle del informe, también el nivel de apoyo. Si no llega a cumplir todos los
-  criterios pero tiene dificultades, la guía NICE pide valorar igualmente, según
-  su perfil, a qué servicios derivarla.
-fuentes: [escap-2021, nice-cg128]
-revisado: 2026-11-10
+  detalle del informe, también el nivel de apoyo. Ese nivel o grado no tiene nada
+  que ver con el grado de discapacidad, que se da en porcentaje, ni con el grado
+  de dependencia, que va del I al III. Si los necesitáis, se piden aparte, y los
+  valoran otros equipos. Si no llega a cumplir todos los criterios pero tiene
+  dificultades, la guía NICE pide valorar igualmente, según su perfil, a qué
+  servicios derivarla.
+fuentes: [escap-2021, nice-cg128, sepeap-tea-2023, first-2022, boe-rd-888-2022, boe-ley-dependencia]
+revisado: 2026-11-13
