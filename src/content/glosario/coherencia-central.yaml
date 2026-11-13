@@ -1,0 +1,56 @@
+termino: Coherencia central
+en_ingles: central coherence
+alias: [coherencia central débil, estilo centrado en los detalles]
+familia: pensamiento
+que_es: >
+  La coherencia central es la tendencia a juntar los detalles para captar el
+  conjunto y su sentido: ver el bosque, y no solo los árboles. Hace más de 30
+  años se propuso que, en el autismo, esa tendencia es más débil, y que por eso
+  muchas personas autistas se fijan más en los detalles. Hoy se discute. Una
+  revisión de 2006, de las investigadoras Francesca Happé y Uta Frith, propone
+  verlo más como un estilo de pensar centrado en los detalles que como un
+  déficit.
+como_se_ve: >
+  Puede fijarse en algo que a nadie más le llama la atención, como un tornillo
+  que falta en un columpio. José Ramón Alonso cuenta de niños que ordenan colores o formas sin problema,
+  pero a los que les cuesta ordenar las viñetas de un cómic para que tengan
+  sentido. Y explica que, en una conversación, un cambio de tema repentino
+  puede hacerles perder el hilo. Las revisiones no coinciden del todo. La de
+  2006, con más de 50 estudios, vio clara la preferencia por los detalles, pero
+  no que costara ver el conjunto. Otra de 2015, con 56 estudios, no encontró
+  ninguna de las dos cosas: solo que el conjunto se capta algo más despacio.
+no_confundir_con: >
+  Con no entender o con no enterarse. Fijarse en los detalles no quiere decir
+  que no capte el conjunto: en la revisión de 2015, lo captaban, aunque
+  tardaran un poco más. Y no todo es dificultad: Francesca Happé propone que
+  este estilo puede estar detrás de muchos talentos.
+en_ninas: >
+  Sin datos sobre niñas. La revisión de 2015 dice que el sexo no parecía
+  influir en los resultados, pero las fuentes que hemos consultado no estudian a
+  las niñas por separado.
+que_hacer: >
+  Si os cuesta que siga una explicación, contad las cosas en orden y avisad
+  cuando cambiéis de tema: Alonso explica que así es más fácil que no pierda el
+  hilo. También señala que a muchas niñas y niños autistas les cuesta separar lo
+  importante de lo accesorio, así que puede ayudar decirle qué es lo
+  importante. Y su atención a los detalles puede ser una fortaleza: dejadle
+  espacio para usarla.
+escenas:
+  - edad: 6 años
+    lugar: al volver del zoo
+    protagonista: nina
+    texto: >
+      Su abuela le pregunta qué animales ha visto. Ella explica que una jirafa
+      tenía una mancha con forma de corazón en el cuello y que su jaula era la
+      número 14. Cuando su abuela le pregunta por los elefantes, dice que no
+      sabe.
+  - edad: 10 años
+    lugar: en clase
+    protagonista: nino
+    texto: >
+      La profesora acaba de leer un cuento y pregunta de qué trata. Él levanta
+      la mano y cuenta que el gato del dibujo tiene seis bigotes en un lado y
+      cinco en el otro.
+relacionados: [funciones-ejecutivas, intereses-especiales]
+fuentes: [happe-frith-2006, van-der-hallen-2015, happe-vital-2009, alonso-autismo-2020, paula-ansiedad-2015]
+revisado: 2026-11-13

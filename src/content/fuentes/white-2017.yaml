@@ -1,0 +1,16 @@
+titulo: Sex differences in parent-reported executive functioning and adaptive behavior in children and young adults with autism spectrum disorder
+autoria: Emily I. White, Gregory L. Wallace, Julia Bascom y otros
+anio: 2017
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/28568910/
+doi: 10.1002/aur.1811
+comprobado: 2026-11-13
+temas: [funciones-ejecutivas, genero]
+estudio:
+  diseno: Cuestionarios de las familias (BRIEF y Vineland), con chicas y chicos emparejados por edad, cociente intelectual y rasgos de autismo y de TDAH
+  muestra: 237
+  edades: De 7 a 18 años
+  porcentaje_ninas: 33 # 79 chicas de 237
+  resultados_por_sexo: true
