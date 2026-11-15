@@ -23,3 +23,15 @@ test('el proceso del diagnóstico se lee sin JavaScript', async ({ page }) => {
   await expect(page.locator('ol.pasos > li')).toHaveCount(6);
   await expect(page.getByRole('region', { name: 'Qué mide cada herramienta' })).toBeVisible();
 });
+
+test('las escenas se leen sin JavaScript, todas a la vez y cada una con su reverso desplegable', async ({ page }) => {
+  await page.goto('/escenas/');
+  await expect(page.locator('[data-tarjeta]:visible')).toHaveCount(await page.locator('[data-tarjeta]').count());
+  // Sin JavaScript no se puede marcar ni pasar de una a otra: esos botones no se muestran.
+  await expect(page.getByRole('button', { name: 'Esto lo hemos visto' })).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Siguiente' })).toHaveCount(0);
+  await expect(page.getByRole('region', { name: 'Lo que habéis reconocido' })).toHaveCount(0);
+  const tarjeta = page.locator('#escena-meltdown-1');
+  await tarjeta.getByText('¿Qué hay detrás?').click();
+  await expect(tarjeta.getByText('Detrás puede haber:')).toBeVisible();
+});

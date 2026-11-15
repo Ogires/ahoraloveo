@@ -31,3 +31,13 @@ export function guardar(
     return false;
   }
 }
+
+export function quitar(clave: string, almacen: Almacen | null = almacenDelNavegador()): boolean {
+  if (!almacen) return false;
+  try {
+    almacen.removeItem(clave);
+    return true;
+  } catch {
+    return false;
+  }
+}

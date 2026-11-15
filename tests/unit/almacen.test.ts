@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { guardar, leer } from '../../src/lib/almacen';
+import { guardar, leer, quitar } from '../../src/lib/almacen';
 
 function almacenFalso() {
   const datos = new Map<string, string>();
@@ -34,5 +34,14 @@ describe('almacén', () => {
   it('sin almacenamiento disponible no falla', () => {
     expect(leer('tema', null)).toBeNull();
     expect(guardar('tema', 'oscuro', null)).toBe(false);
+  });
+
+  it('quita un valor guardado, y si el navegador lo bloquea devuelve false sin lanzar', () => {
+    const almacen = almacenFalso();
+    guardar('escenas-marcadas', '["meltdown-1"]', almacen);
+    expect(quitar('escenas-marcadas', almacen)).toBe(true);
+    expect(leer('escenas-marcadas', almacen)).toBeNull();
+    expect(quitar('escenas-marcadas', bloqueado)).toBe(false);
+    expect(quitar('escenas-marcadas', null)).toBe(false);
   });
 });
