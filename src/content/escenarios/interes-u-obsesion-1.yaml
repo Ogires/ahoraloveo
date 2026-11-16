@@ -1,0 +1,31 @@
+pregunta: ¿Un interés o una obsesión?
+edad: 6 años
+lugar: en el salón de casa
+protagonista: nina
+situacion: >
+  Tiene más de cien piedras guardadas en cajas de zapatos, ordenadas por
+  colores. Cada tarde las saca, las mira con una lupa y le cuenta a su padre,
+  muy contenta, dónde encontró cada una. Cuando la llaman a cenar, protesta un
+  poco, guarda las cajas y va a la mesa.
+opciones:
+  - texto: Un interés
+    explicacion: >
+      Encaja mejor con un interés intenso. Le dedica mucho tiempo y sabe mucho
+      de sus piedras, pero disfruta con ellas y puede dejarlas para ir a cenar.
+      Según la NAS, la asociación británica de autismo, los intereses suelen dar
+      placer y calma.
+  - texto: Una obsesión
+    explicacion: >
+      Desde fuera se parecen, porque le dedica muchísimo tiempo. Pero encaja
+      mejor con un interés intenso. Según la NAS, las obsesiones del trastorno
+      obsesivo-compulsivo (TOC) angustian y no se desean. Ella disfruta con sus
+      piedras y puede dejarlas para ir a cenar.
+  - texto: No lo sé
+    explicacion: >
+      Es lógico dudar, porque le dedica muchísimo tiempo. La pista está en cómo
+      lo vive: disfruta y puede dejarlo para ir a cenar. Eso encaja mejor con un
+      interés intenso. Si no pudiera dejarlo para hacer lo que necesita, o lo
+      hiciera por miedo a que pase algo malo, convendría consultarlo.
+terminos: [intereses-especiales]
+fuentes: [nas-intereses]
+revisado: 2026-11-16

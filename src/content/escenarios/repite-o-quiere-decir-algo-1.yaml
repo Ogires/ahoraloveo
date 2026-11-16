@@ -1,0 +1,33 @@
+pregunta: ¿Repite sin sentido o quiere decir algo?
+edad: 5 años
+lugar: en la cola de la panadería
+protagonista: nina
+situacion: >
+  Está en la cola con su abuela. Mientras esperan, repite bajito «¿Me pone una
+  barra, por favor?», con el mismo tono que usa su abuela cada mañana. Lo dice
+  una y otra vez. Cuando les toca, mira a la panadera y se lo pide ella sola.
+opciones:
+  - texto: Repite sin sentido
+    explicacion: >
+      Desde fuera puede parecerlo, porque dice lo mismo una y otra vez. Pero
+      encaja mejor con que quiere decir algo. Barry Prizant, especialista en
+      autismo, vio que repetir frases oídas sirve para muchas cosas, como ensayar
+      lo que se va a decir. Ella ensaya la frase de su abuela y luego la usa
+      para pedir.
+  - texto: Quiere decir algo
+    explicacion: >
+      Encaja mejor con eso. Repetir frases que se han oído a otras personas se
+      llama ecolalia, y muchas veces es una forma de comunicarse. Barry Prizant,
+      especialista en autismo, vio que sirve, entre otras cosas, para ensayar lo
+      que se va a decir. Ella ensaya la frase de su abuela y luego la usa para
+      pedir.
+  - texto: No lo sé
+    explicacion: >
+      Es lógico dudar, porque repetir lo mismo una y otra vez puede parecer que
+      no tiene sentido. La pista está en el final: cuando les toca, usa esa frase
+      para pedir. Barry Prizant, especialista en autismo, vio que repetir sirve a
+      menudo para ensayar lo que se va a decir. Mandarla callar solo la
+      desanimaría a comunicarse.
+terminos: [ecolalia]
+fuentes: [prizant-seres-humanos-unicos]
+revisado: 2026-11-16

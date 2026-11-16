@@ -1,0 +1,30 @@
+pregunta: ¿Le da igual o le cuesta saber qué siente?
+edad: 9 años
+lugar: en la cocina
+protagonista: nina
+situacion: >
+  Mientras merienda, cuenta que no le han dado el papel que quería en la función
+  del cole. Su madre le pregunta cómo se siente, y ella contesta: «Me da igual».
+  Un rato después, se acerca a su madre y le dice: «Estoy mal. No sé qué me
+  pasa».
+opciones:
+  - texto: Le da igual
+    explicacion: >
+      Desde fuera puede parecerlo, porque ella misma lo dice. Pero encaja mejor
+      con que le cuesta saber qué siente: al rato dice que está mal y que no sabe
+      qué le pasa. Siente algo, aunque no sepa qué es ni cómo llamarlo.
+  - texto: Le cuesta saber qué siente
+    explicacion: >
+      Encaja mejor con eso. Primero dice que le da igual, y luego, que está mal y
+      no sabe qué le pasa. Siente algo, pero le cuesta reconocerlo y ponerle
+      nombre. Eso se llama alexitimia. Acompaña a menudo al autismo, pero no
+      todas las personas autistas la tienen.
+  - texto: No lo sé
+    explicacion: >
+      Es lógico dudar, porque empieza diciendo que le da igual. La pista está en
+      lo que dice después: está mal y no sabe qué le pasa. Eso encaja mejor con
+      que le cuesta saber qué siente. Si os parece que le pasa a menudo, apuntad
+      ejemplos para hablarlo con su pediatra.
+terminos: [alexitimia]
+fuentes: [kinnaird-2019]
+revisado: 2026-11-16

@@ -4,7 +4,7 @@ Una escena de elegir es una situación corta con una pregunta del tipo «¿Crisi
 
 ## Reglas
 
-1. **Solo para lo que la ficha ya dice que se confunde.** La pareja sale de «No confundir con» de la ficha: crisis o rabieta, desconexión o «no hace caso», camuflaje o timidez. Si la ficha no explica la diferencia, primero va a la ficha, con su fuente.
+1. **Solo para lo que la ficha ya dice que se confunde.** La pareja sale de «No confundir con» de la ficha: crisis o rabieta, desconexión o «no hace caso», camuflaje o timidez, interés u obsesión, repetir sin sentido o querer decir algo, «le da igual» o no saber qué siente. Si la ficha no explica la diferencia, primero va a la ficha, con su fuente.
 2. **La situación sigue las reglas de las escenas** ([escenas.md](escenas.md)): inventada, de 60 palabras como mucho, con edad y lugar, sin nombres propios, vista desde fuera, sin nombrar el término y sin repetir el ejemplo de «Cómo se ve» ni las escenas de la ficha.
 3. **Se ve la pista.** La escena tiene que dejar ver lo que las distingue según la ficha: que no para aunque le den lo que pedía, que llega al final de una tarde larga, que para en cuanto sabe que lo tendrá.
 4. **No siempre gana el término autista.** Alguna escena puede encajar mejor con lo que se confunde (una rabieta), y en alguna, con lo que se ve, no se puede saber. Si una escena encaja con una rabieta, la explicación lo dice sin más: eso no dice nada sobre si es autista o no.

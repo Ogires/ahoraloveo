@@ -19,18 +19,21 @@ export const ORDEN_ESCENAS = [
   'elegir-crisis-o-rabieta-1', // emociones · 5 años · en el vestuario de la piscina
   'funciones-ejecutivas-1', // pensamiento · 4 años · en casa
   'teoria-de-la-mente-2', // social · 11 años · en el parque
+  'elegir-interes-u-obsesion-1', // pensamiento · 6 años · en el salón de casa
   'meltdown-1', // emociones · 3 años · en casa de sus abuelos
   'estereotipias-1', // sensorial · 7 años · en clase
   'coherencia-central-1', // pensamiento · 6 años · al volver del zoo
   'elegir-crisis-o-rabieta-2', // emociones · 3 años · a la salida de la guardería
   'masking-1', // social · 10 años · en un cumpleaños
   'shutdown-1', // emociones · 8 años · en la sala de espera del dentista
+  'elegir-repite-o-quiere-decir-algo-1', // social · 5 años · en la cola de la panadería
   'hiper-e-hiposensibilidad-2', // sensorial · 10 años · en una tienda de ropa
   'intereses-especiales-1', // pensamiento · 7 años · en el coche
   'elegir-desconexion-o-no-hace-caso-1', // emociones · 7 años · en una zapatería
   'teoria-de-la-mente-1', // social · 5 años · en casa
   'meltdown-2', // emociones · 9 años · en el comedor del cole
   'estereotipias-3', // sensorial · 6 años · en la terraza de un bar
+  'elegir-le-da-igual-o-no-sabe-que-siente-1', // emociones · 9 años · en la cocina
   'funciones-ejecutivas-2', // pensamiento · 9 años · en su cuarto
   'ecolalia-2', // social · 6 años · en el baño de casa
   'burnout-autista-1', // emociones · 12 años · en casa
