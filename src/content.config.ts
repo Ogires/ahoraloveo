@@ -2,6 +2,7 @@ import { defineCollection, reference } from 'astro:content';
 import { glob } from 'astro/loaders';
 import {
   crearEsquemaApartado,
+  crearEsquemaEscenario,
   crearEsquemaHerramienta,
   crearEsquemaMito,
   crearEsquemaPaso,
@@ -48,4 +49,10 @@ const apartados = defineCollection({
   schema: crearEsquemaApartado({ fuentes: reference('fuentes') }),
 });
 
-export const collections = { fuentes, glosario, entidades, herramientas, proceso, mitos, apartados };
+// Las escenas de elegir («¿Crisis o rabieta?»): van en la ficha de sus términos y entre las tarjetas de /escenas/.
+const escenarios = defineCollection({
+  loader: glob({ pattern: '**/*.{yaml,yml}', base: './src/content/escenarios' }),
+  schema: crearEsquemaEscenario({ fuentes: reference('fuentes'), glosario: reference('glosario') }),
+});
+
+export const collections = { fuentes, glosario, entidades, herramientas, proceso, mitos, apartados, escenarios };

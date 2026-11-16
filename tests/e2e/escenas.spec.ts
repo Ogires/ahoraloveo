@@ -1,3 +1,4 @@
+import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 import { ORDEN_ESCENAS } from '../../src/lib/tarjetas';
 
@@ -89,4 +90,32 @@ test('se llega a las escenas desde la portada y desde el glosario', async ({ pag
   await expect(page.locator('.acciones').getByRole('link', { name: 'Escenas del día a día' })).toHaveAttribute('href', '/escenas/');
   await page.goto('/glosario/');
   await expect(page.getByRole('link', { name: 'escenas «¿Lo habéis visto?»' })).toHaveAttribute('href', '/escenas/');
+});
+
+test('las escenas de elegir son una tarjeta más, sin «Esto lo hemos visto»', async ({ page }) => {
+  const id = ORDEN_ESCENAS.find((t) => t.startsWith('elegir-'))!;
+  const indice = ORDEN_ESCENAS.indexOf(id);
+  await page.goto(`/escenas/#escena-${ORDEN_ESCENAS[indice - 1]}`);
+  await page.getByRole('button', { name: 'Siguiente' }).click();
+  const tarjeta = page.locator(`#escena-${id}`);
+  await expect(tarjeta).toBeVisible();
+  await expect(tarjeta.getByRole('heading', { level: 2 })).toBeFocused();
+  await expect(tarjeta.getByRole('button', { name: 'Esto lo hemos visto' })).toHaveCount(0);
+  await expect(tarjeta.getByRole('link', { name: /^Leer la ficha de / })).toHaveCount(1);
+  await tarjeta.locator('summary').first().click();
+  await expect(tarjeta.locator('.explicacion').first()).toBeVisible();
+  await expect(progreso(page)).toHaveText(`Escena ${indice + 1} de ${TOTAL} · Habéis marcado 0`);
+});
+
+test('una escena de elegir abierta cumple WCAG 2.2 AA en claro y en oscuro', async ({ page }) => {
+  const id = ORDEN_ESCENAS.find((t) => t.startsWith('elegir-'))!;
+  for (const esquema of ['light', 'dark'] as const) {
+    await page.emulateMedia({ colorScheme: esquema });
+    await page.goto(`/escenas/#escena-${id}`);
+    await page.locator(`#escena-${id} summary`).first().click();
+    const { violations } = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
+      .analyze();
+    expect(violations.map((v) => `${v.id}: ${v.help}`)).toEqual([]);
+  }
 });

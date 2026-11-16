@@ -1,0 +1,60 @@
+---
+// Una escena de elegir («¿Crisis o rabieta?»): la situación y sus opciones, cada una con su explicación.
+// Cada opción es un <details>, así que funciona sin JavaScript. Comparten «name»: al abrir una se cierra
+// la que estuviera abierta (en los navegadores que no lo admiten, simplemente se pueden abrir varias).
+// Las explicaciones no enlazan las entidades: en la ficha ya las enlaza «No confundir con», el mismo apartado.
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  escenario: CollectionEntry<'escenarios'>;
+  // En la ficha va dentro de «No confundir con» (h3). En /escenas/ es una tarjeta (h2), y su título
+  // recibe el foco al llegar a ella.
+  nivel: 2 | 3;
+}
+
+const { escenario, nivel } = Astro.props;
+const d = escenario.data;
+const Titulo = nivel === 2 ? 'h2' : 'h3';
+---
+
+<div class="elegir" data-pagefind-ignore>
+  <Titulo class="pregunta" tabindex={nivel === 2 ? '-1' : undefined} data-titulo={nivel === 2 ? '' : undefined}>{d.pregunta}</Titulo>
+  <p class="edad-lugar">{d.edad} · {d.lugar}</p>
+  <p class="situacion">{d.situacion}</p>
+  <p class="instruccion">Elegid una respuesta para ver la explicación:</p>
+  <div class="opciones">
+    {d.opciones.map((o) => (
+      <details class="opcion" name={`elegir-${escenario.id}`}>
+        <summary>
+          {o.texto}
+          <svg class="flecha" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+        </summary>
+        <p class="explicacion">{o.explicacion}</p>
+      </details>
+    ))}
+  </div>
+</div>
+
+<style>
+  .elegir { display: flex; flex-direction: column; gap: 0.625rem; }
+  .pregunta { font-size: 1.5rem; }
+  .edad-lugar { font-size: 0.9375rem; font-weight: 500; color: var(--tinta-suave); }
+  .instruccion { font-weight: 500; margin-top: 0.25rem; }
+  .opciones { display: flex; flex-direction: column; gap: 0.5rem; }
+  .opcion summary {
+    display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;
+    min-height: 44px; padding: 0.5rem 1.25rem; border: 2px solid var(--acento); border-radius: 999px;
+    color: var(--acento); font-weight: 500; cursor: pointer; list-style: none;
+  }
+  .opcion summary::-webkit-details-marker { display: none; }
+  .flecha { flex: none; transition: transform 0.2s ease-out; }
+  .opcion[open] .flecha { transform: rotate(180deg); }
+  .explicacion {
+    margin: 0.5rem 0 0.25rem; padding: 0.875rem 1.125rem;
+    border-left: 4px solid var(--familia, var(--acento)); background: var(--fondo); border-radius: 0 14px 14px 0;
+  }
+  /* El fundido corto de las tarjetas. Con «reducir movimiento», la regla general de global.css lo quita. */
+  .opcion[open] .explicacion { animation: fundido 0.2s ease-out; }
+  @keyframes fundido { from { opacity: 0; } to { opacity: 1; } }
+</style>

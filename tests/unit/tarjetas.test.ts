@@ -15,18 +15,28 @@ const termino = (id: string, escenas: number) => ({
 
 describe('ordenarTarjetas', () => {
   const terminos = [termino('meltdown', 2), termino('masking', 1)];
+  const escenarios = [{ id: 'crisis-o-rabieta-1' }];
+  const orden = ['masking-1', 'meltdown-2', 'elegir-crisis-o-rabieta-1', 'meltdown-1'];
 
   it('sigue el orden dado y llama a cada escena como su ilustración', () => {
-    const tarjetas = ordenarTarjetas(terminos, ['masking-1', 'meltdown-2', 'meltdown-1']);
-    expect(tarjetas.map((t) => t.id)).toEqual(['masking-1', 'meltdown-2', 'meltdown-1']);
-    expect(tarjetas[1].termino.id).toBe('meltdown');
-    expect(tarjetas[1].escena).toEqual({ texto: 'meltdown 2' });
+    const tarjetas = ordenarTarjetas(terminos, escenarios, orden);
+    expect(tarjetas.map((t) => t.id)).toEqual(orden);
+    const segunda = tarjetas[1];
+    expect(segunda.tipo === 'escena' && segunda.termino.id).toBe('meltdown');
+    expect(segunda.tipo === 'escena' && segunda.escena).toEqual({ texto: 'meltdown 2' });
+  });
+
+  it('intercala las escenas de elegir, con su prefijo', () => {
+    const tercera = ordenarTarjetas(terminos, escenarios, orden)[2];
+    expect(tercera.tipo).toBe('elegir');
+    expect(tercera.tipo === 'elegir' && tercera.escenario.id).toBe('crisis-o-rabieta-1');
   });
 
   it('para si falta una escena, si sobra o si se repite', () => {
-    expect(() => ordenarTarjetas(terminos, ['masking-1', 'meltdown-1'])).toThrow('Faltan en el orden de las escenas: meltdown-2');
-    expect(() => ordenarTarjetas(terminos, ['masking-1', 'meltdown-1', 'meltdown-2', 'meltdown-3'])).toThrow('«meltdown-3», que no existe');
-    expect(() => ordenarTarjetas(terminos, ['masking-1', 'meltdown-1', 'meltdown-2', 'masking-1'])).toThrow('«masking-1» está dos veces');
+    expect(() => ordenarTarjetas(terminos, escenarios, ['masking-1', 'meltdown-1', 'elegir-crisis-o-rabieta-1'])).toThrow('Faltan en el orden de las escenas: meltdown-2');
+    expect(() => ordenarTarjetas(terminos, escenarios, ['masking-1', 'meltdown-1', 'meltdown-2'])).toThrow('Faltan en el orden de las escenas: elegir-crisis-o-rabieta-1');
+    expect(() => ordenarTarjetas(terminos, escenarios, [...orden, 'meltdown-3'])).toThrow('«meltdown-3», que no existe');
+    expect(() => ordenarTarjetas(terminos, escenarios, [...orden, 'masking-1'])).toThrow('«masking-1» está dos veces');
   });
 
   it('numera desde 1', () => {

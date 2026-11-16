@@ -109,6 +109,10 @@ Aplica la misma lista de comprobación y devuelve una tabla, ordenada de más a 
 
 Las escenas son situaciones cotidianas cortas que muestran un término sin nombrarlo. Antes de escribir o revisar una, lee [references/escenas.md](references/escenas.md): son inventadas, de 60 palabras como mucho, con edad y lugar, sin nombres propios y sin diagnosticar, y solo muestran lo que la ficha ya dice con su fuente.
 
+## Escenas de elegir
+
+Una escena de elegir («¿Crisis o rabieta?») es una situación corta con dos o tres opciones, más «No lo sé», y una explicación para cada una. Antes de escribir o revisar una, lee [references/escenas-de-elegir.md](references/escenas-de-elegir.md): solo para parejas que la ficha ya distingue, nunca «correcto» ni «fallo», y no siempre gana el término autista.
+
 ## Mitos
 
 Un mito tiene su página en `/mitos/`: primero lo que se suele oír, entre comillas, y justo debajo lo que sabemos. Antes de escribir o revisar uno, lee [references/mitos.md](references/mitos.md). El dato va en una frase, nunca con burlas ni tratamientos, y sin cambiar un mito por otro.

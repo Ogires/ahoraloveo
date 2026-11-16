@@ -3,51 +3,65 @@
 // Cada escena se llama como su ilustración: el término y su número dentro de la ficha («meltdown-2»).
 export const idEscena = (termino: string, indice: number) => `${termino}-${indice + 1}`;
 
+// Las escenas de elegir van en el mismo orden, con este prefijo delante de su id.
+export const PREFIJO_ELEGIR = 'elegir-';
+
 // Orden fijo, elegido a mano (diseño, sección 5): alterna familias, empieza por situaciones frecuentes
 // y poco duras y deja las más duras (el comedor, el burnout) para más adelante, sin acabar con ellas.
-// Al añadir una escena a una ficha hay que ponerla aquí: si falta, la compilación para.
+// De vez en cuando, una escena de elegir; la familia que cuenta es la de su primer término.
+// Al añadir una escena a una ficha, o una escena de elegir, hay que ponerla aquí: si falta, la compilación para.
 export const ORDEN_ESCENAS = [
   'estereotipias-2', // sensorial · 2 años · en el parque
   'intereses-especiales-2', // pensamiento · 8 años · a la salida del cole
   'ecolalia-1', // social · 4 años · en la consulta de pediatría
   'alexitimia-1', // emociones · 11 años · en el coche
   'hiper-e-hiposensibilidad-1', // sensorial · 5 años · en el patio del cole
+  'elegir-crisis-o-rabieta-1', // emociones · 5 años · en el vestuario de la piscina
   'funciones-ejecutivas-1', // pensamiento · 4 años · en casa
   'teoria-de-la-mente-2', // social · 11 años · en el parque
   'meltdown-1', // emociones · 3 años · en casa de sus abuelos
   'estereotipias-1', // sensorial · 7 años · en clase
   'coherencia-central-1', // pensamiento · 6 años · al volver del zoo
+  'elegir-crisis-o-rabieta-2', // emociones · 3 años · a la salida de la guardería
   'masking-1', // social · 10 años · en un cumpleaños
   'shutdown-1', // emociones · 8 años · en la sala de espera del dentista
   'hiper-e-hiposensibilidad-2', // sensorial · 10 años · en una tienda de ropa
   'intereses-especiales-1', // pensamiento · 7 años · en el coche
+  'elegir-desconexion-o-no-hace-caso-1', // emociones · 7 años · en una zapatería
   'teoria-de-la-mente-1', // social · 5 años · en casa
   'meltdown-2', // emociones · 9 años · en el comedor del cole
   'estereotipias-3', // sensorial · 6 años · en la terraza de un bar
   'funciones-ejecutivas-2', // pensamiento · 9 años · en su cuarto
   'ecolalia-2', // social · 6 años · en el baño de casa
   'burnout-autista-1', // emociones · 12 años · en casa
+  'elegir-camuflaje-o-timidez-1', // social · 8 años · en su primera clase de teatro
   'coherencia-central-2', // pensamiento · 10 años · en clase
   'doble-empatia-1', // social · 9 años · de camino a casa
 ] as const;
 
 type ConEscenas = { id: string; data: { escenas: unknown[] } };
 
-export interface Tarjeta<T extends ConEscenas> {
-  id: string;
-  termino: T;
-  escena: T['data']['escenas'][number];
-}
+export type Tarjeta<T extends ConEscenas, E extends { id: string }> =
+  | { tipo: 'escena'; id: string; termino: T; escena: T['data']['escenas'][number] }
+  | { tipo: 'elegir'; id: string; escenario: E };
 
-// Las escenas de todas las fichas, en el orden de arriba. Para la compilación si el orden nombra una
-// escena que no existe, la repite o se deja alguna: así ninguna escena nueva se queda sin tarjeta.
-export function ordenarTarjetas<T extends ConEscenas>(
+// Las escenas de todas las fichas y las escenas de elegir, en el orden de arriba. Para la compilación si
+// el orden nombra una tarjeta que no existe, la repite o se deja alguna: así ninguna se queda fuera.
+export function ordenarTarjetas<T extends ConEscenas, E extends { id: string }>(
   terminos: T[],
+  escenarios: E[],
   orden: readonly string[] = ORDEN_ESCENAS,
-): Tarjeta<T>[] {
-  const todas = new Map<string, Omit<Tarjeta<T>, 'id'>>();
+): Tarjeta<T, E>[] {
+  const todas = new Map<string, Tarjeta<T, E>>();
   for (const termino of terminos) {
-    termino.data.escenas.forEach((escena, i) => todas.set(idEscena(termino.id, i), { termino, escena }));
+    termino.data.escenas.forEach((escena, i) => {
+      const id = idEscena(termino.id, i);
+      todas.set(id, { tipo: 'escena', id, termino, escena });
+    });
+  }
+  for (const escenario of escenarios) {
+    const id = PREFIJO_ELEGIR + escenario.id;
+    todas.set(id, { tipo: 'elegir', id, escenario });
   }
   const vistas = new Set<string>();
   for (const id of orden) {
@@ -57,7 +71,7 @@ export function ordenarTarjetas<T extends ConEscenas>(
   }
   const faltan = [...todas.keys()].filter((id) => !vistas.has(id));
   if (faltan.length > 0) throw new Error(`Faltan en el orden de las escenas: ${faltan.join(', ')}`);
-  return orden.map((id) => ({ id, ...todas.get(id)! }));
+  return orden.map((id) => todas.get(id)!);
 }
 
 // La primera frase de «Qué es», para el reverso: corta en el primer punto (o cierre de pregunta o

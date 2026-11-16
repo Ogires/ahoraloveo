@@ -1,0 +1,31 @@
+pregunta: ¿Desconexión o que no hace caso?
+edad: 7 años
+lugar: en una zapatería
+protagonista: nino
+situacion: >
+  Llevan toda la tarde de compras, con mucha gente y música en cada tienda. En
+  la zapatería, su madre le pide que se pruebe unas zapatillas. Él se sienta en
+  el suelo, muy quieto, y no contesta aunque se lo repita. Tarda un buen rato
+  en volver a hablar.
+opciones:
+  - texto: Una desconexión
+    explicacion: >
+      Encaja mejor con una desconexión (shutdown). Llega al final de una tarde
+      larga, con mucha gente y ruido, cuando algo pequeño termina de
+      desbordarlo. Se queda quieto y no responde, y no lo elige: a veces se da
+      cuenta de lo que pasa, pero no puede contestar.
+  - texto: Que no hace caso
+    explicacion: >
+      Desde fuera puede parecerlo, pero encaja mejor con una desconexión
+      (shutdown). Llega al final de una tarde larga, con mucha gente y ruido, y
+      no lo elige. Ambitious about Autism explica que, cuando se toma por
+      desobediencia o pereza, se sienten incomprendidos y sin apoyo.
+  - texto: No lo sé
+    explicacion: >
+      Es lógico dudar. La pista está en lo que lo rodea: una tarde larga, con
+      mucha gente y ruido, y algo pequeño al final. Así suele llegar una
+      desconexión (shutdown): cuando el estrés se ha ido acumulando. En ese
+      momento ayuda bajar el ruido, darle tiempo y no hacerle muchas preguntas.
+terminos: [shutdown]
+fuentes: [ambitious-meltdowns-shutdowns]
+revisado: 2026-11-16

@@ -35,3 +35,10 @@ test('las escenas se leen sin JavaScript, todas a la vez y cada una con su rever
   await tarjeta.getByText('¿Qué hay detrás?').click();
   await expect(tarjeta.getByText('Detrás puede haber:')).toBeVisible();
 });
+
+test('las escenas de elegir de una ficha se abren sin JavaScript', async ({ page }) => {
+  await page.goto('/glosario/shutdown/');
+  const escena = page.locator('.elegir').first();
+  await escena.getByText('Que no hace caso', { exact: true }).click();
+  await expect(escena.locator('.explicacion').nth(1)).toBeVisible();
+});

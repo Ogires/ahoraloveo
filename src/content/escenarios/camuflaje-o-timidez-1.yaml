@@ -1,0 +1,31 @@
+pregunta: ¿Camuflaje o timidez?
+edad: 8 años
+lugar: en su primera clase de teatro
+protagonista: nina
+situacion: >
+  Al principio se queda al fondo y casi no habla. Mira con atención cómo se
+  presentan las demás. Cuando le toca, se presenta igual que la niña de antes,
+  con las mismas palabras y el mismo gesto con la mano.
+opciones:
+  - texto: Camuflaje
+    explicacion: >
+      Puede ser: copiar lo que hacen las demás es una forma de camuflar, de que
+      no se noten las diferencias. Pero con lo que se ve no se puede saber.
+      Quedarse al fondo y fijarse en las demás también puede ser timidez, sobre
+      todo el primer día.
+  - texto: Timidez
+    explicacion: >
+      Puede ser: quedarse al fondo y hablar poco el primer día es muy común. Pero
+      con lo que se ve no se puede saber. Copiar las palabras y el gesto de otra
+      niña también puede ser una forma de camuflar, de que no se noten las
+      diferencias.
+  - texto: No lo sé
+    explicacion: >
+      Con lo que se ve, no se puede saber. Y eso les pasa a muchas niñas: AETAPI
+      explica que algunas niñas autistas parecen tímidas o calladas, y como eso
+      se espera de una niña, no llama la atención. Ayuda mirar el conjunto, por
+      ejemplo, si en casa la veis agotada aunque en el colegio digan que está
+      bien.
+terminos: [masking]
+fuentes: [aetapi-mujeres-tea, hull-2017]
+revisado: 2026-11-16

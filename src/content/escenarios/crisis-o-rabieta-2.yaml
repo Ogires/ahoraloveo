@@ -1,0 +1,30 @@
+pregunta: ¿Crisis o rabieta?
+edad: 3 años
+lugar: a la salida de la guardería
+protagonista: nina
+situacion: >
+  Otra niña sale comiendo un bollo, y ella quiere uno. Llora, grita y se tira al
+  suelo. Su abuelo le dice que en casa le espera uno de chocolate. Ella se
+  levanta enseguida, le da la mano y le cuenta lo que ha pintado en clase.
+opciones:
+  - texto: Una crisis
+    explicacion: >
+      Desde fuera se parecen, pero esta escena encaja mejor con una rabieta:
+      quería algo y paró en cuanto supo que lo iba a tener. En una crisis
+      (meltdown) no hay nada que negociar. Aunque consiga lo que pedía, no para,
+      y se calma con tiempo, cuando baja la sobrecarga.
+  - texto: Una rabieta
+    explicacion: >
+      Encaja mejor con una rabieta: quería algo y paró en cuanto supo que lo iba
+      a tener. Eso no dice nada sobre si es autista o no. Lo que ayuda es saber
+      distinguirlas, porque lo que sirve en una rabieta puede empeorar una
+      crisis.
+  - texto: No lo sé
+    explicacion: >
+      Es lógico dudar, porque desde fuera se parecen. La pista está en cómo
+      acaba: paró en cuanto supo que tendría su bollo. Una rabieta busca
+      conseguir algo y suele parar cuando lo consigue. En una crisis (meltdown),
+      en cambio, no hay nada que negociar.
+terminos: [meltdown]
+fuentes: [paula-ansiedad-2015]
+revisado: 2026-11-16

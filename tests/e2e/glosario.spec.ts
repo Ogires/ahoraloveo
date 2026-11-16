@@ -63,3 +63,25 @@ test('las escenas con ilustración la muestran, con el texto alternativo vacío 
     await expect.poll(() => imagen.evaluate((i: HTMLImageElement) => i.complete && i.naturalWidth > 0)).toBe(true);
   }
 });
+
+test('las escenas de elegir van debajo de «No confundir con», con «No lo sé» al final', async ({ page }) => {
+  await page.goto('/glosario/meltdown/');
+  const apartado = page.locator('section[aria-labelledby="no-confundir"]');
+  const escenas = apartado.locator('.elegir');
+  await expect(escenas).toHaveCount(2);
+  const primera = escenas.first();
+  await expect(primera.getByRole('heading', { level: 3 })).toHaveText('¿Crisis o rabieta?');
+  await expect(primera.locator('summary').last()).toHaveText('No lo sé');
+});
+
+test('al elegir una opción se ve su explicación, y al elegir otra se cierra la anterior', async ({ page }) => {
+  await page.goto('/glosario/meltdown/');
+  const escena = page.locator('.elegir').first();
+  const opciones = escena.locator('details');
+  await escena.getByText('Una rabieta', { exact: true }).click();
+  await expect(opciones.nth(1).locator('.explicacion')).toBeVisible();
+  await expect(opciones.nth(1).locator('.explicacion')).toContainText('encaja mejor con una crisis');
+  await escena.getByText('No lo sé', { exact: true }).click();
+  await expect(opciones.nth(2).locator('.explicacion')).toBeVisible();
+  await expect(opciones.nth(1).locator('.explicacion')).toBeHidden();
+});

@@ -261,3 +261,36 @@ export const crearEsquemaMito = <F extends z.ZodType, G extends z.ZodType>(refer
     orden: z.number().int().min(1),
     revisado: fecha(),
   });
+
+// Una escena de elegir no es un examen: la explicación dice qué encaja mejor y por qué.
+const PALABRAS_DE_EXAMEN = /(^|[^\p{L}])(correct[oa]s?|incorrect[oa]s?|aciert[oa]s?|acertad[oa]s?|fallo|fallad[oa]s?|error|equivocad[oa]s?)(?![\p{L}])/iu;
+
+// Una escena de elegir, para las parejas que se confunden («¿Crisis o rabieta?»). Guía en
+// .claude/skills/lenguaje-claro/references/escenas-de-elegir.md. Que sus fuentes estén en las de sus
+// fichas lo comprueba comprobarEscenarios(), que ve las dos colecciones.
+export const crearEsquemaEscenario = <F extends z.ZodType, G extends z.ZodType>(referencias: {
+  fuentes: F;
+  glosario: G;
+}) =>
+  z.object({
+    pregunta: texto().regex(/^¿[^¿?]+\?$/, 'La pregunta va entre signos de interrogación: «¿Crisis o rabieta?»'),
+    edad: texto().refine(edadValida, 'La edad va de «1 mes» a «12 años», escrita así: «18 meses», «4 años»'),
+    lugar: texto(),
+    protagonista: z.enum(['nina', 'nino']),
+    situacion: texto().refine((t) => contarPalabras(t) <= 60, 'La situación tiene 60 palabras como mucho'),
+    opciones: z
+      .array(
+        z.object({
+          texto: texto(),
+          explicacion: texto()
+            .refine((t) => contarPalabras(t) <= 60, 'Cada explicación tiene 60 palabras como mucho')
+            .refine((t) => !PALABRAS_DE_EXAMEN.test(t), 'Nada de «correcto» ni «fallo»: «Encaja mejor con…, porque…»'),
+        }),
+      )
+      .min(3, 'Dos o tres opciones, más «No lo sé»')
+      .max(4, 'Dos o tres opciones, más «No lo sé»')
+      .refine((o) => o.at(-1)?.texto === 'No lo sé', 'La última opción es siempre «No lo sé»'),
+    terminos: z.array(referencias.glosario).min(1, 'Cada escena de elegir va en la ficha de al menos un término'),
+    fuentes: z.array(referencias.fuentes).min(1, 'Cada escena de elegir necesita al menos una fuente'),
+    revisado: fecha(),
+  });

@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { z } from 'astro/zod';
 import {
   crearEsquemaApartado,
+  crearEsquemaEscenario,
   crearEsquemaHerramienta,
   crearEsquemaMito,
   crearEsquemaPaso,
@@ -436,5 +437,63 @@ describe('esquema de los apartados sueltos de una página', () => {
   it('exige la fecha de revisión', () => {
     const { revisado: _, ...sinFecha } = apartado;
     expect(esquemaApartado.safeParse(sinFecha).success).toBe(false);
+  });
+});
+
+const esquemaEscenario = crearEsquemaEscenario({ fuentes: z.string(), glosario: z.string() });
+const escenario = {
+  pregunta: '¿Crisis o rabieta?',
+  edad: '5 años',
+  lugar: 'en la piscina',
+  protagonista: 'nino',
+  situacion: 'Llora y da patadas. Le dan lo que pedía y sigue igual.',
+  opciones: [
+    { texto: 'Una crisis', explicacion: 'Encaja mejor con una crisis, porque no para al conseguirlo.' },
+    { texto: 'Una rabieta', explicacion: 'Desde fuera se parecen, pero encaja mejor con una crisis.' },
+    { texto: 'No lo sé', explicacion: 'Es lógico dudar. La pista está en lo que pasa al dárselo.' },
+  ],
+  terminos: ['meltdown'],
+  fuentes: ['nas-crisis'],
+  revisado: '2026-11-16',
+};
+const conExplicacion = (explicacion: string) => ({
+  ...escenario,
+  opciones: [{ ...escenario.opciones[0], explicacion }, ...escenario.opciones.slice(1)],
+});
+
+describe('esquema de las escenas de elegir', () => {
+  it('acepta una escena con su pregunta, su situación, sus opciones y sus fuentes', () => {
+    expect(esquemaEscenario.safeParse(escenario).success).toBe(true);
+  });
+
+  it('la última opción es siempre «No lo sé»', () => {
+    const r = esquemaEscenario.safeParse({ ...escenario, opciones: escenario.opciones.slice(0, 2).concat(escenario.opciones[0]) });
+    expect(r.success).toBe(false);
+    expect(JSON.stringify(r.error)).toContain('No lo sé');
+  });
+
+  it('lleva dos o tres opciones, más «No lo sé»', () => {
+    expect(esquemaEscenario.safeParse({ ...escenario, opciones: escenario.opciones.slice(1) }).success).toBe(false);
+    const cinco = [escenario.opciones[0], escenario.opciones[0], escenario.opciones[0], ...escenario.opciones.slice(1)];
+    expect(esquemaEscenario.safeParse({ ...escenario, opciones: cinco }).success).toBe(false);
+  });
+
+  it('no es un examen: rechaza «correcto», «fallo» y parecidas, pero no las palabras que las contienen', () => {
+    for (const mal of ['¡Correcto! Es una crisis.', 'Has fallado: es una crisis.', 'Es un error pensar que es una rabieta.', 'Respuesta acertada.']) {
+      expect(esquemaEscenario.safeParse(conExplicacion(mal)).success, mal).toBe(false);
+    }
+    expect(esquemaEscenario.safeParse(conExplicacion('Encaja mejor con una crisis, aunque haya errores de juicio')).success).toBe(true);
+  });
+
+  it('la pregunta va entre signos de interrogación y la situación no pasa de 60 palabras', () => {
+    expect(esquemaEscenario.safeParse({ ...escenario, pregunta: 'Crisis o rabieta' }).success).toBe(false);
+    expect(esquemaEscenario.safeParse({ ...escenario, situacion: 'palabra '.repeat(61) }).success).toBe(false);
+  });
+
+  it('exige un término, una fuente y la fecha', () => {
+    expect(esquemaEscenario.safeParse({ ...escenario, terminos: [] }).success).toBe(false);
+    expect(esquemaEscenario.safeParse({ ...escenario, fuentes: [] }).success).toBe(false);
+    const { revisado: _, ...sinFecha } = escenario;
+    expect(esquemaEscenario.safeParse(sinFecha).success).toBe(false);
   });
 });

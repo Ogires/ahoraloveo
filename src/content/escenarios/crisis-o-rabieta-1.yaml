@@ -1,0 +1,31 @@
+pregunta: ¿Crisis o rabieta?
+edad: 5 años
+lugar: en el vestuario de la piscina
+protagonista: nino
+situacion: >
+  Al acabar el cursillo de natación, el vestuario está lleno de gente y suenan
+  los secadores. Él no encuentra su toalla de los peces y empieza a llorar y a
+  dar patadas al banco. Su padre la encuentra y se la da, pero él sigue igual.
+  Se calma un buen rato después, ya en la calle.
+opciones:
+  - texto: Una crisis
+    explicacion: >
+      Encaja mejor con una crisis (meltdown). Ya tiene su toalla y aun así no
+      para: no había nada que negociar. Se calma con tiempo, al salir del ruido y
+      de la gente, cuando baja la sobrecarga. No es mala conducta ni algo que
+      elija.
+  - texto: Una rabieta
+    explicacion: >
+      Desde fuera se parecen, pero encaja mejor con una crisis (meltdown). Una
+      rabieta busca conseguir algo y suele parar cuando lo consigue. Él ya tiene
+      su toalla y sigue igual. Se calma con tiempo, al salir del ruido y de la
+      gente.
+  - texto: No lo sé
+    explicacion: >
+      Es lógico dudar, porque desde fuera se parecen. La pista está en lo que
+      pasa cuando le dan la toalla: una rabieta suele parar ahí, y él sigue
+      igual. Se calma con tiempo, al salir del ruido. Eso encaja mejor con una
+      crisis (meltdown).
+terminos: [meltdown]
+fuentes: [nas-crisis, paula-ansiedad-2015]
+revisado: 2026-11-16
