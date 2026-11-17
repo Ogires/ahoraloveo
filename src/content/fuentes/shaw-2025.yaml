@@ -1,0 +1,17 @@
+titulo: "Prevalence and Early Identification of Autism Spectrum Disorder Among Children Aged 4 and 8 Years — Autism and Developmental Disabilities Monitoring Network, 16 Sites, United States, 2022"
+autoria: Kelly A. Shaw, Susan Williams, Mary E. Patrick y otros (CDC)
+anio: 2025
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12011386/
+doi: 10.15585/mmwr.ss7402a1
+licencia: Dominio público
+comprobado: 2026-11-17
+temas: [discapacidad-intelectual, prevalencia, genero]
+estudio:
+  diseno: Vigilancia en 16 zonas de Estados Unidos, a partir de historias clínicas y escolares
+  muestra: 8613 # niñas y niños autistas de 8 años; 5.292 con datos de capacidad intelectual
+  edades: 8 años
+  porcentaje_ninas: 23 # a partir de la razón de 3,4 chicos por cada chica
+  resultados_por_sexo: true
