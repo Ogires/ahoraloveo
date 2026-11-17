@@ -55,7 +55,7 @@ revisado: 2026-11-09
 - [ ] Cada cifra, con su fuente y su peso; si las fuentes no coinciden, se dice.
 - [ ] Sin burlas, sin culpar a nadie y sin tratamientos.
 - [ ] No deja un mito nuevo en lugar del viejo.
-- [ ] Ninguna frase de más de 30 palabras, e INFLESZ de 55 o más (objetivo: 65).
+- [ ] Ninguna frase de más de 30 palabras. Si el INFLESZ baja de 55, se ha revisado el texto, sin cambiar palabras precisas por otras más vagas.
 - [ ] Las citas de sus fuentes están en `notas/dossieres/mitos-<id>.md` y pasan el comprobador.
 - [ ] Revisado por una persona antes de publicarse.
 

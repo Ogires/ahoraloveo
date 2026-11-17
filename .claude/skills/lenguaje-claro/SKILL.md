@@ -137,7 +137,7 @@ El script calcula el índice **INFLESZ** (Barrio-Cantalejo et al., 2008), la ada
 | 65-80 | Bastante fácil |
 | > 80 | Muy fácil |
 
-**Objetivo: 65 o más en el glosario y las señales, y nunca menos de 55.** Los textos de salud que superan 55 tienen más probabilidades de leerse y entenderse. Aun así, es una ayuda, no un juez. Una ficha corta da un índice poco estable, y una palabra larga pero bien explicada («alexitimia») baja la nota sin que el texto sea peor. Un texto puede puntuar bien y estar mal escrito.
+**La nota orienta, no manda.** Como referencia, 65 o más en el glosario y las señales; por debajo de 55, revisa el texto. Los textos de salud que superan 55 tienen más probabilidades de leerse y entenderse. Pero el índice solo cuenta sílabas y palabras por frase: no sabe si el texto se entiende. Una ficha corta da un índice poco estable, y una palabra larga pero precisa («discapacidad intelectual», «subestimar», «alexitimia») baja la nota sin que el texto sea peor. Por eso nunca se cambia una palabra precisa por otra más corta o más vaga solo para subir la nota. Lo que sí se corrige siempre son las frases de más de 30 palabras. Un texto puede puntuar bien y estar mal escrito.
 
 ## Lista de comprobación final
 
@@ -147,7 +147,7 @@ El script calcula el índice **INFLESZ** (Barrio-Cantalejo et al., 2008), la ada
 - [ ] El apartado «En niñas» tiene fuente o dice «Sin datos sobre niñas».
 - [ ] Nada sugiere un diagnóstico ni culpa a la familia.
 - [ ] Los términos siguen la guía, y cada aviso del script se ha corregido o tiene un motivo.
-- [ ] Ninguna frase pasa de 30 palabras. INFLESZ de 55 o más (objetivo: 65).
+- [ ] Ninguna frase pasa de 30 palabras. Si el INFLESZ baja de 55, se ha revisado el texto, sin cambiar palabras precisas por otras más vagas.
 - [ ] La ficha termina con algo útil: qué observar, qué preguntar o adónde ir.
 - [ ] Los enlaces dicen adónde llevan, y los tecnicismos enlazan al glosario.
 - [ ] Está puesta la fecha de revisión.

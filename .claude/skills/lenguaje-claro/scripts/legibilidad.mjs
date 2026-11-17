@@ -191,7 +191,7 @@ const num = (n) => n.toLocaleString('es-ES', { maximumFractionDigits: 1 });
 function informe(nombre, r) {
   const lineas = [nombre];
   if (r.inflesz === null) return [...lineas, '  (sin texto)'].join('\n');
-  lineas.push(`  INFLESZ ${num(r.inflesz)} · ${tramo(r.inflesz)}  (objetivo ≥ 65; mínimo ${INFLESZ_MINIMO})`);
+  lineas.push(`  INFLESZ ${num(r.inflesz)} · ${tramo(r.inflesz)}  (referencia ≥ 65; por debajo de ${INFLESZ_MINIMO}, revisar)`);
   lineas.push(
     `  ${r.palabras} palabras · ${r.frases} frases · ${num(r.palabrasPorFrase)} palabras/frase · ${num(r.silabasPorPalabra)} sílabas/palabra`,
   );
