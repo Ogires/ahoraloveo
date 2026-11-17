@@ -1,0 +1,53 @@
+termino: Comorbilidad
+en_ingles: comorbidity
+alias: [condiciones asociadas, condiciones coexistentes, trastornos concurrentes]
+alias_en_ingles: [co-occurring conditions]
+familia: clinico
+que_es: >
+  Comorbilidad es la palabra que usan los informes cuando una persona tiene a
+  la vez dos condiciones o más. En el autismo es muy frecuente. La guía NICE
+  explica que unas 7 de cada 10 personas autistas cumplen también los criterios
+  de al menos otro trastorno de salud mental, que a menudo nadie ha detectado.
+  También pueden acompañarlo problemas de sueño, de alimentación o de salud
+  física, como la epilepsia.
+como_se_ve: >
+  Entre los diagnósticos de salud mental, los más frecuentes son el TDAH
+  (trastorno por déficit de atención e hiperactividad), la ansiedad y los
+  trastornos del sueño. Una revisión de 2019 reunió 96 estudios con personas
+  autistas de distintas edades. De media, 28 de cada 100 tenían también TDAH;
+  20, un trastorno de ansiedad, y 13, un trastorno del sueño. Las cifras
+  cambiaban mucho de un estudio a otro, y eran más altas en los hechos en
+  consultas que en los de toda la población. La guía NICE añade, entre otras,
+  la epilepsia, comer muy pocos alimentos, el estreñimiento, los escapes de pis
+  y los problemas de vista u oído. A veces no se notan tal cual: la guía ESCAP
+  explica que la ansiedad puede verse primero como más problemas de
+  comportamiento. Una niña que de un tiempo a esta parte se enfada mucho más a
+  menudo puede estar pasándolo mal por dentro.
+no_confundir_con: >
+  Con «cosas del autismo». La guía ESCAP avisa de que el autismo a menudo
+  eclipsa otros problemas, y que eso hace más difícil detectarlos y tratarlos.
+  Al revés tampoco es fácil. Según ESCAP, cuando una niña o un niño autista no
+  atiende, cuesta saber por qué. Puede ser un TDAH, lo que le cuesta lo social
+  o que el tema no le interese. Por eso la guía NICE pide distinguir el
+  autismo del TDAH o de la ansiedad al diagnosticar, y también mirar si se dan
+  a la vez.
+en_ninas: >
+  La guía ESCAP explica que algunas cosas aumentan el riesgo de que las niñas
+  autistas tengan problemas emocionales, también con la comida. Son el
+  diagnóstico tardío, la falta de apoyos y el esfuerzo por parecerse a las
+  demás. AETAPI, la asociación española de profesionales del autismo, cuenta
+  que, en su experiencia con mujeres adultas, la mayoría habían recibido antes
+  otros diagnósticos, como depresión o ansiedad. Si vuestra hija ya tiene otro
+  diagnóstico y seguís viendo cosas que os hacen pensar en el autismo, podéis
+  decirlo en la consulta.
+que_hacer: >
+  Si algo cambia, como que duerma peor, coma menos o se enfade más a menudo,
+  comentadlo con su pediatra y no deis por hecho que es el autismo. La guía NICE
+  avisa de que, si le cuesta comunicarse, es más difícil notar un problema de
+  sueño, de comida o de salud mental. Apuntad qué veis y desde cuándo. Si os preocupa la epilepsia, o si pierde habilidades que ya
+  tenía sin que se sepa por qué, la guía ESCAP pide pruebas neurológicas
+  completas. Y que tenga otro diagnóstico no quita el de autismo: cada cosa
+  necesita su propia atención.
+relacionados: [masking, burnout-autista, interocepcion]
+fuentes: [nice-cg128, lai-2019, escap-2021, aetapi-mujeres-tea]
+revisado: 2026-11-17
