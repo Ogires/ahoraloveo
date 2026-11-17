@@ -10,11 +10,12 @@ parrafos:
   - >
     Los dos manuales agrupan las señales en dos bloques: la comunicación y la
     relación con los demás, y los comportamientos e intereses repetitivos o muy
-    rígidos. Son las dos primeras columnas de la tabla de abajo. El DSM-5 cuenta
-    también lo sensorial, como molestarse mucho con un ruido o parecer no notar
-    el dolor; la CIE-11, no. Las señales tienen que venir de la primera infancia
-    y afectar a su día a día. Según el DSM-5, a veces no se notan del todo hasta
-    que la vida social le pide más de lo que puede dar.
+    rígidos. Son las dos primeras columnas de la tabla de abajo. Los dos cuentan
+    también lo sensorial en el segundo bloque, como molestarse mucho con un ruido
+    o con una textura. En la CIE-10, el manual anterior de la OMS, no estaba.
+    Las señales tienen que venir de la primera infancia y afectar a su día a
+    día. Según el DSM-5, a veces no se notan del todo hasta que la vida social
+    le pide más de lo que puede dar.
   - >
     Si se confirma, el diagnóstico se llama trastorno del espectro autista (TEA).
     Con el DSM-5, el informe indica además un nivel de apoyo, del 1, que necesita
@@ -38,5 +39,5 @@ que_hacer: >
   valoran otros equipos. Si no llega a cumplir todos los criterios pero tiene
   dificultades, la guía NICE pide valorar igualmente, según su perfil, a qué
   servicios derivarla.
-fuentes: [escap-2021, nice-cg128, sepeap-tea-2023, first-2022, boe-rd-888-2022, boe-ley-dependencia]
-revisado: 2026-11-13
+fuentes: [escap-2021, greaves-lord-2022, nice-cg128, sepeap-tea-2023, first-2022, boe-rd-888-2022, boe-ley-dependencia]
+revisado: 2026-11-17

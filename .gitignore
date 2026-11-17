@@ -12,6 +12,7 @@ docs/plans/*-mv1.md
 # Notas personales y borradores de trabajo
 notas/
 propuestas/
+revisiones/
 
 # Resultados de Playwright
 test-results/

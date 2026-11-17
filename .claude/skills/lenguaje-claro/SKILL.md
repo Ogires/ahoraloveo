@@ -80,6 +80,8 @@ La familia no ve el nivel de la fuente: lo nota en cómo está escrito el texto.
 
 Toda afirmación que no sea de sentido común lleva su fuente (el id del catálogo), y toda cifra también. Si dos fuentes no coinciden, dilo.
 
+Lo que dice un manual o una norma (el DSM-5, la CIE-11, un BOE, un protocolo) se comprueba en el propio documento o en una fuente posterior a su versión vigente. Una guía puede haberse quedado atrás: la de ESCAP, de 2020, decía que la CIE-11 no incluye lo sensorial, y la versión final sí lo incluye (Greaves-Lord y otros, 2022).
+
 ## Límites
 
 - **Explicar, no diagnosticar.** Nunca «si veis esto, vuestra hija es autista». En las señales, recuerda que una sola no dice nada: lo que cuenta es el conjunto, que se mantenga en el tiempo y que afecte a su día a día. Y que quien valora es un profesional.
