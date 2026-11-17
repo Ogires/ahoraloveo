@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { enlazarEntidades, type Entidad, type Trozo } from '../../src/lib/enlazar';
+import { enlacesInternos, enlazarEntidades, type Entidad, type Trozo } from '../../src/lib/enlazar';
 
 const aetapi: Entidad = { nombres: ['AETAPI'], web: 'https://aetapi.org/', idioma: 'es' };
 const nas: Entidad = {
@@ -56,5 +56,39 @@ describe('enlaces a las entidades', () => {
 
   it('sin entidades en el texto, devuelve el texto entero', () => {
     expect(enlazarEntidades('Nada que enlazar.', [aetapi])).toEqual([{ texto: 'Nada que enlazar.' }]);
+  });
+});
+
+describe('enlaces a otras páginas de la web', () => {
+  it('convierte [texto](/ruta/) en un enlace sin idioma, y deja el resto como texto', () => {
+    expect(enlazarEntidades('Lo contamos en [la ficha del masking](/glosario/masking/).', [])).toEqual([
+      { texto: 'Lo contamos en ' },
+      { texto: 'la ficha del masking', enlace: { href: '/glosario/masking/' } },
+      { texto: '.' },
+    ]);
+  });
+
+  it('enlaza las entidades de fuera, pero no las que van dentro del texto del enlace', () => {
+    const trozos = enlazarEntidades('Según [lo que dice AETAPI](/mitos/ninas-calladas/), y AETAPI.', [aetapi]);
+    expect(trozos.filter((t) => t.enlace).map((t) => t.enlace!.href)).toEqual(['/mitos/ninas-calladas/', 'https://aetapi.org/']);
+  });
+
+  it('con un enlace en medio, cada entidad se sigue enlazando una sola vez', () => {
+    const trozos = enlazarEntidades('AETAPI, [una ficha](/glosario/masking/) y AETAPI otra vez.', [aetapi]);
+    expect(enlazados(trozos)).toEqual(['AETAPI', 'una ficha']);
+  });
+
+  it.each(['[sin ruta]', '[externa](https://aetapi.org/)', '[rota](glosario/masking/)'])(
+    'deja «%s» como texto: solo enlaza rutas que empiezan por «/»',
+    (texto) => {
+      expect(enlazarEntidades(texto, [])).toEqual([{ texto }]);
+    },
+  );
+
+  it('enlacesInternos() lista los enlaces de un texto, para comprobarlos', () => {
+    expect(enlacesInternos('En [alexitimia](/glosario/alexitimia/) y [doble empatía](/glosario/doble-empatia/).')).toEqual([
+      { texto: 'alexitimia', href: '/glosario/alexitimia/' },
+      { texto: 'doble empatía', href: '/glosario/doble-empatia/' },
+    ]);
   });
 });

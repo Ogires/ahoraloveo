@@ -19,6 +19,18 @@ test('una ficha con título en español lleva debajo el original en inglés', as
   await expect(page.locator('.otro-nombre span')).toHaveAttribute('lang', 'en');
 });
 
+// Solo los otros nombres en inglés van marcados como inglés: los demás se leen en español.
+test('en «También se dice», solo los nombres en inglés van con lang="en"', async ({ page }) => {
+  await page.goto('/glosario/ecolalia/');
+  await expect(page.locator('.alias')).toHaveText('También se dice: ecolalia inmediata, ecolalia demorada, scripting');
+  await expect(page.locator('.alias [lang="en"]')).toHaveText(['scripting']);
+});
+
+test('un texto puede enlazar a otra página de la web', async ({ page }) => {
+  await page.goto('/glosario/neurodiversidad/');
+  await expect(page.getByRole('link', { name: 'la ficha del masking' })).toHaveAttribute('href', '/glosario/masking/');
+});
+
 test('el índice del glosario muestra cada término con su otro nombre', async ({ page }) => {
   await page.goto('/glosario/');
   await expect(page.getByRole('link', { name: 'Meltdown (crisis)' })).toHaveAttribute('href', '/glosario/meltdown/');

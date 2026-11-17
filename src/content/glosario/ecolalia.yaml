@@ -1,6 +1,7 @@
 termino: Ecolalia
 en_ingles: echolalia
-alias: [ecolalia inmediata, ecolalia demorada, scripting]
+alias: [ecolalia inmediata, ecolalia demorada]
+alias_en_ingles: [scripting]
 familia: social
 que_es: >
   La ecolalia es repetir palabras o frases que se han oído a otras personas, en

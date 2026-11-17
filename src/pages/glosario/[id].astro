@@ -49,6 +49,11 @@ const texto = {
   que_hacer: d.que_hacer ? enlazar(d.que_hacer) : null,
 };
 const familia = FAMILIAS.find((f) => f.id === d.familia)!;
+// Los otros nombres en español y, detrás, los ingleses, con lang="en" para el lector de pantalla.
+const otrosNombres = [
+  ...d.alias.map((texto) => ({ texto, ingles: false })),
+  ...d.alias_en_ingles.map((texto) => ({ texto, ingles: true })),
+];
 ---
 
 <Base titulo={`${d.termino} (${otroNombre(d).texto})`} descripcion={d.que_es}>
@@ -70,7 +75,11 @@ const familia = FAMILIAS.find((f) => f.id === d.familia)!;
           <p class="otro-nombre">En inglés: <span lang="en">{d.en_ingles}</span></p>
         </>
       )}
-      {d.alias.length > 0 && <p class="alias">También se dice: <span lang="en">{d.alias.join(', ')}</span></p>}
+      {otrosNombres.length > 0 && (
+        <p class="alias">También se dice: {otrosNombres.map((n, i) => (
+          <>{i > 0 && ', '}{n.ingles ? <span lang="en">{n.texto}</span> : n.texto}</>
+        ))}</p>
+      )}
     </header>
 
     <section aria-labelledby="que-es">

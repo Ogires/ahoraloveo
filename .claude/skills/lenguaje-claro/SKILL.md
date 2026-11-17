@@ -28,6 +28,8 @@ La norma considera que un texto está en lenguaje claro cuando quien lo lee encu
    - Números en cifras y con contexto («1 de cada 4», «unas 3 veces más»).
    - Sin dobles negaciones, sin paréntesis largos y sin siglas sin explicar.
 4. **Útil.** La ficha termina con algo que se puede hacer: qué observar, qué preguntar, cuándo consultar o qué ficha leer después. Los enlaces dicen adónde llevan.
+   - Si el texto remite a otra página de la web, la enlaza. En el YAML se escribe como en Markdown y en una sola línea: `lo contamos en [la ficha del masking](/glosario/masking/)`. Solo en los apartados largos (no en «Qué es», el dato de un mito ni las escenas), y una prueba comprueba que la página exista.
+   - Las organizaciones que se nombran en el texto (AETAPI, la NAS, la OMS…) se enlazan solas si están en `src/content/entidades/`. Si nombras una nueva, añádela allí.
 
 ## Tono
 

@@ -1,7 +1,7 @@
-// Enlaza la primera mención de cada entidad en un texto. La ficha lo llama una vez por apartado,
-// así que cada apartado enlaza su primera mención y se puede leer suelto: quien salta a
-// «Qué podéis hacer» encuentra el enlace sin volver arriba. Devuelve trozos, no HTML:
-// la página los pinta como texto o como <a>, y Astro escapa el texto.
+// Enlaza la primera mención de cada entidad en un texto, y los enlaces a otras páginas de la web.
+// La ficha lo llama una vez por apartado, así que cada apartado enlaza su primera mención y se puede
+// leer suelto: quien salta a «Qué podéis hacer» encuentra el enlace sin volver arriba. Devuelve
+// trozos, no HTML: la página los pinta como texto o como <a>, y Astro escapa el texto.
 export interface Entidad {
   nombres: string[];
   web: string;
@@ -10,7 +10,18 @@ export interface Entidad {
 
 export interface Trozo {
   texto: string;
-  enlace?: { href: string; idioma: string };
+  // Sin idioma, el enlace es a otra página de la web.
+  enlace?: { href: string; idioma?: string };
+}
+
+// Un enlace a otra página de la web se escribe en el YAML como en Markdown, en una sola línea:
+// «lo contamos en [la ficha del masking](/glosario/masking/)». Solo rutas internas, que empiezan
+// por «/». Que la ruta exista, y que el campo admita enlaces, lo comprueba
+// tests/unit/enlaces-internos.test.ts.
+const ENLACE_INTERNO = /\[([^[\]]+)\]\((\/[^()\s]*)\)/g;
+
+export function enlacesInternos(texto: string): { texto: string; href: string }[] {
+  return [...texto.matchAll(ENLACE_INTERNO)].map((m) => ({ texto: m[1], href: m[2] }));
 }
 
 const escapar = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -22,10 +33,11 @@ const patron = (e: Entidad) =>
     'u',
   );
 
-export function enlazarEntidades(texto: string, entidades: Entidad[]): Trozo[] {
-  const yaEnlazadas = new Set<Entidad>();
+// Las entidades de un tramo sin enlaces internos. «yaEnlazadas» se comparte entre los tramos de un
+// mismo texto, para que cada entidad se enlace una sola vez aunque haya un enlace interno en medio.
+function enlazarTramo(tramo: string, entidades: Entidad[], yaEnlazadas: Set<Entidad>): Trozo[] {
   const trozos: Trozo[] = [];
-  let resto = texto;
+  let resto = tramo;
   for (;;) {
     let mejor: { entidad: Entidad; inicio: number; nombre: string } | null = null;
     for (const entidad of entidades) {
@@ -43,5 +55,19 @@ export function enlazarEntidades(texto: string, entidades: Entidad[]): Trozo[] {
     resto = resto.slice(mejor.inicio + mejor.nombre.length);
   }
   if (resto) trozos.push({ texto: resto });
+  return trozos;
+}
+
+// Dentro del texto de un enlace interno no se enlazan entidades: un enlace no va dentro de otro.
+export function enlazarEntidades(texto: string, entidades: Entidad[]): Trozo[] {
+  const yaEnlazadas = new Set<Entidad>();
+  const trozos: Trozo[] = [];
+  let desde = 0;
+  for (const m of texto.matchAll(ENLACE_INTERNO)) {
+    trozos.push(...enlazarTramo(texto.slice(desde, m.index), entidades, yaEnlazadas));
+    trozos.push({ texto: m[1], enlace: { href: m[2] } });
+    desde = m.index + m[0].length;
+  }
+  trozos.push(...enlazarTramo(texto.slice(desde), entidades, yaEnlazadas));
   return trozos;
 }

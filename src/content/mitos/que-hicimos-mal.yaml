@@ -7,9 +7,10 @@ dato: >
   Se nace autista, y los genes tienen mucho que ver: no lo causa la forma de
   criar ni nada que pase después de nacer.
 por_que: >
-  El NHS, la sanidad pública británica, explica que con el autismo se nace y que
-  no se sabe qué lo causa, aunque a veces se repite en una familia. La NAS, la
-  asociación británica de autismo, va más allá: la mayoría de las personas
+  El NHS, la sanidad pública británica, explica que con el autismo se nace.
+  Sobre la causa, no todas las fuentes dicen lo mismo. El NHS dice que no se
+  sabe qué lo causa, aunque a veces se repite en una familia. La NAS, la
+  asociación británica de autismo, es más concreta: la mayoría de las personas
   autistas lo son por los genes que heredan. Según la NAS, solo dos cosas del
   embarazo hacen, por sí solas, el autismo mucho más probable. Son la rubéola de
   la madre en los tres primeros meses y el valproato, un medicamento contra las
@@ -37,4 +38,4 @@ que_hacer: >
 relacionados: []
 fuentes: [nhs-autismo, nas-causas, nas-mitos-causas]
 orden: 6
-revisado: 2026-11-12
+revisado: 2026-11-17

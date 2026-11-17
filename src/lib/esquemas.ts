@@ -139,6 +139,8 @@ export const crearEsquemaTermino = <F extends z.ZodType, G extends z.ZodType, I 
     en_espanol: z.array(texto()).default([]),
     en_ingles: texto().optional(),
     alias: z.array(z.string()).default([]), // otros nombres, como los que usan los estudios
+    // Los otros nombres en inglés («scripting»), aparte, para que el lector de pantalla los lea en inglés.
+    alias_en_ingles: z.array(texto()).default([]),
     familia: z.enum(IDS_FAMILIAS),
     que_es: texto(),
     como_se_ve: texto(),
