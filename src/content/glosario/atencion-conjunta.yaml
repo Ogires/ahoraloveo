@@ -1,0 +1,61 @@
+termino: Atención conjunta
+en_ingles: joint attention
+alias: [atención compartida]
+familia: social
+que_es: >
+  La atención conjunta es compartir con otra persona el interés por algo. La
+  guía NICE la describe con tres gestos. El primero es mirar adonde señala otra
+  persona. El segundo, señalar o enseñar algo para compartirlo. Y el tercero,
+  mirar de la cosa a la persona y otra vez a la cosa. En el autismo, estos gestos pueden darse menos o no
+  darse.
+como_se_ve: >
+  La guía de la SEPEAP, de pediatría, la incluye entre las señales que se miran
+  en los primeros años. Con 9 meses, si mira cuando le señalan algo. Con 12, si
+  señala para pedir o para compartir. Y con 18, si hay atención conjunta. La
+  guía ESCAP recoge otra señal, de los CDC de Estados Unidos: a los 14 meses,
+  enseñar cosas que le interesan, como señalar un avión que pasa. Y explica que
+  los retrasos en señalar o en hacer gestos están entre las primeras cosas que
+  se notan.
+no_confundir_con: >
+  Con pedir. La guía NICE explica que una niña puede usar pocos gestos y, aun
+  así, llevar la mano de un adulto hasta lo que quiere. Lo que se mira es si
+  señala o enseña algo para compartir el interés. Tampoco hay que dar por hecho
+  que es autismo: NICE pide tener en cuenta otras causas, como no oír o no ver
+  bien. Y una sola señal no dice nada. La guía pide verla dentro de todo su
+  desarrollo, y quien la valora es un profesional.
+en_ninas: >
+  Un estudio de 2025 siguió a 4.550 niñas y niños de 20 a 40 meses, la mayoría
+  hermanos pequeños de niñas y niños autistas. En las niñas, cómo respondían
+  cuando alguien les señalaba algo reflejaba peor sus dificultades sociales que
+  en los niños. Sus autores piden pruebas que recojan mejor las dificultades de
+  las niñas pequeñas. Aparte de este estudio, las fuentes que hemos consultado
+  no estudian a las niñas por separado.
+que_hacer: >
+  Si os preocupa, contadlo a su pediatra. Entre los 16 y los 30 meses hay un
+  cuestionario de cribado, el [M-CHAT-R/F](/diagnostico/m-chat-r-f/). Pregunta,
+  entre otras cosas, si mira hacia donde señaláis y si señala para enseñaros
+  algo. La atención conjunta se puede trabajar. La guía ESCAP explica que los
+  programas con más pruebas para niñas y niños pequeños enseñan a las familias
+  a responder a sus señales. Así crean ocasiones para compartir la atención. La
+  guía de la SEPEAP cita dos, JASPER y PACT. Y ESCAP añade que
+  también sirven los momentos de cada día, no solo las sesiones.
+escenas:
+  - edad: 16 meses
+    lugar: en el salón de casa
+    protagonista: nina
+    texto: >
+      Su padre señala la grúa que se ve por la ventana y la llama para que la
+      mire. Ella sigue apilando vasos de plástico sin levantar la vista. Al rato
+      suena el pitido del microondas y se gira enseguida. Después coge a su
+      padre de la mano y lo lleva hasta la nevera.
+  - edad: 4 años
+    lugar: en la playa
+    protagonista: nino
+    texto: >
+      Su hermana encuentra un cangrejo entre las rocas, lo señala y lo llama
+      varias veces. Él no mira hacia allí y sigue echando agua en el foso del
+      castillo. Más tarde encuentra una concha enorme, le da vueltas entre los
+      dedos y se la guarda en el bolsillo sin enseñársela a nadie.
+relacionados: []
+fuentes: [nice-cg128, sepeap-tea-2023, escap-2021, burrows-2025]
+revisado: 2026-11-18

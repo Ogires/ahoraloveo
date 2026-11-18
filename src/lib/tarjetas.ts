@@ -22,6 +22,7 @@ export const ORDEN_ESCENAS = [
   'elegir-interes-u-obsesion-1', // pensamiento · 6 años · en el salón de casa
   'meltdown-1', // emociones · 3 años · en casa de sus abuelos
   'estereotipias-1', // sensorial · 7 años · en clase
+  'atencion-conjunta-1', // social · 16 meses · en el salón de casa
   'coherencia-central-1', // pensamiento · 6 años · al volver del zoo
   'elegir-crisis-o-rabieta-2', // emociones · 3 años · a la salida de la guardería
   'masking-1', // social · 10 años · en un cumpleaños
@@ -32,6 +33,7 @@ export const ORDEN_ESCENAS = [
   'elegir-desconexion-o-no-hace-caso-1', // emociones · 7 años · en una zapatería
   'teoria-de-la-mente-1', // social · 5 años · en casa
   'meltdown-2', // emociones · 9 años · en el comedor del cole
+  'atencion-conjunta-2', // social · 4 años · en la playa
   'estereotipias-3', // sensorial · 6 años · en la terraza de un bar
   'elegir-le-da-igual-o-no-sabe-que-siente-1', // emociones · 9 años · en la cocina
   'funciones-ejecutivas-2', // pensamiento · 9 años · en su cuarto
