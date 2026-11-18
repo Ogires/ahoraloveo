@@ -1,6 +1,6 @@
-termino: Comorbilidad
+termino: Lo que puede acompañar al autismo
 en_ingles: comorbidity
-alias: [condiciones asociadas, condiciones coexistentes, trastornos concurrentes]
+alias: [comorbilidad, condiciones asociadas, condiciones coexistentes, trastornos concurrentes]
 alias_en_ingles: [co-occurring conditions]
 familia: clinico
 que_es: >
@@ -52,4 +52,4 @@ que_hacer: >
   necesita su propia atención.
 relacionados: [discapacidad-intelectual, masking, burnout-autista, interocepcion]
 fuentes: [nice-cg128, lai-2019, escap-2021, aetapi-mujeres-tea]
-revisado: 2026-11-17
+revisado: 2026-11-18

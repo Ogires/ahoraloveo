@@ -2,8 +2,8 @@ termino: Shutdown
 en_espanol: [desconexión]
 familia: emociones
 que_es: >
-  Un shutdown es otra forma de reaccionar cuando a una persona autista le llega
-  más de lo que puede procesar. Es como un meltdown, pero hacia dentro: en vez
+  Un shutdown es una reacción en la que una persona autista se desconecta
+  cuando le llega más de lo que puede procesar. Es como un meltdown, pero hacia dentro: en vez
   de estallar, se apaga. Se queda callada, quieta o deja de responder, y no lo
   elige. Suele llegar cuando el estrés se ha ido acumulando y algo pequeño, como
   un ruido o un cambio de planes, termina de desbordarla.
@@ -45,4 +45,4 @@ escenas:
     imagen: ../../assets/escenas/shutdown-1.webp
 relacionados: [meltdown, masking, burnout-autista]
 fuentes: [ambitious-meltdowns-shutdowns, phung-2021, cook-2021]
-revisado: 2026-11-05
+revisado: 2026-11-18
