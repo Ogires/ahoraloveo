@@ -16,8 +16,9 @@ como_se_ve: >
   cansancio enorme. Uno contaba que, tras un día con dos exámenes, llegaba a casa
   y se quedaba sentado sin saber qué hacer.
 no_confundir_con: >
-  Con una depresión o con el desgaste del trabajo: el estudio de 2020 concluye que
-  el burnout autista es algo distinto. Tampoco es lo mismo que un shutdown. El
+  Con una depresión o con el desgaste profesional, que es el burnout del
+  trabajo. El equipo del estudio de 2020 cree que el burnout autista es algo
+  distinto. Tampoco es lo mismo que un shutdown. El
   shutdown dura un rato; el burnout, meses, y puede traer más shutdowns.
 en_ninas: >
   Sin datos sobre niñas. El estudio de 2020 entrevistó a personas adultas y no
@@ -46,4 +47,4 @@ escenas:
     imagen: ../../assets/escenas/burnout-autista-1.webp
 relacionados: [masking, shutdown, meltdown]
 fuentes: [raymaker-2020, phung-2021, ambitious-meltdowns-shutdowns, cook-2021]
-revisado: 2026-11-05
+revisado: 2026-11-17

@@ -5,8 +5,8 @@ alias_en_ingles: [scripting]
 familia: social
 que_es: >
   La ecolalia es repetir palabras o frases que se han oído a otras personas, en
-  la tele o en una película. Puede ser justo después de oírlas o mucho tiempo más
-  tarde. Es frecuente en el autismo: el DSM-5, el manual de diagnóstico, la
+  la tele o en una película. Puede ser justo después de oírlas (ecolalia
+  inmediata) o un tiempo después (ecolalia demorada). Es frecuente en el autismo: el DSM-5, el manual de diagnóstico, la
   incluye entre las conductas repetitivas. Y muchas veces no es repetir sin más,
   sino una forma de comunicarse.
 como_se_ve: >
@@ -52,4 +52,4 @@ escenas:
     imagen: ../../assets/escenas/ecolalia-2.webp
 relacionados: [estereotipias, masking]
 fuentes: [escap-2021, prizant-seres-humanos-unicos, aetapi-mujeres-tea]
-revisado: 2026-11-05
+revisado: 2026-11-17

@@ -12,8 +12,9 @@ como_se_ve: >
   Un estudio de 2020 lo puso a prueba con algo parecido al juego del teléfono:
   una persona contaba una historia a otra, esta a la siguiente, y así hasta 8.
   Las cadenas formadas solo por personas autistas transmitieron la historia tan
-  bien como las formadas solo por personas no autistas. Los detalles se perdían
-  en las cadenas mixtas, y en ellas la gente también se sentía menos a gusto. En
+  bien como las formadas solo por personas no autistas. En las cadenas mixtas
+  se perdían muchos más detalles, y en ellas la gente también se sentía menos a
+  gusto. En
   el día a día, puede que vuestra hija se entienda muy bien con otra niña autista
   y, en cambio, se pierda en el grupo de clase.
 no_confundir_con: >
@@ -44,4 +45,4 @@ escenas:
     imagen: ../../assets/escenas/doble-empatia-1.webp
 relacionados: [masking, neurodiversidad]
 fuentes: [crompton-2020, pellicano-2022]
-revisado: 2026-11-05
+revisado: 2026-11-17
