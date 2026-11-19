@@ -61,7 +61,8 @@ escenas:
     texto: >
       Juega a los profes con su prima. Reparte las fichas a sus peluches siempre
       en el mismo orden: el oso, el conejo y la muñeca. Su prima le da la primera
-      a la muñeca. Ella se la quita, se la da al oso y dice: «Primero el oso». Al rato, su prima se va a jugar a otra cosa.
+      a la muñeca. Ella se la quita, se la da al oso y dice: «Primero el oso».
+      Al rato, su prima se va a jugar a otra cosa.
   - edad: 8 años
     lugar: en una cena en casa
     protagonista: nino
@@ -70,6 +71,7 @@ escenas:
       la suya y la arrastra hasta el hueco de siempre, junto a la ventana. Cena
       apretado entre su abuela y la pared, con el plato en el borde de la mesa.
       No se queja en toda la cena.
+    imagen: ../../assets/escenas/rigidez-y-rutinas-2.webp
 relacionados: [funciones-ejecutivas, meltdown, comorbilidad]
 fuentes: [escap-2021, nas-crisis, nas-que-es, paula-ansiedad-2015, nice-cg128, prizant-seres-humanos-unicos, sepeap-tea-2023, aetapi-mujeres-tea]
 revisado: 2026-11-18
