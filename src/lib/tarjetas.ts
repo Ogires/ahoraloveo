@@ -26,6 +26,7 @@ export const ORDEN_ESCENAS = [
   'coherencia-central-1', // pensamiento · 6 años · al volver del zoo
   'elegir-crisis-o-rabieta-2', // emociones · 3 años · a la salida de la guardería
   'masking-1', // social · 10 años · en un cumpleaños
+  'rigidez-y-rutinas-1', // pensamiento · 5 años · en su cuarto
   'shutdown-1', // emociones · 8 años · en la sala de espera del dentista
   'elegir-repite-o-quiere-decir-algo-1', // social · 5 años · en la cola de la panadería
   'hiper-e-hiposensibilidad-2', // sensorial · 10 años · en una tienda de ropa
@@ -42,6 +43,7 @@ export const ORDEN_ESCENAS = [
   'elegir-camuflaje-o-timidez-1', // social · 8 años · en su primera clase de teatro
   'coherencia-central-2', // pensamiento · 10 años · en clase
   'doble-empatia-1', // social · 9 años · de camino a casa
+  'rigidez-y-rutinas-2', // pensamiento · 8 años · en una cena en casa
 ] as const;
 
 type ConEscenas = { id: string; data: { escenas: unknown[] } };
