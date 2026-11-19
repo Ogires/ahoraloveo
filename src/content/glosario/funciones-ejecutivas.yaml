@@ -48,6 +48,7 @@ escenas:
       Cada mañana se viste con la ropa que su padre le deja en la silla. Hoy la
       camiseta de siempre está en la lavadora, y se queda parada con el pantalón
       puesto, mirando la silla. Cuando su padre le da otra, termina de vestirse.
+    imagen: ../../assets/escenas/funciones-ejecutivas-1.webp
   - edad: 9 años
     lugar: en su cuarto
     protagonista: nino

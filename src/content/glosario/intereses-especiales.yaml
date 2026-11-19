@@ -52,6 +52,7 @@ escenas:
       De camino a casa de sus abuelos, va diciendo el número de cada autobús que
       se cruzan y adónde va. Se sabe los horarios de memoria, y cuando pasa uno
       tarde, avisa de cuántos minutos lleva de retraso.
+    imagen: ../../assets/escenas/intereses-especiales-1.webp
   - edad: 8 años
     lugar: a la salida del cole
     protagonista: nina
