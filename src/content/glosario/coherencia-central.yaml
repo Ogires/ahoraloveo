@@ -54,6 +54,15 @@ escenas:
       la mano y cuenta que el gato del dibujo tiene seis bigotes en un lado y
       cinco en el otro.
     imagen: ../../assets/escenas/coherencia-central-2.webp
+  - edad: 3 años
+    lugar: en la escuela infantil
+    protagonista: nina
+    texto: >
+      Sabe de quién es cada par de calcetines antideslizantes de la clase,
+      aunque casi todos son grises con puntitos: uno tiene un puntito rojo y
+      otro, un hilo suelto. Al volver del patio, la educadora encuentra un par en
+      el banco y pregunta de quién es. Ella lo mira y se lo lleva a un compañero,
+      que se los pone.
 relacionados: [funciones-ejecutivas, intereses-especiales]
 fuentes: [happe-frith-2006, van-der-hallen-2015, happe-vital-2009, alonso-autismo-2020, paula-ansiedad-2015]
-revisado: 2026-11-17
+revisado: 2026-11-20

@@ -35,6 +35,7 @@ export const ORDEN_ESCENAS = [
   'teoria-de-la-mente-1', // social · 5 años · en casa
   'meltdown-2', // emociones · 9 años · en el comedor del cole
   'atencion-conjunta-2', // social · 4 años · en la playa
+  'coherencia-central-3', // pensamiento · 3 años · en la escuela infantil
   'estereotipias-3', // sensorial · 6 años · en la terraza de un bar
   'elegir-le-da-igual-o-no-sabe-que-siente-1', // emociones · 9 años · en la cocina
   'funciones-ejecutivas-2', // pensamiento · 9 años · en su cuarto
