@@ -232,11 +232,19 @@ export const crearEsquemaPaso = <F extends z.ZodType, H extends z.ZodType>(refer
   });
 
 // Un apartado suelto de una página, con sus fuentes y su fecha, como «Los criterios» de /diagnostico/.
+// Como en los pasos, el recuadro valenciano solo va donde algo cambia y está documentado.
 export const crearEsquemaApartado = <F extends z.ZodType>(referencias: { fuentes: F }) =>
   z.object({
     titulo: texto(),
     parrafos: z.array(texto()).min(1).max(4, 'Un apartado tiene cuatro párrafos como mucho'),
     que_hacer: texto(),
+    comunitat_valenciana: z
+      .object({
+        parrafos: z.array(texto()).min(1).max(4, 'El recuadro valenciano tiene cuatro párrafos como mucho'),
+        fuentes: z.array(referencias.fuentes).min(1),
+        comprobado: fecha(),
+      })
+      .optional(),
     fuentes: z.array(referencias.fuentes).min(1, 'Cada apartado necesita al menos una fuente'),
     revisado: fecha(),
   });

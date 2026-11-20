@@ -37,7 +37,7 @@ const RUTAS = new Set([
 // Las anclas a las que se puede enlazar. Si hace falta otra, se añade aquí.
 const ordenesDePasos = ids('proceso').map((id) => parse(readFileSync(join(CONTENIDO, 'proceso', `${id}.yaml`), 'utf8')).orden);
 const ANCLAS: Record<string, string[]> = {
-  '/diagnostico/': ['criterios', 'que-mide', 'fuentes', ...ordenesDePasos.map((o) => `paso-${o}`)],
+  '/diagnostico/': ['colegio', 'criterios', 'que-mide', 'fuentes', ...ordenesDePasos.map((o) => `paso-${o}`)],
   '/escenas/': ORDEN_ESCENAS.map((id) => `escena-${id}`),
 };
 
@@ -48,7 +48,7 @@ const CAMPOS_CON_ENLACES: Record<string, string[]> = {
   mitos: ['por_que', 'de_donde_viene', 'que_hacer'],
   herramientas: ['que_mide', 'como_se_interpreta', 'limitaciones', 'en_ninas'],
   proceso: ['que_pasa', 'que_hacer', 'comunitat_valenciana.texto'],
-  apartados: ['parrafos', 'que_hacer'],
+  apartados: ['parrafos', 'que_hacer', 'comunitat_valenciana.parrafos'],
 };
 
 // Todos los textos de un YAML, con su campo («comunitat_valenciana.texto»; los índices de una lista no cuentan).

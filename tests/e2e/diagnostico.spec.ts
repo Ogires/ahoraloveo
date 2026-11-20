@@ -40,7 +40,20 @@ test('explica con qué criterios se decide el diagnóstico, entre los pasos y la
   await expect(apartado).toContainText('Qué podéis hacer');
   // Va después de los pasos y antes de la tabla, cuyas dos primeras columnas son sus dos bloques.
   const orden = await page.evaluate(() =>
-    [...document.querySelectorAll('ol.pasos, #criterios, #que-mide')].map((e) => e.id || e.className),
+    [...document.querySelectorAll('ol.pasos, #colegio, #criterios, #que-mide')].map((e) => e.id || e.className),
   );
-  expect(orden).toEqual(['pasos', 'criterios', 'que-mide']);
+  expect(orden).toEqual(['pasos', 'colegio', 'criterios', 'que-mide']);
+});
+
+test('explica lo que hace el colegio, con su recuadro de la Comunitat Valenciana', async ({ page }) => {
+  await page.goto('/diagnostico/');
+  const apartado = page.getByRole('region', { name: 'Lo que hace el colegio' });
+  await expect(apartado.locator('p').first()).not.toBeEmpty();
+  await expect(apartado).toContainText('Qué podéis hacer');
+  const recuadro = apartado.getByRole('complementary', { name: 'En la Comunitat Valenciana' });
+  await expect(recuadro.locator('p').first()).not.toBeEmpty();
+  await expect(recuadro.locator('.comprobado')).toContainText('Comprobado el');
+  // El primer paso lleva hasta aquí.
+  await page.locator('#paso-1').locator('..').getByRole('link', { name: 'lo que hace el colegio' }).click();
+  await expect(page).toHaveURL(/#colegio$/);
 });
