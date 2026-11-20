@@ -17,8 +17,8 @@ como_se_ve: >
   qué siente y explicarlo.
 no_confundir_con: >
   Con no tener emociones. Las personas con alexitimia tienen emociones; lo que
-  les cuesta es reconocerlas y nombrarlas. Y no todas las personas autistas la
-  tienen: según la misma revisión, la otra mitad no.
+  les cuesta es reconocerlas y nombrarlas. Y no todas las personas autistas
+  tienen alexitimia: en la revisión de 15 estudios, la tenía la mitad.
 en_ninas: >
   Sin datos sobre niñas. La revisión reunió estudios con adolescentes y
   adultos, en su mayoría varones, y no pudo comparar por sexo. No incluía niñas
@@ -42,4 +42,4 @@ escenas:
     imagen: ../../assets/escenas/alexitimia-1.webp
 relacionados: [interocepcion]
 fuentes: [kinnaird-2019]
-revisado: 2026-11-05
+revisado: 2026-11-20
