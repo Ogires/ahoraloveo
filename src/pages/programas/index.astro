@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import NombreTermino from '../../components/NombreTermino.astro';
+import Base from '../../layouts/Base.astro';
+import { PESOS } from '../../lib/esquemas';
+import { programasDe } from '../../lib/programas';
+
+const programas = await getCollection('programas');
+// Una sección por ficha del glosario que tenga programas, en orden alfabético, con los programas
+// agrupados por edades igual que en la ficha.
+const fichas = (await getCollection('glosario'))
+  .map((termino) => ({ termino, grupos: programasDe(termino.id, programas) }))
+  .filter((f) => f.grupos.length > 0)
+  .sort((a, b) => a.termino.data.termino.localeCompare(b.termino.data.termino, 'es'));
+const descripcion =
+  'Programas e intervenciones que se han probado en estudios: qué son, para qué edades y qué se sabe de cada uno. Informamos, no recomendamos.';
+---
+
+<Base titulo="Programas estudiados" descripcion={descripcion}>
+  <div class="texto">
+    <h1>Programas estudiados</h1>
+    <p class="entradilla">{descripcion}</p>
+    <p>Que un programa exista no quiere decir que haya que hacerlo. Si os interesa alguno, preguntad por él a quien la atiende.</p>
+    {fichas.map((f) => (
+      <section aria-labelledby={`ficha-${f.termino.id}`}>
+        <h2 id={`ficha-${f.termino.id}`}><a href={`/glosario/${f.termino.id}/`}><NombreTermino datos={f.termino.data} /></a></h2>
+        {f.grupos.map((g) => (
+          <>
+            <h3 class="tramo">{g.titulo}</h3>
+            <ul class="programas">
+              {g.programas.map((p) => (
+                <li class="programa">
+                  <a href={`/programas/${p.id}/`}>{p.data.nombre}</a>
+                  <p>{p.data.para_que}</p>
+                  <p class="datos">{p.data.edades} · {PESOS[p.data.peso]}</p>
+                </li>
+              ))}
+            </ul>
+          </>
+        ))}
+      </section>
+    ))}
+  </div>
+</Base>
+
+<style>
+  .entradilla { font-size: 1.3125rem; font-weight: 300; color: var(--tinta-suave); }
+  section { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 2rem; }
+  .programas { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
+  .programa { background: var(--superficie); border-radius: 20px; padding: 1rem 1.25rem; display: flex; flex-direction: column; gap: 0.375rem; }
+  .programa a { font-size: 1.1875rem; font-weight: 500; }
+  .datos { font-size: 0.9375rem; color: var(--tinta-suave); }
+  .tramo { font-size: 1.125rem; }
+</style>

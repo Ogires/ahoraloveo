@@ -121,6 +121,10 @@ Una escena de elegir («¿Crisis o rabieta?») es una situación corta con dos o
 
 Un mito tiene su página en `/mitos/`: primero lo que se suele oír, entre comillas, y justo debajo lo que sabemos. Antes de escribir o revisar uno, lee [references/mitos.md](references/mitos.md). El dato va en una frase, nunca con burlas ni tratamientos, y sin cambiar un mito por otro.
 
+## Programas estudiados
+
+Un programa es una intervención probada en estudios, con su página en `/programas/` y una línea en su ficha del glosario. Antes de escribir o revisar uno, lee [references/programas.md](references/programas.md). Informa de qué es y qué se sabe, con el peso de las pruebas dicho con palabras; nunca lo recomienda para un caso concreto.
+
 ## Legibilidad automática
 
 ```bash

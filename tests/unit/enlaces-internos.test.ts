@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { parse } from 'yaml';
 import { expect, it } from 'vitest';
@@ -12,8 +12,9 @@ import { ORDEN_ESCENAS } from '../../src/lib/tarjetas';
 const CONTENIDO = join(process.cwd(), 'src/content');
 const PAGINAS = join(process.cwd(), 'src/pages');
 
+// Una colección que aún no tiene contenido (los programas, al principio) no tiene carpeta.
 const ids = (carpeta: string) =>
-  readdirSync(join(CONTENIDO, carpeta))
+  (existsSync(join(CONTENIDO, carpeta)) ? readdirSync(join(CONTENIDO, carpeta)) : [])
     .filter((f) => /\.ya?ml$/.test(f))
     .map((f) => f.replace(/\.ya?ml$/, ''));
 
@@ -32,6 +33,7 @@ const RUTAS = new Set([
   ...ids('glosario').map((id) => `/glosario/${id}/`),
   ...ids('mitos').map((id) => `/mitos/${id}/`),
   ...ids('herramientas').map((id) => `/diagnostico/${id}/`),
+  ...ids('programas').map((id) => `/programas/${id}/`),
 ]);
 
 // Las anclas a las que se puede enlazar. Si hace falta otra, se añade aquí.
@@ -49,6 +51,7 @@ const CAMPOS_CON_ENLACES: Record<string, string[]> = {
   herramientas: ['que_mide', 'como_se_interpreta', 'limitaciones', 'en_ninas'],
   proceso: ['que_pasa', 'que_hacer', 'comunitat_valenciana.texto'],
   apartados: ['parrafos', 'que_hacer', 'comunitat_valenciana.parrafos'],
+  programas: ['que_es', 'como_es', 'que_encontraron', 'en_ninas', 'limitaciones'],
 };
 
 // Todos los textos de un YAML, con su campo («comunitat_valenciana.texto»; los índices de una lista no cuentan).

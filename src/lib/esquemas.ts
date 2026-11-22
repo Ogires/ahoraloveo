@@ -208,6 +208,51 @@ export const crearEsquemaHerramienta = <F extends z.ZodType, G extends z.ZodType
     revisado: fecha(),
   });
 
+// El peso de las pruebas de un programa, de más a menos (guía en .claude/skills/lenguaje-claro/references/programas.md).
+// Más adelante, la base del semáforo de terapias.
+export const PESOS = {
+  revisiones: 'Varias revisiones coinciden en que ayuda',
+  ensayo: 'Al menos un ensayo controlado encontró mejoras',
+  pequenos: 'Solo hay estudios pequeños o sin grupo de comparación',
+  'sin-estudios': 'No hay estudios controlados',
+  'sin-beneficio': 'Los estudios no encuentran beneficio',
+} as const;
+export type Peso = keyof typeof PESOS;
+
+// Un programa o una intervención estudiados (diseño: docs/plans/2026-11-20-programas-design.md).
+// Las edades van en texto, para leerlas, y en números, para agruparlos en la ficha del glosario.
+export const crearEsquemaPrograma = <F extends z.ZodType, G extends z.ZodType>(referencias: {
+  fuentes: F;
+  glosario: G;
+}) =>
+  z
+    .object({
+      nombre: texto(),
+      en_ingles: texto().optional(), // el nombre original, si el título va traducido
+      para_que: texto(), // una frase: es la línea que sale en la ficha del glosario
+      edades: texto(),
+      edad_desde: z.number().min(0).max(18),
+      edad_hasta: z.number().min(0).max(99),
+      quien: texto(),
+      formato: texto(),
+      duracion: texto(),
+      en_espana: texto(), // o «Sin datos sobre su uso en España.»
+      peso: z.enum(ids(PESOS)),
+      que_es: texto(),
+      como_es: texto(),
+      que_encontraron: texto(),
+      en_ninas: texto(), // texto, o «Sin datos sobre niñas» con su explicación
+      limitaciones: texto(),
+      que_preguntar: z.array(texto()).min(1),
+      relacionados: z.array(referencias.glosario).min(1, 'Cada programa va con al menos una ficha del glosario'),
+      fuentes: z.array(referencias.fuentes).min(1, 'Cada programa necesita al menos una fuente'),
+      revisado: fecha(),
+    })
+    .refine((p) => p.edad_desde <= p.edad_hasta, {
+      message: 'La edad «desde» no puede ser mayor que la edad «hasta»',
+      path: ['edad_hasta'],
+    });
+
 // Los pasos del proceso de diagnóstico. El recuadro valenciano solo va donde algo cambia y está documentado.
 export const crearEsquemaPaso = <F extends z.ZodType, H extends z.ZodType>(referencias: {
   fuentes: F;

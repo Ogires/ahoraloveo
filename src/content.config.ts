@@ -6,6 +6,7 @@ import {
   crearEsquemaHerramienta,
   crearEsquemaMito,
   crearEsquemaPaso,
+  crearEsquemaPrograma,
   crearEsquemaTermino,
   esquemaEntidad,
   esquemaFuente,
@@ -55,4 +56,10 @@ const escenarios = defineCollection({
   schema: crearEsquemaEscenario({ fuentes: reference('fuentes'), glosario: reference('glosario') }),
 });
 
-export const collections = { fuentes, glosario, entidades, herramientas, proceso, mitos, apartados, escenarios };
+// Los programas estudiados: una página cada uno en /programas/ y una línea en su ficha del glosario.
+const programas = defineCollection({
+  loader: glob({ pattern: '**/*.{yaml,yml}', base: './src/content/programas' }),
+  schema: crearEsquemaPrograma({ fuentes: reference('fuentes'), glosario: reference('glosario') }),
+});
+
+export const collections = { fuentes, glosario, entidades, herramientas, proceso, mitos, apartados, escenarios, programas };

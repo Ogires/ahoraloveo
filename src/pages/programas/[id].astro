@@ -1,0 +1,104 @@
+---
+import { getCollection, getEntries } from 'astro:content';
+import ListaFuentes from '../../components/ListaFuentes.astro';
+import NombreTermino from '../../components/NombreTermino.astro';
+import PieRevision from '../../components/PieRevision.astro';
+import TextoEnlazado from '../../components/TextoEnlazado.astro';
+import Base from '../../layouts/Base.astro';
+import { enlazarEntidades } from '../../lib/enlazar';
+import { cargarEntidades } from '../../lib/entidades';
+import { PESOS } from '../../lib/esquemas';
+import { exigirTodas } from '../../lib/referencias';
+
+export async function getStaticPaths() {
+  const programas = await getCollection('programas');
+  return programas.map((programa) => ({ params: { id: programa.id }, props: { programa } }));
+}
+
+const { programa } = Astro.props;
+const d = programa.data;
+const origen = `El programa «${programa.id}»`;
+// Si un programa nombra una fuente o una ficha que no existe, la compilación se para aquí.
+const fuentes = exigirTodas(await getEntries(d.fuentes), d.fuentes.map((r) => `fuentes/${r.id}`), origen);
+const fichas = exigirTodas(await getEntries(d.relacionados), d.relacionados.map((r) => `glosario/${r.id}`), origen);
+const entidades = await cargarEntidades();
+// Cada apartado enlaza la primera vez que nombra cada entidad, para que se pueda leer suelto.
+const enlazar = (t: string) => enlazarEntidades(t, entidades);
+const apartados = [
+  { id: 'que-es', titulo: 'Qué es', texto: d.que_es },
+  { id: 'como-es', titulo: 'Cómo es', texto: d.como_es },
+  { id: 'que-encontraron', titulo: 'Qué encontraron los estudios', texto: d.que_encontraron },
+];
+---
+
+<Base titulo={d.nombre} descripcion={d.para_que}>
+  <article class="ficha" data-pagefind-body>
+    {/* La navegación no se indexa, como en el glosario. */}
+    <p data-pagefind-ignore><a href="/programas/">Programas estudiados</a></p>
+    <header>
+      <h1>{d.nombre}</h1>
+      {d.en_ingles && <p class="nombre-original">En inglés: <span lang="en">{d.en_ingles}</span></p>}
+    </header>
+
+    <dl class="carta panel">
+      <div class="ancha">
+        <dt>Para qué</dt>
+        <dd>
+          {d.para_que}{' '}
+          <span class="fichas">
+            {fichas.length > 1 ? 'Fichas' : 'Ficha'}: {fichas.map((f, i) => (
+              <>{i > 0 && ', '}<a href={`/glosario/${f.id}/`}><NombreTermino datos={f.data} /></a></>
+            ))}.
+          </span>
+        </dd>
+      </div>
+      <div><dt>Edades</dt><dd>{d.edades}</dd></div>
+      <div><dt>Quién lo aplica</dt><dd>{d.quien}</dd></div>
+      <div><dt>Formato</dt><dd>{d.formato}</dd></div>
+      <div><dt>Duración</dt><dd>{d.duracion}</dd></div>
+      <div><dt>En España</dt><dd>{d.en_espana}</dd></div>
+      <div><dt>Qué se sabe</dt><dd>{PESOS[d.peso]}.</dd></div>
+    </dl>
+
+    {apartados.map((a) => (
+      <section aria-labelledby={a.id}>
+        <h2 id={a.id}>{a.titulo}</h2>
+        <p><TextoEnlazado trozos={enlazar(a.texto)} /></p>
+      </section>
+    ))}
+
+    <section class="en-ninas" aria-labelledby="en-ninas">
+      <h2 id="en-ninas">En niñas</h2>
+      <p><TextoEnlazado trozos={enlazar(d.en_ninas)} /></p>
+    </section>
+
+    <section aria-labelledby="limitaciones">
+      <h2 id="limitaciones">Limitaciones</h2>
+      <p><TextoEnlazado trozos={enlazar(d.limitaciones)} /></p>
+    </section>
+
+    <section aria-labelledby="que-preguntar">
+      <h2 id="que-preguntar">Qué preguntar en consulta</h2>
+      <ul class="preguntas">{d.que_preguntar.map((p) => <li>{p}</li>)}</ul>
+      <p class="aviso">Que exista no quiere decir que haya que hacerlo. Si os interesa, preguntad por él a quien la atiende.</p>
+    </section>
+
+    <section aria-labelledby="fuentes" data-pagefind-ignore>
+      <h2 id="fuentes">Fuentes</h2>
+      <ListaFuentes fuentes={fuentes} />
+    </section>
+    <PieRevision revisado={d.revisado} pagina={d.nombre} />
+  </article>
+</Base>
+
+<style>
+  .nombre-original { font-size: 1.3125rem; }
+  /* Columnas más anchas que en las herramientas: aquí los datos son frases. */
+  .carta { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem 2rem; margin: 0; }
+  .carta .ancha { grid-column: 1 / -1; }
+  .carta dt { font-weight: 600; }
+  .carta dd { margin: 0; }
+  .fichas { color: var(--tinta-suave); }
+  .preguntas { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.5rem; }
+  .aviso { color: var(--tinta-suave); }
+</style>

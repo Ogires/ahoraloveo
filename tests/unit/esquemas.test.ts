@@ -6,6 +6,7 @@ import {
   crearEsquemaHerramienta,
   crearEsquemaMito,
   crearEsquemaPaso,
+  crearEsquemaPrograma,
   crearEsquemaTermino,
   esquemaEntidad,
   esquemaFuente,
@@ -495,5 +496,60 @@ describe('esquema de las escenas de elegir', () => {
     expect(esquemaEscenario.safeParse({ ...escenario, fuentes: [] }).success).toBe(false);
     const { revisado: _, ...sinFecha } = escenario;
     expect(esquemaEscenario.safeParse(sinFecha).success).toBe(false);
+  });
+});
+
+const esquemaPrograma = crearEsquemaPrograma({ fuentes: z.string(), glosario: z.string() });
+
+const programa = {
+  nombre: 'Unstuck and On Target',
+  para_que: 'Un programa para el cole que trabaja la flexibilidad.',
+  edades: 'De 8 a 11 años',
+  edad_desde: 8,
+  edad_hasta: 11,
+  quien: 'El profesorado, con formación',
+  formato: 'En grupo, en el colegio',
+  duracion: '21 sesiones de 30 a 40 minutos',
+  en_espana: 'Sin datos sobre su uso en España.',
+  peso: 'ensayo',
+  que_es: 'Un programa escolar.',
+  como_es: 'En cada sesión…',
+  que_encontraron: 'Un ensayo con 67 niñas y niños…',
+  en_ninas: 'Sin datos sobre niñas.',
+  limitaciones: 'Un solo ensayo.',
+  que_preguntar: ['¿Se usa en su colegio?'],
+  relacionados: ['funciones-ejecutivas'],
+  fuentes: ['kenworthy-2014'],
+  revisado: '2026-11-20',
+};
+
+describe('esquema de los programas', () => {
+  it('acepta un programa completo', () => {
+    expect(valido(esquemaPrograma, programa)).toBe(true);
+  });
+
+  it('exige «En niñas», aunque sea para decir que no hay datos', () => {
+    expect(valido(esquemaPrograma, { ...programa, en_ninas: ' ' })).toBe(false);
+  });
+
+  it('exige un peso de la lista', () => {
+    expect(valido(esquemaPrograma, { ...programa, peso: 'demostrado' })).toBe(false);
+  });
+
+  it('exige al menos una ficha relacionada, una fuente y una pregunta', () => {
+    expect(valido(esquemaPrograma, { ...programa, relacionados: [] })).toBe(false);
+    expect(valido(esquemaPrograma, { ...programa, fuentes: [] })).toBe(false);
+    expect(valido(esquemaPrograma, { ...programa, que_preguntar: [] })).toBe(false);
+  });
+
+  it('rechaza unas edades al revés o negativas', () => {
+    expect(valido(esquemaPrograma, { ...programa, edad_desde: 11, edad_hasta: 8 })).toBe(false);
+    expect(valido(esquemaPrograma, { ...programa, edad_desde: -1 })).toBe(false);
+  });
+
+  it('acepta el nombre original en inglés, si el título va traducido', () => {
+    expect(
+      valido(esquemaPrograma, { ...programa, nombre: 'Entrenamiento de la memoria de trabajo', en_ingles: 'Working memory training' }),
+    ).toBe(true);
   });
 });
