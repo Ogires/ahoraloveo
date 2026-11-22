@@ -1,0 +1,44 @@
+nombre: Estimulación cerebral no invasiva
+en_ingles: Non-invasive brain stimulation (tDCS, rTMS)
+para_que: Aparatos que estimulan el cerebro desde fuera de la cabeza, con una corriente débil o con pulsos magnéticos.
+edades: Desde los 7 años
+edad_desde: 7
+edad_hasta: 18
+quien: Sin datos en las fuentes que hemos consultado.
+formato: Individual, con un aparato que se coloca sobre la cabeza.
+duracion: >
+  En el único ensayo con niñas y niños pequeños, de 7 a 10 años, 12 sesiones en 4 semanas. Las fuentes
+  que hemos consultado no dicen cuánto dura lo habitual.
+en_espana: Sin datos sobre su uso en España con niñas y niños autistas.
+peso: sin-beneficio
+que_es: >
+  Son técnicas que estimulan zonas del cerebro desde fuera de la cabeza, sin operar. La estimulación
+  transcraneal con corriente continua (tDCS) usa una corriente eléctrica débil, y la estimulación
+  magnética transcraneal (EMT o rTMS), pulsos magnéticos. En el autismo se han probado para intentar
+  mejorar las conductas repetitivas, la cognición o las funciones ejecutivas.
+como_es: >
+  Las fuentes que hemos consultado no describen cómo es una sesión para una niña o un niño. En el único
+  ensayo con niñas y niños de 7 a 10 años, se combinó con un videojuego que se juega moviendo el cuerpo,
+  tres veces por semana durante cuatro semanas.
+que_encontraron: >
+  Una revisión de 2026 reunió 30 ensayos que la comparaban con una estimulación simulada, en autismo,
+  TDAH y otros trastornos del neurodesarrollo. No fue mejor que la simulada en ninguna área de la
+  cognición, tampoco en el autismo. Otra revisión de 2026, de 53 ensayos de EMT, encontró mejoras en
+  algunos rasgos del autismo, pero no pruebas suficientes para las funciones ejecutivas. Y concluye que
+  aún no se puede recomendar como tratamiento habitual. Dos revisiones anteriores sí vieron mejoras,
+  pero piden cautela por la calidad de los estudios.
+en_ninas: >
+  Sin datos sobre niñas. Las revisiones que hemos consultado no dicen cuántas niñas había, y el resumen
+  del ensayo con niñas y niños de 7 a 10 años tampoco.
+limitaciones: >
+  La certeza de las pruebas es baja o muy baja. En la revisión de 53 ensayos de EMT, la mayoría no
+  ocultaba a los participantes qué tratamiento recibían. Más de la mitad no informaba de los efectos
+  secundarios; los que se contaron fueron leves y pasajeros. Muchos estudios son con jóvenes o adultos,
+  no con niñas y niños. Y las guías clínicas que hemos consultado no la nombran.
+que_preguntar:
+  - ¿Se ofrece dentro de un estudio de investigación, con su autorización y su seguimiento?
+  - ¿Qué pruebas hay en niñas y niños autistas, y frente a qué se comparó?
+  - ¿Qué efectos secundarios puede tener y cómo se van a vigilar?
+relacionados: [funciones-ejecutivas]
+fuentes: [ying-2026, mei-2026, minghui-2025, liu-2023, fallahiyan-2026]
+revisado: 2026-11-20

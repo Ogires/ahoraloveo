@@ -1,0 +1,16 @@
+titulo: 'Randomized controlled effectiveness trial of executive function intervention for children on the autism spectrum'
+autoria: L. Kenworthy, L. G. Anthony, D. Q. Naiman y otros
+anio: 2014
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4532389/
+doi: 10.1111/jcpp.12161
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas]
+estudio:
+  diseno: Ensayo aleatorizado por colegios, frente a un programa de habilidades sociales con las mismas sesiones
+  muestra: 67
+  edades: De 3.º a 5.º de primaria
+  porcentaje_ninas: 12 # 87 % y 90 % de niños en los dos grupos (47 y 20)
+  resultados_por_sexo: false

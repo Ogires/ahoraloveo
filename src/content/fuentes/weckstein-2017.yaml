@@ -1,0 +1,16 @@
+titulo: 'A Retrospective Chart Analysis with Follow-Up of Cogmed Working Memory Training in Children and Adolescents with Autism Spectrum Disorder'
+autoria: S. M. Weckstein, E. J. Weckstein, C. D. Parker y otros
+anio: 2017
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5656100/
+doi: 10.12659/msmbr.904930
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas]
+estudio:
+  diseno: Revisión de historias clínicas, sin grupo de comparación, con autismo y TDAH
+  muestra: 15
+  edades: De 9 a 19 años
+  porcentaje_ninas: 20 # 3 chicas de 15, según la tabla
+  resultados_por_sexo: false

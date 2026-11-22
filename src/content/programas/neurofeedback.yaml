@@ -1,0 +1,47 @@
+nombre: Neurofeedback
+para_que: Un entrenamiento en el que se intenta aprender a cambiar la actividad del cerebro mientras se juega en una pantalla.
+edades: De 7 a 17 años
+edad_desde: 7
+edad_hasta: 17
+quien: >
+  Terapeutas con formación en neurofeedback, en consulta o en un centro. También hay aparatos para usar
+  en casa.
+formato: Individual, con unos sensores en la cabeza que registran la actividad eléctrica del cerebro.
+duracion: Entre 15 y 60 sesiones, de 20 a 60 minutos cada una, durante 5 a 12 semanas.
+en_espana: Sin datos sobre su uso en España, ni estudios con niñas y niños españoles.
+peso: pequenos
+que_es: >
+  El neurofeedback mide la actividad eléctrica del cerebro con unos sensores en la cabeza y la convierte
+  en un juego en la pantalla. Cuando el cerebro hace lo que busca el entrenamiento, el juego avanza. La
+  idea es que, con práctica, la persona aprenda a regular esa actividad, y que eso mejore la atención,
+  el control de los impulsos o la flexibilidad. Hay versiones en consulta y aparatos para usar en casa.
+como_es: >
+  En cada sesión, la niña se sienta delante de una pantalla con los sensores puestos. Por ejemplo, tiene
+  que hacer avanzar un objeto, y lo consigue cuando sus ondas cerebrales se acercan a lo que pide el
+  programa. Quien la atiende ajusta lo que el juego le pide en cada momento.
+que_encontraron: >
+  Los estudios son pequeños y no coinciden. En uno con 38 participantes, solo la mitad aprendió a
+  regular su actividad cerebral, y en ellos mejoró la flexibilidad en una prueba, pero no los rasgos de
+  autismo. En otro, con 41 chicos adolescentes, no fue mejor que el tratamiento habitual. En un
+  tercero, también con adolescentes, la mejora no se mantuvo en el seguimiento. Una revisión de 2025
+  encontró que 10 de sus 12 estudios veían algún efecto positivo en la cognición. En cambio, otra de
+  2011 concluyó que las pruebas no apoyan usarlo en el autismo.
+en_ninas: >
+  Hay muy pocas niñas. El ensayo de 41 adolescentes solo tenía chicos, y en el del aparato para casa
+  había 6 niñas entre los 34 participantes que terminaron. Un estudio con 6 chicas y 6 chicos
+  adolescentes no vio diferencias entre ellas y ellos, pero con tan pocos participantes no se puede
+  sacar una conclusión.
+limitaciones: >
+  Las guías no lo recomiendan. NICE dice que no se use para los problemas de habla y lenguaje, y no
+  habla de las funciones ejecutivas. ESCAP lo cuenta entre los tratamientos «alternativos» que no tienen
+  cabida para las características esenciales del autismo, y la SEPEAP, entre las terapias con riesgos
+  indirectos. La revisión de 2011 señala muestras pequeñas, poca duración y pocos grupos de comparación. En
+  el ensayo del aparato para casa solo terminaron 34 de 83, y el artículo agradece la financiación y el
+  equipo a varias empresas.
+que_preguntar:
+  - ¿Qué estudios tiene en niñas y niños autistas, y con qué se comparó?
+  - ¿Qué se espera que mejore, y cómo lo vamos a comprobar?
+  - ¿Cuántas sesiones hacen falta y cuánto cuestan?
+relacionados: [funciones-ejecutivas]
+fuentes: [kouijzer-2013, konicar-2021, klobl-2023, kanafgourabi-2025, carrick-2018, werneck-rohrer-2022, gacek-2025, rezaee-2025, holtmann-2011, nice-cg170, escap-2021, sepeap-tea-2023]
+revisado: 2026-11-20

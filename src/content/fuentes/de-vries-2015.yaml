@@ -1,0 +1,16 @@
+titulo: 'Working memory and cognitive flexibility-training for children with an autism spectrum disorder: a randomized controlled trial'
+autoria: M. de Vries, P. J. Prins, B. A. Schmand y otros
+anio: 2015
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/25256627/
+doi: 10.1111/jcpp.12324
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas]
+estudio:
+  diseno: 'Ensayo aleatorizado: entrenamiento de memoria de trabajo o de flexibilidad frente a una versión de prueba del mismo juego'
+  muestra: 121
+  edades: De 8 a 12 años
+  porcentaje_ninas: null # el resumen no lo dice
+  resultados_por_sexo: false

@@ -1,0 +1,16 @@
+titulo: 'Volitional modification of brain activity in adolescents with Autism Spectrum Disorder: A Bayesian analysis of Slow Cortical Potential neurofeedback'
+autoria: L. Konicar, S. Radev, K. Prillinger y otros
+anio: 2021
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7829342/
+doi: 10.1016/j.nicl.2021.102557
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas]
+estudio:
+  diseno: Ensayo frente al tratamiento habitual, con chicos adolescentes
+  muestra: 41
+  edades: Adolescentes
+  porcentaje_ninas: 0 # solo chicos
+  resultados_por_sexo: false

@@ -1,0 +1,16 @@
+titulo: 'Working memory training in children with borderline intellectual functioning and neuropsychiatric disorders: a triple-blind randomised controlled trial'
+autoria: S. Roording-Ragetlie, M. Spaltman, E. de Groot y otros
+anio: 2022
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9298879/
+doi: 10.1111/jir.12895
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas]
+estudio:
+  diseno: Ensayo aleatorizado triple ciego de Cogmed frente a una versión de prueba, con cociente intelectual límite y autismo, TDAH o los dos
+  muestra: 72
+  edades: De 10 a 13 años
+  porcentaje_ninas: 26 # 19 niñas de 72
+  resultados_por_sexo: false

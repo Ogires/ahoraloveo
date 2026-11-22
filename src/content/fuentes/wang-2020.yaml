@@ -1,0 +1,16 @@
+titulo: 'Effects of Mini-Basketball Training Program on Executive Functions and Core Symptoms among Preschool Children with Autism Spectrum Disorders'
+autoria: J. G. Wang, K. L. Cai, Z. M. Liu y otros
+anio: 2020
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7287705/
+doi: 10.3390/brainsci10050263
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas, ejercicio]
+estudio:
+  diseno: 'Estudio piloto sin reparto al azar: minibasket frente a la rehabilitación habitual'
+  muestra: 33
+  edades: Unos 5 años
+  porcentaje_ninas: 15 # 5 niñas de 33
+  resultados_por_sexo: false

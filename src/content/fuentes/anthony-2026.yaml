@@ -1,0 +1,16 @@
+titulo: 'Addressing Disparities: A Pragmatic Comparative Effectiveness Trial of School-Based Executive Functioning Interventions'
+autoria: L. G. Anthony, L. Kenworthy, A. Verbalis y otros
+anio: 2026
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13186250/
+doi: 10.1080/23794925.2026.2633981
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas]
+estudio:
+  diseno: Ensayo aleatorizado por colegios, frente a otro programa para el colegio, con niñas y niños autistas o con TDAH
+  muestra: 148
+  edades: De 3.º a 5.º de primaria
+  porcentaje_ninas: 18 # 82 % de niños; entre las 50 niñas y niños autistas, 2 niñas
+  resultados_por_sexo: false

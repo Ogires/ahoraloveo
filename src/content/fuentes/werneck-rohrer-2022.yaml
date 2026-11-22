@@ -1,0 +1,16 @@
+titulo: 'Effects of an intensive slow cortical potentials neurofeedback training in female and male adolescents with autism spectrum disorder: Are there sex differences?'
+autoria: S. G. Werneck-Rohrer, T. M. Lindorfer, C. Waleew y otros
+anio: 2022
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8671879/
+doi: 10.1007/s00508-021-01989-7
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas]
+estudio:
+  diseno: Un solo grupo, con chicas y chicos emparejados, sin grupo de comparación
+  muestra: 12
+  edades: Adolescentes
+  porcentaje_ninas: 50 # 6 chicas de 12
+  resultados_por_sexo: true

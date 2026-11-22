@@ -1,0 +1,16 @@
+titulo: 'Individual brain regulation as learned via neurofeedback is related to affective changes in adolescents with autism spectrum disorder'
+autoria: M. Klöbl, K. Prillinger, R. Diehm y otros
+anio: 2023
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9837918/
+doi: 10.1186/s13034-022-00549-9
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas]
+estudio:
+  diseno: Nuevo análisis del ensayo de Konicar y otros (2021), frente al tratamiento habitual
+  muestra: 41
+  edades: Adolescentes
+  porcentaje_ninas: 0 # solo chicos
+  resultados_por_sexo: false

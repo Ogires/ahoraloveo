@@ -34,12 +34,17 @@ en_ninas: >
   señala que, ya de adultas, a algunas mujeres autistas les cuesta organizar el
   tiempo, el dinero o la casa.
 que_hacer: >
-  Ayuda que las cosas sean previsibles. La NAS, la asociación británica de
-  autismo, aconseja dar estructura al paso de una actividad a otra: un horario
-  claro y un temporizador que cuente el tiempo que queda. José Ramón Alonso
-  recomienda avisar antes de los cambios y usar frases como «primero… y
-  luego…»: «primero te pones los zapatos y luego salimos». E Isabel Paula
-  propone enseñarle a resolver problemas, para que gane autonomía.
+  Ayuda que las cosas sean previsibles y se puedan ver. La NAS, la asociación
+  británica de autismo, propone agendas del día con dibujos o fotos, listas
+  para ir tachando y relojes o temporizadores que muestren el tiempo. Según la
+  Federación Autismo Castilla y León, con las más pequeñas se usan objetos de
+  verdad, y después fotos, dibujos o palabras escritas. También ayuda dividir
+  las tareas en pasos, dar una sola instrucción cada vez y guardar sus cosas
+  siempre en el mismo sitio. Antes de un cambio, avisad, contad hacia atrás y
+  decidle qué sigue igual. Tener pensado un plan B ayuda cuando algo falla, y
+  José Ramón Alonso recomienda frases como «primero te pones los zapatos y
+  luego salimos». Usad los mismos apoyos en casa y en el colegio. Son consejos
+  de entidades y especialistas, no resultados de estudios.
 escenas:
   - edad: 4 años
     lugar: en casa
@@ -58,5 +63,5 @@ escenas:
       mochila, lo saca todo y empieza otra vez por la cantimplora.
     imagen: ../../assets/escenas/funciones-ejecutivas-2.webp
 relacionados: [meltdown, rigidez-y-rutinas]
-fuentes: [demetriou-2018, white-2017, alonso-autismo-2020, paula-ansiedad-2015, prizant-seres-humanos-unicos, nas-crisis, aetapi-mujeres-tea]
-revisado: 2026-11-17
+fuentes: [demetriou-2018, white-2017, alonso-autismo-2020, paula-ansiedad-2015, prizant-seres-humanos-unicos, nas-crisis, nas-organising, nas-preference, nas-pupils, autismo-cyl-profesores, aetapi-mujeres-tea]
+revisado: 2026-11-20

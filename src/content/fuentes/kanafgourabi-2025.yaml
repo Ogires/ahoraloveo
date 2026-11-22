@@ -1,0 +1,16 @@
+titulo: 'The impact of ILF neurofeedback on inhibitory control in high-functioning adolescents with autism spectrum disorder: Preliminary evidence of a randomized controlled trial'
+autoria: S. N. Esmaeilzadeh Kanafgourabi, M. Shabani, Z. Mirchi y otros
+anio: 2025
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/37930738/
+doi: 10.1080/21622965.2023.2258247
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas]
+estudio:
+  diseno: Ensayo aleatorizado simple ciego, frente a un neurofeedback simulado
+  muestra: 24
+  edades: Adolescentes
+  porcentaje_ninas: null # el resumen no lo dice
+  resultados_por_sexo: false

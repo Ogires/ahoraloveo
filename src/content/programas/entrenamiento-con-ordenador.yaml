@@ -1,0 +1,52 @@
+nombre: Entrenamiento con ordenador
+en_ingles: Computerized cognitive training
+para_que: Juegos o ejercicios de ordenador que entrenan la memoria de trabajo u otras funciones ejecutivas, cada vez más difíciles.
+edades: De 7 a 13 años
+edad_desde: 7
+edad_hasta: 13
+quien: >
+  El propio programa: la niña juega con la supervisión de su familia o del colegio. En Cogmed, además,
+  un entrenador revisa por teléfono cada semana cómo va. En otra versión, un adulto se sienta con ella
+  y le enseña estrategias.
+formato: Individual, con ordenador o tableta, en casa, en el colegio o en consulta.
+duracion: >
+  Cogmed: 25 días en 5 semanas, de 35 a 45 minutos al día. Con un adulto que enseña estrategias: hasta 10
+  sesiones de una hora, o unas 12 horas repartidas en 8 a 12 semanas de colegio.
+en_espana: Sin datos sobre su uso en España, ni estudios con niñas y niños españoles.
+peso: sin-beneficio
+que_es: >
+  Son programas de ordenador o tableta con ejercicios que se repiten y que se hacen más difíciles a medida
+  que acierta. Por ejemplo, recordar en orden una serie de cosas que aparecen en la pantalla, cada vez
+  más larga. Los más conocidos son Cogmed y Braingame Brian, que trabajan sobre todo la memoria de
+  trabajo y la flexibilidad. La idea es que, entrenando esas funciones, la mejora se note también en
+  casa y en el colegio. Hay una variante en la que un adulto acompaña el juego y le enseña estrategias
+  para usar fuera de la pantalla.
+como_es: >
+  En Cogmed, la niña hace ocho ejercicios distintos en cada sesión, en casa o en el colegio, con un
+  adulto cerca. Si acierta, el siguiente es un poco más difícil, y si falla, más fácil. En la versión
+  con un adulto, este para el juego para enseñarle trucos, como repetir en voz baja lo que tiene que
+  recordar. Y la ayuda a manejar la frustración cuando el juego se pone difícil.
+que_encontraron: >
+  Dos ensayos lo compararon con una versión de prueba del mismo programa, que no se hace más difícil. En
+  el de Braingame Brian, con 121 niñas y niños autistas de 8 a 12 años, mejoraron todos, también con la
+  versión de prueba. Sus autores concluyen que, tal como está, probablemente no sirve para niñas y niños
+  autistas. En el de Cogmed, con 72 niñas y niños con autismo, TDAH o los dos, tampoco hubo diferencias,
+  ni al terminar ni seis meses después. Con un adulto que enseña estrategias, un ensayo con 70 niñas y
+  niños no vio mejoras en las pruebas ni en lo que contaban las familias. Eso sí, ellas notaron menos
+  conductas repetitivas. Una revisión de 2025 encontró mejoras, pero con pocos datos a largo plazo.
+en_ninas: >
+  Hay pocas niñas: 7 de 70 en el ensayo con un adulto que enseña estrategias, y 19 de 72 en el de Cogmed,
+  que no dice cuántas de ellas eran autistas. Las fuentes que hemos consultado no dan los resultados de
+  las niñas por separado.
+limitaciones: >
+  Los estudios que sí encuentran mejoras suelen no tener grupo de comparación, como uno de Cogmed que
+  revisó las historias de 15 niñas, niños y jóvenes. Una revisión de 2026 concluye que en autismo solo
+  hay un ensayo controlado, y que no fue mejor que el entrenamiento de prueba. Además, a algunos les
+  cuesta terminarlo: en un estudio, 1 de cada 5 necesitó más de las 6 semanas previstas.
+que_preguntar:
+  - ¿Qué estudios tiene este programa en niñas y niños autistas, y con qué se comparó?
+  - ¿Qué esperan que mejore, el juego o lo que le cuesta en casa y en el colegio?
+  - ¿Cuánto tiempo al día pide, y durante cuántas semanas?
+relacionados: [funciones-ejecutivas]
+fuentes: [de-vries-2015, roording-ragetlie-2022, faja-2022, edmunds-2022, benyakorn-2018, weckstein-2017, lin-2025, maggio-2026]
+revisado: 2026-11-20

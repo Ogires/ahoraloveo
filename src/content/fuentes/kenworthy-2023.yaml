@@ -1,0 +1,16 @@
+titulo: 'Leveraging technology to make parent training more accessible: Randomized trial of in-person versus online executive function training for parents of autistic children'
+autoria: L. Kenworthy, D. Childress, A. C. Armour y otros
+anio: 2023
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9892365/
+doi: 10.1177/13623613221111212
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas]
+estudio:
+  diseno: Ensayo aleatorizado de la formación de las familias, en persona o en línea, sin grupo sin formación
+  muestra: 96
+  edades: De 8 a 12 años
+  porcentaje_ninas: 19 # 12 de 50 en persona y 6 de 46 en línea
+  resultados_por_sexo: false

@@ -1,0 +1,16 @@
+titulo: 'Efficacy of executive function training in preschool children with ASD: a randomized controlled trial'
+autoria: L. Fan, Y. Guo, M. Cheung y otros
+anio: 2026
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13366625/
+doi: 10.1186/s13034-026-01092-7
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas]
+estudio:
+  diseno: 'Ensayo aleatorizado con evaluación ciega: el curso más el tratamiento habitual, frente al tratamiento habitual'
+  muestra: 72
+  edades: De 3 a 6 años
+  porcentaje_ninas: 15 # el 83 % y el 86 % eran niños, según la tabla
+  resultados_por_sexo: false

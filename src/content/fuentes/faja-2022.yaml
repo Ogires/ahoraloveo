@@ -1,0 +1,16 @@
+titulo: 'A preliminary randomized, controlled trial of executive function training for children with autism spectrum disorder'
+autoria: S. Faja, T. Clarkson, R. Gilbert y otros
+anio: 2022
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8813874/
+doi: 10.1177/13623613211014990
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas]
+estudio:
+  diseno: 'Ensayo aleatorizado preliminar: juegos de ordenador con un adulto que enseña estrategias, frente a lista de espera'
+  muestra: 70
+  edades: De 7 a 11 años
+  porcentaje_ninas: 10 # 7 niñas de 70, según Edmunds 2022
+  resultados_por_sexo: false

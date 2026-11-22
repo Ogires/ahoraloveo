@@ -1,0 +1,16 @@
+titulo: 'Effects of gymnastics exercises on executive function in children with autism spectrum disorder aged 6 to 9 years: a pilot study of a randomized controlled trial'
+autoria: C. Deng, Z. Zhu, G. Luo y otros
+anio: 2025
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12597812/
+doi: 10.3389/fpsyg.2025.1660305
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas, ejercicio]
+estudio:
+  diseno: 'Ensayo aleatorizado piloto: gimnasia frente a las actividades de siempre'
+  muestra: 24
+  edades: De 6 a 9 años
+  porcentaje_ninas: 50 # 12 niñas de 24
+  resultados_por_sexo: false

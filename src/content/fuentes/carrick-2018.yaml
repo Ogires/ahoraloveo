@@ -1,0 +1,16 @@
+titulo: 'The Treatment of Autism Spectrum Disorder With Auditory Neurofeedback: A Randomized Placebo Controlled Trial Using the Mente Autism Device'
+autoria: F. R. Carrick, G. Pagnacco, A. Hankir y otros
+anio: 2018
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6041407/
+doi: 10.3389/fneur.2018.00537
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas]
+estudio:
+  diseno: Ensayo aleatorizado en casa, con un aparato frente a uno simulado; terminaron 34 de 83
+  muestra: 83
+  edades: Sin datos en el resumen
+  porcentaje_ninas: 18 # 6 niñas de las 34 que terminaron
+  resultados_por_sexo: false

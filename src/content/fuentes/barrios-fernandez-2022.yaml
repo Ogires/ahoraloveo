@@ -1,0 +1,16 @@
+titulo: 'Effects of Square-Stepping Exercise on Motor and Cognitive Skills in Autism Spectrum Disorder Children and Adolescents: A Study Protocol'
+autoria: S. Barrios-Fernández, J. Carlos-Vivas, L. Muñoz-Bermejo y otros
+anio: 2022
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8950471/
+doi: 10.3390/healthcare10030450
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas, ejercicio]
+estudio:
+  diseno: Protocolo de un ensayo aleatorizado, sin resultados publicados
+  muestra: 52
+  edades: De 6 a 12 años
+  porcentaje_ninas: null # aún no se sabe
+  resultados_por_sexo: false

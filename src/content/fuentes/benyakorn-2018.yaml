@@ -1,0 +1,16 @@
+titulo: 'Computerized Cognitive Training in Children With Autism and Intellectual Disabilities: Feasibility and Satisfaction Study'
+autoria: S. Benyakorn, C. A. Calub, S. J. Riley y otros
+anio: 2018
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5993974/
+doi: 10.2196/mental.9564
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas]
+estudio:
+  diseno: Estudio de viabilidad de Cogmed, sin grupo de comparación, con discapacidad intelectual
+  muestra: 26
+  edades: De 8 a 17 años
+  porcentaje_ninas: 19 # 5 niñas de 26
+  resultados_por_sexo: false

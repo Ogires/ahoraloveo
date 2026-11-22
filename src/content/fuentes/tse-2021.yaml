@@ -1,0 +1,16 @@
+titulo: 'Improving Executive Function of Children with Autism Spectrum Disorder through Cycling Skill Acquisition'
+autoria: A. C. Y. Tse, D. I. Anderson, V. H. L. Liu y otros
+anio: 2021
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/34127635/
+doi: 10.1249/MSS.0000000000002609
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas, ejercicio]
+estudio:
+  diseno: 'Ensayo aleatorizado de tres grupos: aprender a ir en bici, bicicleta estática y sin ejercicio'
+  muestra: 62
+  edades: De 8 a 12 años
+  porcentaje_ninas: 19 # 12 niñas de 62
+  resultados_por_sexo: false

@@ -1,0 +1,16 @@
+titulo: 'Effects of School-Based Neurofeedback Training on Attention in Students with Autism and Intellectual Disabilities'
+autoria: M. Gacek, T. Smoleń, Ł. Krzywoszański y otros
+anio: 2025
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12296775/
+doi: 10.1007/s10803-024-06400-8
+comprobado: 2026-11-20
+temas: [funciones-ejecutivas, programas]
+estudio:
+  diseno: Estudio sin reparto al azar en un centro de educación especial, con autismo y discapacidad intelectual
+  muestra: 49
+  edades: Edad escolar
+  porcentaje_ninas: null # sin dato en el resumen
+  resultados_por_sexo: false
