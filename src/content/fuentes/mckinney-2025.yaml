@@ -1,0 +1,16 @@
+titulo: 'Study protocol for a randomized controlled trial of Regulating Together (RT), a group therapy for emotion dysregulation in school-age autistic youth and their caregivers'
+autoria: W. S. McKinney, L. J. Tadevich, L. M. Schmitt y otros
+anio: 2025
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12023655/
+doi: 10.1186/s40359-025-02737-6
+comprobado: 2026-11-23
+temas: [meltdown, programas]
+estudio:
+  diseno: Protocolo de un ensayo aleatorizado de Regulating Together frente a otro programa de grupo (AIMS), sin resultados todavía
+  muestra: 144 # prevista, no real
+  edades: De 8 a 12 años
+  porcentaje_ninas: null # protocolo sin participantes todavía
+  resultados_por_sexo: false # estratifica por sexo (l. 70), sin análisis por sexo anunciado

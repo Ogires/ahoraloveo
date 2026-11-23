@@ -1,0 +1,16 @@
+titulo: 'A Randomized Controlled Trial of Functional Communication Training via Telehealth for Young Children with Autism Spectrum Disorder'
+autoria: S. Lindgren, D. Wacker, K. Schieltz y otros
+anio: 2020
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7572463/
+doi: 10.1007/s10803-020-04451-1
+comprobado: 2026-11-23
+temas: [meltdown, programas]
+estudio:
+  diseno: Ensayo aleatorizado de entrenamiento en comunicación funcional por telesalud frente a atención habitual (12 semanas de espera), con observación en vídeo
+  muestra: 38
+  edades: De 21 a 84 meses
+  porcentaje_ninas: 16 # 6 niñas de 38 aleatorizados (3 + 3, tabla 2 del xml); 9 de los 56 evaluados (l. 21)
+  resultados_por_sexo: false

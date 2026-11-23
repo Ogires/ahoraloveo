@@ -1,0 +1,16 @@
+titulo: 'Stepping Stones Triple P: an RCT of a parenting program with parents of a child diagnosed with an autism spectrum disorder'
+autoria: K. Whittingham, K. Sofronoff, J. Sheffield y otros
+anio: 2009
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/19023654/
+doi: 10.1007/s10802-008-9285-x
+comprobado: 2026-11-23
+temas: [meltdown, programas]
+estudio:
+  diseno: Ensayo aleatorizado de Stepping Stones Triple P con familias (el resumen no dice con qué se comparó), con seguimiento de 6 meses
+  muestra: 59 # familias
+  edades: De 2 a 9 años
+  porcentaje_ninas: null # el resumen no da el sexo (solo el resumen)
+  resultados_por_sexo: false

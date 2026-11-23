@@ -1,0 +1,61 @@
+nombre: Formación para familias sobre la conducta
+en_ingles: Behavioral parent training (RUBI, Stepping Stones Triple P)
+para_que: Cursos para la familia sobre cómo prevenir y manejar las rabietas y otras conductas difíciles, sin distinguirlas de las crisis por sobrecarga.
+edades: De 2 a 9 años
+edad_desde: 2
+edad_hasta: 9
+quien: >
+  Terapeutas con formación en el programa, que enseñan a la madre, al padre o a quien cuide de la niña
+  o el niño. Después es la familia quien lo aplica en casa.
+formato: >
+  RUBI es individual, en consulta, con alguna visita a casa. También se ha probado por videollamada.
+  Stepping Stones Triple P se hace en grupo, y puede tener sesiones individuales si hace falta.
+duracion: >
+  RUBI tiene 11 sesiones de 60 a 90 minutos en 16 semanas, más llamadas de refuerzo y hasta 2 sesiones
+  opcionales.
+en_espana: >
+  Sin datos sobre su uso en España, ni estudios con niñas y niños españoles. La guía europea ESCAP,
+  traducida al castellano, llama a Stepping Stones Triple P «Escalones Intermedios». La guía de la
+  SEPEAP, de pediatría, recoge los programas para familias sobre el manejo del comportamiento.
+peso: revisiones
+que_es: >
+  Son cursos en los que una o un terapeuta enseña a la familia a prevenir y a manejar las conductas
+  difíciles: rabietas, desobediencia, agresividad o autolesiones. Los más estudiados en el autismo son
+  RUBI y Stepping Stones Triple P. Parten de buscar para qué sirve una conducta, mirando qué pasa antes
+  y qué pasa después. Buscan cambiar lo que hacen las personas adultas para que cambie la conducta de la
+  niña o el niño. No tratan aparte las crisis por sobrecarga: las cuentan entre las rabietas.
+como_es: >
+  La familia aprende primero a fijarse en qué pasa antes y después de una conducta. Después ve cómo
+  prevenirla, por ejemplo con un horario con dibujos para las rutinas, y cómo premiar lo que hace bien.
+  También aprende a ignorar ciertas conductas de forma planificada y a conseguir que siga las
+  indicaciones. Hay explicaciones, vídeos y ensayos de situaciones, y tareas para practicar en casa
+  entre una sesión y otra. Las últimas sesiones enseñan a comunicarse mejor o a hacer cosas del día a
+  día, y cómo mantener lo conseguido.
+que_encontraron: >
+  El ensayo más grande, de 2015, tuvo 180 niñas y niños de 3 a 7 años en seis centros de Estados Unidos.
+  Se comparó RUBI con unas sesiones informativas sobre el autismo, un número parecido. Los dos grupos
+  mejoraron. Con RUBI, según las familias, la irritabilidad bajó casi a la mitad, y en el otro grupo,
+  un tercio. Una clínica que no sabía el grupo vio mejoría en 7 de cada 10, frente a 4 de cada 10. Pero
+  la diferencia no llegó al mínimo que las autoras consideraban importante en la práctica. De quienes
+  mejoraron con RUBI, 8 de cada 10 seguían bien seis meses después. Dos metaanálisis, de 2017 y 2019,
+  encontraron una mejora moderada de la conducta según lo que cuentan las familias. En un ensayo de
+  Triple P, en cambio, esa mejora no se vio al observar la conducta en casa.
+en_ninas: >
+  Pocas niñas. En el ensayo de 2015 había 22 niñas entre 180 participantes, 10 de ellas con RUBI. En los
+  estudios de Triple P, los resúmenes no dan el número de niñas, o solo dicen que casi 9 de cada 10 eran
+  niños. Ningún estudio miró los resultados de las niñas por separado.
+limitaciones: >
+  No distingue una crisis por sobrecarga de una rabieta, y enseña a ignorar algunas conductas. La NAS,
+  la asociación británica de autismo, y Ambitious about Autism explican que una crisis no es una rabieta
+  ni una forma de llamar la atención. La psicóloga Isabel Paula avisa de que lo que ayuda en una rabieta
+  puede empeorar un meltdown. Las autoras del ensayo de 2015 crearon RUBI, y dos de ellas firman uno de
+  los metaanálisis. Las familias sabían qué grupo les tocaba. En el metaanálisis de 2019 casi no había
+  datos de observación ni del profesorado. NICE, la guía británica, no recomienda ningún programa con
+  nombre: entre sus preguntas pendientes está si la formación en grupo para familias funciona.
+que_preguntar:
+  - ¿El programa distingue las crisis por sobrecarga de las rabietas?
+  - ¿Qué nos enseñarán a hacer cuando tenga una crisis, ignorarla o ayudarla a calmarse?
+  - ¿Cómo vamos a saber si le ayuda, en casa y en el cole?
+relacionados: [meltdown]
+fuentes: [bearss-2015, scahill-2016, bearss-2018, whittingham-2009, tellegen-2014, postorino-2017, tarver-2019, nuske-2024, escap-2021, sepeap-tea-2023, nice-cg170, nas-crisis, ambitious-meltdowns-shutdowns, paula-ansiedad-2015]
+revisado: 2026-11-23

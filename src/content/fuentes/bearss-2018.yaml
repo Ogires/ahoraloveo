@@ -1,0 +1,16 @@
+titulo: 'Feasibility of Parent Training via Telehealth for Children with Autism Spectrum Disorder and Disruptive Behavior: A Demonstration Pilot'
+autoria: K. Bearss, T. L. Burrell, S. A. Challa y otros
+anio: 2018
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/29170938/
+doi: 10.1007/s10803-017-3363-2
+comprobado: 2026-11-23
+temas: [meltdown, programas]
+estudio:
+  diseno: Piloto de viabilidad por telesalud en zonas rurales, sin grupo de comparación
+  muestra: 14
+  edades: De 3 a 8 años
+  porcentaje_ninas: null # el resumen no da el sexo (solo el resumen)
+  resultados_por_sexo: false

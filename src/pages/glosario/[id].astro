@@ -67,20 +67,22 @@ const otrosNombres = [
     <header>
       <span class="chip">{familia.nombre}</span>
       {/* El título es el nombre más usado en español al hablar de autismo, a veces inglés. Lo inglés
-          va con lang="en" para que el lector de pantalla lo pronuncie bien. */}
+          va con lang="en" para que el lector de pantalla lo pronuncie bien.
+          Los otros nombres pesan en la búsqueda como el título (Pagefind da 7 al h1): quien busca «crisis»
+          tiene que encontrar antes la ficha de meltdown que las páginas que solo hablan de crisis. */}
       {tituloEnIngles(d) ? (
         <>
           <h1 lang="en">{d.termino}</h1>
-          <p class="otro-nombre">En español: {d.en_espanol.join(', ')}</p>
+          <p class="otro-nombre" data-pagefind-weight="7">En español: {d.en_espanol.join(', ')}</p>
         </>
       ) : (
         <>
           <h1>{d.termino}</h1>
-          <p class="otro-nombre">En inglés: <span lang="en">{d.en_ingles}</span></p>
+          <p class="otro-nombre" data-pagefind-weight="7">En inglés: <span lang="en">{d.en_ingles}</span></p>
         </>
       )}
       {otrosNombres.length > 0 && (
-        <p class="alias">También se dice: {otrosNombres.map((n, i) => (
+        <p class="alias" data-pagefind-weight="7">También se dice: {otrosNombres.map((n, i) => (
           <>{i > 0 && ', '}{n.ingles ? <span lang="en">{n.texto}</span> : n.texto}</>
         ))}</p>
       )}

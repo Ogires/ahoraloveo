@@ -1,0 +1,16 @@
+titulo: 'A randomized controlled trial evaluating a brief parenting program with children with autism spectrum disorders'
+autoria: C. L. Tellegen y M. R. Sanders
+anio: 2014
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/24979315/
+doi: 10.1037/a0037246
+comprobado: 2026-11-23
+temas: [meltdown, programas]
+estudio:
+  diseno: Ensayo aleatorizado de una versión breve de Stepping Stones Triple P (atención primaria) frente a la atención habitual, con seguimiento de 6 meses
+  muestra: 64 # familias
+  edades: De 2 a 9 años
+  porcentaje_ninas: 14 # 86 % de niños según el resumen, así que unas 9 niñas: derivado, no publicado (solo el resumen)
+  resultados_por_sexo: false

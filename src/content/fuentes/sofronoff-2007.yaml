@@ -1,0 +1,16 @@
+titulo: 'A randomized controlled trial of a cognitive behavioural intervention for anger management in children diagnosed with Asperger syndrome'
+autoria: K. Sofronoff, T. Attwood, S. Hinton y otros
+anio: 2007
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/17082978/
+doi: 10.1007/s10803-006-0262-3
+comprobado: 2026-11-23
+temas: [meltdown, programas]
+estudio:
+  diseno: Ensayo aleatorizado frente a lista de espera de seis sesiones semanales de dos horas de terapia cognitivo-conductual para la ira, con grupo de familias
+  muestra: 45
+  edades: De 10 a 14 años # el resumen no da la edad; sale de la descripción que hace Weiss 2018 (l. 15)
+  porcentaje_ninas: null # el resumen no da el sexo (solo el resumen)
+  resultados_por_sexo: false

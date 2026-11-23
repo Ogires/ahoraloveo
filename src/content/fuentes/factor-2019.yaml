@@ -1,0 +1,16 @@
+titulo: 'Teaching emotion regulation to children with autism spectrum disorder: Outcomes of the Stress and Anger Management Program (STAMP)'
+autoria: R. S. Factor, D. M. Swain, L. Antezana y otros
+anio: 2019
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/31502872/
+doi: 10.1521/bumc.2019.83.3.235
+comprobado: 2026-11-23
+temas: [meltdown, programas]
+estudio:
+  diseno: Ensayo aleatorizado frente a lista de espera del programa de grupo STAMP (con grupo de familias)
+  muestra: 23
+  edades: De 4 a 7 años
+  porcentaje_ninas: 17 # 4 niñas de 23 («N = 23; 19 boys», resumen)
+  resultados_por_sexo: false

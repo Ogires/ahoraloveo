@@ -1,0 +1,16 @@
+titulo: 'Effect of parent training vs parent education on behavioral problems in children with autism spectrum disorder: a randomized clinical trial'
+autoria: K. Bearss, C. Johnson, T. Smith y otros
+anio: 2015
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9078140/
+doi: 10.1001/jama.2015.3150
+comprobado: 2026-11-23
+temas: [meltdown, programas]
+estudio:
+  diseno: Ensayo aleatorizado en seis centros, formación para familias (RUBI) frente a educación para familias con las mismas sesiones
+  muestra: 180
+  edades: De 3 a 7 años
+  porcentaje_ninas: 12 # 22 niñas de 180 (12,2 %): «158 boys, 22 girls» en el texto (l. 52); 10 con RUBI y 12 con la educación para familias, tabla 1
+  resultados_por_sexo: false

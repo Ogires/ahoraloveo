@@ -1,0 +1,16 @@
+titulo: 'Regulating Together: Emotion Dysregulation Group Treatment for ASD Youth and Their Caregivers'
+autoria: R. C. Shaffer, L. M. Schmitt, D. L. Reisinger y otros
+anio: 2023
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10126211/
+doi: 10.1007/s10803-022-05461-x
+comprobado: 2026-11-23
+temas: [meltdown, programas]
+estudio:
+  diseno: Ensayo intragrupo, sin grupo de comparación en paralelo, con cinco semanas previas sin tratamiento y seguimiento de 10 semanas
+  muestra: 44
+  edades: De 8 a 18 años
+  porcentaje_ninas: 11 # 5 niñas de 44 (11,3 %), tabla 3 del xml; en los 52 inscritos no se da el sexo
+  resultados_por_sexo: false # el sexo entra como covariable, sin resultados por sexo

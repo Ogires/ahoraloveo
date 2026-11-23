@@ -1,0 +1,16 @@
+titulo: 'Improving emotion regulation with CBT in young children with high functioning autism spectrum disorders: a pilot study'
+autoria: A. Scarpa y N. M. Reyes
+anio: 2011
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/21457605/
+doi: 10.1017/S1352465811000063
+comprobado: 2026-11-23
+temas: [meltdown, programas]
+estudio:
+  diseno: Piloto de un grupo de terapia cognitivo-conductual (STAMP), con asignación al azar a grupo de intervención o de espera
+  muestra: 11
+  edades: De 5 a 7 años
+  porcentaje_ninas: null # el resumen no da el sexo (solo el resumen)
+  resultados_por_sexo: false

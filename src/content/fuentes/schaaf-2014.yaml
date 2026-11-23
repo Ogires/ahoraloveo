@@ -1,0 +1,16 @@
+titulo: 'An intervention for sensory difficulties in children with autism: a randomized trial'
+autoria: R. C. Schaaf, T. Benevides, Z. Mailloux y otros
+anio: 2014
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4057638/
+doi: 10.1007/s10803-013-1983-8
+comprobado: 2026-11-23
+temas: [meltdown, programas]
+estudio:
+  diseno: Ensayo aleatorizado de terapia de integración sensorial de Ayres (30 sesiones en 10 semanas) frente a la atención habitual
+  muestra: 32
+  edades: De 4 a 8 años
+  porcentaje_ninas: 19 # 6 niñas de 32: 3 + 3 (l. 12)
+  resultados_por_sexo: false

@@ -1,0 +1,16 @@
+titulo: 'Weighted blankets and sleep in autistic children—a randomized controlled trial'
+autoria: P. Gringras, D. Green, B. Wright y otros
+anio: 2014
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/25022743/
+doi: 10.1542/peds.2013-4285
+comprobado: 2026-11-23
+temas: [meltdown, programas]
+estudio:
+  diseno: Ensayo aleatorizado cruzado de una manta con peso frente a una manta idéntica sin peso, para el sueño (2 semanas con cada una)
+  muestra: 73 # aleatorizados; 67 completaron
+  edades: De 5 a 16 años
+  porcentaje_ninas: null # el resumen no da el sexo (solo el resumen)
+  resultados_por_sexo: false

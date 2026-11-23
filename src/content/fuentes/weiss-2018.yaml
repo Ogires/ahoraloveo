@@ -1,0 +1,16 @@
+titulo: 'A randomized waitlist-controlled trial of cognitive behavior therapy to improve emotion regulation in children with autism'
+autoria: J. A. Weiss, K. Thomson, P. Burnham Riosa y otros
+anio: 2018
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6220772/
+doi: 10.1111/jcpp.12915
+comprobado: 2026-11-23
+temas: [meltdown, programas]
+estudio:
+  diseno: Ensayo aleatorizado frente a lista de espera de terapia cognitivo-conductual individual de 10 sesiones (Secret Agent Society - Operation Regulation)
+  muestra: 68
+  edades: De 8 a 12 años
+  porcentaje_ninas: 12 # 8 niñas de 68 (11,8 %): «88.2%, n = 60» de niños en el texto (l. 34); tabla 1: 11,4 % y 12,1 %
+  resultados_por_sexo: false # el sexo estratificó la aleatorización, sin resultados por sexo

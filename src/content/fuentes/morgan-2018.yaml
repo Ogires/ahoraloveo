@@ -1,0 +1,16 @@
+titulo: 'Cluster randomized trial of the classroom SCERTS intervention for elementary students with autism spectrum disorder'
+autoria: L. Morgan, J. L. Hooker, N. Sparapani y otros
+anio: 2018
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6457665/
+doi: 10.1037/ccp0000314
+comprobado: 2026-11-23
+temas: [meltdown, programas]
+estudio:
+  diseno: Ensayo aleatorizado por colegios de SCERTS en el aula frente a formación habitual del profesorado (módulos en línea)
+  muestra: 197
+  edades: De 5 a 9 años
+  porcentaje_ninas: 19 # unas 37 niñas de 197: 81,2 % de varones (l. 4); derivado de los porcentajes de la tabla 3 (78,8 % y 84,8 %), no publicado
+  resultados_por_sexo: false

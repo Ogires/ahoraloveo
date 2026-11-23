@@ -1,0 +1,16 @@
+titulo: 'Sensory integration therapy for children with autism and sensory processing difficulties: the SenITA RCT'
+autoria: E. Randell, M. Wright, S. Milosevic y otros
+anio: 2022
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/35766242/
+doi: 10.3310/TQGE0020
+comprobado: 2026-11-23
+temas: [meltdown, programas]
+estudio:
+  diseno: Ensayo aleatorizado de terapia de integración sensorial (24 sesiones en 26 semanas) frente a la atención habitual, con seguimiento a los 6 y 12 meses
+  muestra: 138 # aleatorizados; 106 en el análisis principal
+  edades: Primaria ordinaria # el resumen no da las edades
+  porcentaje_ninas: null # el resumen no da el número de niñas (solo el resumen)
+  resultados_por_sexo: true # el resumen da la interacción intervención × sexo (p = 0,050), que los autores llaman «hypothesis-generating only»
