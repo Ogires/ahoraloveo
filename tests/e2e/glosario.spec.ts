@@ -64,6 +64,16 @@ test('las escenas aparecen en «En el día a día», con su edad y su lugar', as
   await expect(apartado.locator('.edad-lugar').first()).toHaveText('4 años · en la consulta de pediatría');
 });
 
+test('cada escena explica por qué es un ejemplo en un desplegable cerrado', async ({ page }) => {
+  await page.goto('/glosario/ecolalia/');
+  const escena = page.locator('.escena').first();
+  const explicacion = escena.getByText('repetir puede ser su forma de decir que sí');
+  await expect(explicacion).toBeHidden();
+  await escena.getByText('Por qué es un ejemplo').click();
+  await expect(explicacion).toBeVisible();
+  await expect(page.locator('.escena details.por-que')).toHaveCount(2);
+});
+
 test('las escenas con ilustración la muestran, con el texto alternativo vacío a propósito', async ({ page }) => {
   await page.goto('/glosario/estereotipias/');
   const imagenes = page.locator('.escena img');

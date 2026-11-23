@@ -35,6 +35,9 @@ test('al girar la tarjeta se ve lo que puede haber detrás, y el foco pasa al t�
   await expect(tarjeta.locator('[data-nombre]')).toBeFocused();
   await expect(tarjeta.locator('[data-nombre]')).toHaveText('Meltdown (crisis)');
   await expect(tarjeta.locator('.chip')).toHaveText('Emociones');
+  // El reverso también explica cómo muestra la escena el término.
+  await expect(tarjeta.locator('.por-que')).toContainText('Por qué es un ejemplo:');
+  await expect(tarjeta.locator('.por-que')).toContainText('no para aunque ya pueden ir al parque');
   await expect(tarjeta.getByRole('link', { name: 'Leer la ficha de Meltdown' })).toHaveAttribute('href', '/glosario/meltdown/');
 });
 

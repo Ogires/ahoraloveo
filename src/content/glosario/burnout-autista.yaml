@@ -44,6 +44,10 @@ escenas:
       de semana le basta para recuperarse. Le cuesta organizarse para los deberes
       y ducharse sin que se lo recuerden, cosas que antes hacía sola. El ruido del
       extractor de la cocina, que nunca le había molestado, ahora no lo aguanta.
+    por_que: >
+      Dura meses, no es un mal día. Y se juntan tres cosas. Está cansada y no se
+      recupera, le cuestan cosas que antes hacía sola y ya no soporta un ruido
+      de siempre.
     imagen: ../../assets/escenas/burnout-autista-1.webp
 relacionados: [masking, shutdown, meltdown]
 fuentes: [raymaker-2020, phung-2021, ambitious-meltdowns-shutdowns, cook-2021]

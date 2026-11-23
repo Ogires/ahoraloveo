@@ -1,6 +1,6 @@
 # Escenas del día a día
 
-Una escena es una situación cotidiana corta que muestra un término del glosario sin nombrarlo. Sirve para que una familia reconozca a su hija o a su hijo antes de leer el nombre técnico. En la ficha van en el apartado «En el día a día»; más adelante, también en las tarjetas «¿Lo habéis visto?».
+Una escena es una situación cotidiana corta que muestra un término del glosario sin nombrarlo. Sirve para que una familia reconozca a su hija o a su hijo antes de leer el nombre técnico. En la ficha van en el apartado «En el día a día», y también en las tarjetas «¿Lo habéis visto?» (`/escenas/`). Cada una lleva una explicación corta, «Por qué es un ejemplo», para quien no la reconozca a la primera.
 
 ## Reglas
 
@@ -38,7 +38,25 @@ escenas:
       Viene de una mañana larga en el cole, y en la sala de espera se oye el torno
       sin parar. Deja de contestar a su padre, se queda muy quieta en la silla y
       mira al suelo. Cuando la llaman, tarda mucho en levantarse.
+    por_que: >
+      Tras una mañana larga, el ruido del torno puede terminar de desbordarla.
+      En vez de estallar, se apaga: deja de contestar y se queda quieta. No está
+      ignorando a su padre: puede que no consiga responder.
 ```
+
+## Por qué es un ejemplo
+
+La escena no nombra el término, y a veces no se reconoce a la primera. Por eso cada escena lleva una explicación corta (`por_que`). Sale en el reverso de la tarjeta, debajo de la definición, y en la ficha, en un desplegable cerrado bajo la escena: así no se le quita a nadie el ejercicio de reconocerla.
+
+1. **Obligatoria y corta.** Dos o tres frases, 40 palabras como mucho.
+2. **Señala lo que se ve.** Nombra los detalles concretos de la escena (la pregunta repetida, la camiseta que falta) y los une con lo que dice la ficha. Sin hablar en abstracto.
+3. **Solo lo que la ficha ya dice.** Sin datos ni fuentes nuevas, y sin rasgos de otras fichas.
+4. **Con «puede», sin diagnosticar.** «Puede costarle cambiar de plan», nunca «tiene problemas de flexibilidad» ni «es autista».
+5. **La diferencia con lo que se confunde**, si la ficha la explica y la escena la muestra: «no para aunque ya pueden ir al parque: una rabieta suele parar cuando se consigue lo que se quería».
+6. **Se lee suelta.** En la tarjeta no se ve la ficha: nada de «como dice la ficha». El término puede nombrarse, pero no hace falta, porque está justo encima.
+7. **Sin culpas ni etiquetas,** como la escena: nada de «se porta mal» ni «es un capricho» como explicación. Sí vale negarlo («no es un capricho») si la ficha lo dice en «No confundir con».
+
+Ejemplo, para la escena de la puerta de *Teoría de la mente*: «Se toma la pregunta al pie de la letra: contesta que sí puede. Pero su madre, con las manos llenas, quiere que abra. Cuando se lo pide claro, abre enseguida. Puede costarle deducir lo que el otro espera».
 
 ## Ejemplos
 
@@ -67,6 +85,7 @@ escenas:
 - [ ] Lo ve un adulto que está ahí, y ningún adulto explica la escena.
 - [ ] Sin culpas, burlas ni dramatismo, y sin «son nervios».
 - [ ] El final no repite el de otra escena, y el conjunto no dibuja siempre a la misma niña.
+- [ ] Lleva «Por qué es un ejemplo»: 40 palabras como mucho, con los detalles de la escena, solo lo que dice la ficha y con «puede».
 - [ ] Si lleva ilustración, cumple las normas de «Ilustraciones».
 - [ ] Revisada por una persona antes de publicarse.
 
@@ -91,5 +110,5 @@ Una escena puede llevar una ilustración: la niña o el niño, en dibujo sencill
 
 ## Lo que se comprueba solo
 
-- **El esquema** rechaza una escena sin edad o sin lugar, con una edad fuera de 0 a 12 años, con más de 60 palabras o con un protagonista que no sea `nina` o `nino`, y una ficha con más de tres escenas.
+- **El esquema** rechaza una escena sin edad o sin lugar, con una edad fuera de 0 a 12 años, con más de 60 palabras, sin «Por qué es un ejemplo» o con uno de más de 40, o con un protagonista que no sea `nina` o `nino`, y una ficha con más de tres escenas.
 - **Una prueba** (`npm test`) avisa cuando hay seis escenas o más y más de un tercio comparte edad o lugar, o ninguna tiene a un niño de protagonista.

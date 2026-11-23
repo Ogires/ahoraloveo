@@ -1,0 +1,84 @@
+termino: Pensamiento dicotómico
+en_ingles: dichotomous thinking
+alias: [pensamiento en blanco o negro, pensamiento de todo o nada, mente dicotómica]
+alias_en_ingles: [black-and-white thinking]
+familia: pensamiento
+que_es: >
+  El pensamiento dicotómico es la tendencia a ver las cosas en blanco o negro,
+  sin grises. Algo está bien o mal, y una persona es buena o mala. La psicóloga
+  Isabel Paula explica que muchas personas autistas piensan a partir de reglas
+  fijas, y que les cuesta hacer sitio a las excepciones. Una revisión de 2023 lo
+  cuenta como una de las caras de la rigidez, junto a la insistencia en que nada
+  cambie.
+como_se_ve: >
+  El catedrático de Biología Celular José Ramón Alonso y la psicóloga Irene
+  Alonso lo explican así. Una niña o un niño autista puede ver a todo el mundo
+  como bueno o malo. Las normas le dan una estructura cómoda, y las sigue al pie de la
+  letra. Por eso le desconciertan las excepciones del día a día, y le cuesta
+  entender que alguien cambie de opinión. Barry Prizant, especialista en autismo,
+  cuenta que muchos niños autistas entienden las reglas sociales en blanco o
+  negro. Hacen todo lo posible por acertar y, si creen que se han equivocado,
+  piden perdón enseguida. Aun así, se ha estudiado poco. Una revisión de 2023
+  señala que no parece haber estudios dedicados a ello en el autismo, aunque sale
+  a menudo en lo que cuentan las propias personas autistas. Dos estudios
+  japoneses, con más de 1.600 adultos sin diagnóstico, midieron los rasgos
+  autistas con cuestionarios. Quienes tenían más rasgos llevaban peor no saber
+  qué iba a pasar, y eso iba unido a pensar más en blanco o negro. Pero, por sí
+  solos, los rasgos autistas no iban unidos a pensar así: en un estudio no había
+  relación, y en el otro iba en sentido contrario.
+no_confundir_con: >
+  Con ser cabezota o desobediente. José Ramón e Irene Alonso explican que
+  romper una norma le causa desazón y ansiedad. Y Prizant cuenta que muchos niños
+  autistas destacan cumpliendo las normas del colegio, sobre todo cuando se las
+  explican y tienen sentido. Tampoco es algo solo del autismo: Isabel Paula
+  recuerda que también aparece en personas no autistas con ansiedad.
+en_ninas: >
+  Sin datos sobre niñas. Los dos estudios japoneses se hicieron con adultos y,
+  aunque la mitad eran mujeres, no comparan a mujeres y hombres. AETAPI, la
+  asociación española de profesionales del autismo, no habla del pensamiento
+  dicotómico como tal. Pero sí pide fijarse en las niñas y chicas a las que
+  cuesta mucho hacer cambiar de idea. También en las que reaccionan con mucha
+  intensidad ante injusticias que parecen poco graves, y en las que piden perdón
+  todo el tiempo.
+que_hacer: >
+  Explicadle las normas enteras, con sus excepciones y desde su punto de vista.
+  Prizant cuenta de un niño de 10 años que se enfadaba cuando levantaba la mano
+  y la profesora no le daba el turno. Le explicaron la norma completa: «si
+  levanto la mano, a veces la profesora me llamará, pero otras veces puede que dé
+  el turno a mis amigos». Después de practicarla unas semanas, lo había
+  entendido. Isabel Paula propone pensar juntos en un plan A, un plan B y un plan
+  C, y hacer lluvias de ideas: apuntar todas las opciones, aunque parezcan raras,
+  sin juzgarlas. Añade que las escalas para medir el malestar, como un termómetro
+  de las emociones, pueden reducir el pensamiento de todo o nada. AETAPI aconseja
+  ayudarla a pensar otras explicaciones de lo que pasa. Son consejos de
+  especialistas y entidades, no resultados de estudios.
+escenas:
+  - edad: 8 años
+    lugar: en el parque
+    protagonista: nina
+    texto: >
+      Merendando en un banco, cuenta que su mejor amiga hoy ha jugado en el
+      recreo con otras niñas. Dice que ya no es su amiga y que es mala. Su madre
+      le recuerda que ayer le dejó sus rotuladores nuevos. Ella contesta que eso
+      ya no cuenta.
+    por_que: >
+      Un solo recreo convierte a su mejor amiga en «mala», y lo bueno de antes
+      ya no cuenta. Puede costarle ver los grises: que una persona haga unas
+      cosas bien y otras no.
+    imagen: ../../assets/escenas/pensamiento-dicotomico-1.webp
+  - edad: 10 años
+    lugar: en el comedor de casa
+    protagonista: nino
+    texto: >
+      Le devuelven el dictado con dos faltas y un «Muy bien» de la profesora. Al
+      enseñárselo a su padre, dice que le ha salido mal. Su padre cuenta las
+      palabras: 18 bien de 20. Él cierra el cuaderno y contesta: «Si hay faltas,
+      está mal».
+    por_que: >
+      Lo dice él mismo: si hay faltas, está mal, aunque sean 2 de 20. Puede
+      costarle ver los puntos intermedios entre el todo y la nada, aunque la
+      profesora y su padre se los señalen.
+    imagen: ../../assets/escenas/pensamiento-dicotomico-2.webp
+relacionados: [rigidez-y-rutinas, funciones-ejecutivas, coherencia-central]
+fuentes: [paula-ansiedad-2015, alonso-autismo-2020, prizant-seres-humanos-unicos, petrolini-2023, suzuki-2023, shi-2024, aetapi-mujeres-tea]
+revisado: 2026-11-23

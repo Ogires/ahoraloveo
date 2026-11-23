@@ -41,6 +41,10 @@ escenas:
       Al terminar la revisión, la pediatra le enseña las pegatinas y le pregunta
       si quiere una. Ella señala la roja y contesta: «¿Quieres una pegatina?». En
       cuanto se la dan, se la pega en la camiseta.
+    por_que: >
+      Repite la pregunta en vez de contestar «sí». Pero señala la pegatina roja
+      y se la pone en cuanto se la dan: repetir puede ser su forma de decir que
+      sí. No es hablar sin sentido.
     imagen: ../../assets/escenas/ecolalia-1.webp
   - edad: 6 años
     lugar: en el baño de casa
@@ -48,7 +52,11 @@ escenas:
     texto: >
       Antes de meterse en la bañera repite en voz baja «agua calentita, agua
       calentita», con la voz de la presentadora de su programa favorito. Lo hace
-      siempre que algo le da un poco de miedo.
+      siempre que algo le pone nervioso.
+    por_que: >
+      Repite una frase oída en su programa favorito, con la voz de la
+      presentadora, siempre que algo le pone nervioso. Repetirla puede servirle
+      para calmarse: no es repetir sin más.
     imagen: ../../assets/escenas/ecolalia-2.webp
 relacionados: [estereotipias, masking]
 fuentes: [escap-2021, prizant-seres-humanos-unicos, aetapi-mujeres-tea]

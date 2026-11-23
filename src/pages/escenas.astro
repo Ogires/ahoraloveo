@@ -61,6 +61,8 @@ const terminosDe = (ids: { id: string }[]) => ids.map((r) => porId.get(r.id)!);
                 <p>Detrás puede haber:</p>
                 <p class="termino" tabindex="-1" data-nombre><NombreTermino datos={tarjeta.termino.data} /></p>
                 <p>{primeraFrase(tarjeta.termino.data.que_es)}</p>
+                {/* Cómo muestra la escena el término, para quien no la ha reconocido a la primera. */}
+                <p class="por-que"><strong>Por qué es un ejemplo:</strong> {tarjeta.escena.por_que}</p>
                 <p>
                   <a href={`/glosario/${tarjeta.termino.id}/`}>Leer la ficha<span class="visualmente-oculto"> de <span lang={tituloEnIngles(tarjeta.termino.data) ? 'en' : undefined}>{tarjeta.termino.data.termino}</span></span></a>
                 </p>
@@ -229,6 +231,7 @@ const terminosDe = (ids: { id: string }[]) => ids.map((r) => porId.get(r.id)!);
   .detras[open] .reverso { animation: fundido 0.2s ease-out; }
   @keyframes fundido { from { opacity: 0; } to { opacity: 1; } }
   .termino { font-size: 1.5rem; font-weight: 600; line-height: 1.25; }
+  .por-que { align-self: stretch; border-top: 1.5px solid var(--linea); padding-top: 0.75rem; margin-top: 0.25rem; }
 
   .marcar, .borrar {
     display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px; padding: 0.5rem 1.25rem;

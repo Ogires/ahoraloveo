@@ -43,6 +43,10 @@ escenas:
       Sale al patio en manga corta en pleno enero y no parece tener frío. Se cae
       del tobogán, se levanta sin quejarse y sigue jugando, aunque le sangra la
       rodilla.
+    por_que: >
+      No parece sentir el frío de enero ni el golpe, aunque le sangra la
+      rodilla. Puede que algunas sensaciones casi no le lleguen. Aunque no se
+      queje, conviene mirarle la herida.
     imagen: ../../assets/escenas/hiper-e-hiposensibilidad-1.webp
   - edad: 10 años
     lugar: en una tienda de ropa
@@ -51,6 +55,10 @@ escenas:
       En la tienda va pasando la mano por todos los abrigos y se acerca las
       prendas a la cara para olerlas. De pronto suena un aviso por megafonía: se
       tapa los oídos con fuerza y dice que le duele.
+    por_que: >
+      En la misma tienda toca y huele toda la ropa, y un aviso por megafonía le
+      duele. Puede que busque unas sensaciones y que otras le lleguen con
+      demasiada fuerza. No es exagerar: puede dolerle de verdad.
     imagen: ../../assets/escenas/hiper-e-hiposensibilidad-2.webp
 relacionados: [meltdown, estereotipias, interocepcion]
 fuentes: [nas-crisis, escap-2021, aetapi-mujeres-tea, hull-2017, paula-ansiedad-2015, prizant-seres-humanos-unicos]

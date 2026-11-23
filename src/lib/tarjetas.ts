@@ -33,6 +33,7 @@ export const ORDEN_ESCENAS = [
   'intereses-especiales-1', // pensamiento · 7 años · en el coche
   'elegir-desconexion-o-no-hace-caso-1', // emociones · 7 años · en una zapatería
   'teoria-de-la-mente-1', // social · 5 años · en casa
+  'pensamiento-dicotomico-1', // pensamiento · 8 años · en el parque
   'meltdown-2', // emociones · 9 años · en el comedor del cole
   'atencion-conjunta-2', // social · 4 años · en la playa
   'coherencia-central-3', // pensamiento · 3 años · en la escuela infantil
@@ -40,6 +41,7 @@ export const ORDEN_ESCENAS = [
   'elegir-le-da-igual-o-no-sabe-que-siente-1', // emociones · 9 años · en la cocina
   'funciones-ejecutivas-2', // pensamiento · 9 años · en su cuarto
   'ecolalia-2', // social · 6 años · en el baño de casa
+  'pensamiento-dicotomico-2', // pensamiento · 10 años · en el comedor de casa
   'burnout-autista-1', // emociones · 12 años · en casa
   'elegir-camuflaje-o-timidez-1', // social · 8 años · en su primera clase de teatro
   'coherencia-central-2', // pensamiento · 10 años · en clase

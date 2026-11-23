@@ -1,0 +1,17 @@
+titulo: 'Autistic traits associated with dichotomic thinking mediated by intolerance of uncertainty'
+autoria: N. Suzuki y M. Hirai
+anio: 2023
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10462756/
+doi: 10.1038/s41598-023-41164-8
+licencia: CC BY 4.0
+comprobado: 2026-11-23
+temas: [pensamiento-dicotomico]
+estudio:
+  diseno: Encuesta con cuestionarios (rasgos autistas, intolerancia a la incertidumbre y pensamiento dicotómico) a población general de Japón, sin personas autistas
+  muestra: 651 # 151 en el estudio piloto y 500 en el principal
+  edades: Adultos de 18 a 27 años
+  porcentaje_ninas: 50.4 # 78 + 250 mujeres de 651
+  resultados_por_sexo: false

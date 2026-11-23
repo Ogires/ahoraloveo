@@ -42,6 +42,10 @@ escenas:
       pregunta una y otra vez cuándo van a salir, cada vez más alto, hasta que se
       tira al suelo, grita y da patadas. Al rato escampa y le dicen que ya pueden
       ir, pero no consigue parar.
+    por_que: >
+      Un cambio de planes puede desbordarla. Antes hay un aviso: repite la misma
+      pregunta, cada vez más alto. Y no para aunque ya pueden ir al parque: una
+      rabieta suele parar cuando se consigue lo que se quería.
     imagen: ../../assets/escenas/meltdown-1.webp
   - edad: 9 años
     lugar: en el comedor del cole
@@ -50,6 +54,10 @@ escenas:
       El comedor está lleno y hay mucho ruido. Antes de acabar el primer plato se
       levanta, va de un lado a otro de la fila y empieza a balancearse. Cuando un
       monitor le pide que se siente, da un golpe en la mesa y se pone a gritar.
+    por_que: >
+      El ruido del comedor lleno puede llegar a desbordarlo. Antes hay avisos:
+      va de un lado a otro y se balancea. El golpe y los gritos de después no
+      son mala conducta ni algo que elija.
     imagen: ../../assets/escenas/meltdown-2.webp
 relacionados: [masking, shutdown, burnout-autista]
 fuentes: [nas-crisis, paula-ansiedad-2015, aetapi-mujeres-tea]

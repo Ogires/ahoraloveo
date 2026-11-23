@@ -106,6 +106,15 @@ const otrosNombres = [
               )}
               <p class="edad-lugar">{e.edad} · {e.lugar}</p>
               <p>{e.texto}</p>
+              {/* Cerrado, para no quitar a nadie el ejercicio de reconocerla; abierto, explica cómo muestra el término. */}
+              <details class="por-que">
+                <summary>
+                  Por qué es un ejemplo
+                  <svg class="flecha" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                </summary>
+                <p>{e.por_que}</p>
+              </details>
             </li>
           ))}
         </ul>
@@ -177,6 +186,17 @@ const otrosNombres = [
   .escena { background: var(--superficie); border-radius: 20px; padding: 1rem 1.25rem; display: flex; flex-direction: column; gap: 0.375rem; }
   .no-confundir :global(.elegir) { background: var(--superficie); border-radius: 20px; padding: 1rem 1.25rem; margin-top: 0.5rem; }
   .edad-lugar { font-size: 0.9375rem; font-weight: 500; color: var(--tinta-suave); }
+  .por-que summary {
+    display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px;
+    color: var(--acento); font-weight: 500; cursor: pointer; list-style: none;
+  }
+  .por-que summary::-webkit-details-marker { display: none; }
+  .flecha { flex: none; transition: transform 0.2s ease-out; }
+  .por-que[open] .flecha { transform: rotate(180deg); }
+  .por-que p {
+    margin-bottom: 0.25rem; padding: 0.875rem 1.125rem;
+    border-left: 4px solid var(--familia, var(--acento)); background: var(--fondo); border-radius: 0 14px 14px 0;
+  }
   .programas { display: flex; flex-direction: column; gap: 0.5rem; padding-left: 1.5rem; }
   .peso, .aviso-programas { color: var(--tinta-suave); }
   .tramo { font-size: 1.125rem; }

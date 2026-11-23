@@ -4,8 +4,9 @@ alias: [mentalización, cognición social]
 familia: social
 que_es: >
   La teoría de la mente es la capacidad de darse cuenta de lo que otras
-  personas piensan, saben, sienten o quieren, aunque no lo digan. José Ramón
-  Alonso lo explica así: en el trato con los demás, «leemos» su comportamiento.
+  personas piensan, saben, sienten o quieren, aunque no lo digan. El catedrático
+  de Biología Celular José Ramón Alonso y la psicóloga Irene Alonso lo explican
+  así: en el trato con los demás, «leemos» su comportamiento.
   Por sus gestos, su cara o su tono de voz, deducimos lo que saben y lo que
   esperan. Durante años se ha dicho que a las personas autistas les falta. Hoy esa
   idea se discute.
@@ -34,8 +35,8 @@ en_ninas: >
   entienden lo que sienten los demás, pero les cuesta reaccionar de forma
   espontánea, por ejemplo, consolar a alguien.
 que_hacer: >
-  Dadle instrucciones exactas y completas. Alonso aconseja decir también lo que
-  esperáis después: no solo «mira si tu hermano está en la ducha», sino «y
+  Dadle instrucciones exactas y completas. José Ramón e Irene Alonso aconsejan
+  decir también lo que esperáis después: no solo «mira si tu hermano está en la ducha», sino «y
   luego ven a decírmelo». Tened cuidado con las bromas. Explicadle las normas
   que los demás dan por sabidas, sin esperar que las capte sola. AETAPI propone
   ayudarla a pensar otras explicaciones de lo que hacen los demás. Y recordad
@@ -49,6 +50,10 @@ escenas:
       Su madre llega con las manos llenas de bolsas y le pregunta: «¿Puedes
       abrir la puerta?». Ella contesta «sí» y sigue jugando. Cuando su madre le
       dice «ábrela, por favor», se levanta enseguida a abrirla.
+    por_que: >
+      Se toma la pregunta al pie de la letra: contesta que sí puede. Pero su
+      madre, con las manos llenas, quiere que abra. Cuando se lo pide claro,
+      abre enseguida. Puede costarle deducir lo que el otro espera.
     imagen: ../../assets/escenas/teoria-de-la-mente-1.webp
   - edad: 11 años
     lugar: en el parque
@@ -56,8 +61,13 @@ escenas:
     texto: >
       Un amigo le cuenta, muy serio, que su perro se ha perdido. Él le explica
       por qué calles del barrio suelen aparecer los perros y cuántos días
-      tardan. Al día siguiente, lo primero que le pregunta es si ya ha vuelto.
+      tardan. Su amigo se queda callado, mirando al suelo, y él sigue con los
+      datos. Al día siguiente, lo primero que le pregunta es si ya ha vuelto.
+    por_que: >
+      Su amigo muestra sin palabras que está triste: se calla y mira al suelo.
+      Puede costarle leer esas señales, y sigue con los datos. Pero al día
+      siguiente pregunta por el perro: no es que no quiera a su amigo.
     imagen: ../../assets/escenas/teoria-de-la-mente-2.webp
 relacionados: [doble-empatia, alexitimia]
 fuentes: [velikonja-2019, gernsbacher-2019, crompton-2020, alonso-autismo-2020, prizant-seres-humanos-unicos, aetapi-mujeres-tea]
-revisado: 2026-11-17
+revisado: 2026-11-23

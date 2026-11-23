@@ -39,6 +39,10 @@ escenas:
       Vuelven de un partido que su equipo ha perdido. Su padre le pregunta si está
       triste o enfadado, y él se encoge de hombros: «Normal». Un rato después
       pregunta, muy serio, cómo se sabe que uno está enfadado.
+    por_que: >
+      Contesta «Normal» y luego pregunta cómo se sabe que uno está enfadado.
+      Puede que no sepa qué siente. No es que no sienta nada: puede costarle
+      reconocerlo y ponerle nombre.
     imagen: ../../assets/escenas/alexitimia-1.webp
 relacionados: [interocepcion]
 fuentes: [kinnaird-2019]

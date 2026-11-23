@@ -41,6 +41,10 @@ escenas:
       En el coche, de camino al cumpleaños, repasa en voz baja lo que va a decir
       al dar el regalo. En la fiesta no se separa de su mejor amiga: espera a ver
       qué contesta ella y luego dice lo mismo.
+    por_que: >
+      Prepara de antemano lo que va a decir y copia las respuestas de su amiga.
+      Desde fuera puede parecer timidez. Por dentro, estas estrategias pueden
+      suponerle mucho esfuerzo.
     imagen: ../../assets/escenas/masking-1.webp
 relacionados: [meltdown, estereotipias, burnout-autista, presentacion-femenina]
 fuentes: [cook-2021, hull-2017, aetapi-mujeres-tea]

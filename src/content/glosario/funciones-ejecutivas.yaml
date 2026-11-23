@@ -41,9 +41,9 @@ que_hacer: >
   verdad, y después fotos, dibujos o palabras escritas. También ayuda dividir
   las tareas en pasos, dar una sola instrucción cada vez y guardar sus cosas
   siempre en el mismo sitio. Antes de un cambio, avisad, contad hacia atrás y
-  decidle qué sigue igual. Tener pensado un plan B ayuda cuando algo falla, y
-  José Ramón Alonso recomienda frases como «primero te pones los zapatos y
-  luego salimos». Usad los mismos apoyos en casa y en el colegio. Son consejos
+  decidle qué sigue igual. Tener pensado un plan B ayuda cuando algo falla. El
+  catedrático de Biología Celular José Ramón Alonso y la psicóloga Irene Alonso
+  recomiendan frases como «primero te pones los zapatos y luego salimos». Usad los mismos apoyos en casa y en el colegio. Son consejos
   de entidades y especialistas, no resultados de estudios.
 escenas:
   - edad: 4 años
@@ -53,6 +53,10 @@ escenas:
       Cada mañana se viste con la ropa que su padre le deja en la silla. Hoy la
       camiseta de siempre está en la lavadora, y se queda parada con el pantalón
       puesto, mirando la silla. Cuando su padre le da otra, termina de vestirse.
+    por_que: >
+      Falta la camiseta de siempre y se queda parada, aunque sabe vestirse. En
+      cuanto su padre le da otra, sigue. Puede costarle cambiar de plan cuando
+      algo no sale: no es pereza ni desobediencia.
     imagen: ../../assets/escenas/funciones-ejecutivas-1.webp
   - edad: 9 años
     lugar: en su cuarto
@@ -61,7 +65,11 @@ escenas:
       Prepara la mochila para la excursión con la lista delante. Mete la
       cantimplora y va a buscar la gorra. Al volver, se queda mirando la
       mochila, lo saca todo y empieza otra vez por la cantimplora.
+    por_que: >
+      Tiene la lista delante, pero al volver con la gorra se pierde y empieza
+      otra vez por la cantimplora. Puede costarle tener en la cabeza lo que está
+      haciendo, sobre todo en tareas de varios pasos.
     imagen: ../../assets/escenas/funciones-ejecutivas-2.webp
 relacionados: [meltdown, rigidez-y-rutinas]
 fuentes: [demetriou-2018, white-2017, alonso-autismo-2020, paula-ansiedad-2015, prizant-seres-humanos-unicos, nas-crisis, nas-organising, nas-preference, nas-pupils, autismo-cyl-profesores, aetapi-mujeres-tea]
-revisado: 2026-11-20
+revisado: 2026-11-23

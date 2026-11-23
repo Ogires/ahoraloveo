@@ -52,6 +52,10 @@ escenas:
       De camino a casa de sus abuelos, va diciendo el número de cada autobús que
       se cruzan y adónde va. Se sabe los horarios de memoria, y cuando pasa uno
       tarde, avisa de cuántos minutos lleva de retraso.
+    por_que: >
+      Se sabe el número, el destino y el horario de cada autobús. Lo que
+      distingue un interés así de una afición no es el tema, sino la intensidad.
+      Y dedicarle tiempo puede hacerle disfrutar y calmarse.
     imagen: ../../assets/escenas/intereses-especiales-1.webp
   - edad: 8 años
     lugar: a la salida del cole
@@ -61,6 +65,10 @@ escenas:
       que les gusta a todas. Ella se sabe las fechas de sus giras, el nombre de
       cada músico y todas las letras, y lo cuenta todo seguido. Las otras ya
       hablan de otra cosa y ella sigue.
+    por_que: >
+      Le gusta la misma cantante que a sus compañeras, pero se sabe giras,
+      músicos y letras, y sigue cuando ellas ya hablan de otra cosa. En una
+      niña, si solo se mira el tema, esa intensidad puede pasar desapercibida.
     imagen: ../../assets/escenas/intereses-especiales-2.webp
 relacionados: [estereotipias, masking]
 fuentes: [nas-intereses, escap-2021, aetapi-mujeres-tea, brown-2024, spark-intereses-2025, prizant-seres-humanos-unicos, paula-ansiedad-2015]

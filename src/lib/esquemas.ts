@@ -120,6 +120,9 @@ export const crearEsquemaEscena = <I extends z.ZodType>(imagen: I) =>
     lugar: texto(),
     protagonista: z.enum(['nina', 'nino']),
     texto: texto().refine((t) => contarPalabras(t) <= 60, 'Una escena tiene 60 palabras como mucho'),
+    // «Por qué es un ejemplo»: señala lo que se ve en la escena y lo une con la ficha. Sale en el reverso
+    // de la tarjeta y en un desplegable bajo la escena, para quien no la reconozca a la primera.
+    por_que: texto().refine((t) => contarPalabras(t) <= 40, '«Por qué es un ejemplo» tiene 40 palabras como mucho'),
     imagen: imagen.optional(),
   });
 

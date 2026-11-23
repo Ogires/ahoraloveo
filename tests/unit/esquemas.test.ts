@@ -111,7 +111,13 @@ describe('esquema del glosario', () => {
     expect(valido(esquemaTermino, { ...termino, en_ingles: 'meltdown' })).toBe(false);
   });
 
-  const escena = { edad: '4 años', lugar: 'en una fiesta de cumpleaños', protagonista: 'nina', texto: 'Se aparta a un rincón.' };
+  const escena = {
+    edad: '4 años',
+    lugar: 'en una fiesta de cumpleaños',
+    protagonista: 'nina',
+    texto: 'Se aparta a un rincón.',
+    por_que: 'Puede que el ruido de la fiesta la desborde.',
+  };
 
   it('acepta de una a tres escenas, y ninguna', () => {
     expect(valido(esquemaTermino, { ...termino, escenas: [escena] })).toBe(true);
@@ -134,12 +140,20 @@ describe('esquema del glosario', () => {
     expect(valido(esquemaTermino, { ...termino, escenas: [{ ...escena, protagonista: 'nena' }] })).toBe(false);
   });
 
+  // El reverso de la tarjeta y el desplegable de la ficha explican cómo la escena muestra el término.
+  it('rechaza una escena sin «Por qué es un ejemplo» o con uno de más de 40 palabras', () => {
+    const { por_que: _, ...sinPorQue } = escena;
+    expect(valido(esquemaTermino, { ...termino, escenas: [sinPorQue] })).toBe(false);
+    expect(valido(esquemaTermino, { ...termino, escenas: [{ ...escena, por_que: 'palabra '.repeat(41) }] })).toBe(false);
+    expect(valido(esquemaTermino, { ...termino, escenas: [{ ...escena, por_que: 'palabra '.repeat(40) }] })).toBe(true);
+  });
+
   it('rechaza una familia que no existe', () => {
     expect(valido(esquemaTermino, { ...termino, familia: 'cognitivo' })).toBe(false);
   });
 
   it('una escena puede llevar ilustración, o no llevarla', () => {
-    const escena = { edad: '6 años', lugar: 'en la terraza de un bar', protagonista: 'nina', texto: 'Se balancea.' };
+    const escena = { edad: '6 años', lugar: 'en la terraza de un bar', protagonista: 'nina', texto: 'Se balancea.', por_que: 'Le calma.' };
     const conImagen = { ...escena, imagen: '../../assets/escenas/estereotipias-3.webp' };
     const r = esquemaTermino.parse({ ...termino, escenas: [escena, conImagen] });
     expect(r.escenas[0].imagen).toBeUndefined();
