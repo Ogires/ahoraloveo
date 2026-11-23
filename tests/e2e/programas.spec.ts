@@ -1,5 +1,13 @@
 import { expect, test } from '@playwright/test';
 
+test('el menú lleva a los programas', async ({ page }) => {
+  await page.goto('/');
+  const menu = page.getByRole('navigation', { name: 'Principal' });
+  await menu.getByRole('link', { name: 'Programas', exact: true }).click();
+  await expect(page).toHaveURL(/\/programas\/$/);
+  await expect(menu.getByRole('link', { name: 'Programas', exact: true })).toHaveAttribute('aria-current', 'page');
+});
+
 test('la página de un programa muestra su carta de datos y sus apartados', async ({ page }) => {
   await page.goto('/programas/unstuck-and-on-target/');
   await expect(page.getByRole('heading', { level: 1 })).not.toBeEmpty();
