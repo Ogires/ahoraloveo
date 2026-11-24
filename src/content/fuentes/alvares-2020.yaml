@@ -1,0 +1,16 @@
+titulo: 'The misnomer of ''high functioning autism'': Intelligence is an imprecise predictor of functional abilities at diagnosis'
+autoria: Gail A. Alvares, Keely Bebbington, Dominique Cleary y otros
+anio: 2020
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/31215791/
+doi: 10.1177/1362361319852831
+comprobado: 2026-11-24
+temas: [diagnostico, discapacidad-intelectual]
+estudio:
+  diseno: Registro de diagnósticos en Australia Occidental; compara el cociente intelectual con la conducta adaptativa (Vineland)
+  muestra: 2225
+  edades: De 1 a 18 años
+  porcentaje_ninas: null # el resumen no lo da; dice que se controló por sexo
+  resultados_por_sexo: false
