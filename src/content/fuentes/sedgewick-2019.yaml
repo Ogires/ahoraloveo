@@ -1,0 +1,16 @@
+titulo: '''It''s different for girls'': Gender differences in the friendships and conflict of autistic and neurotypical adolescents'
+autoria: Felicity Sedgewick, Vivian Hill y Elizabeth Pellicano
+anio: 2019
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/30280923/
+doi: 10.1177/1362361318794930
+comprobado: 2026-11-24
+temas: [genero, amistad]
+estudio:
+  diseno: Cuestionarios y entrevistas sobre amistades y conflictos
+  muestra: 102 # 27 chicas y 26 chicos autistas, y 49 sin autismo
+  edades: De 11 a 18 años
+  porcentaje_ninas: 52 # 53 chicas de 102
+  resultados_por_sexo: true

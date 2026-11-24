@@ -1,0 +1,16 @@
+titulo: 'Brief Report: Gender Differences in Experiences of Peer Victimization Among Adolescents with Autism Spectrum Disorder'
+autoria: Jessica L. Greenlee, Marcia A. Winter e Isabella A. Marcovici
+anio: 2020
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7483866/
+doi: 10.1007/s10803-020-04437-z
+comprobado: 2026-11-24
+temas: [genero, acoso]
+estudio:
+  diseno: Cuestionarios a adolescentes autistas y sus familias, en un solo momento (Estados Unidos)
+  muestra: 105
+  edades: De 13 a 17 años
+  porcentaje_ninas: 48 # 50 chicas de 105
+  resultados_por_sexo: true
