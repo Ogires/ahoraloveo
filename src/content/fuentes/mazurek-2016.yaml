@@ -1,0 +1,16 @@
+titulo: 'Bedtime Electronic Media Use and Sleep in Children with Autism Spectrum Disorder'
+autoria: M. O. Mazurek, C. R. Engelhardt, J. Hilgard y otros
+anio: 2016
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/27355885/
+doi: 10.1097/DBP.0000000000000314
+comprobado: 2026-11-24
+temas: [pantallas, sueno]
+estudio:
+  diseno: Cuestionarios a las familias sobre pantallas y sueño
+  muestra: 101
+  edades: Niñas y niños autistas # el resumen no da las edades
+  porcentaje_ninas: null # el resumen no lo da
+  resultados_por_sexo: false

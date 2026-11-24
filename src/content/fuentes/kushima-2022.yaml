@@ -1,0 +1,17 @@
+titulo: 'Association Between Screen Time Exposure in Children at 1 Year of Age and Autism Spectrum Disorder at 3 Years of Age: The Japan Environment and Children''s Study'
+autoria: Megumi Kushima, Reiji Kojima, Ryoji Shinohara y otros
+anio: 2022
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8804971/
+doi: 10.1001/jamapediatrics.2021.5778
+licencia: CC BY 4.0
+comprobado: 2026-11-24
+temas: [pantallas]
+estudio:
+  diseno: Cohorte de nacimiento en Japón; pantallas al año y diagnóstico de autismo a los 3 años
+  muestra: 84030 # 330 con autismo a los 3 años, 79 de ellas niñas
+  edades: De 1 a 3 años
+  porcentaje_ninas: null # el artículo no da el porcentaje del total
+  resultados_por_sexo: true

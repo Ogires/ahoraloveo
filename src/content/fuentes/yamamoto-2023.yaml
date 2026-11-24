@@ -1,0 +1,17 @@
+titulo: 'Screen Time and Developmental Performance Among Children at 1-3 Years of Age in the Japan Environment and Children''s Study'
+autoria: Midori Yamamoto, Hidetoshi Mezawa, Kenichi Sakurai y otros
+anio: 2023
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10507594/
+doi: 10.1001/jamapediatrics.2023.3643
+licencia: CC BY 4.0
+comprobado: 2026-11-24
+temas: [pantallas]
+estudio:
+  diseno: Cohorte de nacimiento en Japón, sin niñas ni niños autistas; pantallas y desarrollo en los dos sentidos
+  muestra: 57980
+  edades: De 1 a 3 años
+  porcentaje_ninas: 49 # 50,7 % eran niños
+  resultados_por_sexo: true

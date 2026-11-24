@@ -1,0 +1,18 @@
+# Carta de investigación (Research Letter). No confundir con lin-2025, de otro tema.
+titulo: 'Screen Time Before 2 Years of Age and Risk of Autism at 12 Years of Age'
+autoria: Ping-I Lin, Weng Tong Wu y Yue-Liang Leon Guo
+anio: 2025
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11536305/
+doi: 10.1001/jamapediatrics.2024.4432
+licencia: CC BY 4.0
+comprobado: 2026-11-24
+temas: [pantallas]
+estudio:
+  diseno: Cohorte de nacimiento en Australia; pantallas a los 2 años y autismo referido por la familia a los 12
+  muestra: 5107
+  edades: De 2 a 12 años
+  porcentaje_ninas: null # la carta no lo da
+  resultados_por_sexo: false
