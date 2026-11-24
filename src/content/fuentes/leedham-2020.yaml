@@ -1,0 +1,16 @@
+titulo: '''I was exhausted trying to figure it out'': The experiences of females receiving an autism diagnosis in middle to late adulthood'
+autoria: Alexandra Leedham, Andrew R. Thompson, Richard Smith y Megan Freeth
+anio: 2020
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/31144507/
+doi: 10.1177/1362361319853442
+comprobado: 2026-11-24
+temas: [genero, diagnostico]
+estudio:
+  diseno: Entrevistas a mujeres diagnosticadas pasados los 40 años, con análisis cualitativo
+  muestra: 11
+  edades: Mujeres diagnosticadas después de los 40 años
+  porcentaje_ninas: 100 # todas mujeres
+  resultados_por_sexo: false
