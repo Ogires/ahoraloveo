@@ -1,0 +1,16 @@
+titulo: 'The impact of bilingual environments on language development in children with autism spectrum disorders'
+autoria: Catherine Hambly y Eric Fombonne
+anio: 2012
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/21938563/
+doi: 10.1007/s10803-011-1365-z
+comprobado: 2026-11-24
+temas: [bilinguismo, lenguaje]
+estudio:
+  diseno: Compara el lenguaje de niñas y niños autistas que oyen uno o dos idiomas (Canadá)
+  muestra: 75 # 45 con dos idiomas y 30 con uno
+  edades: De media, 56 meses
+  porcentaje_ninas: null # el resumen no lo da
+  resultados_por_sexo: false
