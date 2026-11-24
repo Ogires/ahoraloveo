@@ -1,0 +1,17 @@
+titulo: 'Prevalence and Characteristics of Autism Spectrum Disorder Among Children Aged 8 Years — Autism and Developmental Disabilities Monitoring Network, 11 Sites, United States, 2020'
+autoria: Matthew J. Maenner, Zachary Warren, Ashley Robinson Williams y otros (CDC)
+anio: 2023
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10042614/
+doi: 10.15585/mmwr.ss7202a1
+licencia: Dominio público
+comprobado: 2026-11-24
+temas: [discapacidad-intelectual, prevalencia, diagnostico]
+estudio:
+  diseno: Vigilancia en 11 zonas de Estados Unidos, a partir de historias clínicas y escolares
+  muestra: 6245 # niñas y niños autistas de 8 años; 4.165 con datos de capacidad intelectual
+  edades: 8 años
+  porcentaje_ninas: 21 # a partir de la razón de 3,8 chicos por cada chica
+  resultados_por_sexo: true
