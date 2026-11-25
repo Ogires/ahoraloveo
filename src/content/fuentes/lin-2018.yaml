@@ -1,0 +1,16 @@
+titulo: 'Treatment for Higher-Order Restricted Repetitive Behaviors (H-RRB) in Children with Autism Spectrum Disorder'
+autoria: C. E. Lin y R. Koegel
+anio: 2018
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/29926293/
+doi: 10.1007/s10803-018-3637-3
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Diseño de caso único con línea base múltiple - automanejo y principios del tratamiento de respuesta fundamental para conductas repetitivas de orden superior
+  muestra: 3
+  edades: Niñas y niños pequeños (el resumen no da la edad)
+  porcentaje_ninas: null # El resumen no da el sexo. Solo el resumen
+  resultados_por_sexo: false

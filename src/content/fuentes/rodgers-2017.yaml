@@ -1,0 +1,16 @@
+titulo: 'Towards a Treatment for Intolerance of Uncertainty in Young People with Autism Spectrum Disorder: Development of the Coping with Uncertainty in Everyday Situations (CUES©) Programme'
+autoria: J. Rodgers, A. Hodgson, K. Shields y otros
+anio: 2017
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5676830/
+doi: 10.1007/s10803-016-2924-0
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Piloto antes y después de CUES, un programa de 8 sesiones para familias sobre la intolerancia a la incertidumbre, sin grupo de comparación
+  muestra: 11
+  edades: De 8 a 15 años y 11 meses
+  porcentaje_ninas: 27 # 3 niñas de 11 que terminaron: 4 niños de 6 y 4 de 5 (l. 32), un dato derivado y no publicado. El texto dice que el programa se dio a 14 familias y el resumen, a 11
+  resultados_por_sexo: false

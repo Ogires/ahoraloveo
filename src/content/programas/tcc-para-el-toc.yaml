@@ -1,0 +1,51 @@
+nombre: Terapia cognitivo-conductual adaptada para el TOC
+en_ingles: CBT with exposure and response prevention
+para_que: Para cuando, además del autismo, hay un trastorno obsesivo-compulsivo (TOC), con rituales que le angustian y no puede parar.
+edades: De 7 a 13 años en el único ensayo con menores. Los demás estudios son sobre todo con adolescentes y personas adultas.
+edad_desde: 7
+edad_hasta: 13
+quien: Profesionales de la psicología con formación en terapia cognitivo-conductual, contando con la familia.
+formato: En consulta, adaptada al autismo con la familia, apoyos visuales y sus intereses.
+duracion: Nueve semanas en el ensayo con menores.
+en_espana: Sin datos sobre su uso en España con niñas y niños autistas, ni estudios con niñas y niños españoles.
+peso: ensayo
+que_es: >
+  La terapia cognitivo-conductual (TCC) con exposición es el tratamiento psicológico más asentado para el
+  TOC en la población general. Para niñas y niños autistas se adapta: participa la familia y se usan
+  apoyos visuales, sus intereses y metáforas pensadas para ella. Antes hay que distinguir. La guía ESCAP
+  explica que los rituales del autismo suelen dar confort, alivio o disfrute, y no angustia. Por eso, esta
+  terapia se plantea para el TOC que acompaña al autismo.
+como_es: >
+  Tiene varias partes. Primero se explica qué es el TOC. Después se hace una escalera de situaciones que le
+  dan miedo, de la más fácil a la más difícil. Paso a paso, se enfrenta a cada una sin hacer el ritual.
+  Por ejemplo, tocar algo que cree sucio y esperar un rato antes de lavarse las manos. También aprende a
+  responder a los pensamientos que la asustan y a prevenir recaídas. En una versión, además, se averigua
+  para qué le sirve cada conducta y se forma a la familia.
+que_encontraron: >
+  Un ensayo de 2020 con 37 niñas y niños de 7 a 13 años, sin discapacidad intelectual, comparó nueve
+  semanas de una TCC adaptada con la atención habitual. Encontró mejoras grandes en las dos medidas
+  principales, valoradas por personas ajenas al tratamiento. De este ensayo solo hemos podido leer el
+  resumen. Otro ensayo, con 46 adolescentes y personas adultas, no encontró una diferencia clara frente a
+  un programa para manejar la ansiedad, aunque con la TCC mejoraron más personas: el 45 %, frente al 20 %.
+  Una revisión Cochrane de 2021 solo encontró ese ensayo y concluyó que las pruebas son limitadas. Otra
+  revisión, de 2018, con 11 estudios, vio buenos resultados en todos, pero casi ninguno tenía grupo de
+  comparación.
+en_ninas: >
+  Sin datos sobre niñas de 0 a 12 años. El resumen del ensayo con menores no dice cuántas había. En la
+  revisión de 2018 había 60 mujeres y chicas de 170 participantes, contando a personas adultas. De los
+  estudios de un solo caso, solo uno incluía a una chica, y a ella le volvieron los síntomas del TOC. Nadie miró
+  los resultados por sexo.
+limitaciones: >
+  Hay pocos estudios, pequeños, y casi todos con adolescentes o personas adultas. El ensayo con menores
+  solo incluyó a quienes no tenían discapacidad intelectual. En el ensayo con adultos, cuanto más adaptaba
+  la familia su día a día a los rituales, peores eran los resultados. Con rituales propios del autismo,
+  sin TOC, solo se ha probado en casos sueltos: un chico de 14 años y cinco niños con discapacidad
+  intelectual. En ellos se bloqueaba el ritual con una ligera redirección física, o se le pedía que lo
+  parase. La guía NICE remite a su guía del TOC para el TOC que acompaña al autismo.
+que_preguntar:
+  - ¿Estos rituales la calman, o le angustian y no puede pararlos?
+  - ¿Podría haber un TOC además del autismo? ¿Quién lo valora?
+  - ¿La terapia está adaptada al autismo y cuenta con la familia?
+relacionados: [rigidez-y-rutinas, comorbilidad]
+fuentes: [vause-2020, russell-2013, elliott-2021, kose-2018, boyd-2011b, boyd-2013, escap-2021, nice-cg170]
+revisado: 2026-11-25

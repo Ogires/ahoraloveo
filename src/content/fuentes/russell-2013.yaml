@@ -1,0 +1,16 @@
+titulo: 'Cognitive behavior therapy for comorbid obsessive-compulsive disorder in high-functioning autism spectrum disorders: a randomized controlled trial'
+autoria: A. J. Russell, A. Jassi, M. A. Fullana y otros
+anio: 2013
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/23389964/
+doi: 10.1002/da.22053
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Ensayo aleatorizado de TCC para el TOC frente a manejo de la ansiedad en adolescentes y personas adultas
+  muestra: 46
+  edades: Adolescentes y personas adultas (media de 26,9 años)
+  porcentaje_ninas: 24 # 35 varones de 46 según el resumen, así que 11 personas que no son varones: dato derivado. Solo el resumen
+  resultados_por_sexo: false

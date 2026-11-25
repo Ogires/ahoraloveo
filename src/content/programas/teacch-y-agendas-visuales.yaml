@@ -1,0 +1,60 @@
+nombre: Enseñanza estructurada y agendas visuales (TEACCH)
+en_ingles: TEACCH, structured teaching, visual schedules
+para_que: Organizar el aula y el día con apoyos visuales, para que sepa qué toca y gane autonomía. No se ha medido si cambia la rigidez.
+edades: Se ha estudiado desde antes de los 3 años, en casa, en infantil y en el colegio.
+edad_desde: 2
+edad_hasta: 12
+quien: >
+  El profesorado y el personal de educación especial. En la versión para menores de 3 años, la familia, en
+  casa, con una persona experta.
+formato: En el aula o en casa. Se organizan el espacio, el horario y las tareas con apoyos visuales.
+duracion: >
+  Es una forma de organizar la enseñanza, sin un número fijo de sesiones. La versión para menores de 3
+  años duró seis meses, con 20 visitas a casa de 90 minutos y 4 sesiones en grupo.
+en_espana: >
+  La guía de la SEPEAP, de pediatría, lo nombra. La guía de Autismo Castilla y León para el profesorado
+  explica cómo hacer un horario visual. Entre los estudios que hemos leído, no hay ninguno con niñas y niños
+  españoles.
+peso: revisiones
+que_es: >
+  TEACCH es un programa creado en Estados Unidos que organiza la enseñanza con apoyos visuales. Se ordena
+  el espacio para que cada sitio sirva para una cosa. Un horario visual le enseña qué toca y cuándo, y un
+  sistema de trabajo, qué tarea hay que hacer y cuándo termina. La guía ESCAP explica que busca un entorno
+  predecible y con el menor estrés posible. La meta es que gane autonomía. Las agendas o los horarios
+  visuales también se usan solos, en papel o en una tableta.
+como_es: >
+  En un aula, por ejemplo, hay un rincón para trabajar sola, otro para jugar y otro para el grupo. Al
+  llegar, mira su horario con dibujos. Al acabar cada actividad, vuelve al horario, comenta lo que ha
+  hecho y ve qué viene después. Si hay un cambio, se le explica en ese momento con la nueva alternativa, y
+  al final del día se repasa lo que fue distinto. Algunos colegios asocian a cada actividad un objeto,
+  siempre el mismo, que la acompaña en el cambio.
+que_encontraron: >
+  Ningún estudio ha medido si cambia la rigidez. Una revisión de 2025, con 20 estudios y 920 niñas y niños,
+  encontró mejoras pequeñas en comunicación, vida diaria y motricidad, y algo mayores en habilidades
+  sociales. Las puntuaciones de gravedad del autismo también bajaron, pero los estudios daban resultados
+  muy distintos. Otra revisión, de 2013, vio mejoras de moderadas a grandes en la conducta social y en las
+  conductas difíciles, con muy pocos estudios. En un estudio con 198 niñas y niños de 3 a 5 años,
+  mejoraron por igual en aulas TEACCH, en otro programa y en aulas de educación especial de calidad. Una
+  revisión de 2024, con estudios de un solo caso, vio que ayudaba a terminar tareas sin ayuda. Sobre los
+  horarios visuales, una revisión de 2015 los considera una práctica con pruebas, sobre todo junto con una
+  enseñanza sistemática. Pero en un estudio con 2 niñas o niños, el horario solo no redujo la conducta
+  difícil al cambiar a una actividad que no les gustaba.
+en_ninas: >
+  Pocas niñas, y ningún estudio miró sus resultados por separado. Según una revisión de 2025, había 33
+  niñas de 198 en el estudio de 3 a 5 años, y 7 de 49 en el de menores de 3. Las revisiones no dicen
+  cuántas niñas había en total.
+limitaciones: >
+  Los estudios son de calidad regular, con pocos ensayos y resultados muy distintos entre sí. Miden
+  habilidades y conducta, no la rigidez ni cómo lleva los cambios. Las guías no coinciden: la de la SEPEAP
+  cuenta TEACCH entre los programas que han mostrado eficacia, y la guía ESCAP dice que aún no se ha
+  demostrado. Uno de los estudios lo firma personal del propio programa TEACCH. En la versión para menores
+  de 3 años no cambiaron las medidas generales, solo la comunicación social. Y una revisión de agendas en
+  tableta o móvil reunió 17 estudios con 58 participantes, y menos de la mitad cumplía los criterios de
+  calidad.
+que_preguntar:
+  - ¿Cómo se organizan su aula y su horario, y cómo se le avisan los cambios?
+  - ¿Podemos usar en casa el mismo tipo de horario visual que en el cole?
+  - ¿Qué haremos si un cambio de última hora le cuesta mucho?
+relacionados: [rigidez-y-rutinas]
+fuentes: [li-2025d, virues-ortega-2013, boyd-2014, turner-brown-2019, zhou-k-2024, knight-2015, hammond-2025, waters-2009, escap-2021, sepeap-tea-2023, autismo-cyl-profesores]
+revisado: 2026-11-25

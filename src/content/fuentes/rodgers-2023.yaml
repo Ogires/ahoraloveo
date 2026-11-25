@@ -1,0 +1,16 @@
+titulo: 'Coping with uncertainty in everyday situations (CUES©) to address intolerance of uncertainty in autistic children: an intervention feasibility trial'
+autoria: J. Rodgers, J. Goodwin, D. Garland y otros
+anio: 2023
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10465370/
+doi: 10.1007/s10803-022-05645-5
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Ensayo aleatorizado de viabilidad de CUES frente a Understanding Autism (2 sesiones), con seguimiento de 26 semanas
+  muestra: 50
+  edades: De 6 a 16 años
+  porcentaje_ninas: 32 # 16 niñas de 50: 34 niños (l. 127), 18 y 16 por grupo (tabla 5 del xml)
+  resultados_por_sexo: false

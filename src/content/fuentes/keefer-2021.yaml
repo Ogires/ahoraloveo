@@ -1,0 +1,16 @@
+titulo: 'DINOSAUR: an integrated cognitive-behavioral treatment for anxiety in young children with ASD'
+autoria: A. Keefer y R. A. Vasa
+anio: 2021
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8504090/
+doi: 10.1186/s11689-021-09396-9
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Descripción del tratamiento DINOSAUR (12 sesiones por telesalud) y plan de un piloto con lista de espera, sin resultados
+  muestra: 16
+  edades: De 4 a 6 años
+  porcentaje_ninas: null # Muestra prevista, no real (l. 57); protocolo sin participantes todavía
+  resultados_por_sexo: false

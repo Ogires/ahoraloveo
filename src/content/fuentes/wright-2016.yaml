@@ -1,0 +1,16 @@
+titulo: 'Social Stories™ to alleviate challenging behaviour and social difficulties exhibited by children with autism spectrum disorder in mainstream schools: design of a manualised training toolkit and feasibility study for a cluster randomised controlled trial with nested qualitative and cost-effectiveness components'
+autoria: B. Wright, D. Marshall, J. Adamson y otros
+anio: 2016
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4781252/
+doi: 10.3310/hta20060
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Informe HTA de ASSSIST-1 - revisión sistemática, fase cualitativa y ensayo de viabilidad de historias sociales en colegios
+  muestra: 50
+  edades: De 5 a 15 años
+  porcentaje_ninas: 26 # Mismo ensayo que Marshall 2016 (13 de 50, tabla 1 de ese artículo); el resumen del HTA no da el sexo. Solo el resumen
+  resultados_por_sexo: false

@@ -42,8 +42,13 @@ en_ninas: >
   pero, vistos de cerca, pueden ser poco flexibles y repetir siempre lo mismo,
   como un ritual. Por eso pide fijarse en si acepta cambios en la historia que
   se inventa. Y cuenta que, hacia los seis años, algunas niñas empiezan a
-  controlar y esconder sus conductas repetitivas. Las fuentes que hemos
-  consultado no estudian por separado la rigidez en las niñas.
+  controlar y esconder sus conductas repetitivas. Sobre la rigidez en concreto,
+  los estudios no coinciden. Un metaanálisis de 2024, con niñas, niños y personas
+  adultas, no encontró diferencias por sexo en la insistencia en que nada
+  cambie. Los chicos sí tenían más movimientos repetitivos e intereses
+  restringidos. En cambio, un estudio con 615 niñas y niños de 3 a 18 años vio
+  que ellas podían insistir más en que nada cambie. Su equipo se pregunta si se
+  debe a la ansiedad, que es frecuente en las niñas autistas.
 que_hacer: >
   Un cambio de rutina puede angustiar mucho, y la NAS lo cuenta entre los
   desencadenantes habituales de un [meltdown](/glosario/meltdown/). Para los
@@ -52,7 +57,10 @@ que_hacer: >
   explica que anticipar lo que va a pasar es una de las reglas de oro. Pero a
   algunas personas saberlo con tiempo les da más ansiedad, y entonces conviene
   avisar justo antes. También aconseja cambiar las rutinas poco a poco y pactar
-  momentos para sus rituales. Si la rigidez le hace pasarlo mal o le complica el día
+  momentos para sus rituales. Para los imprevistos, la NAS e Isabel Paula proponen
+  tener preparado un plan B. En el colegio, la guía de Autismo Castilla y León propone
+  asociar a cada actividad un objeto, siempre el mismo, que la acompañe en el
+  cambio. Si la rigidez le hace pasarlo mal o le complica el día
   a día, contadlo en la consulta.
 escenas:
   - edad: 5 años
@@ -82,5 +90,5 @@ escenas:
       puede ayudarle a estar tranquilo.
     imagen: ../../assets/escenas/rigidez-y-rutinas-2.webp
 relacionados: [funciones-ejecutivas, pensamiento-dicotomico, meltdown, comorbilidad]
-fuentes: [escap-2021, nas-crisis, nas-que-es, paula-ansiedad-2015, nice-cg128, prizant-seres-humanos-unicos, sepeap-tea-2023, aetapi-mujeres-tea]
-revisado: 2026-11-18
+fuentes: [escap-2021, nas-crisis, nas-que-es, nas-preference, paula-ansiedad-2015, nice-cg128, prizant-seres-humanos-unicos, sepeap-tea-2023, aetapi-mujeres-tea, edwards-2024, antezana-2019, autismo-cyl-profesores]
+revisado: 2026-11-25

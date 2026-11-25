@@ -1,0 +1,16 @@
+titulo: 'Modified exposure and response prevention to treat the repetitive behaviors of a child with autism: a case report'
+autoria: B. A. Boyd, C. R. Woodard y J. W. Bodfish
+anio: 2011
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3420741/
+doi: 10.1155/2011/241095
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Caso único - exposición con prevención de respuesta modificada para rituales de puzles en un chico de 14 años
+  muestra: 1
+  edades: 14 años
+  porcentaje_ninas: 0 # Un chico (l. 8)
+  resultados_por_sexo: false

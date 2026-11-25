@@ -1,0 +1,16 @@
+titulo: 'A Pilot Randomised Control Trial of Digitally-Mediated Social Stories for Children on the Autism Spectrum'
+autoria: R. Hanrahan, E. Smith, H. Johnson y otros
+anio: 2020
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7677143/
+doi: 10.1007/s10803-020-04490-8
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Ensayo aleatorizado piloto de historias sociales digitales (aplicación SOFA) frente a un poema en iPad, en un solo colegio
+  muestra: 15
+  edades: De 4 a 10 años
+  porcentaje_ninas: 7 # 1 niña de 15 (l. 16: 14 niños y 1 niña)
+  resultados_por_sexo: false

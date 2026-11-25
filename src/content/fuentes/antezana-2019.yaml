@@ -1,0 +1,16 @@
+titulo: 'Gender differences in restricted and repetitive behaviors and interests in youth with autism'
+autoria: L. Antezana, R. S. Factor, E. E. Condy y otros
+anio: 2019
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/30561911/
+doi: 10.1002/aur.2049
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, genero]
+estudio:
+  diseno: Estudio transversal de diferencias por sexo en el RBS-R con datos de una base de datos compartida (NDAR)
+  muestra: 615
+  edades: De 3 a 18 años
+  porcentaje_ninas: 18 # 108 niñas de 615 (507 niños, 82,4 %) según el resumen. Solo el resumen
+  resultados_por_sexo: true

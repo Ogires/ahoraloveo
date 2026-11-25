@@ -1,0 +1,16 @@
+titulo: 'A pilot, single-arm feasibility study of an integrated cognitive-behavioral treatment for anxiety in young autistic children'
+autoria: A. Keefer, J. Perrin, V. Singh y otros
+anio: 2024
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/38216125/
+doi: 10.1093/jpepsy/jsad093
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Piloto de DINOSAUR de un solo grupo, sin grupo de comparación
+  muestra: 14
+  edades: De 4 a 6 años
+  porcentaje_ninas: null # El resumen no da el sexo. Solo el resumen
+  resultados_por_sexo: false

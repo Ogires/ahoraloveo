@@ -1,0 +1,16 @@
+titulo: 'Managing repetitive behaviours in young children with autism spectrum disorder (ASD): pilot randomised controlled trial of a new parent group intervention'
+autoria: V. Grahame, D. Brett, L. Dixon y otros
+anio: 2015
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/26036646/
+doi: 10.1007/s10803-015-2474-x
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Ensayo aleatorizado piloto de Managing Repetitive Behaviours (8 semanas, grupo de familias)
+  muestra: 45
+  edades: De 3 a 7 años
+  porcentaje_ninas: null # El resumen no da el sexo. Solo el resumen
+  resultados_por_sexo: false

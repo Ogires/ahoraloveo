@@ -1,0 +1,16 @@
+titulo: 'Feasibility of exposure response prevention to treat repetitive behaviors of children with autism and an intellectual disability: a brief report'
+autoria: B. A. Boyd, C. R. Woodard y J. W. Bodfish
+anio: 2013
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3710662/
+doi: 10.1177/1362361311414066
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Estudio de viabilidad sin grupo de comparación - exposición con prevención de respuesta modificada en 5 menores con discapacidad intelectual
+  muestra: 5
+  edades: De 5 a 11 años
+  porcentaje_ninas: 0 # 5 varones en la tabla 1 del xml
+  resultados_por_sexo: false

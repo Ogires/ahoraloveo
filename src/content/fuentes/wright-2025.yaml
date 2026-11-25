@@ -1,0 +1,16 @@
+titulo: 'Autism Spectrum Social Stories in Schools Trial 2 (ASSSIST-2): a pragmatic randomised controlled trial of the Social Stories™ intervention to address the social and emotional health of autistic children in UK primary schools'
+autoria: B. Wright, J. E. Blackwell, K. J. Bell y otros
+anio: 2025
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11754701/
+doi: 10.1111/camh.12740
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Ensayo aleatorizado por colegios de historias sociales frente a atención habitual (ASSSIST-2), con el profesorado sin ciego
+  muestra: 249
+  edades: De 4 a 11 años
+  porcentaje_ninas: null # El texto dice que el sexo estaba equilibrado entre grupos (l. 52) y da las cifras en la tabla S2, material suplementario que no está en notas/fuentes
+  resultados_por_sexo: false

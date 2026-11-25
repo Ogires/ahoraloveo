@@ -1,0 +1,16 @@
+titulo: 'A group intervention for parents and carers to recognise and understand restricted and repetitive behaviour in autistic children: a multisite RCT'
+autoria: V. Grahame, A. Kernohan, E. Kharati y otros
+anio: 2025
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12666600/
+doi: 10.3310/WHTU0367
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Informe HTA del mismo ensayo de Understanding Repetitive Behaviours, con evaluación económica
+  muestra: 227
+  edades: De 3 a 9 años y 11 meses
+  porcentaje_ninas: 20 # Mismo ensayo que Grahame 2025 (46 de 227, tabla 2 de ese artículo); el resumen del HTA no da el sexo y preveía 250 familias. Solo el resumen
+  resultados_por_sexo: false

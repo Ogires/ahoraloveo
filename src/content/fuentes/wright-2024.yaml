@@ -1,0 +1,16 @@
+titulo: 'Impact of Social Stories on social and emotional health of autism spectrum primary school children: the ASSSIST2 RCT with economic evaluation'
+autoria: B. Wright, K. J. Bell, J. E. Blackwell y otros
+anio: 2024
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/39207130/
+doi: 10.3310/JBTM8017
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Informe HTA de ASSSIST-2 - ensayo aleatorizado por colegios de historias sociales con evaluación económica
+  muestra: 249
+  edades: De 4 a 11 años
+  porcentaje_ninas: null # El resumen no da el sexo. Solo el resumen
+  resultados_por_sexo: false

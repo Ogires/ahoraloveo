@@ -1,0 +1,16 @@
+titulo: 'Social Stories in mainstream schools for children with autism spectrum disorder: a feasibility randomised controlled trial'
+autoria: D. Marshall, B. Wright, V. Allgar y otros
+anio: 2016
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4985921/
+doi: 10.1136/bmjopen-2016-011748
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Ensayo aleatorizado de viabilidad por colegios de historias sociales frente a un cuento de control, sin ciego (ASSSIST-1)
+  muestra: 50
+  edades: De 5 a 15 años
+  porcentaje_ninas: 26 # 13 niñas de 50: 4 de 23 y 9 de 27 (tabla 1 del xml)
+  resultados_por_sexo: false

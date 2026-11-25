@@ -1,0 +1,16 @@
+titulo: 'Understanding Repetitive Behaviours: A clinical and cost-effectiveness, multi-site randomised controlled trial of a group for parents and carers of young autistic children'
+autoria: V. Grahame, A. Kernohan, E. Kharati y otros
+anio: 2025
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12255847/
+doi: 10.1177/13623613251333175
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Ensayo aleatorizado multicéntrico de Understanding Repetitive Behaviours frente a un grupo de psicoeducación para familias (Learning About Autism)
+  muestra: 227
+  edades: De 3 a 9 años y 11 meses
+  porcentaje_ninas: 20 # 46 niñas de 227: 22 de 113 con la comparación y 24 de 114 con URB (tabla 2 del xml). El texto solo dice que se ajustó por sexo (l. 77)
+  resultados_por_sexo: false

@@ -1,0 +1,16 @@
+titulo: 'Functional Behavior-Based Cognitive-Behavioral Therapy for Obsessive Compulsive Behavior in Children with Autism Spectrum Disorder: A Randomized Controlled Trial'
+autoria: T. Vause, H. Jaksic, N. Neil y otros
+anio: 2020
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/30293128/
+doi: 10.1007/s10803-018-3772-x
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Ensayo aleatorizado de TCC basada en la evaluación funcional (Fb-CBT, 9 semanas) frente a tratamiento habitual para conductas obsesivo-compulsivas
+  muestra: 37
+  edades: De 7 a 13 años
+  porcentaje_ninas: null # El resumen no da el sexo. Solo el resumen
+  resultados_por_sexo: false

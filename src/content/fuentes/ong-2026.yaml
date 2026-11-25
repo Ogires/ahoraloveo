@@ -1,0 +1,16 @@
+titulo: 'Targeting intolerance of uncertainty in young children diagnosed with autism: A randomized controlled trial of a parent-mediated group intervention'
+autoria: C. S. Y. Ong, J. Rodgers, M. N. Cooper y otros
+anio: 2026
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12973137/
+doi: 10.1002/jcv2.70027
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Ensayo aleatorizado de CUES-Junior frente a lista de espera, con evaluadoras y evaluadores que no sabían el grupo
+  muestra: 64
+  edades: De 4 a 7 años
+  porcentaje_ninas: 24 # 14 niñas de 59 con datos de línea base: 7 en cada grupo (tabla 1 del xml); los 64 aleatorizados no tienen sexo en el texto
+  resultados_por_sexo: false

@@ -1,0 +1,16 @@
+titulo: 'Comparative efficacy of LEAP, TEACCH and non-model-specific special education programs for preschoolers with autism spectrum disorders'
+autoria: B. A. Boyd, K. Hume, M. T. McBee y otros
+anio: 2014
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/23812661/
+doi: 10.1007/s10803-013-1877-9
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Estudio cuasi-experimental que compara aulas LEAP, TEACCH y educación especial sin modelo
+  muestra: 198
+  edades: De 3 a 5 años
+  porcentaje_ninas: 17 # 33 niñas de 198 (165 y 33) en la tabla 1 de Li 2025d (xml), no en este resumen: dato derivado de otro artículo. Solo el resumen
+  resultados_por_sexo: false

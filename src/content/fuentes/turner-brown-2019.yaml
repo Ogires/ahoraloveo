@@ -1,0 +1,16 @@
+titulo: 'Preliminary Efficacy of Family Implemented TEACCH for Toddlers: Effects on Parents and Their Toddlers with Autism Spectrum Disorder'
+autoria: L. Turner-Brown, K. Hume, B. A. Boyd y otros
+anio: 2019
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/27241348/
+doi: 10.1007/s10803-016-2812-7
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Ensayo aleatorizado de FITT (TEACCH en casa para menores de 3 años) frente a servicios habituales
+  muestra: 50
+  edades: Menores de 3 años
+  porcentaje_ninas: 14 # 7 niñas de 49 (42 niños y 7 niñas) en la tabla 1 de Li 2025d (xml), no en este resumen: dato derivado de otro artículo. Solo el resumen
+  resultados_por_sexo: false

@@ -1,0 +1,16 @@
+titulo: 'Effects of a family-implemented treatment on the repetitive behaviors of children with autism'
+autoria: B. A. Boyd, S. G. McDonough, B. Rupp y otros
+anio: 2011
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3709848/
+doi: 10.1007/s10803-010-1156-y
+comprobado: 2026-11-25
+temas: [rigidez-y-rutinas, programas]
+estudio:
+  diseno: Diseño de caso único con línea base múltiple - FITBI, tratamiento aplicado por la familia para la inflexibilidad conductual
+  muestra: 5
+  edades: De 39 a 65 meses
+  porcentaje_ninas: 0 # 5 varones en la tabla 1 del xml
+  resultados_por_sexo: false
