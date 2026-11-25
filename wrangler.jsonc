@@ -1,6 +1,8 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "ahoraloveo",
+  // El nombre «ahoraloveo» lo tiene el Worker de redirecciones (redirecciones/wrangler.jsonc),
+  // para que la dirección de antes, ahoraloveo.webninja.workers.dev, lleve a la nueva.
+  "name": "ahoraloveo-web",
   "compatibility_date": "2026-10-01",
   // Worker solo con assets: no hay script. Cuando llegue el RAG, se añade "main".
   "assets": {
@@ -8,6 +10,9 @@
     // Una ruta que no existe recibe 404.html con estado 404, en lugar de una respuesta vacía.
     "not_found_handling": "404-page"
   },
-  "workers_dev": true
-  // Cuando haya nombre: "routes": [{ "pattern": "<subdominio>.webninja.fyi", "custom_domain": true }]
+  // Cloudflare crea el registro DNS y el certificado al desplegar.
+  "routes": [{ "pattern": "ahoraloveo.es", "custom_domain": true }],
+  // Sin dirección propia en workers.dev: la web solo está en su dominio.
+  "workers_dev": false,
+  "preview_urls": false
 }

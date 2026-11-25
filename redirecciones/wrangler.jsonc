@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  // Conserva el nombre de antes para quedarse con ahoraloveo.webninja.workers.dev.
+  "name": "ahoraloveo",
+  "main": "index.ts",
+  "compatibility_date": "2026-10-01",
+  "routes": [{ "pattern": "www.ahoraloveo.es", "custom_domain": true }],
+  "workers_dev": true,
+  "preview_urls": false
+}

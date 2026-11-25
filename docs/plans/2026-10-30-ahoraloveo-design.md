@@ -176,9 +176,9 @@ Esta es la red de seguridad del contenido.
 
 - **Generador:** Astro con salida 100 % estática y colecciones de contenido con esquema. Las islas de interactividad se escriben en TypeScript sin framework.
 - **Buscador:** Pagefind, con el índice creado al compilar y la búsqueda en el navegador. No necesita servidor.
-- **Alojamiento:** Cloudflare Workers, solo con assets, en un subdominio de `webninja.fyi` (`custom_domain`) y con `workers_dev: true`. Cuando llegue el RAG se añadirá el script del Worker sin mudarse. Al estrenar dominio propio, redirecciones 301 y URL canónicas.
+- **Alojamiento:** Cloudflare Workers, solo con assets, en `ahoraloveo.es` (registrado en OVH, con los DNS en Cloudflare, `custom_domain`). Cuando llegue el RAG se añadirá el script del Worker sin mudarse. Un segundo Worker, `redirecciones/`, lleva con un 301 el `www` y la dirección de antes (`ahoraloveo.webninja.workers.dev`) al dominio.
 - **Estadísticas:** Cloudflare Web Analytics, que no usa cookies.
-- **Contacto:** un correo en el propio dominio, redirigido con Cloudflare Email Routing.
+- **Contacto:** `hola@ahoraloveo.es`, un buzón de OVH. Se responde desde él, sin que se vea el correo personal.
 - **Licencias:**
   - código, MIT;
   - textos, CC BY-SA 4.0;
@@ -232,7 +232,6 @@ Esta es la red de seguridad del contenido.
   - preguntas frecuentes con respuestas revisadas y guardadas en caché;
   - el proveedor del modelo, detrás de una capa propia y configurable.
 - **Versión en valenciano.**
-- **Dominio propio.**
 - Un sello de **«revisado por»** si en algún momento colabora un profesional o una entidad.
 
 ## 13. Decisiones abiertas
