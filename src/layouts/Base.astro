@@ -15,6 +15,10 @@ interface Props {
 const { titulo, descripcion } = Astro.props;
 const tituloCompleto = titulo === SITIO.nombre ? titulo : `${titulo} | ${SITIO.nombre}`;
 const canonica = new URL(Astro.url.pathname, Astro.site).href;
+// La tarjeta que muestran LinkedIn, WhatsApp y otras redes al compartir un enlace.
+// La imagen es la misma en todas las páginas; el texto alternativo dice lo que pone en ella.
+const imagenCompartir = new URL('/compartir.png', Astro.site).href;
+const altCompartir = `${SITIO.nombre}. ${SITIO.tema}. ${SITIO.lema}.`;
 const ruta = Astro.url.pathname;
 const enlaces = [
   { href: '/glosario/', texto: 'Glosario' },
@@ -35,6 +39,17 @@ const enlaces = [
     <meta name="description" content={descripcion} />
     <link rel="canonical" href={canonica} />
     {!SITIO.publicada && <meta name="robots" content="noindex, nofollow" />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITIO.nombre} />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content={tituloCompleto} />
+    <meta property="og:description" content={descripcion} />
+    <meta property="og:url" content={canonica} />
+    <meta property="og:image" content={imagenCompartir} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={altCompartir} />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content={CLARO.fondo} media={mediaBarra('claro', null)} data-tema="claro" />
     <meta name="theme-color" content={OSCURO.fondo} media={mediaBarra('oscuro', null)} data-tema="oscuro" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
