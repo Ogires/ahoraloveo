@@ -1,0 +1,16 @@
+titulo: 'Exploring the Usefulness of a Multi-Sensory Environment on Sensory Behaviors in Children with Autism Spectrum Disorder'
+autoria: C. De Domenico, M. Di Cara, A. Piccolo y otros
+anio: 2024
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11277603/
+doi: 10.3390/jcm13144162
+comprobado: 2026-11-26
+temas: [sensorial, programas]
+estudio:
+  diseno: 'Ensayo aleatorizado piloto simple ciego de una sala multisensorial más terapia habitual frente a terapia habitual, durante 4 meses' # La sala la diseñó la empresa Duit. Mismo centro que Leonardi 2025
+  muestra: 20
+  edades: De 3 a 6 años
+  porcentaje_ninas: 15 # 3 niñas de 20 (l. 29)
+  resultados_por_sexo: false

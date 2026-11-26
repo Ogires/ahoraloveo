@@ -1,0 +1,16 @@
+titulo: 'Patterns of equipment use for autistic children in multi-sensory environments: Time spent with sensory equipment varies by sensory profile and intellectual ability'
+autoria: K. L. Unwin, G. Powell, A. Price y otros
+anio: 2024
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10913295/
+doi: 10.1177/13623613231180266
+comprobado: 2026-11-26
+temas: [sensorial, programas]
+estudio:
+  diseno: 'Estudio observacional de 5 minutos de juego libre en una sala multisensorial y su relación con el perfil sensorial; los mismos 41 niñas y niños de Unwin 2022'
+  muestra: 41
+  edades: De 4 a 12 años
+  porcentaje_ninas: 20 # 8 niñas de 41 (l. 10 y l. 11)
+  resultados_por_sexo: false

@@ -1,0 +1,16 @@
+titulo: 'Family-centered occupational therapy and telerehabilitation for children with autism spectrum disorders'
+autoria: V. Gibbs y S. Toth-Cohen
+anio: 2011
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/23899082/
+doi: 10.3109/07380577.2011.606460
+comprobado: 2026-11-26
+temas: [sensorial, programas]
+estudio:
+  diseno: 'Piloto de terapia ocupacional por telerrehabilitación con 4 familias durante 6 semanas, sin grupo de comparación; usa dietas sensoriales' # Solo el resumen
+  muestra: 4 # familias
+  edades: El resumen no las da
+  porcentaje_ninas: null # el resumen no da el sexo
+  resultados_por_sexo: false

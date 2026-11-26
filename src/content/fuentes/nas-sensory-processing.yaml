@@ -1,0 +1,9 @@
+titulo: Autism and sensory processing
+autoria: National Autistic Society
+anio: sin fecha # la página no la lleva; consultada el 26 de noviembre de 2026
+tipo: entidad
+nivel: entidades
+idioma: en
+url: https://www.autism.org.uk/advice-and-guidance/about-autism/sensory-processing # responde 200 (comprobado con curl el 26-11-2026)
+comprobado: 2026-11-26
+temas: [sensorial, programas]

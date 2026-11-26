@@ -1,0 +1,16 @@
+titulo: 'Sensory Adapted Dental Environments to Enhance Oral Care for Children with Autism Spectrum Disorders: A Randomized Controlled Pilot Study'
+autoria: S. A. Cermak, L. I. Stein Duker, M. E. Williams y otros
+anio: 2015
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4554774/
+doi: 10.1007/s10803-015-2450-5
+comprobado: 2026-11-26
+temas: [sensorial, programas]
+estudio:
+  diseno: 'Ensayo aleatorizado piloto cruzado de un entorno dental adaptado a los sentidos (SADE) frente al entorno habitual, con una limpieza en cada uno'
+  muestra: 22 # 22 autistas; además hay 22 sin autismo (no cuentan aquí)
+  edades: De 6 a 12 años
+  porcentaje_ninas: 18 # 4 niñas de 22 autistas (tabla 1 del xml: 18,2 %); en las limitaciones (l. 64) dicen que hay 4,5 niños por cada niña
+  resultados_por_sexo: false

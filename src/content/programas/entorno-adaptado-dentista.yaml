@@ -1,0 +1,51 @@
+nombre: Entorno adaptado en el dentista
+en_ingles: Sensory Adapted Dental Environment (SADE)
+para_que: Cambiar la luz, el sonido y el tacto en la consulta del dentista para que la visita le estrese menos.
+edades: De 6 a 12 años en los estudios.
+edad_desde: 6
+edad_hasta: 12
+quien: El equipo de la consulta dental, después de una formación corta. En el primer estudio, de dos horas.
+formato: En la consulta del dentista, durante una limpieza o un empaste. Se cambia la sala, no a la niña.
+duracion: Lo que dura la visita. Prepararlo lleva de 5 a 10 minutos.
+en_espana: Sin datos sobre su uso en España. Los estudios son de Estados Unidos e Italia.
+peso: ensayo
+que_es: >
+  Es una forma de preparar la consulta del dentista para que tenga menos estímulos que molestan. Se
+  oscurece la sala, suena música rítmica y la niña o el niño se tumba envuelto en una especie de manta
+  con peso, con forma de mariposa. Busca que la visita le estrese menos. Cambia el entorno, no a la niña.
+  En la misma línea, la guía NICE pide adaptar la atención sanitaria, por ejemplo con citas a primera o
+  última hora para esperar menos.
+como_es: >
+  Antes de la cita se cierran las cortinas y se apagan las luces del techo y la lámpara del dentista.
+  Durante la limpieza suena la música y la niña está envuelta en la «mariposa», que la abraza con algo
+  de peso. Si le agobia, puede pedir que se la abran, y cualquier parte se retira si ella o su familia lo
+  piden. En otro estudio usaron una pantalla con vídeos que ya conocía, luz suave y un torno recubierto de esponja,
+  que hace menos ruido.
+que_encontraron: >
+  El ensayo más grande, de 2023, tuvo 162 niñas y niños autistas de 6 a 12 años. Cada uno hizo una
+  limpieza en la consulta adaptada y otra en la habitual, en orden al azar y con unos seis meses entre
+  ambas. En la adaptada hubo menos estrés en el cuerpo, medido en la piel, y menos conductas de malestar
+  contadas en vídeo. En cambio, las escalas generales de conducta y los cuestionarios no cambiaron. Un
+  piloto de 2015 con 22 niñas y niños vio lo mismo en el cuerpo, con efectos pequeños en la conducta. En
+  un estudio italiano con 50, el empaste salió bien en 34 en la consulta adaptada, frente a 11 en la
+  habitual. Una revisión de 2024 concluye que lo que baja de forma clara es el estrés medido en la piel.
+  Según el equipo del ensayo grande, la Academia Americana de Odontopediatría lo ha añadido a sus buenas
+  prácticas.
+en_ninas: >
+  Pocas niñas: 26 de 162 en el ensayo grande y 4 de 22 en el piloto. El estudio italiano, con 14 niñas de
+  50, miró los resultados por sexo: la mejora fue clara en los niños y no llegó a serlo en las niñas. Sus
+  autores lo atribuyen a que había pocas niñas o a diferencias sensoriales por sexo. El ensayo grande pide
+  estudiar si funciona distinto en niñas.
+limitaciones: >
+  En el ensayo grande, quienes contaban las conductas en vídeo sabían en qué consulta estaba cada niña o
+  niño. El piloto tenía muy pocos participantes, casi todos con mucha dificultad para hablar, y la
+  limpieza duró unos minutos más. En el estudio italiano, la consulta adaptada fue siempre la segunda
+  visita, y eso pudo ayudar por sí solo. La «mariposa» sujeta un poco, aunque no se diseñó para eso: por
+  eso se puede abrir si lo pide. Los dos estudios de Estados Unidos son del mismo grupo.
+que_preguntar:
+  - ¿Podemos pedir cita a primera hora, para esperar lo menos posible?
+  - ¿Se pueden bajar las luces y el ruido durante la visita?
+  - Si algo le agobia, ¿puede pedir que paren o que se lo quiten?
+relacionados: [hiper-e-hiposensibilidad]
+fuentes: [stein-duker-2023, cermak-2015, fallea-2022, tirupathi-2024, prynda-2024, nice-cg170]
+revisado: 2026-11-26

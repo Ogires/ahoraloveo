@@ -1,0 +1,16 @@
+titulo: 'Occupational Therapy Using Sensory Integration for Enhancing Occupational Performance in Children with Autism: A Randomized Controlled Trial'
+autoria: Z. Çorakcı Yazıcıoğlu y G. Bumin
+anio: 2025
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/40711707/
+doi: 10.1007/s10803-025-06970-1
+comprobado: 2026-11-26
+temas: [sensorial, programas]
+estudio:
+  diseno: 'Ensayo aleatorizado de terapia ocupacional con integración sensorial más programa en casa frente a solo el programa en casa (16 sesiones en 4 meses)' # Solo el resumen
+  muestra: 35 # 16 y 19
+  edades: De 3 a 10 años
+  porcentaje_ninas: null # el resumen no da el sexo
+  resultados_por_sexo: false

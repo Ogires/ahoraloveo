@@ -1,0 +1,15 @@
+titulo: 'Contextual Intervention Adapted for Autism Spectrum Disorder: An RCT of a Parenting Program with Parents of Children Diagnosed with Autism Spectrum Disorder (ASD)'
+autoria: Z. Pashazadeh Azari, S. A. Hosseini, M. Rassafiani y otros
+anio: 2019
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6789080/
+comprobado: 2026-11-26
+temas: [sensorial, programas]
+estudio:
+  diseno: 'Ensayo aleatorizado con lista de espera de una intervención contextual (CI-ASD) con madres, basada en el perfil sensorial de Dunn'
+  muestra: 33 # reclutadas 38 familias (l. 29); 33 completaron (tabla 1 del xml; el resumen dice 36)
+  edades: De 3 a 10 años
+  porcentaje_ninas: 21 # 7 niñas de 33: 2 y 5 (tabla 1 del xml)
+  resultados_por_sexo: false

@@ -1,0 +1,16 @@
+titulo: 'Occupation-Based Coaching by Means of Telehealth for Families of Young Children With Autism Spectrum Disorder'
+autoria: L. M. Little, E. Pope, A. Wallisch y otros
+anio: 2018
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/29426380/
+doi: 10.5014/ajot.2018.024786
+comprobado: 2026-11-26
+temas: [sensorial, programas]
+estudio:
+  diseno: 'Estudio de antes y después, sin grupo de comparación, de coaching basado en la ocupación por telesalud' # Solo el resumen. Pope y Dunn cofundaron la empresa de coaching (afiliaciones)
+  muestra: 18 # familias
+  edades: De 2 a 6 años
+  porcentaje_ninas: null # el resumen no da el sexo
+  resultados_por_sexo: false

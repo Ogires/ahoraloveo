@@ -1,0 +1,48 @@
+nombre: Dietas sensoriales
+en_ingles: Sensory diet
+para_que: Un plan de actividades sensoriales y de movimiento a lo largo del día. No hay estudios controlados.
+edades: Sin datos de las dietas sensoriales, porque no hay estudios. Los asientos con pelota se han probado de 6 a 9 años.
+edad_desde: 6
+edad_hasta: 9
+quien: Las prepara una terapeuta ocupacional, y las ponen en práctica la familia y el colegio.
+formato: Un plan con actividades sensoriales y de movimiento, en casa y en el cole.
+duracion: Sin una duración fija. Las actividades se repiten cada día.
+en_espana: Sin datos sobre su uso en España.
+peso: sin-estudios
+que_es: >
+  Una dieta sensorial no tiene nada que ver con la comida. Según la NAS, es un plan de actividades
+  sensoriales y de movimiento, repartidas a lo largo del día, que dirige una terapeuta ocupacional. Busca
+  que esté más a gusto con los estímulos y que se regule mejor. A veces incluye apoyos como cojines que
+  se mueven o asientos de pelota. La NAS cuenta que a algunas personas autistas les han ayudado los
+  cojines que se mueven.
+como_es: >
+  La terapeuta valora qué le molesta y qué busca, y propone actividades para momentos concretos. Por
+  ejemplo, saltar un rato antes de sentarse a hacer los deberes, o un juego de apretar cojines al volver
+  del cole. Isabel Paula insiste en que no hay una lista que sirva para todos: se eligen las actividades
+  que le van bien a cada persona.
+que_encontraron: >
+  No hemos encontrado ningún estudio con grupo de comparación sobre dietas sensoriales en niñas y niños
+  autistas. En PubMed solo aparecen una revisión de 2014, que las nombra entre los tratamientos más
+  conocidos y pide más investigación, y un piloto con 4 familias. Una revisión de 2015 encontró pocos
+  efectos de las estrategias sensoriales sueltas del aula, como los chalecos con peso o las pelotas. Pero
+  avisa de que muchos estudios no seguían bien los protocolos. Sobre los asientos con pelota hay estudios
+  de 3 a 15 niñas y niños: en algunos pasaban más tiempo sentados, pero cada uno respondía distinto. En
+  uno con 15 alumnos, el cojín de aire no cambió nada.
+en_ninas: >
+  Sin datos sobre niñas en las dietas sensoriales, porque no hay estudios. En los de asientos con pelota
+  había 5 niñas de 15 en uno y ninguna en otro, con 6 niños. Los demás no lo dicen.
+limitaciones: >
+  La NAS dice que no está claro cómo de eficaces son las terapias sensoriales y que hace falta más
+  investigación. Pide que la persona autista esté en el centro de las decisiones y que se tengan en
+  cuenta los posibles efectos negativos. La Academia Americana de Pediatría dice que la terapia
+  ocupacional con estrategias sensoriales puede ser una parte de un plan más amplio. Pero avisa de que la
+  investigación es limitada y no concluyente. En uno de los estudios de asientos, se buscaba que la niña
+  no necesitara estimularse. La NAS recuerda que no hay que parar el stimming si no se hace daño. Y quien
+  tiene poco equilibrio puede estar peor sentado en una pelota.
+que_preguntar:
+  - ¿Qué actividades concretas propone, y para qué momentos del día?
+  - ¿Le han valorado antes el perfil sensorial?
+  - ¿Cómo sabremos si le ayudan?
+relacionados: [hiper-e-hiposensibilidad]
+fuentes: [nas-sensory-processing, hazen-2014, gibbs-2011, case-smith-2015, aap-2012, matin-sadr-2017, bagatell-2010, brennan-2021, paula-ansiedad-2015]
+revisado: 2026-11-26

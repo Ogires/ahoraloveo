@@ -1,0 +1,16 @@
+titulo: 'The effectiveness of weighted blankets on sleep and everyday activities - A retrospective follow-up study of children and adults with attention deficit hyperactivity disorder and/or autism spectrum disorder'
+autoria: V. Bolic Baric, S. Skuthälla, M. Pettersson y otros
+anio: 2023
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/34184958/
+doi: 10.1080/11038128.2021.1939414
+comprobado: 2026-11-26
+temas: [sensorial, programas]
+estudio:
+  diseno: 'Seguimiento retrospectivo por entrevista telefónica del uso de mantas con peso en personas con TDAH o autismo' # Solo el resumen
+  muestra: 85 # 48 de 17 años o menos y 37 adultos
+  edades: 48 de 17 años o menos y 37 adultos (el resumen no da el rango)
+  porcentaje_ninas: null # el resumen no da el sexo
+  resultados_por_sexo: false

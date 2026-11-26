@@ -1,0 +1,16 @@
+titulo: 'Impact of a contextual intervention on child participation and parent competence among children with autism spectrum disorders: a pretest-posttest repeated-measures design'
+autoria: W. Dunn, J. Cox, L. Foster y otros
+anio: 2012
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/22917118/
+doi: 10.5014/ajot.2012.004119
+comprobado: 2026-11-26
+temas: [sensorial, programas]
+estudio:
+  diseno: 'Estudio de antes y después, sin grupo de comparación, de una intervención contextual con madres y padres' # Solo el resumen
+  muestra: 20 # madres y padres
+  edades: El resumen no las da
+  porcentaje_ninas: null # el resumen no da el sexo
+  resultados_por_sexo: false

@@ -1,0 +1,16 @@
+titulo: 'Sex differences in sensory processing in children with autism spectrum disorder'
+autoria: J. M. A. Osório, B. Rodríguez-Herreros, S. Richetin y otros
+anio: 2021
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9290069/
+doi: 10.1002/aur.2580
+comprobado: 2026-11-26
+temas: [sensorial, genero]
+estudio:
+  diseno: 'Estudio transversal de diferencias por sexo en el procesamiento sensorial con el SPM (cuestionario a las familias): autistas frente a desarrollo típico'
+  muestra: 168 # autistas; además hay 439 con desarrollo típico (l. 2)
+  edades: De 2 a 12 años y 11 meses
+  porcentaje_ninas: 15 # 26 niñas de 168 autistas (l. 2)
+  resultados_por_sexo: true

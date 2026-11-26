@@ -1,0 +1,16 @@
+titulo: 'Evaluating the Use of Stability Ball Chairs for Children with ASD in a Clinic Setting'
+autoria: J. Brennan y K. Crosland
+anio: 2021
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8586410/
+doi: 10.1007/s40617-021-00606-3
+comprobado: 2026-11-26
+temas: [sensorial, programas]
+estudio:
+  diseno: 'Estudio de caso único (tratamientos alternos con línea base múltiple) del balón de estabilidad como silla en una clínica' # Solo el resumen
+  muestra: 3
+  edades: El resumen no las da
+  porcentaje_ninas: null # el resumen no da el sexo
+  resultados_por_sexo: false

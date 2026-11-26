@@ -1,8 +1,8 @@
 nombre: Integración sensorial
 en_ingles: Ayres Sensory Integration
 para_que: Una terapia de juego con terapeutas ocupacionales que busca cambiar cómo se procesa lo que llega por los sentidos.
-edades: De 4 a 11 años
-edad_desde: 4
+edades: De 3 a 11 años en los ensayos
+edad_desde: 3
 edad_hasta: 11
 quien: Terapeutas ocupacionales con formación en integración sensorial.
 formato: Individual, en una consulta de terapia ocupacional, con actividades de juego.
@@ -31,6 +31,13 @@ que_encontraron: >
   un ensayo con 73 niñas y niños no encontró mejora en el sueño ni en la conducta, aunque a ellos y a
   sus familias les gustaban. No hay estudios de las mantas para las crisis. La NAS las cuenta entre el
   material sensorial que se puede probar.
+  Lo publicado desde 2023 va en la misma línea. Una revisión de 2025, con 9 ensayos y 344
+  participantes, encontró pruebas fuertes de que ayuda a alcanzar las metas propias de cada niña o niño.
+  Y pruebas moderadas de que no sirve para conductas como la irritabilidad, así que no la recomienda para
+  eso ni para la resistencia a los cambios. Un ensayo de 2025 con 35 niñas y niños de 3 a 10 años, frente
+  a solo un programa en casa, vio más avances en las metas de las familias. Otro metaanálisis de 2025, con
+  16 ensayos de una versión china del método, concluyó que mejora, pero todos los ensayos eran de China.
+  La NAS dice que la poca investigación que hay sugiere que suele ayudar, y pide más estudios.
 en_ninas: >
   En el ensayo de 2014 había 6 niñas entre 32. El de 2022 no da el número, pero sí comparó por sexo: con
   la terapia, las niñas tuvieron algo más de irritabilidad que los niños. Los autores avisan de que es
@@ -41,11 +48,14 @@ limitaciones: >
   revisión, de 2015, encontró pocos efectos de los apoyos sensoriales sueltos, como los chalecos con
   peso, aunque muchos estudios no seguían bien los protocolos. La guía ESCAP dice que hay poca evidencia
   de esta terapia y de los chalecos con peso. Y añade que cambios sencillos en el entorno, como el
-  ruido, la luz o la ropa, pueden reducir mucho los problemas.
+  ruido, la luz o la ropa, pueden reducir mucho los problemas. Una revisión de 2019 la considera una
+  práctica con pruebas a partir de dos ensayos con 69 participantes, y otra de 2024 se apoya en ella. La
+  de 2019 la firman especialistas en el método, entre quienes está la primera firmante del ensayo de
+  2014, aunque nadie valoró un estudio propio.
 que_preguntar:
   - ¿Qué objetivo concreto queremos conseguir, y cómo sabremos si se alcanza?
   - ¿Se puede cambiar antes algo del entorno, en casa o en el cole?
   - ¿Cuántas sesiones hacen falta y cuánto cuestan?
-relacionados: [meltdown]
-fuentes: [randell-2022, schaaf-2014, case-smith-2015, weitlauf-2017, gringras-2014, escap-2021, nas-crisis]
-revisado: 2026-11-23
+relacionados: [meltdown, hiper-e-hiposensibilidad]
+fuentes: [randell-2022, schaaf-2014, acuna-2025, corakci-2025, case-smith-2015, weitlauf-2017, schoen-2019, camino-alarcon-2024, lyu-2025, gringras-2014, escap-2021, nas-crisis, nas-sensory-processing]
+revisado: 2026-11-26

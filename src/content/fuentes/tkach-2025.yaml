@@ -1,0 +1,16 @@
+titulo: 'The Feasibility of Occupation-Based Coaching for Autistic Children and Primary Caregivers'
+autoria: M. M. Tkach, W. Dunn y T. J. Wolf
+anio: 2025
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/39757912/
+doi: 10.1177/15394492241309322
+comprobado: 2026-11-26
+temas: [sensorial, programas]
+estudio:
+  diseno: 'Estudio de viabilidad de antes y después, de un solo grupo, de coaching basado en la ocupación por telesalud (8 sesiones)' # Solo el resumen
+  muestra: 13 # niñas y niños; 12 cuidadores
+  edades: Edad escolar (el resumen no da el rango)
+  porcentaje_ninas: null # el resumen no da el sexo
+  resultados_por_sexo: false

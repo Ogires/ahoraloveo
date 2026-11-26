@@ -1,0 +1,16 @@
+titulo: 'Effectiveness of therapy ball chairs on classroom participation in children with autism spectrum disorders'
+autoria: N. Bagatell, G. Mirigliani, C. Patterson y otros
+anio: 2010
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/21218680/
+doi: 10.5014/ajot.2010.09149
+comprobado: 2026-11-26
+temas: [sensorial, programas]
+estudio:
+  diseno: 'Estudio de caso único de sillas de pelota durante la asamblea de clase' # Solo el resumen
+  muestra: 6
+  edades: El resumen no las da
+  porcentaje_ninas: 0 # 6 niños («6 boys with autism spectrum disorder», resumen)
+  resultados_por_sexo: false

@@ -1,0 +1,16 @@
+titulo: 'Sensory-Adapted Dental Environment for the Treatment of Patients with Autism Spectrum Disorder'
+autoria: A. Fallea, R. Zuccarello, M. Roccella y otros
+anio: 2022
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8947452/
+doi: 10.3390/children9030393
+comprobado: 2026-11-26
+temas: [sensorial, programas]
+estudio:
+  diseno: 'Estudio intragrupo no aleatorizado de orden fijo: primer empaste en el entorno habitual y, dos meses después, el segundo en el entorno dental adaptado'
+  muestra: 50
+  edades: De 9 a 10 años
+  porcentaje_ninas: 28 # 14 niñas de 50 (l. 23)
+  resultados_por_sexo: true # separa por sexo en la l. 26: significativo en niños y no en niñas

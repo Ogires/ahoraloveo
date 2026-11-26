@@ -1,0 +1,16 @@
+titulo: 'Adaptive Functioning, Sensory Processing, and Behavioral Problems in Autistic Children: The Moderating Role of Gender'
+autoria: C. Shulman, D. Bitton y Z. Nir
+anio: 2026
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13599690/
+doi: 10.1002/aur.70327
+comprobado: 2026-11-26
+temas: [sensorial, genero]
+estudio:
+  diseno: 'Estudio transversal con muestreo intencional de funcionamiento adaptativo, procesamiento sensorial y conducta según el género'
+  muestra: 110
+  edades: Media de 85,6 meses (unos 7 años); no se ha leído el rango
+  porcentaje_ninas: 55 # 60 niñas de 110 (l. 19)
+  resultados_por_sexo: true

@@ -1,0 +1,16 @@
+titulo: 'Impact of Noise-Attenuating Headphones on Participation in the Home, Community, and School for Children with Autism Spectrum Disorder'
+autoria: B. Pfeiffer, S. R. Erb y L. Slugg
+anio: 2019
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/30265827/
+doi: 10.1080/01942638.2018.1496963
+comprobado: 2026-11-26
+temas: [sensorial, programas]
+estudio:
+  diseno: 'Estudio cualitativo (teoría fundamentada) con entrevistas a madres, padres y docentes sobre auriculares que atenúan el ruido' # Solo el resumen
+  muestra: 15 # 10 madres y padres y 5 docentes
+  edades: De 6 a 12 años (de las niñas y niños de quienes se habla)
+  porcentaje_ninas: null # el resumen no da el sexo
+  resultados_por_sexo: false

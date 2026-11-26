@@ -1,0 +1,16 @@
+titulo: 'Effectiveness of Earmuffs and Noise-cancelling Headphones for Coping with Hyper-reactivity to Auditory Stimuli in Children with Autism Spectrum Disorder: A Preliminary Study'
+autoria: N. Ikuta, R. Iwanaga, A. Tokunaga y otros
+anio: 2016
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6091992/
+doi: 10.1016/j.hkjot.2016.09.001
+comprobado: 2026-11-26
+temas: [sensorial, programas]
+estudio:
+  diseno: 'Piloto cruzado aleatorizado de orejeras y auriculares con cancelación de ruido: 2 semanas sin ellos y 2 semanas con cada uno'
+  muestra: 21 # 25 reclutadas (6 niñas); 4 no quisieron ponérselos (l. 33)
+  edades: De 4 a 16 años
+  porcentaje_ninas: 24 # 5 niñas de 21 (l. 4)
+  resultados_por_sexo: false # los propios autores dicen que el sexo no se controló (l. 47)

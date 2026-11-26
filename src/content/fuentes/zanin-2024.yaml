@@ -1,0 +1,16 @@
+titulo: 'Effectiveness of Noise Cancelling Earbuds in Reducing Hearing and Auditory Attention Deficits in Children with Autism'
+autoria: J. Zanin, D. Tomlin y G. Rance
+anio: 2024
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11355770/
+doi: 10.3390/jcm13164786
+comprobado: 2026-11-26
+temas: [sensorial, programas]
+estudio:
+  diseno: 'Estudio intragrupo: pruebas con y sin auriculares internos con cancelación de ruido y dos semanas de prueba en el aula'
+  muestra: 13 # 10 acabaron las dos semanas (l. 46)
+  edades: De 6 a 13 años
+  porcentaje_ninas: 23 # 3 niñas de 13: 10 varones (l. 15); las niñas son ASD4, ASD5 y ASD8 (tabla 1 del xml)
+  resultados_por_sexo: false

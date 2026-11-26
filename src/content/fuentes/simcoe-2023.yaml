@@ -1,0 +1,16 @@
+titulo: 'Are there gender-based variations in the presentation of Autism amongst female and male children?'
+autoria: S. M. Simcoe, J. Gilmour, M. S. Garnett y otros
+anio: 2023
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10465371/
+doi: 10.1007/s10803-022-05552-9
+comprobado: 2026-11-26
+temas: [sensorial, genero]
+estudio:
+  diseno: 'Estudio transversal con el cuestionario Q-ASC-M contestado por las familias (datos de archivo de una clínica de Brisbane): autistas frente a sin autismo'
+  muestra: 111 # autistas (sin discapacidad intelectual ni del lenguaje); además hay 212 sin autismo, 323 en total (l. 15)
+  edades: De 5 a 12 años
+  porcentaje_ninas: 42 # 47 niñas de 111 autistas (tabla 1 del xml)
+  resultados_por_sexo: true

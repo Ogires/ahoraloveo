@@ -24,7 +24,9 @@ no_confundir_con: >
 en_ninas: >
   AETAPI, la asociación española de profesionales del autismo, pide fijarse en
   las niñas que no se quejan cuando se hacen mucho daño. Y también en las que, al
-  contrario, sienten cualquier roce como una amenaza. En un estudio con 92
+  contrario, sienten cualquier roce como una amenaza. Los estudios que comparan
+  niñas y niños autistas no coinciden: unos encuentran más sensibilidad en ellas,
+  otro más en ellos y otro ninguna diferencia. En un estudio con 92
   personas autistas adultas, más de la mitad mujeres, varias contaron que
   disimulaban sus reacciones a la sobrecarga para que no se notara su autismo.
   Por eso, que no se queje no significa que no lo esté pasando mal.
@@ -35,6 +37,14 @@ que_hacer: >
   preguntarle qué necesita. Barry Prizant cuenta el caso de una familia que le
   decía a su hija «¿Necesitas tus auriculares? ¿Quieres irte?» y respetaba lo
   que ella contestaba. En el colegio, contad qué le molesta y qué la ayuda.
+  La guía NICE pide tener en cuenta la luz, el ruido y el color de las paredes.
+  También adaptar las citas médicas, por ejemplo a primera o última hora para esperar
+  menos. Para infantil, Autismo Castilla y León aconseja no obligarle a usar
+  materiales que rechaza y acercarse poco a poco a lo que le molesta. Isabel
+  Paula avisa de que intentar que se acostumbre a un estímulo suele dar poco
+  resultado, y de que hay que hacerlo con precaución. Y si parece no sentir el
+  dolor, la guía de Castilla y León pide vigilar golpes, caídas o problemas de
+  salud de los que no se queje.
 escenas:
   - edad: 5 años
     lugar: en el patio del cole
@@ -61,5 +71,5 @@ escenas:
       demasiada fuerza. No es exagerar: puede dolerle de verdad.
     imagen: ../../assets/escenas/hiper-e-hiposensibilidad-2.webp
 relacionados: [meltdown, estereotipias, interocepcion]
-fuentes: [nas-crisis, escap-2021, aetapi-mujeres-tea, hull-2017, paula-ansiedad-2015, prizant-seres-humanos-unicos]
-revisado: 2026-11-05
+fuentes: [nas-crisis, escap-2021, aetapi-mujeres-tea, hull-2017, paula-ansiedad-2015, prizant-seres-humanos-unicos, nice-cg170, autismo-cyl-profesores, simcoe-2023, osorio-2021, shulman-2026, pezone-2026]
+revisado: 2026-11-26
