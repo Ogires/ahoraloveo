@@ -7,7 +7,7 @@ import Base from '../../layouts/Base.astro';
 import { enlazarEntidades } from '../../lib/enlazar';
 import { cargarEntidades } from '../../lib/entidades';
 import { AREAS } from '../../lib/esquemas';
-import { formatearFecha } from '../../lib/fecha';
+import { fechaIso, formatearFecha } from '../../lib/fecha';
 import { ordenarPasos } from '../../lib/proceso';
 import { exigirTodas } from '../../lib/referencias';
 import { COLUMNAS, tablaAreas } from '../../lib/tabla-areas';
@@ -82,7 +82,7 @@ const grupos = tablaAreas(await getCollection('herramientas'));
             <aside class="cv" aria-labelledby={`cv-${p.data.orden}`}>
               <h3 id={`cv-${p.data.orden}`}>En la Comunitat Valenciana</h3>
               <p><TextoEnlazado trozos={enlazar(p.data.comunitat_valenciana.texto)} /></p>
-              <p class="comprobado">Comprobado el {formatearFecha(p.data.comunitat_valenciana.comprobado)}.</p>
+              <p class="comprobado">Comprobado el <time datetime={fechaIso(p.data.comunitat_valenciana.comprobado)}>{formatearFecha(p.data.comunitat_valenciana.comprobado)}</time>.</p>
             </aside>
           )}
         </li>
@@ -98,7 +98,7 @@ const grupos = tablaAreas(await getCollection('herramientas'));
           <aside class="cv" aria-labelledby={`cv-${a.id}`}>
             <h3 id={`cv-${a.id}`}>En la Comunitat Valenciana</h3>
             {a.data.comunitat_valenciana.parrafos.map((p) => <p><TextoEnlazado trozos={enlazar(p)} /></p>)}
-            <p class="comprobado">Comprobado el {formatearFecha(a.data.comunitat_valenciana.comprobado)}.</p>
+            <p class="comprobado">Comprobado el <time datetime={fechaIso(a.data.comunitat_valenciana.comprobado)}>{formatearFecha(a.data.comunitat_valenciana.comprobado)}</time>.</p>
           </aside>
         )}
       </section>

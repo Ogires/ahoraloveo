@@ -4,17 +4,21 @@ import '../styles/global.css';
 import Rueda from '../components/Rueda.astro';
 import SelectorTema from '../components/SelectorTema.astro';
 import { SITIO } from '../config';
+import { metaRobots } from '../lib/seo';
 import { mediaBarra } from '../lib/tema';
 import { CLARO, OSCURO } from '../lib/tokens';
 
 interface Props {
   titulo: string;
   descripcion: string;
+  indexable?: boolean;
+  canonica?: string | null;
 }
 
-const { titulo, descripcion } = Astro.props;
+const { titulo, descripcion, indexable = true, canonica: canonicaProp } = Astro.props;
 const tituloCompleto = titulo === SITIO.nombre ? titulo : `${titulo} | ${SITIO.nombre}`;
-const canonica = new URL(Astro.url.pathname, Astro.site).href;
+const canonica = canonicaProp === null ? null : new URL(canonicaProp ?? Astro.url.pathname, Astro.site).href;
+const robots = metaRobots(SITIO.publicada, indexable);
 // La tarjeta que muestran LinkedIn, WhatsApp y otras redes al compartir un enlace.
 // La imagen es la misma en todas las páginas; el texto alternativo dice lo que pone en ella.
 const imagenCompartir = new URL('/compartir.png', Astro.site).href;
@@ -37,14 +41,14 @@ const enlaces = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{tituloCompleto}</title>
     <meta name="description" content={descripcion} />
-    <link rel="canonical" href={canonica} />
-    {!SITIO.publicada && <meta name="robots" content="noindex, nofollow" />}
+    {canonica && <link rel="canonical" href={canonica} />}
+    {robots && <meta name="robots" content={robots} />}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITIO.nombre} />
     <meta property="og:locale" content="es_ES" />
     <meta property="og:title" content={tituloCompleto} />
     <meta property="og:description" content={descripcion} />
-    <meta property="og:url" content={canonica} />
+    {canonica && <meta property="og:url" content={canonica} />}
     <meta property="og:image" content={imagenCompartir} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -53,6 +57,7 @@ const enlaces = [
     <meta name="theme-color" content={CLARO.fondo} media={mediaBarra('claro', null)} data-tema="claro" />
     <meta name="theme-color" content={OSCURO.fondo} media={mediaBarra('oscuro', null)} data-tema="oscuro" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <script is:inline src="/tema.js"></script>
     <link rel="stylesheet" href="/tokens.css" />
     <slot name="cabeza" />

@@ -8,7 +8,7 @@ import { agruparPorLetra } from '../../lib/letras';
 const grupos = agruparPorLetra(await getCollection('glosario'), (t) => t.data.termino);
 ---
 
-<Base titulo="Glosario de la A a la Z" descripcion="Las palabras que vais a oír al hablar de autismo, en orden alfabético, con lo que cambia en las niñas.">
+<Base titulo="Glosario de la A a la Z" descripcion="Las palabras que vais a oír al hablar de autismo, en orden alfabético, con lo que cambia en las niñas." canonica="/glosario/">
   <div class="glosario">
     <CabeceraGlosario vista="a-z" />
     {grupos.map((g) => (

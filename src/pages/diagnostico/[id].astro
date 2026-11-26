@@ -9,6 +9,8 @@ import { enlazarEntidades } from '../../lib/enlazar';
 import { cargarEntidades } from '../../lib/entidades';
 import { AREAS, FORMATOS, TIPOS_HERRAMIENTA } from '../../lib/esquemas';
 import { exigirTodas } from '../../lib/referencias';
+import { tituloHerramienta } from '../../lib/seo';
+import { primeraFrase } from '../../lib/tarjetas';
 
 export async function getStaticPaths() {
   const herramientas = await getCollection('herramientas');
@@ -38,7 +40,7 @@ const apartados = [
 ];
 ---
 
-<Base titulo={d.nombre} descripcion={d.que_es}>
+<Base titulo={tituloHerramienta(d.nombre, d.tipo)} descripcion={primeraFrase(d.que_es)}>
   <article class="ficha" data-pagefind-body>
     {/* La navegación no se indexa, como en el glosario. */}
     <p data-pagefind-ignore><a href="/diagnostico/">Diagnóstico</a></p>

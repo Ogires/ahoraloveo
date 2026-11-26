@@ -1,11 +1,12 @@
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 import { SITIO } from './src/config';
+import { incluirEnMapa } from './src/lib/seo';
 
 export default defineConfig({
   site: SITIO.url,
   // El mapa del sitio, para los buscadores. robots.txt dice dónde está.
-  integrations: [sitemap()],
+  integrations: [sitemap({ filter: incluirEnMapa })],
   // Shiki colorea el código con estilos en línea, que la CSP bloquea. No hay bloques de código.
   markdown: { syntaxHighlight: false },
   security: {

@@ -7,6 +7,7 @@ import NombreTermino from '../../components/NombreTermino.astro';
 import PieRevision from '../../components/PieRevision.astro';
 import TextoEnlazado from '../../components/TextoEnlazado.astro';
 import Base from '../../layouts/Base.astro';
+import { SITIO } from '../../config';
 import { comprobarEscenarios, escenariosDe } from '../../lib/elegir';
 import { enlazarEntidades } from '../../lib/enlazar';
 import { cargarEntidades } from '../../lib/entidades';
@@ -14,6 +15,8 @@ import { PESOS } from '../../lib/esquemas';
 import { mitosDe } from '../../lib/mitos';
 import { programasDe } from '../../lib/programas';
 import { exigirTodas } from '../../lib/referencias';
+import { tituloTermino } from '../../lib/seo';
+import { primeraFrase } from '../../lib/tarjetas';
 import { otroNombre, tituloEnIngles } from '../../lib/terminos';
 import { FAMILIAS } from '../../lib/tokens';
 
@@ -60,7 +63,7 @@ const otrosNombres = [
 ];
 ---
 
-<Base titulo={`${d.termino} (${otroNombre(d).texto})`} descripcion={d.que_es}>
+<Base titulo={tituloTermino(d.termino, otroNombre(d).texto, SITIO.nombre)} descripcion={primeraFrase(d.que_es)}>
   <article class={`ficha f-${d.familia}`} data-pagefind-body>
     {/* La navegación no se indexa: buscar «crisis» no debe traer cada ficha que solo la enlaza. */}
     <p data-pagefind-ignore><a href="/glosario/">Glosario</a></p>

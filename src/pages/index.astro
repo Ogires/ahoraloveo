@@ -1,10 +1,22 @@
 ---
+import { getCollection } from 'astro:content';
 import Rueda from '../components/Rueda.astro';
 import Base from '../layouts/Base.astro';
 import { SITIO } from '../config';
+
+const totalGlosario = (await getCollection('glosario')).length;
+const totalMitos = (await getCollection('mitos')).length;
+const datosSitio = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITIO.nombre,
+  url: SITIO.url,
+  inLanguage: 'es',
+};
 ---
 
 <Base titulo={SITIO.tema} descripcion="Qué es el autismo, cómo se ve en el día a día y qué cambia en las niñas. Con cada fuente a la vista.">
+  <script is:inline type="application/ld+json" slot="cabeza" set:html={JSON.stringify(datosSitio)} />
   <section class="portada">
     <div class="portada-texto">
       <h1>{SITIO.lema}</h1>
@@ -14,6 +26,7 @@ import { SITIO } from '../config';
         <a href="/escenas/">Escenas del día a día</a>
         <a href="/diagnostico/">Cómo es el diagnóstico</a>
         <a href="/mitos/">Mitos sobre el autismo</a>
+        <a href="/programas/">Programas estudiados</a>
         <a href="/sobre/">Quién hace esta web</a>
       </div>
     </div>
@@ -24,7 +37,7 @@ import { SITIO } from '../config';
   </section>
   <section class="panel empezando" aria-labelledby="empezando">
     <h2 id="empezando">Esta web está empezando</h2>
-    <p>De momento hay unas pocas palabras del <a href="/glosario/">glosario</a>, con sus <a href="/escenas/">escenas del día a día</a>. También hay una <a href="/diagnostico/">guía del diagnóstico</a>, con las pruebas que os podéis encontrar, y <a href="/mitos/">los primeros mitos</a> sobre el autismo. Iremos sumando términos y señales poco a poco, siempre con sus fuentes.</p>
+    <p>Ya hay {totalGlosario} palabras en el <a href="/glosario/">glosario</a>, con sus <a href="/escenas/">escenas del día a día</a>, una <a href="/diagnostico/">guía del diagnóstico</a>, {totalMitos} <a href="/mitos/">mitos</a> y los <a href="/programas/">programas</a> que se han estudiado para algunas de esas palabras. Iremos sumando términos y señales poco a poco, siempre con sus fuentes.</p>
   </section>
 </Base>
 
