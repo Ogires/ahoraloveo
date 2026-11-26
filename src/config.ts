@@ -10,7 +10,8 @@ export const SITIO = {
   // Buzón de OVH: se responde desde esta dirección, sin que se vea el correo personal.
   correo: 'hola@ahoraloveo.es',
   // Con false, cada página lleva noindex para que los buscadores no la indexen.
-  publicada: false,
+  // Abierta a los buscadores el 2026-11-26. La 404 y la búsqueda siguen con noindex (indexable={false}).
+  publicada: true,
   // Token público de Cloudflare Web Analytics. Vacío: sin estadísticas.
   analytics: '',
 } as const;
