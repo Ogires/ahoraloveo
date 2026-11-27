@@ -13,6 +13,7 @@ docs/plans/*-mv1.md
 notas/
 propuestas/
 revisiones/
+.impeccable/
 
 # Resultados de Playwright
 test-results/

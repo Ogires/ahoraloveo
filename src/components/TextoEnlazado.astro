@@ -3,8 +3,24 @@ import type { Trozo } from '../lib/enlazar';
 
 interface Props {
   trozos: Trozo[];
+  marcarExternos?: boolean;
 }
-const { trozos } = Astro.props;
+const { trozos, marcarExternos = false } = Astro.props;
+const esExterno = (href: string) => marcarExternos && /^https?:\/\//.test(href);
 ---
 
-{trozos.map((t) => (t.enlace ? <a href={t.enlace.href} hreflang={t.enlace.idioma}>{t.texto}</a> : t.texto))}
+{trozos.map((t) =>
+  t.enlace ? (
+    <a href={t.enlace.href} hreflang={t.enlace.idioma}>
+      {t.texto}
+      {esExterno(t.enlace.href) && (
+        <>
+          <span class="externo" aria-hidden="true"> ↗</span>
+          <span class="visualmente-oculto"> (web externa)</span>
+        </>
+      )}
+    </a>
+  ) : (
+    t.texto
+  ),
+)}

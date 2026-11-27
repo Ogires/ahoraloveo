@@ -104,7 +104,10 @@ test('las escenas de elegir son una tarjeta más, sin «Esto lo hemos visto»', 
   await expect(tarjeta).toBeVisible();
   await expect(tarjeta.getByRole('heading', { level: 2 })).toBeFocused();
   await expect(tarjeta.getByRole('button', { name: 'Esto lo hemos visto' })).toHaveCount(0);
-  await expect(tarjeta.getByRole('link', { name: /^Leer la ficha de / })).toHaveCount(1);
+  const enlaceFicha = tarjeta.getByRole('link', { name: /^Leer la ficha de / });
+  await expect(enlaceFicha).toHaveCount(1);
+  await expect(enlaceFicha.locator('.visualmente-oculto')).toHaveCount(0);
+  await expect(page.locator('.barra-progreso').getByRole('link', { name: 'Ver lo que habéis reconocido' })).toHaveAttribute('href', '#reconocido');
   await tarjeta.locator('summary').first().click();
   await expect(tarjeta.locator('.explicacion').first()).toBeVisible();
   await expect(progreso(page)).toHaveText(`Escena ${indice + 1} de ${TOTAL} · Habéis marcado 0`);

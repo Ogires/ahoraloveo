@@ -108,6 +108,7 @@ const grupos = tablaAreas(await getCollection('herramientas'));
     <section>
       <h2 id="que-mide">Qué mide cada herramienta</h2>
       <p>Una vista de conjunto. Los matices están en la ficha de cada una.</p>
+      <p class="pista-desplazar">En pantallas estrechas, desplazad la tabla hacia los lados para ver todas las columnas.</p>
       <div class="desplazable" role="region" aria-labelledby="que-mide" tabindex="0">
         <table>
           <thead>
@@ -152,7 +153,8 @@ const grupos = tablaAreas(await getCollection('herramientas'));
   .paso h3, .cv h3 { font-size: 1.125rem; }
   .herramientas-paso ul { display: flex; flex-direction: column; gap: 0.375rem; padding-left: 1.5rem; }
   .cv { display: flex; flex-direction: column; gap: 0.5rem; border-left: 4px solid var(--acento); padding-left: 1rem; }
-  .comprobado, .edades { font-size: 0.9375rem; color: var(--tinta-suave); }
+  .comprobado, .edades, .pista-desplazar { font-size: 0.9375rem; color: var(--tinta-suave); }
+  @media (min-width: 44rem) { .pista-desplazar { display: none; } }
   .edades { display: block; font-weight: 400; }
   /* position: relative contiene los «No» ocultos (absolutos): sin ella ensanchaban la página. */
   .desplazable { overflow-x: auto; position: relative; }

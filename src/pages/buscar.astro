@@ -1,5 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
+
+const ejemplos = ['crisis', 'camuflaje', 'comorbilidad', 'ADOS-2', 'cribado', 'colegio'];
 ---
 
 <Base titulo="Buscar" descripcion="Buscad un término o una palabra en toda la web." indexable={false}>
@@ -13,6 +15,14 @@ import Base from '../layouts/Base.astro';
     <noscript>
       <p>La búsqueda necesita JavaScript. Mientras, tenéis <a href="/glosario/">todos los términos en el glosario</a>.</p>
     </noscript>
+    <div class="ejemplos" data-ejemplos hidden>
+      <p id="ejemplos-titulo">Podéis probar con:</p>
+      <ul aria-labelledby="ejemplos-titulo">
+        {ejemplos.map((e) => (
+          <li><button type="button" class="ejemplo" data-ejemplo={e}>{e}</button></li>
+        ))}
+      </ul>
+    </div>
     <pagefind-input></pagefind-input>
     <pagefind-summary></pagefind-summary>
     <pagefind-results></pagefind-results>
@@ -21,4 +31,14 @@ import Base from '../layouts/Base.astro';
 
 <style>
   .buscar { display: flex; flex-direction: column; gap: 1.5rem; max-width: 44rem; padding-block: 1.5rem 0; }
+  .buscar [hidden] { display: none; }
+  .ejemplos { display: flex; flex-direction: column; gap: 0.5rem; }
+  .ejemplos p { font-size: 0.9375rem; color: var(--tinta-suave); }
+  .ejemplos ul { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin: 0; }
+  .ejemplo {
+    min-height: 44px; padding: 0.4rem 1rem; border-radius: 999px;
+    border: 2px solid var(--linea); background: var(--superficie); color: var(--tinta);
+    font: inherit; font-size: 0.9375rem; font-weight: 500; cursor: pointer;
+  }
+  .ejemplo:hover { border-color: var(--acento); color: var(--acento); }
 </style>

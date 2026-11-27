@@ -67,7 +67,7 @@ const descripcion =
         <div class="apartado" id={`camino-${i + 1}`}>
           <h3>{apartado.titulo}</h3>
           {apartado.parrafos.map((p) => (
-            <p><TextoEnlazado trozos={enlazar(p)} /></p>
+            <p><TextoEnlazado trozos={enlazar(p)} marcarExternos /></p>
           ))}
           <p class="comprobado">
             Comprobado el <time datetime={fechaIso(apartado.comprobado)}>{formatearFecha(apartado.comprobado)}</time>.
@@ -78,14 +78,18 @@ const descripcion =
 
     <section aria-labelledby="asociaciones">
       <h2 id="asociaciones">Asociaciones y fundaciones</h2>
-      <p><TextoEnlazado trozos={enlazar(datos.aviso_entidades)} /></p>
+      <p><TextoEnlazado trozos={enlazar(datos.aviso_entidades)} marcarExternos /></p>
       {organizacionesPorProvincia.map((grupo) => (
         <div class="provincia">
           <h3>{grupo.nombre}</h3>
           <ul class="organizaciones">
             {grupo.lista.map((o) => (
               <li class="organizacion">
-                <a href={o.data.web}>{etiqueta(o.data)}</a>
+                <a href={o.data.web}>
+                  {etiqueta(o.data)}
+                  <span class="externo" aria-hidden="true"> ↗</span>
+                  <span class="visualmente-oculto"> (web externa)</span>
+                </a>
                 {o.data.localidad && <p class="datos">{o.data.localidad}</p>}
                 <p>{o.data.que_ofrece}</p>
                 <p class="comprobado">
@@ -100,14 +104,18 @@ const descripcion =
 
     <section aria-labelledby="mujeres-ninas">
       <h2 id="mujeres-ninas">Mujeres y niñas</h2>
-      <p><TextoEnlazado trozos={enlazar(datos.mujeres_ninas.texto)} /></p>
+      <p><TextoEnlazado trozos={enlazar(datos.mujeres_ninas.texto)} marcarExternos /></p>
       <p class="comprobado">
         Comprobado el <time datetime={fechaIso(datos.mujeres_ninas.comprobado)}>{formatearFecha(datos.mujeres_ninas.comprobado)}</time>.
       </p>
       <ul class="organizaciones">
         {organizacionesMujeres.map((o) => (
           <li class="organizacion">
-            <a href={o.data.web}>{etiqueta(o.data)}</a>
+            <a href={o.data.web}>
+              {etiqueta(o.data)}
+              <span class="externo" aria-hidden="true"> ↗</span>
+              <span class="visualmente-oculto"> (web externa)</span>
+            </a>
             <p>{o.data.que_ofrece}</p>
             <p class="comprobado">
               Comprobado el <time datetime={fechaIso(o.data.comprobado)}>{formatearFecha(o.data.comprobado)}</time>.
@@ -122,7 +130,11 @@ const descripcion =
       <ul class="organizaciones">
         {organizacionesAdultas.map((o) => (
           <li class="organizacion">
-            <a href={o.data.web}>{etiqueta(o.data)}</a>
+            <a href={o.data.web}>
+              {etiqueta(o.data)}
+              <span class="externo" aria-hidden="true"> ↗</span>
+              <span class="visualmente-oculto"> (web externa)</span>
+            </a>
             {o.data.localidad && (
               <p class="datos">{o.data.localidad} ({PROVINCIAS[o.data.provincia]})</p>
             )}
@@ -140,7 +152,11 @@ const descripcion =
       <ul class="organizaciones">
         {organizacionesConfederaciones.map((o) => (
           <li class="organizacion">
-            <a href={o.data.web}>{etiqueta(o.data)}</a>
+            <a href={o.data.web}>
+              {etiqueta(o.data)}
+              <span class="externo" aria-hidden="true"> ↗</span>
+              <span class="visualmente-oculto"> (web externa)</span>
+            </a>
             <p>{o.data.que_ofrece}</p>
             <p class="comprobado">
               Comprobado el <time datetime={fechaIso(o.data.comprobado)}>{formatearFecha(o.data.comprobado)}</time>.

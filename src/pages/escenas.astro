@@ -31,14 +31,17 @@ const terminosDe = (ids: { id: string }[]) => ids.map((r) => porId.get(r.id)!);
     </header>
 
     <div class="visor" data-visor>
-      <p class="progreso" aria-live="polite" data-progreso hidden></p>
+      <div class="barra-progreso" data-barra-progreso hidden>
+        <p class="progreso" aria-live="polite" data-progreso></p>
+        <a class="ver-reconocido" href="#reconocido">Ver lo que habéis reconocido</a>
+      </div>
       <ol class="tarjetas">
         {tarjetas.map((tarjeta, i) => tarjeta.tipo === 'elegir' ? (
           <li class={`tarjeta f-${terminosDe(tarjeta.escenario.data.terminos)[0].data.familia}`} id={`escena-${tarjeta.id}`} data-tarjeta data-id={tarjeta.id}>
             <EscenaElegir escenario={tarjeta.escenario} nivel={2} />
             {terminosDe(tarjeta.escenario.data.terminos).map((termino) => (
               <p>
-                <a href={`/glosario/${termino.id}/`}>Leer la ficha<span class="visualmente-oculto"> de <span lang={tituloEnIngles(termino.data) ? 'en' : undefined}>{termino.data.termino}</span></span></a>
+                <a href={`/glosario/${termino.id}/`}>Leer la ficha de <span lang={tituloEnIngles(termino.data) ? 'en' : undefined}>{termino.data.termino}</span></a>
               </p>
             ))}
           </li>
@@ -107,6 +110,7 @@ const terminosDe = (ids: { id: string }[]) => ids.map((r) => porId.get(r.id)!);
     const tarjetas = [...visor.querySelectorAll<HTMLElement>('[data-tarjeta]')];
     const ids = tarjetas.map((t) => t.dataset.id!);
     const terminoDe = new Map(tarjetas.map((t) => [t.dataset.id!, t.dataset.termino!]));
+    const barraProgreso = visor.querySelector<HTMLElement>('[data-barra-progreso]')!;
     const progreso = visor.querySelector<HTMLElement>('[data-progreso]')!;
     const controles = visor.querySelector<HTMLElement>('[data-controles]')!;
     const anterior = visor.querySelector<HTMLButtonElement>('[data-anterior]')!;
@@ -185,7 +189,7 @@ const terminosDe = (ids: { id: string }[]) => ids.map((r) => porId.get(r.id)!);
       tituloReconocido.focus();
     });
 
-    progreso.hidden = false;
+    barraProgreso.hidden = false;
     controles.hidden = false;
     reconocido.hidden = false;
     pintar();
@@ -202,7 +206,9 @@ const terminosDe = (ids: { id: string }[]) => ids.map((r) => porId.get(r.id)!);
   .aviso { background: var(--superficie); border-radius: 20px; padding: 1rem 1.25rem; }
 
   .visor { display: flex; flex-direction: column; gap: 1rem; scroll-margin-top: 1rem; }
+  .barra-progreso { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.25rem 1rem; }
   .progreso { font-weight: 500; color: var(--tinta-suave); }
+  .ver-reconocido { font-size: 0.9375rem; font-weight: 500; }
   .tarjetas { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.5rem; }
   .tarjeta {
     max-width: none; /* global.css limita los li a 38em, que es para el texto */
@@ -251,6 +257,7 @@ const terminosDe = (ids: { id: string }[]) => ids.map((r) => porId.get(r.id)!);
   .reconocido {
     background: var(--superficie); border-radius: 28px; padding: clamp(1.25rem, 3vw, 2rem);
     display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem;
+    scroll-margin-top: 1rem;
   }
   .reconocido h2 { font-size: 1.5rem; }
   .nota { font-size: 0.9375rem; color: var(--tinta-suave); }

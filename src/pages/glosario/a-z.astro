@@ -3,18 +3,37 @@ import { getCollection } from 'astro:content';
 import CabeceraGlosario from '../../components/CabeceraGlosario.astro';
 import EntradaGlosario from '../../components/EntradaGlosario.astro';
 import Base from '../../layouts/Base.astro';
-import { agruparPorLetra } from '../../lib/letras';
+import { entradasAlfabeticas } from '../../lib/letras';
+import { tituloEnIngles } from '../../lib/terminos';
 
-const grupos = agruparPorLetra(await getCollection('glosario'), (t) => t.data.termino);
+const grupos = entradasAlfabeticas(await getCollection('glosario'));
+const saltos = grupos.map((g) => ({ href: `#letra-${g.letra}`, texto: g.letra }));
 ---
 
 <Base titulo="Glosario de la A a la Z" descripcion="Las palabras que vais a oír al hablar de autismo, en orden alfabético, con lo que cambia en las niñas." canonica="/glosario/">
   <div class="glosario">
-    <CabeceraGlosario vista="a-z" />
+    <CabeceraGlosario vista="a-z" etiquetaSaltos="Ir a una letra" saltos={saltos} />
     {grupos.map((g) => (
       <section aria-labelledby={`letra-${g.letra}`}>
         <h2 id={`letra-${g.letra}`} class="letra">{g.letra}</h2>
-        <dl>{g.elementos.map((t) => <EntradaGlosario termino={t} conFamilia />)}</dl>
+        <dl>
+          {g.elementos.map((e) =>
+            e.tipo === 'termino' ? (
+              <EntradaGlosario termino={e.termino} conFamilia />
+            ) : (
+              <div class="remision">
+                <dt><span lang={e.ingles ? 'en' : undefined}>{e.nombre}</span></dt>
+                <dd>
+                  <span aria-hidden="true">→</span>{' '}
+                  <span class="visualmente-oculto">Véase </span>
+                  <a href={`/glosario/${e.termino.id}/`}>
+                    <span lang={tituloEnIngles(e.termino.data) ? 'en' : undefined}>{e.termino.data.termino}</span>
+                  </a>
+                </dd>
+              </div>
+            ),
+          )}
+        </dl>
       </section>
     ))}
   </div>
@@ -22,4 +41,11 @@ const grupos = agruparPorLetra(await getCollection('glosario'), (t) => t.data.te
 
 <style>
   .letra { font-size: 1.75rem; color: var(--acento); }
+  .remision {
+    background: var(--superficie); border: 1.5px solid var(--linea); border-radius: 20px;
+    padding: 0.75rem 1.25rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 0.5rem;
+  }
+  .remision dt { font-size: 1.125rem; font-weight: 500; }
+  .remision dd { margin: 0; color: var(--tinta-suave); }
+  .remision dd a { font-weight: 500; }
 </style>

@@ -9,3 +9,10 @@ test('cada apartado enlaza su primera mención de una entidad', async ({ page })
     await expect(page.locator(`section[aria-labelledby="${apartado}"] a[href="https://aetapi.org/"]`)).toHaveCount(1);
   }
 });
+
+test('en a quién acudir, los enlaces externos llevan la pista visual y accesible', async ({ page }) => {
+  await page.goto('/a-quien-acudir/');
+  const primero = page.locator('.organizacion a').first();
+  await expect(primero).toContainText('↗');
+  await expect(primero).toContainText('(web externa)');
+});

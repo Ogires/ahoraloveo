@@ -12,16 +12,26 @@ const grupos = FAMILIAS.map((f) => ({
   ...f,
   terminos: terminos.filter((t) => t.data.familia === f.id),
 })).filter((g) => g.terminos.length > 0);
+const saltos = grupos.map((g) => ({ href: `#familia-${g.id}`, texto: g.nombre, familia: g.id }));
 ---
 
 <Base titulo="Glosario" descripcion="Las palabras que vais a oír al hablar de autismo, explicadas con calma y con lo que cambia en las niñas.">
   <div class="glosario">
-    <CabeceraGlosario vista="familias" />
+    <CabeceraGlosario vista="familias" etiquetaSaltos="Ir a una familia" saltos={saltos} />
     {grupos.map((g) => (
       <section class={`f-${g.id}`} aria-labelledby={`familia-${g.id}`}>
-        <h2 id={`familia-${g.id}`}><span class="chip">{g.nombre}</span></h2>
+        <h2 id={`familia-${g.id}`}><span class="chip titulo-familia">{g.nombre}</span></h2>
         <dl>{g.terminos.map((t) => <EntradaGlosario termino={t} />)}</dl>
       </section>
     ))}
   </div>
 </Base>
+
+<style>
+  .titulo-familia {
+    padding: 0.35rem 1.15rem;
+    font-size: clamp(1.5rem, 2.8vw, 1.75rem);
+    font-weight: 600;
+    line-height: 1.25;
+  }
+</style>

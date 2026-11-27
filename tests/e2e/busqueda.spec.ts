@@ -28,3 +28,14 @@ test('«cribado» encuentra la sección del diagnóstico', async ({ page }) => {
   await page.locator('pagefind-input input').fill('cribado');
   await expect(page.locator('pagefind-results a[href*="/diagnostico/"]').first()).toBeVisible(ESPERA);
 });
+
+test('los ejemplos de búsqueda son visibles y todos devuelven resultados', async ({ page }) => {
+  await page.goto('/buscar/');
+  const botones = page.locator('[data-ejemplo]');
+  const total = await botones.count();
+  expect(total).toBeGreaterThanOrEqual(5);
+  for (let i = 0; i < total; i++) {
+    await botones.nth(i).click();
+    await expect(page.locator('pagefind-results a').first()).toBeVisible(ESPERA);
+  }
+});

@@ -8,6 +8,7 @@ test('el botón pasa a modo oscuro y lo recuerda al recargar', async ({ page }) 
   await boton.click();
   await expect(page.locator('html')).toHaveAttribute('data-tema', 'oscuro');
   await expect(boton).toHaveAttribute('aria-pressed', 'true');
+  await expect(boton).toHaveCSS('background-color', 'rgb(178, 172, 245)');
   await page.reload();
   await expect(page.locator('html')).toHaveAttribute('data-tema', 'oscuro');
   await expect(page.getByRole('button', { name: 'Modo oscuro' })).toHaveAttribute('aria-pressed', 'true');

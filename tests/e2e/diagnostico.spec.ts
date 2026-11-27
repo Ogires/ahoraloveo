@@ -57,3 +57,12 @@ test('explica lo que hace el colegio, con su recuadro de la Comunitat Valenciana
   await page.locator('#paso-1').locator('..').getByRole('link', { name: 'lo que hace el colegio' }).click();
   await expect(page).toHaveURL(/#colegio$/);
 });
+
+test('la pista de desplazamiento de la tabla se ve en móvil y se oculta en escritorio', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/diagnostico/');
+  await expect(page.locator('.pista-desplazar')).toBeVisible();
+
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await expect(page.locator('.pista-desplazar')).toBeHidden();
+});

@@ -92,8 +92,45 @@ test('las escenas de elegir van debajo de «No confundir con», con «No lo sé�
   const escenas = apartado.locator('.elegir');
   await expect(escenas).toHaveCount(2);
   const primera = escenas.first();
-  await expect(primera.getByRole('heading', { level: 3 })).toHaveText('¿Crisis o rabieta?');
+  await expect(primera.getByRole('heading', { level: 3 })).toHaveText('¿Crisis o rabieta en la piscina?');
+  await expect(escenas.nth(1).getByRole('heading', { level: 3 })).toHaveText('¿Crisis o rabieta a la salida de la guardería?');
   await expect(primera.locator('summary').last()).toHaveText('No lo sé');
+});
+
+test('el glosario limita su ancho, tiene barra de saltos, enlace a buscar y títulos de familia más grandes que los términos', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto('/glosario/');
+  const ancho = await page.locator('.glosario').evaluate((el) => el.getBoundingClientRect().width);
+  expect(ancho).toBeLessThanOrEqual(704); // 44rem
+
+  const saltos = page.getByRole('navigation', { name: 'Ir a una familia' });
+  await expect(saltos.getByRole('link', { name: 'Emociones' })).toHaveAttribute('href', '#familia-emociones');
+  await expect(page.locator('.cabecera-glosario').getByRole('link', { name: 'el buscador' })).toHaveAttribute('href', '/buscar/');
+
+  const tamanoFamilia = await page.locator('h2 .titulo-familia').first().evaluate((el) => parseFloat(getComputedStyle(el).fontSize));
+  const tamanoTermino = await page.locator('.entrada dt').first().evaluate((el) => parseFloat(getComputedStyle(el).fontSize));
+  expect(tamanoFamilia).toBeGreaterThan(tamanoTermino);
+});
+
+test('la A–Z incluye remisiones desde otros nombres y barra de saltos por letra', async ({ page }) => {
+  await page.goto('/glosario/a-z/');
+  await expect(page.getByRole('navigation', { name: 'Ir a una letra' }).getByRole('link', { name: 'C' })).toHaveAttribute('href', '#letra-C');
+  const remisionComorbilidad = page.locator('.remision', { hasText: 'Comorbilidad' });
+  await expect(remisionComorbilidad).toHaveCount(1);
+  await expect(remisionComorbilidad.getByRole('link', { name: 'Lo que puede acompañar al autismo' })).toHaveAttribute('href', '/glosario/comorbilidad/');
+});
+
+test('el índice «En esta página» solo muestra los apartados que tiene la ficha', async ({ page }) => {
+  await page.goto('/glosario/meltdown/');
+  const indiceMeltdown = page.getByRole('navigation', { name: 'En esta página' });
+  await expect(indiceMeltdown.getByRole('link', { name: 'En el día a día' })).toHaveAttribute('href', '#dia-a-dia');
+  await expect(indiceMeltdown.getByRole('link', { name: 'En niñas' })).toHaveAttribute('href', '#en-ninas');
+  await expect(indiceMeltdown.getByRole('link', { name: 'Qué podéis hacer' })).toHaveAttribute('href', '#que-hacer');
+
+  await page.goto('/glosario/interocepcion/');
+  const indiceInterocepcion = page.getByRole('navigation', { name: 'En esta página' });
+  await expect(indiceInterocepcion.getByRole('link', { name: 'En niñas' })).toHaveAttribute('href', '#en-ninas');
+  await expect(indiceInterocepcion.getByRole('link', { name: 'En el día a día' })).toHaveCount(0);
 });
 
 test('al elegir una opción se ve su explicación, y al elegir otra se cierra la anterior', async ({ page }) => {

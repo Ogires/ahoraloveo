@@ -61,6 +61,18 @@ const otrosNombres = [
   ...d.alias.map((texto) => ({ texto, ingles: false })),
   ...d.alias_en_ingles.map((texto) => ({ texto, ingles: true })),
 ];
+const enEstaPagina = [
+  { id: 'que-es', texto: 'Qué es' },
+  { id: 'como-se-ve', texto: 'Cómo se ve' },
+  ...(d.escenas.length > 0 ? [{ id: 'dia-a-dia', texto: 'En el día a día' }] : []),
+  ...(texto.no_confundir_con ? [{ id: 'no-confundir', texto: 'No confundir con' }] : []),
+  { id: 'en-ninas', texto: 'En niñas' },
+  ...(texto.que_hacer ? [{ id: 'que-hacer', texto: 'Qué podéis hacer' }] : []),
+  ...(programas.length > 0 ? [{ id: 'programas', texto: 'Programas estudiados' }] : []),
+  ...(mitos.length > 0 ? [{ id: 'mitos', texto: 'Mitos sobre esto' }] : []),
+  ...(relacionados.length > 0 ? [{ id: 'relacionados', texto: 'Términos relacionados' }] : []),
+  { id: 'fuentes', texto: 'Fuentes' },
+];
 ---
 
 <Base titulo={tituloTermino(d.termino, otroNombre(d).texto, SITIO.nombre)} descripcion={primeraFrase(d.que_es)}>
@@ -90,6 +102,15 @@ const otrosNombres = [
         ))}</p>
       )}
     </header>
+
+    <nav class="indice-pagina" aria-labelledby="en-esta-pagina" data-pagefind-ignore>
+      <p id="en-esta-pagina" class="indice-titulo">En esta página</p>
+      <ul>
+        {enEstaPagina.map((a) => (
+          <li><a href={`#${a.id}`}>{a.texto}</a></li>
+        ))}
+      </ul>
+    </nav>
 
     <section aria-labelledby="que-es">
       <h2 id="que-es">Qué es</h2>
@@ -187,6 +208,16 @@ const otrosNombres = [
 <style>
   .otro-nombre { font-size: 1.3125rem; }
   .alias { color: var(--tinta-suave); }
+  .indice-pagina {
+    background: var(--superficie); border-radius: 20px; padding: 1rem 1.25rem;
+    display: flex; flex-direction: column; gap: 0.5rem;
+  }
+  .indice-titulo { font-size: 0.9375rem; font-weight: 600; color: var(--tinta-suave); }
+  .indice-pagina ul {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; font-size: 0.9375rem;
+  }
+  .indice-pagina a { display: inline-block; padding-block: 0.25rem; }
   .escenas { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
   .escena { background: var(--superficie); border-radius: 20px; padding: 1rem 1.25rem; display: flex; flex-direction: column; gap: 0.375rem; }
   .no-confundir :global(.elegir) { background: var(--superficie); border-radius: 20px; padding: 1rem 1.25rem; margin-top: 0.5rem; }

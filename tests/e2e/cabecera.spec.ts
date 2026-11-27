@@ -30,9 +30,9 @@ test.describe('móvil (390×844)', () => {
     expect(boxTema).not.toBeNull();
     expect(boxMenu).not.toBeNull();
 
-    // Ningún control de la primera fila se solapa horizontalmente con el siguiente.
-    expect(boxMarca!.x + boxMarca!.width).toBeLessThanOrEqual(boxTema!.x);
-    expect(boxTema!.x + boxTema!.width).toBeLessThanOrEqual(boxMenu!.x);
+    // Ningún control de la primera fila se solapa y hay aire suficiente para el contorno del foco.
+    expect(boxTema!.x - (boxMarca!.x + boxMarca!.width)).toBeGreaterThanOrEqual(12);
+    expect(boxMenu!.x - (boxTema!.x + boxTema!.width)).toBeGreaterThanOrEqual(12);
 
     await expect(page.locator('.nav-movil nav')).toBeHidden();
     await expect(page.locator('.nav-escritorio')).toBeHidden();
