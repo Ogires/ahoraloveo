@@ -13,5 +13,5 @@ export const SITIO = {
   // Abierta a los buscadores el 2026-11-26. La 404 y la búsqueda siguen con noindex (indexable={false}).
   publicada: true,
   // Token público de Cloudflare Web Analytics. Vacío: sin estadísticas.
-  analytics: '',
+  analytics: '0b86450f80a44dbdbed3ef2ffa402663', // desde el 2026-11-27, con fragmento manual (la inyección automática excluía la UE)
 } as const;
