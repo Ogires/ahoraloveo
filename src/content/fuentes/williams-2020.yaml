@@ -1,0 +1,16 @@
+titulo: 'The Incredible Years Autism Spectrum and Language Delays Parent Program: A Pragmatic, Feasibility Randomized Controlled Trial'
+autoria: M. E. Williams, R. P. Hastings y J. Hutchings
+anio: 2020
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/31961490/
+doi: 10.1002/aur.2265
+comprobado: 2026-11-27
+temas: [meltdown, programas]
+estudio:
+  diseno: Ensayo aleatorizado piloto de viabilidad, en cuatro servicios de Gales, de IY-ASLD (12 sesiones semanales) frente a lista de espera con atención habitual
+  muestra: 58 # familias, 29 y 29 (solo el resumen)
+  edades: De 3 a 8 años
+  porcentaje_ninas: null # el resumen no da el sexo
+  resultados_por_sexo: false

@@ -1,0 +1,16 @@
+titulo: 'Early intervention for autism with a parent-delivered Qigong massage program: a randomized controlled trial'
+autoria: L. M. Silva, M. Schalock y K. Gabrielsen
+anio: 2011
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/22026323/
+doi: 10.5014/ajot.2011.000661
+comprobado: 2026-11-27
+temas: [meltdown, sensorial, programas]
+estudio:
+  diseno: Ensayo aleatorizado de masaje qigong aplicado solo por las familias, 4 meses, frente a lista de espera; el profesorado valora sin saber el grupo. Quienes firman crearon el programa
+  muestra: 47 # solo el resumen
+  edades: Niñas y niños pequeños (el resumen no da el rango)
+  porcentaje_ninas: null # el resumen no da el sexo
+  resultados_por_sexo: false

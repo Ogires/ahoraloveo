@@ -1,0 +1,16 @@
+titulo: 'Remote delivery of culturally adapted prevent-teach-reinforce for families with Chinese American families of young autistic children'
+autoria: J. Zhu, W. Machalicek y Q. Wei
+anio: 2026
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13140853/
+doi: 10.3389/fpsyt.2026.1783825
+comprobado: 2026-11-27
+temas: [meltdown, programas]
+estudio:
+  diseno: Dos diseños de línea base múltiple aleatorizados con seis díadas madre-hijo, de Prevent-Teach-Reinforce para familias adaptado a familias chino-estadounidenses y por videollamada
+  muestra: 6 # díadas
+  edades: De 3 años y medio a 4 años y 9 meses # tabla de participantes del xml
+  porcentaje_ninas: null # el texto no da el sexo de las niñas y niños
+  resultados_por_sexo: false

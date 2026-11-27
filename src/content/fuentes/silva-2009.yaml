@@ -1,0 +1,16 @@
+titulo: 'Qigong massage treatment for sensory and self-regulation problems in young children with autism: a randomized controlled trial'
+autoria: L. M. Silva, M. Schalock, R. Ayres y otros
+anio: 2009
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/19708471/
+doi: 10.5014/ajot.63.4.423
+comprobado: 2026-11-27
+temas: [meltdown, sensorial, programas]
+estudio:
+  diseno: Ensayo aleatorizado de masaje qigong (20 sesiones con una persona entrenada y masaje diario de la familia durante 5 meses) frente a lista de espera; el profesorado valora sin saber el grupo y las familias lo saben. Quienes firman crearon el programa
+  muestra: 46 # solo el resumen
+  edades: Menores de 6 años
+  porcentaje_ninas: null # el resumen no da el sexo
+  resultados_por_sexo: false

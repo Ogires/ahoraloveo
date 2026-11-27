@@ -1,0 +1,16 @@
+titulo: 'The feasibility of occupational therapy using Zones of Regulation™ Concepts in an equine environment'
+autoria: B. C. Peters, R. L. Gabriels, A. A. Schmid y otros
+anio: 2024
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11405308/
+doi: 10.3389/fpsyt.2024.1401222
+comprobado: 2026-11-27
+temas: [meltdown, programas]
+estudio:
+  diseno: 'Estudio de viabilidad sin grupo de comparación: 10 semanas de terapia ocupacional con conceptos de Zones of Regulation en consulta y, a continuación, 10 semanas con caballos'
+  muestra: 14
+  edades: De 6 a 13 años
+  porcentaje_ninas: 57 # 8 de 14, tabla 1 del xml: «Sex (M/F) 6/8»; el texto dice que reclutaron «more female than male participants» (l. 124)
+  resultados_por_sexo: false

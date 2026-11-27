@@ -1,0 +1,16 @@
+titulo: 'FIRST STEPS: A Pilot Randomized Study Analyzing the Preliminary Efficacy of the Incredible Years for Autism Spectrum and Language Delays (IY-ASLD(®))'
+autoria: F. Valencia-Agudo, L. Villalta-Macià, E. Urbiola-Merina y otros
+anio: 2026
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/41849025/
+doi: 10.1007/s10803-026-07268-6
+comprobado: 2026-11-27
+temas: [meltdown, programas]
+estudio:
+  diseno: Ensayo aleatorizado piloto multicéntrico de IY-ASLD en línea frente a atención habitual, en servicios públicos de salud mental de España
+  muestra: 62 # familias de niñas y niños autistas y de prematuros con dificultades de comunicación o socialización (solo el resumen)
+  edades: De 2 a 5 años
+  porcentaje_ninas: null # el resumen no da el sexo
+  resultados_por_sexo: false

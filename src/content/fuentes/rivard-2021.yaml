@@ -1,0 +1,16 @@
+titulo: 'Using Prevent Teach Reinforce for Young Children to Manage Challenging Behaviors in Public Specialized Early Intervention Services for Autism'
+autoria: M. Rivard, C. Mello, Z. Mestari y otros
+anio: 2021
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/33420936/
+doi: 10.1007/s10803-020-04856-y
+comprobado: 2026-11-27
+temas: [meltdown, programas]
+estudio:
+  diseno: Prueba de concepto sin grupo de comparación de Prevent-Teach-Reinforce para niñas y niños pequeños (PTR-YC), aplicado en casa por educadoras y educadores de intervención temprana
+  muestra: 35 # familias (solo el resumen)
+  edades: No consta en el resumen
+  porcentaje_ninas: null # el resumen no da el sexo
+  resultados_por_sexo: false

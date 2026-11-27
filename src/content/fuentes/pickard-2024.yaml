@@ -1,0 +1,16 @@
+titulo: 'A cluster randomized controlled trial comparing the effectiveness of two school-based interventions for autistic youth with anxiety'
+autoria: K. Pickard, B. Maddox, R. Boles y otros
+anio: 2024
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10763300/
+doi: 10.1186/s12888-023-05441-0
+comprobado: 2026-11-27
+temas: [meltdown, programas]
+estudio:
+  diseno: Protocolo de un ensayo aleatorizado por colegios que compara Facing Your Fears en el colegio con Zones of Regulation, sin resultados todavía
+  muestra: 200 # prevista, no real
+  edades: De 8 a 14 años
+  porcentaje_ninas: null # protocolo sin participantes todavía
+  resultados_por_sexo: false

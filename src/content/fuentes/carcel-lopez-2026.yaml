@@ -1,0 +1,16 @@
+titulo: 'Describing Pre-Post Changes Observed During the Implementation of a Snoezelen Program in a Real-School Context'
+autoria: M. D. Cárcel-López y M. Ferrando-Prieto
+anio: 2026
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13205858/
+doi: 10.3390/ejihpe16050062
+comprobado: 2026-11-27
+temas: [meltdown, sensorial, programas]
+estudio:
+  diseno: Estudio antes y después, sin grupo de comparación, de un programa Snoezelen (28 sesiones individuales semanales con su profesorado) en un colegio de la Región de Murcia
+  muestra: 27
+  edades: Edad media de 10 años (desviación 4,2); el rango no consta
+  porcentaje_ninas: null # el texto no da el sexo de las alumnas y alumnos
+  resultados_por_sexo: false

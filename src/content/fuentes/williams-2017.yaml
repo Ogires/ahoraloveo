@@ -1,0 +1,16 @@
+titulo: 'Parenting for Autism, Language, And Communication Evaluation Study (PALACES): protocol for a pilot randomised controlled trial'
+autoria: M. E. Williams, R. Hastings, J. M. Charles y otros
+anio: 2017
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5318566/
+doi: 10.1136/bmjopen-2016-014524
+comprobado: 2026-11-27
+temas: [meltdown, programas]
+estudio:
+  diseno: Protocolo de un ensayo aleatorizado piloto multicéntrico de Incredible Years para autismo y retraso del lenguaje (IY-ASLD) frente a lista de espera, sin resultados
+  muestra: 72 # prevista, no real
+  edades: De 3 a 8 años
+  porcentaje_ninas: null # protocolo sin participantes todavía
+  resultados_por_sexo: false

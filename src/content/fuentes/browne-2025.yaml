@@ -1,0 +1,16 @@
+titulo: 'The Acceptability of Occupational Therapy Using Zones of Regulation™ Concepts in an Equine Environment to Autistic Children'
+autoria: J. M. Browne, S. J. Reega, E. M. Rankins y otros
+anio: 2025
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12024242/
+doi: 10.3390/bs15040495
+comprobado: 2026-11-27
+temas: [meltdown, programas]
+estudio:
+  diseno: 'Estudio cualitativo: entrevistas a seis niñas y niños autistas que habían hecho 10 semanas de terapia ocupacional con conceptos de Zones of Regulation y caballos, dentro de un ensayo aleatorizado en marcha (NCT05846932)'
+  muestra: 6
+  edades: De 7 a 9 años
+  porcentaje_ninas: 33 # 2 niñas y 4 niños, tabla de participantes del xml
+  resultados_por_sexo: false

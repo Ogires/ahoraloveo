@@ -1,0 +1,16 @@
+titulo: 'Occupational Therapy Using Zones of Regulation™ Concepts: A Feasibility Study'
+autoria: B. C. Peters, R. Gabriels, A. A. Schmid y otros
+anio: 2024
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pubmed.ncbi.nlm.nih.gov/38659367/
+doi: 10.1177/15394492241246549
+comprobado: 2026-11-27
+temas: [meltdown, programas]
+estudio:
+  diseno: Estudio de viabilidad sin grupo de comparación de terapia ocupacional con conceptos de Zones of Regulation (OT-ZOR), 10 semanas, medido antes y después
+  muestra: 14 # solo el resumen
+  edades: De 6 a 13 años
+  porcentaje_ninas: null # el resumen no da el sexo; probablemente los mismos 14 que Peters 2024b (8 niñas): sin comprobar
+  resultados_por_sexo: false

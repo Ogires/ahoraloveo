@@ -1,0 +1,16 @@
+titulo: 'A Pilot Feasibility Randomized Trial of the RUBI in Educational Settings Intervention With Paraeducators Supporting Autistic Students in Public Elementary Schools'
+autoria: K. Bearss, W. Shih, D. M. Tagavi y otros
+anio: 2025
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12714176/
+doi: 10.1007/s10803-025-07072-8
+comprobado: 2026-11-27
+temas: [meltdown, programas]
+estudio:
+  diseno: Ensayo aleatorizado piloto de RUBIES (RUBI en el colegio, aplicado por auxiliares) frente a otro programa de formación (PASS), 24 semanas, en 39 colegios de EE. UU.
+  muestra: 65 # alumnas y alumnos; además, 67 auxiliares (solo el resumen)
+  edades: Primaria
+  porcentaje_ninas: null # el resumen no da el sexo
+  resultados_por_sexo: false

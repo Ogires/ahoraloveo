@@ -7,7 +7,9 @@ edad_hasta: 12
 quien: El personal del colegio, del centro o de la terapia, acompañando a la niña o al niño.
 formato: Individual, en una sala con aparatos de luz, sonido y tacto, como tubos de burbujas o paneles.
 duracion: Sin una duración fija. En un estudio, 36 sesiones de 45 minutos en cuatro meses.
-en_espana: Sin datos sobre su uso en España. Los estudios son del Reino Unido e Italia.
+en_espana: >
+  Hay un estudio en un colegio de la Región de Murcia, con 27 alumnas y alumnos y sin grupo de
+  comparación. Sin datos sobre cuánto se usan en España.
 peso: pequenos
 que_es: >
   Una sala multisensorial, también llamada sala Snoezelen, tiene aparatos que crean experiencias de luz,
@@ -27,21 +29,24 @@ que_encontraron: >
   las dos formas. En un piloto italiano con 20 niñas y niños de 3 a 6 años, cuatro meses en la sala
   mejoraron la motricidad y algunas conductas de gusto, olfato y tacto. Una revisión de 2025 dice que
   podría ayudar con la agresividad y las estereotipias. Para lo demás, concluye que no hay pruebas
-  suficientes.
+  suficientes. En el colegio de Murcia, en 2026, cada alumna o alumno tuvo 28 sesiones individuales, una
+  por semana. Sus autores avisan de que, sin grupo de comparación, los cambios que vieron no se pueden
+  atribuir a la sala.
 en_ninas: >
   Pocas niñas: 8 de 41 en el estudio de 2022 y 3 de 20 en el piloto italiano. La revisión cuenta 45
-  mujeres y niñas de 171 participantes, contando a personas adultas. Ningún estudio miró los resultados
-  por sexo.
+  mujeres y niñas de 171 participantes, contando a personas adultas. El estudio de Murcia no dice
+  cuántas niñas había. Ningún estudio miró los resultados por sexo.
 limitaciones: >
   Ningún estudio mira qué pasa después, en casa o en el cole. Tampoco se ha comparado con un cuarto de
   juego habitual, sin aparatos. Una empresa donó la sala del estudio de 2022 y otra diseñó la del piloto
   italiano. La revisión de 2025 la firma el mismo centro que hizo el piloto, que está entre los estudios
-  revisados. Ninguno de esos estudios vigiló posibles efectos negativos. Ninguna de las guías que hemos
-  consultado habla de salas multisensoriales.
+  revisados. Ninguno de esos estudios vigiló posibles efectos negativos. La guía NICE sobre discapacidad
+  intelectual y conductas difíciles pide no ofrecerlas antes de valorar su perfil sensorial. Las demás
+  guías que hemos consultado no hablan de salas multisensoriales.
 que_preguntar:
   - ¿Para qué se usa la sala con ella, y quién decide qué aparatos se encienden?
   - ¿Puede ir allí cuando necesite descansar de tanto estímulo?
   - ¿Hay también un rincón tranquilo, sin aparatos, al que pueda ir?
 relacionados: [hiper-e-hiposensibilidad]
-fuentes: [unwin-2022, unwin-2024, de-domenico-2024, leonardi-2025, nas-crisis, ambitious-meltdowns-shutdowns, autismo-cyl-profesores]
-revisado: 2026-11-26
+fuentes: [unwin-2022, unwin-2024, de-domenico-2024, leonardi-2025, carcel-lopez-2026, nice-ng11, nas-crisis, ambitious-meltdowns-shutdowns, autismo-cyl-profesores]
+revisado: 2026-11-27

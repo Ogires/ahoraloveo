@@ -1,0 +1,16 @@
+titulo: 'Protocol for a randomized pilot study (FIRST STEPS): implementation of the Incredible Years-ASLD® program in Spanish children with autism and preterm children with communication and/or socialization difficulties'
+autoria: F. Valencia, E. Urbiola, M. Romero-González y otros
+anio: 2021
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8056105/
+doi: 10.1186/s13063-021-05229-1
+comprobado: 2026-11-27
+temas: [meltdown, programas]
+estudio:
+  diseno: Protocolo de un ensayo aleatorizado piloto multicéntrico de IY-ASLD en línea frente a atención habitual, en tres hospitales españoles, sin resultados
+  muestra: 70 # prevista («approximately 70 families»), no real
+  edades: De 2 a 5 años
+  porcentaje_ninas: null # protocolo sin participantes todavía
+  resultados_por_sexo: false

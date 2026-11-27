@@ -1,0 +1,16 @@
+titulo: 'Treatment of tactile impairment in young children with autism: results with qigong massage'
+autoria: L. Silva y M. Schalock
+anio: 2013
+tipo: estudio
+nivel: estudios
+idioma: en
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3838308/
+doi: 10.3822/ijtmb.v6i4.227
+comprobado: 2026-11-27
+temas: [meltdown, sensorial, programas]
+estudio:
+  diseno: 'Análisis retrospectivo de la base de datos de las propias autoras: masaje qigong (97) frente a lista de espera (32), con medidas de las familias a los 5 meses'
+  muestra: 129
+  edades: De 3 a 6 años
+  porcentaje_ninas: 19 # 25 de 129, tabla 1 del xml: 18 niñas de 97 y 7 de 32; los grupos no diferían en sexo (l. 4)
+  resultados_por_sexo: false

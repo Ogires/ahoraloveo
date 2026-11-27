@@ -1,0 +1,43 @@
+nombre: Entrenamiento de integración auditiva
+en_ingles: Auditory integration training (Berard, Tomatis)
+para_que: Escuchar música modificada para que molesten menos los sonidos. Los estudios no encuentran beneficio, y las guías lo desaconsejan.
+edades: De 3 años en adelante en los estudios
+edad_desde: 3
+edad_hasta: 39
+quien: Profesionales formados en alguno de los métodos.
+formato: Individual. La niña o el niño escucha con auriculares.
+duracion: Sin datos en las fuentes que hemos consultado.
+en_espana: >
+  Sin datos sobre su uso en España. La guía de la SEPEAP, de pediatría, lo cuenta entre los
+  tratamientos sin pruebas.
+peso: sin-beneficio
+que_es: >
+  Se creó para mejorar la sensibilidad anormal al sonido de algunas personas, entre ellas personas
+  autistas. Consiste en escuchar música a la que se le han filtrado o cambiado algunos sonidos. Hay
+  varios métodos, como el de Berard o el de Tomatis.
+como_es: >
+  La niña o el niño escucha música modificada con auriculares, en varias sesiones. No tiene que hacer
+  nada más que escuchar.
+que_encontraron: >
+  Una revisión Cochrane de 2011 reunió 7 ensayos con 182 personas de 3 a 39 años, y 5 de ellos tenían
+  menos de 20 participantes. Tres no encontraron beneficio. Otros tres vieron mejoras en un cuestionario
+  de conducta, pero con una forma de puntuarlo que la revisión considera dudosa. Concluye que no hay
+  pruebas para usarlo, aunque tampoco bastan para demostrar que no sirve. Una revisión de 2018 con 13
+  ensayos hechos en China, con 976 niñas y niños, sí encontró que mejoraban las puntuaciones de dos
+  cuestionarios, y lo recomienda para niñas y niños de China.
+en_ninas: >
+  Sin datos sobre niñas: las revisiones no dicen en sus resúmenes cuántas había.
+limitaciones: >
+  Ningún estudio mide las crisis. Los ensayos de la revisión Cochrane son pocos, pequeños y antiguos. La
+  revisión de 2018 solo incluye estudios de China, y no sabemos si evita los problemas que señala
+  Cochrane. NICE, la guía británica, pide que no se use para el habla y el lenguaje. La guía europea
+  ESCAP lo cuenta entre los tratamientos alternativos sin cabida en el autismo, y la SEPEAP, entre los
+  que no tienen pruebas y tienen riesgos indirectos. Sobre los apoyos para el ruido, lo contamos en
+  [orejeras y auriculares](/programas/orejeras-y-auriculares/).
+que_preguntar:
+  - ¿Qué estudios respaldan este método, y qué dicen las guías?
+  - ¿Qué se espera que mejore, y cómo lo vamos a medir?
+  - ¿Qué otras formas hay de ayudarla con los ruidos que le molestan?
+relacionados: [hiper-e-hiposensibilidad, meltdown]
+fuentes: [sinha-2011, li-2018, nice-cg170, escap-2021, sepeap-tea-2023]
+revisado: 2026-11-27
