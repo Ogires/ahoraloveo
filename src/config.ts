@@ -1,6 +1,6 @@
 // Datos del sitio. Nada de esto es secreto: todo acaba en el HTML.
 export const SITIO = {
-  nombre: 'Ahora lo veo', // candidato: faltan las marcas y la prueba con familias
+  nombre: 'Ahora lo veo', // definitivo desde el 2026-11-26: sin marcas que choquen en TMview
   tema: 'Autismo en mujeres y niñas', // subtítulo: dice de qué va y es lo que se busca
   lema: 'Para cuando aparece la palabra «autismo»', // dice para quién es, no por qué se hace
   url: 'https://ahoraloveo.es', // sin barra final: redirecciones/index.ts le añade la ruta
