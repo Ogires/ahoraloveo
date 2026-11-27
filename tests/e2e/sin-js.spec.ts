@@ -51,3 +51,16 @@ test('a quién acudir se lee completo sin JavaScript', async ({ page }) => {
   await expect(page.getByRole('heading', { level: 2, name: 'Para el resto de España' })).toBeVisible();
   await expect(page.locator('.organizacion').first()).toBeVisible();
 });
+
+test('en móvil sin JavaScript el menú se abre y los enlaces llevan a su página', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/');
+  const resumen = page.locator('.nav-movil > summary');
+  const navMovil = page.locator('.nav-movil nav');
+  await expect(resumen).toBeVisible();
+  await expect(navMovil).toBeHidden();
+  await resumen.click();
+  await expect(navMovil).toBeVisible();
+  await navMovil.getByRole('link', { name: 'Escenas', exact: true }).click();
+  await expect(page).toHaveURL(/\/escenas\/$/);
+});
