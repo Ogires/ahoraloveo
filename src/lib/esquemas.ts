@@ -352,3 +352,47 @@ export const crearEsquemaEscenario = <F extends z.ZodType, G extends z.ZodType>(
     fuentes: z.array(referencias.fuentes).min(1, 'Cada escena de elegir necesita al menos una fuente'),
     revisado: fecha(),
   });
+
+// «A quién acudir»: entidades sin ánimo de lucro, confederaciones y recursos sobre mujeres y niñas.
+export const BLOQUES_ORGANIZACION = ['entidades', 'mujeres-ninas', 'adultas', 'confederaciones'] as const;
+export const PROVINCIAS = {
+  alicante: 'Alicante',
+  castellon: 'Castellón',
+  valencia: 'Valencia',
+  estatal: 'Toda España',
+} as const;
+
+export const esquemaOrganizacion = z
+  .object({
+    nombre: texto(),
+    siglas: texto().optional(),
+    bloque: z.enum(BLOQUES_ORGANIZACION),
+    provincia: z.enum(ids(PROVINCIAS)),
+    localidad: texto().optional(),
+    que_ofrece: texto(), // una frase, según su propia web
+    web: z.httpUrl(),
+    comprobado: fecha(),
+  })
+  .refine((o) => o.bloque !== 'entidades' || (o.provincia !== 'estatal' && o.localidad !== undefined), {
+    message: 'Una entidad de la Comunitat lleva su provincia y su localidad',
+    path: ['localidad'],
+  });
+
+// Los textos de la página «A quién acudir» de una comunidad (de momento, solo la Comunitat Valenciana).
+export const crearEsquemaAcudir = <F extends z.ZodType>(referencias: { fuentes: F }) =>
+  z.object({
+    entradilla: texto(),
+    camino_publico: z
+      .array(
+        z.object({
+          titulo: texto(),
+          parrafos: z.array(texto()).min(1).max(4),
+          fuentes: z.array(referencias.fuentes).min(1),
+          comprobado: fecha(),
+        }),
+      )
+      .length(4, 'El camino público tiene cuatro apartados: sanidad, atención temprana, colegio y discapacidad'),
+    aviso_entidades: texto(),
+    mujeres_ninas: z.object({ texto: texto(), comprobado: fecha() }),
+    revisado: fecha(),
+  });

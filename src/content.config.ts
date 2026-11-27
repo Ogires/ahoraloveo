@@ -1,6 +1,7 @@
 import { defineCollection, reference } from 'astro:content';
 import { glob } from 'astro/loaders';
 import {
+  crearEsquemaAcudir,
   crearEsquemaApartado,
   crearEsquemaEscenario,
   crearEsquemaHerramienta,
@@ -10,6 +11,7 @@ import {
   crearEsquemaTermino,
   esquemaEntidad,
   esquemaFuente,
+  esquemaOrganizacion,
 } from './lib/esquemas';
 
 const fuentes = defineCollection({
@@ -62,4 +64,26 @@ const programas = defineCollection({
   schema: crearEsquemaPrograma({ fuentes: reference('fuentes'), glosario: reference('glosario') }),
 });
 
-export const collections = { fuentes, glosario, entidades, herramientas, proceso, mitos, apartados, escenarios, programas };
+const organizaciones = defineCollection({
+  loader: glob({ pattern: '**/*.{yaml,yml}', base: './src/content/organizaciones' }),
+  schema: esquemaOrganizacion,
+});
+
+const acudir = defineCollection({
+  loader: glob({ pattern: '**/*.{yaml,yml}', base: './src/content/acudir' }),
+  schema: crearEsquemaAcudir({ fuentes: reference('fuentes') }),
+});
+
+export const collections = {
+  fuentes,
+  glosario,
+  entidades,
+  herramientas,
+  proceso,
+  mitos,
+  apartados,
+  escenarios,
+  programas,
+  organizaciones,
+  acudir,
+};

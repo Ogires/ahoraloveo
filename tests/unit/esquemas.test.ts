@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { z } from 'astro/zod';
 import {
+  crearEsquemaAcudir,
   crearEsquemaApartado,
   crearEsquemaEscenario,
   crearEsquemaHerramienta,
@@ -10,6 +11,7 @@ import {
   crearEsquemaTermino,
   esquemaEntidad,
   esquemaFuente,
+  esquemaOrganizacion,
 } from '../../src/lib/esquemas';
 
 const esquemaTermino = crearEsquemaTermino({ fuentes: z.string(), glosario: z.string(), imagen: z.string() });
@@ -565,5 +567,72 @@ describe('esquema de los programas', () => {
     expect(
       valido(esquemaPrograma, { ...programa, nombre: 'Entrenamiento de la memoria de trabajo', en_ingles: 'Working memory training' }),
     ).toBe(true);
+  });
+});
+
+const organizacion = {
+  nombre: 'APACV',
+  siglas: 'APACV',
+  bloque: 'entidades' as const,
+  provincia: 'alicante' as const,
+  localidad: 'Alicante',
+  que_ofrece: 'Información, asesoramiento y terapias para familias.',
+  web: 'https://apacv.org/',
+  comprobado: '2026-11-27',
+};
+
+describe('esquema de las organizaciones', () => {
+  it('acepta una organización completa', () => {
+    expect(valido(esquemaOrganizacion, organizacion)).toBe(true);
+  });
+
+  it('rechaza una organización sin web o con una web que no es una URL', () => {
+    const { web: _, ...sinWeb } = organizacion;
+    expect(valido(esquemaOrganizacion, sinWeb)).toBe(false);
+    expect(valido(esquemaOrganizacion, { ...organizacion, web: 'no-es-una-url' })).toBe(false);
+  });
+
+  it('rechaza una entidad sin localidad', () => {
+    const { localidad: _, ...sinLocalidad } = organizacion;
+    expect(valido(esquemaOrganizacion, sinLocalidad)).toBe(false);
+  });
+
+  it('rechaza una entidad con provincia estatal', () => {
+    expect(valido(esquemaOrganizacion, { ...organizacion, provincia: 'estatal' })).toBe(false);
+  });
+});
+
+const esquemaAcudir = crearEsquemaAcudir({ fuentes: z.string() });
+
+const apartadoCamino = {
+  titulo: 'Sanidad',
+  parrafos: ['Pediatría os deriva si hace falta.'],
+  fuentes: ['cv-protocolo-sanidad-2023'],
+  comprobado: '2026-11-27',
+};
+
+const acudir = {
+  entradilla: 'Dónde pedir información y apoyo en la Comunitat Valenciana.',
+  camino_publico: [
+    apartadoCamino,
+    { ...apartadoCamino, titulo: 'Atención temprana' },
+    { ...apartadoCamino, titulo: 'En el colegio' },
+    { ...apartadoCamino, titulo: 'Discapacidad y dependencia' },
+  ],
+  aviso_entidades: 'Son entidades sin ánimo de lucro.',
+  mujeres_ninas: {
+    texto: 'Los recursos específicos son de ámbito estatal.',
+    comprobado: '2026-11-27',
+  },
+  revisado: '2026-11-27',
+};
+
+describe('esquema de «A quién acudir»', () => {
+  it('acepta una ficha completa de «A quién acudir»', () => {
+    expect(valido(esquemaAcudir, acudir)).toBe(true);
+  });
+
+  it('rechaza un camino público con tres apartados', () => {
+    expect(valido(esquemaAcudir, { ...acudir, camino_publico: acudir.camino_publico.slice(0, 3) })).toBe(false);
   });
 });

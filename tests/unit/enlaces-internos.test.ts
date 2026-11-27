@@ -41,6 +41,7 @@ const ordenesDePasos = ids('proceso').map((id) => parse(readFileSync(join(CONTEN
 const ANCLAS: Record<string, string[]> = {
   '/diagnostico/': ['colegio', 'criterios', 'que-mide', 'fuentes', ...ordenesDePasos.map((o) => `paso-${o}`)],
   '/escenas/': ORDEN_ESCENAS.map((id) => `escena-${id}`),
+  '/a-quien-acudir/': ['resto-de-espana'],
 };
 
 // Los campos que la web pinta con enlazarEntidades(). Los demás se usan también como texto plano
@@ -52,6 +53,7 @@ const CAMPOS_CON_ENLACES: Record<string, string[]> = {
   proceso: ['que_pasa', 'que_hacer', 'comunitat_valenciana.texto'],
   apartados: ['parrafos', 'que_hacer', 'comunitat_valenciana.parrafos'],
   programas: ['que_es', 'como_es', 'que_encontraron', 'en_ninas', 'limitaciones'],
+  acudir: ['camino_publico.parrafos', 'aviso_entidades', 'mujeres_ninas.texto'],
 };
 
 // Todos los textos de un YAML, con su campo («comunitat_valenciana.texto»; los índices de una lista no cuentan).

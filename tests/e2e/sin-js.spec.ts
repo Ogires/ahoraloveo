@@ -42,3 +42,12 @@ test('las escenas de elegir de una ficha se abren sin JavaScript', async ({ page
   await escena.getByText('Que no hace caso', { exact: true }).click();
   await expect(escena.locator('.explicacion').nth(1)).toBeVisible();
 });
+
+test('a quién acudir se lee completo sin JavaScript', async ({ page }) => {
+  await page.goto('/a-quien-acudir/');
+  await expect(page.getByRole('heading', { level: 1, name: 'A quién acudir' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: 'El camino público' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: 'Asociaciones y fundaciones' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 2, name: 'Para el resto de España' })).toBeVisible();
+  await expect(page.locator('.organizacion').first()).toBeVisible();
+});

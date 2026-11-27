@@ -1,0 +1,82 @@
+entradilla: >
+  Aquí reunimos a quién acudir en la Comunitat Valenciana cuando hay una sospecha de autismo o un
+  diagnóstico reciente. Encontraréis el camino público y las asociaciones sin ánimo de lucro con web
+  propia.
+
+camino_publico:
+  - titulo: Sanidad
+    parrafos:
+      - >
+        La puerta de entrada es vuestro centro de salud. Cómo funciona la derivación desde pediatría hasta la unidad de salud mental infantil (USMIA) lo contamos en [la guía del diagnóstico](/diagnostico/#paso-4).
+      - >
+        El Plan Valenciano de Salud Mental y Adicciones cuenta 26 USMIA en la Comunitat Valenciana, con
+        datos de 2023. También prevé planes de actuación específicos para el autismo.
+      - >
+        Además, el departamento de salud de Manises tiene en Mislata una unidad de neurorrehabilitación
+        infantil que atiende a niñas y niños autistas hasta los 7 años.
+    fuentes: [cv-protocolo-sanidad-2023, cv-plan-salud-mental-2024-2027, cv-manises-guia-tea]
+    comprobado: 2026-11-27
+
+  - titulo: Atención temprana
+    parrafos:
+      - >
+        Es gratuita, es para menores de 6 años y no hace falta tener un diagnóstico. En la guía explicamos [cómo pedirla con el informe de pediatría](/diagnostico/#paso-4).
+      - >
+        La dan los centros de desarrollo infantil y atención temprana (CDIAT) y los programas
+        municipales de atención al desarrollo infantil (ADI), con financiación pública.
+      - >
+        La solicitud se presenta en el ayuntamiento, en una oficina PROP o en la dirección territorial
+        de servicios sociales. La administración tiene como máximo 6 meses para resolverla.
+    fuentes: [cv-sede-atencion-temprana, cv-protocolo-sanidad-2023, cv-protocolo-educacion-2024]
+    comprobado: 2026-11-27
+
+  - titulo: En el colegio
+    parrafos:
+      - >
+        Qué tipos de escolarización hay y quién decide los apoyos lo contamos en [el colegio en la Comunitat Valenciana](/diagnostico/#colegio).
+      - >
+        Las unidades especializadas de orientación (UEO) tienen un equipo de autismo en las tres
+        provincias. Asesoran a los colegios cuando hace falta un apoyo más especializado.
+      - >
+        Para el curso 2026-2027 hay unidades específicas dentro de colegios ordinarios. Algunas son
+        solo para alumnado autista de infantil y primaria.
+      - >
+        Para entrar en una unidad específica, la norma pide autismo «moderado o grave» o discapacidad
+        intelectual grave o profunda. Cada alumna o alumno tiene además una clase ordinaria de
+        referencia, que tiene menos alumnos si hay plaza libre.
+    fuentes: [cv-ceice-ueo, cv-resolucion-unidades-especificas-2026, cv-decreto-72-2021, cv-orden-10-2023]
+    comprobado: 2026-11-27
+
+  - titulo: Discapacidad y dependencia
+    parrafos:
+      - >
+        En menores, el grado de discapacidad lo piden la madre, el padre o quien tenga la tutela. Con
+        un grado del 33 % o más, se entrega la tarjeta que lo acredita.
+      - >
+        En la Comunitat Valenciana se tramita por urgencia, con un plazo máximo de 3 meses. Si no
+        responden en ese plazo, la solicitud se puede entender denegada. Cuando llega la resolución,
+        el grado cuenta desde el día en que se pidió.
+      - >
+        La solicitud de dependencia la firman los dos progenitores, salvo que solo conste uno. Hay 3
+        meses para resolver el grado y otros 3 para el programa individual de atención (PIA).
+      - >
+        Si pasan 6 meses sin respuesta, la dependencia se entiende concedida. Si vuestra hija o hijo
+        necesita una persona de asistencia terapéutica infantil (PATI) en el colegio, hay un anexo
+        para pedirlo.
+    fuentes: [cv-sede-discapacidad, cv-sede-dependencia, boe-rd-888-2022, boe-ley-dependencia]
+    comprobado: 2026-11-27
+
+aviso_entidades: >
+  Son asociaciones y fundaciones sin ánimo de lucro de la Comunitat Valenciana, con web propia. Algunas
+  cobran una cuota o algunos servicios. No incluimos clínicas privadas ni valoramos sus terapias. Las
+  que no tienen web no aparecen: podéis buscarlas en los [directorios del resto de España](/a-quien-acudir/#resto-de-espana).
+
+mujeres_ninas:
+  texto: >
+    En la Comunitat Valenciana no hemos encontrado ninguna asociación ni ningún programa para niñas
+    autistas. Hay charlas puntuales, publicaciones en fechas como el 8 de marzo y entidades centradas
+    en mujeres adultas. Los materiales y las líneas de trabajo estables que conocemos son de toda
+    España.
+  comprobado: 2026-11-27
+
+revisado: 2026-11-27

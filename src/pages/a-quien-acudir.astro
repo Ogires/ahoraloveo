@@ -1,0 +1,194 @@
+---
+import { getCollection, getEntries, getEntry } from 'astro:content';
+import ListaFuentes from '../components/ListaFuentes.astro';
+import PieRevision from '../components/PieRevision.astro';
+import TextoEnlazado from '../components/TextoEnlazado.astro';
+import Base from '../layouts/Base.astro';
+import { enlazarEntidades } from '../lib/enlazar';
+import { cargarEntidades } from '../lib/entidades';
+import { BLOQUES_ORGANIZACION, PROVINCIAS } from '../lib/esquemas';
+import { fechaIso, formatearFecha } from '../lib/fecha';
+import { exigirTodas } from '../lib/referencias';
+
+const entrada = await getEntry('acudir', 'comunitat-valenciana');
+if (!entrada) throw new Error('Falta acudir/comunitat-valenciana');
+const datos = entrada.data;
+
+const entidades = await cargarEntidades();
+const enlazar = (t: string) => enlazarEntidades(t, entidades);
+
+const todasOrganizaciones = await getCollection('organizaciones');
+const porBloque = (bloque: (typeof BLOQUES_ORGANIZACION)[number]) =>
+  todasOrganizaciones
+    .filter((o) => o.data.bloque === bloque)
+    .sort((a, b) => a.data.nombre.localeCompare(b.data.nombre, 'es'));
+
+// El nombre completo, con las siglas detrás si las usa: las siglas solas no dicen nada a una familia.
+const etiqueta = (d: { nombre: string; siglas?: string }) => (d.siglas ? `${d.nombre} (${d.siglas})` : d.nombre);
+
+const provinciasCv = ['alicante', 'castellon', 'valencia'] as const;
+const organizacionesEntidades = porBloque('entidades');
+const organizacionesPorProvincia = provinciasCv.map((provincia) => ({
+  provincia,
+  nombre: PROVINCIAS[provincia],
+  lista: organizacionesEntidades.filter((o) => o.data.provincia === provincia),
+}));
+
+const organizacionesMujeres = porBloque('mujeres-ninas');
+const organizacionesAdultas = porBloque('adultas');
+const organizacionesConfederaciones = porBloque('confederaciones');
+
+const refsFuentes = datos.camino_publico.flatMap((apartado) => apartado.fuentes);
+const refsUnicas = [...new Map(refsFuentes.map((ref) => [ref.id, ref])).values()];
+const fuentes = exigirTodas(
+  await getEntries(refsUnicas),
+  refsUnicas.map((ref) => ref.id),
+  'acudir/comunitat-valenciana',
+);
+
+const descripcion =
+  'Dónde pedir información y apoyo en la Comunitat Valenciana si hay sospecha de autismo o diagnóstico reciente: camino público y asociaciones.';
+---
+
+<Base titulo="A quién acudir" descripcion={descripcion}>
+  <div class="acudir texto" data-pagefind-body>
+    <header>
+      <h1>A quién acudir</h1>
+      <p class="entradilla">{datos.entradilla}</p>
+      <p>
+        De momento esta guía reúne los recursos de la Comunitat Valenciana. Si vivís en otra comunidad,
+        podéis consultar los directorios del <a href="#resto-de-espana">resto de España</a>.
+      </p>
+    </header>
+
+    <section aria-labelledby="camino-publico">
+      <h2 id="camino-publico">El camino público</h2>
+      {datos.camino_publico.map((apartado, i) => (
+        <div class="apartado" id={`camino-${i + 1}`}>
+          <h3>{apartado.titulo}</h3>
+          {apartado.parrafos.map((p) => (
+            <p><TextoEnlazado trozos={enlazar(p)} /></p>
+          ))}
+          <p class="comprobado">
+            Comprobado el <time datetime={fechaIso(apartado.comprobado)}>{formatearFecha(apartado.comprobado)}</time>.
+          </p>
+        </div>
+      ))}
+    </section>
+
+    <section aria-labelledby="asociaciones">
+      <h2 id="asociaciones">Asociaciones y fundaciones</h2>
+      <p><TextoEnlazado trozos={enlazar(datos.aviso_entidades)} /></p>
+      {organizacionesPorProvincia.map((grupo) => (
+        <div class="provincia">
+          <h3>{grupo.nombre}</h3>
+          <ul class="organizaciones">
+            {grupo.lista.map((o) => (
+              <li class="organizacion">
+                <a href={o.data.web}>{etiqueta(o.data)}</a>
+                {o.data.localidad && <p class="datos">{o.data.localidad}</p>}
+                <p>{o.data.que_ofrece}</p>
+                <p class="comprobado">
+                  Comprobado el <time datetime={fechaIso(o.data.comprobado)}>{formatearFecha(o.data.comprobado)}</time>.
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </section>
+
+    <section aria-labelledby="mujeres-ninas">
+      <h2 id="mujeres-ninas">Mujeres y niñas</h2>
+      <p><TextoEnlazado trozos={enlazar(datos.mujeres_ninas.texto)} /></p>
+      <p class="comprobado">
+        Comprobado el <time datetime={fechaIso(datos.mujeres_ninas.comprobado)}>{formatearFecha(datos.mujeres_ninas.comprobado)}</time>.
+      </p>
+      <ul class="organizaciones">
+        {organizacionesMujeres.map((o) => (
+          <li class="organizacion">
+            <a href={o.data.web}>{etiqueta(o.data)}</a>
+            <p>{o.data.que_ofrece}</p>
+            <p class="comprobado">
+              Comprobado el <time datetime={fechaIso(o.data.comprobado)}>{formatearFecha(o.data.comprobado)}</time>.
+            </p>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section aria-labelledby="adultas">
+      <h2 id="adultas">Si sois personas adultas</h2>
+      <ul class="organizaciones">
+        {organizacionesAdultas.map((o) => (
+          <li class="organizacion">
+            <a href={o.data.web}>{etiqueta(o.data)}</a>
+            {o.data.localidad && (
+              <p class="datos">{o.data.localidad} ({PROVINCIAS[o.data.provincia]})</p>
+            )}
+            <p>{o.data.que_ofrece}</p>
+            <p class="comprobado">
+              Comprobado el <time datetime={fechaIso(o.data.comprobado)}>{formatearFecha(o.data.comprobado)}</time>.
+            </p>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section aria-labelledby="resto-de-espana">
+      <h2 id="resto-de-espana">Para el resto de España</h2>
+      <ul class="organizaciones">
+        {organizacionesConfederaciones.map((o) => (
+          <li class="organizacion">
+            <a href={o.data.web}>{etiqueta(o.data)}</a>
+            <p>{o.data.que_ofrece}</p>
+            <p class="comprobado">
+              Comprobado el <time datetime={fechaIso(o.data.comprobado)}>{formatearFecha(o.data.comprobado)}</time>.
+            </p>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section aria-labelledby="fuentes" data-pagefind-ignore>
+      <h2 id="fuentes">Fuentes</h2>
+      <ListaFuentes fuentes={fuentes} />
+    </section>
+
+    <PieRevision revisado={datos.revisado} pagina="A quién acudir" />
+  </div>
+</Base>
+
+<style>
+  .acudir { display: flex; flex-direction: column; gap: 2.5rem; min-width: 0; padding-block: 1.5rem 0; }
+  header, section, .provincia { display: flex; flex-direction: column; gap: 0.75rem; min-width: 0; }
+  .entradilla { font-size: 1.3125rem; font-weight: 300; color: var(--tinta-suave); }
+  .apartado {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-left: 4px solid var(--acento);
+    padding-left: 1rem;
+  }
+  .apartado h3, .provincia h3 { font-size: 1.125rem; }
+  .organizaciones {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .organizacion {
+    background: var(--superficie);
+    border: 1px solid var(--linea);
+    border-radius: 20px;
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    overflow-wrap: break-word;
+  }
+  .organizacion a { font-size: 1.1875rem; font-weight: 500; align-self: flex-start; }
+  .datos, .comprobado { font-size: 0.9375rem; color: var(--tinta-suave); }
+</style>
